@@ -23,6 +23,7 @@ $PGI = []; $SIDEBAR_DATA = '';
 // =============================================================================
 
 use phpweb\I18n\Languages;
+use phpweb\ProjectGlobals;
 use phpweb\UserNotes\Sorter;
 use phpweb\UserNotes\UserNote;
 
@@ -35,7 +36,7 @@ function manual_notes($notes):void {
     global $LANG;
 
     // Get needed values
-    list($filename) = $GLOBALS['PGI']['this'];
+    [$filename] = $GLOBALS['PGI']['this'];
 
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
@@ -96,7 +97,7 @@ END_USERNOTE_HEADER;
 function manual_notes_load(string $id): array
 {
     $hash = substr(md5($id), 0, 16);
-    $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
+    $notes_file = ProjectGlobals::getPublicRoot() . "/backend/notes/" .
                   substr($hash, 0, 2) . "/$hash";
 
     // Open the note file for reading and get the data (12KB)
@@ -140,7 +141,7 @@ function manual_note_display(UserNote $note, $voteOption = true): void
 
     // Vote User Notes Div
     if ($voteOption) {
-        list($redir_filename) = $GLOBALS['PGI']['this'];
+        [$redir_filename] = $GLOBALS['PGI']['this'];
         if (substr($redir_filename, -4) == '.php') {
             $redir_filename = substr($redir_filename, 0, -4);
         }
@@ -286,9 +287,9 @@ function manual_setup($setup): void {
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
     $timestamps = [
-        filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]),
-        filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
-        filemtime($_SERVER["DOCUMENT_ROOT"] . "/styles/theme-base.css"),
+        filemtime(ProjectGlobals::getPublicRoot() . "/" . $_SERVER["BASE_PAGE"]),
+        filemtime(ProjectGlobals::getProjectRoot() . "/include/prepend.inc"),
+        filemtime(ProjectGlobals::getPublicRoot() . "/styles/theme-base.css"),
     ];
 
     // Load user note for this page

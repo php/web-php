@@ -1,0 +1,36 @@
+<?php
+# This API is deprecated as of 2025-04-01.
+# Please use /releases/branches.php instead.
+# This API *may* be removed at an indeterminate point in the future.
+
+use phpweb\ProjectGlobals;
+
+$_SERVER['BASE_PAGE'] = 'releases/active.php';
+
+require_once __DIR__ . '/../../include/prepend.inc';
+require_once ProjectGlobals::getPublicRoot() . '/include/branches.inc';
+
+header('Content-Type: application/json; charset=UTF-8');
+
+$states = [];
+
+function formatDate($date = null) {
+    return $date !== null ? $date->format('c') : null;
+}
+
+foreach (get_all_branches() as $major => $releases) {
+    $states[$major] = [];
+    foreach ($releases as $branch => $release) {
+        $states[$major][$branch] = [
+            'state' => get_branch_support_state($branch),
+            'initial_release' => formatDate(get_branch_release_date($branch)),
+            'active_support_end' => formatDate(get_branch_bug_eol_date($branch)),
+            'security_support_end' => formatDate(get_branch_security_eol_date($branch)),
+        ];
+    }
+    krsort($states[$major]);
+}
+
+krsort($states);
+
+echo json_encode($states);

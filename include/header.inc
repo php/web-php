@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\ProjectGlobals;
+
 $css_files = [
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
@@ -39,7 +42,7 @@ if ($config["cache"]) {
     if (is_numeric($config["cache"])) {
         $timestamp = $config["cache"];
     } else {
-        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]);
+        $timestamp = filemtime(ProjectGlobals::getPublicRoot() . "/" . $_SERVER["BASE_PAGE"]);
     }
     $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 

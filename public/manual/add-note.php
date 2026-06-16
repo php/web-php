@@ -1,0 +1,395 @@
+<?php
+$ip_spam_lookup_url = 'http://www.dnsbl.info/dnsbl-database-check.php?IP=';
+
+$_SERVER['BASE_PAGE'] = 'manual/add-note.php';
+require_once __DIR__ . '/../../include/prepend.inc';
+require_once __DIR__ . '/../../include/posttohost.inc';
+require_once __DIR__ . '/../../include/shared-manual.inc';
+include __DIR__ . '/spam_challenge.php';
+
+use phpweb\UserNotes\UserNote;
+
+site_header("Add Manual Note", ['css' => 'add-note.css']);
+
+// Copy over "sect", "redirect" and "repo" from GET to POST
+if (empty($_POST['sect']) && isset($_GET['sect'])) {
+    $_POST['sect'] = $_GET['sect'];
+}
+if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
+    $_POST['redirect'] = $_GET['redirect'];
+}
+if (empty($_POST['repo']) && isset($_GET['repo'])) {
+    $_POST['repo'] = $_GET['repo'];
+}
+// Assume English if we didn't get a language
+if (empty($_POST['repo'])) {
+    $_POST['repo'] = 'en';
+}
+
+// Decide on whether all vars are present for processing
+$process = true;
+$needed_vars = ['note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer'];
+foreach ($needed_vars as $varname) {
+    if (empty($_POST[$varname])) {
+        $process = false;
+        break;
+    }
+}
+
+// We have a submitted form to process
+if ($process) {
+
+    // Clean off leading and trailing whitespace
+    $user = trim($_POST['user']);
+    $note = trim($_POST['note']);
+
+    // Convert all line-endings to unix format,
+    // and don't allow out-of-control blank lines
+    $note = str_replace(["\r\n", "\r"], "\n", $note);
+    $note = preg_replace("/\n{2,}/", "\n\n", $note);
+
+    // Don't pass through example username
+    if ($user === "user@example.com") {
+        $user = "Anonymous";
+    }
+
+    // We don't know of any error now
+    $error = false;
+
+    // No note specified
+    if (strlen($note) == 0) {
+        $error = "You have not specified the note text.";
+    }
+
+    // SPAM challenge failed
+    elseif (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['answer'])) {
+        $error = 'SPAM challenge failed.';
+    }
+
+    // The user name contains a malicious character
+    elseif (stristr($user, "|")) {
+        $error = "You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.";
+    }
+
+    // Check if the note is too long
+    elseif (strlen($note) >= 4096) {
+        $error = "Your note is too long. You'll have to make it shorter before you can post it. Keep in mind that this is not the place for long code examples!";
+    }
+
+    // Check if the note is not too short
+    elseif (strlen($note) < 32) {
+        $error = "Your note is too short. Trying to test the notes system? Save us the trouble of deleting your test, and don't. It works.";
+    }
+
+    // Check if any line is too long
+    else {
+
+        // Split the note by whitespace, and check length
+        foreach (preg_split("/\\s+/", $note) as $chunk) {
+            if (strlen($chunk) > 120) {
+                $error = "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
+                break;
+            }
+        }
+    }
+
+    // No error was found, and the submit action is required
+    if (!$error && strtolower($_POST['action']) !== "preview") {
+
+        $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
+                   ($_SERVER['HTTP_VIA'] ?? '');
+
+        // Post the variables to the central user note script
+        $result = posttohost(
+            "https://main.php.net/entry/user-note.php",
+            [
+                'user' => $user,
+                'note' => $note,
+                'sect' => $_POST['sect'],
+                'ip' => $_SERVER['REMOTE_ADDR'],
+                'redirip' => $redirip,
+            ],
+        );
+
+        // If there is any non-header result, then it is an error
+        if ($result) {
+            if (strpos($result, '[TOO MANY NOTES]') !== false) {
+                echo "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
+            } elseif (($pos = strpos($result, '[SPAMMER]')) !== false) {
+                $ip = trim(substr($result, $pos + 9));
+                $spam_url = $ip_spam_lookup_url . $ip;
+                echo '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="' . $spam_url . '">' . $spam_url . '</a>.</p>';
+            } elseif (strpos($result, '[SPAM WORD]') !== false) {
+                echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
+            } elseif (strpos($result, '[CLOSED]') !== false) {
+                echo '<p class="formerror">Due to some technical problems this service isn\'t currently working. Please try again later. Sorry for any inconvenience.</p>';
+            } else {
+                echo "<!-- $result -->";
+                echo "<p class=\"formerror\">There was an internal error processing your submission. Please try to submit again later.</p>";
+            }
+        }
+
+        // There was no error returned
+        else {
+            echo '<p>Your submission was successful -- thanks for contributing! Note ',
+                 'that it will not show up for up to a few hours, ',
+                 'but it will eventually find its way.</p>';
+        }
+
+        // Print out common footer, and end page
+        site_footer();
+        exit();
+    }
+
+    // There was an error, or a preview is needed
+    // If there was an error, print out
+    if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
+
+    // Print out preview of note
+    echo '<p>This is what your entry will look like, roughly:</p>';
+    echo '<div id="usernotes">';
+    manual_note_display(new UserNote('', '', '', time(), $user, $note));
+    echo '</div><br><br>';
+}
+
+// Any needed variable was missing => display instructions
+else {
+?>
+
+<section id="add-note-usernotes" class="clearfix">
+  <h1>Adding a note to the manual</h1>
+  <div class="note_description">
+    <ul>
+      <li>
+        Please read <a href="#whatnottoenter">What not to enter</a>
+        we have many comments to moderate and there is an overwhelming number of
+        users ignoring this important section.
+      </li>
+      <li>
+        <em>Good notes rise to the top</em> as they are voted up; this makes
+        them easier to find.
+      </li>
+      <li>
+        <em>Poor notes fall to the bottom and are faded out</em> to discourage
+        their use; after certain threshold they are removed.
+      </li>
+      <li>Any form of spam is removed immediately.</li>
+    </ul>
+  </div>
+  <div class="note_example">
+    <div class="shadow"></div>
+    <div id="usernotes">
+      <h3 class="title">User Contributed Notes <span class="count">3 notes</span></h3>
+      <div class="note bad">
+        <div class="votes">
+          <div>
+            <a class="usernotes-voteu" title="Vote up!">up</a>
+          </div>
+        <div>
+          <a class="usernotes-voted" title="Vote down!">down</a>
+        </div>
+        <div class="tally">3</div>
+      </div>
+      <a class="name"><strong class="user"><em>Anonymous</em></strong></a>
+      <a class="genanchor" href="#"> ¶</a>
+      <div class="date">
+        <strong>1 year ago</strong>
+      </div>
+      <div class="text">
+        <div class="phpcode">
+          <code><span class="html">eval() is the best for all sorts of things</span></code>
+        </div>
+      </div>
+    </div>
+
+<div class="note good">
+  <div class="votes">
+    <div>
+      <a class="usernotes-voteu" title="Vote up!">up</a>
+    </div>
+    <div>
+      <a class="usernotes-voted" title="Vote down!">down</a>
+    </div>
+    <div title="" class="tally">
+      1
+    </div>
+  </div>
+  <a class="name"><strong class="user"><em>rasmus () lerdorf ! com</em></strong></a>
+  <a class="genanchor" href="#"> ¶</a>
+  <div class="date">
+    <strong>
+      2 days ago
+    </strong>
+  </div>
+  <div class="text">
+    <div class="phpcode">
+      <code><span class="html">If eval() is the answer, you're almost certainly asking the wrong question.</span></code>
+    </div>
+  </div>
+</div>
+
+<div class="note spam">
+  <div class="votes">
+    <div>
+      <a class="usernotes-voteu" title="Vote up!">up</a>
+    </div>
+    <div>
+      <a class="usernotes-voted" title="Vote down!">down</a>
+    </div>
+    <div title="" class="tally">
+      0
+    </div>
+  </div>
+  <a class="name"><strong class="user"><em>spam () spam ! spam</em></strong></a>
+  <a class="genanchor" href="#"> ¶</a>
+  <div class="date">
+    <strong>
+      1 hour ago
+    </strong>
+  </div>
+  <div class="text">
+    <div class="phpcode">
+      <code><span class="html">egg bacon sausage spam spam baked beans</span></code>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="whatnottoenter" class='clearfix'>
+<h3>Thou shall not enter! <small>(No, really, don't)</small></h3>
+<div class='columns'>
+<ul>
+  <li><strong>Bug reports &amp; Missing documentation</strong>
+    Instead <a href="https://github.com/php/doc-<?=clean($_POST['repo'])?>/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F<?=clean($_POST['sect'])?>%0A%0A---">report an issue</a>
+  for this manual page.
+  </li>
+  <li><strong>Support questions or request for help</strong> See the <a href="/support.php">support page</a> for available options. In other words, do not ask questions within the user notes.</li>
+  <li><strong>References to other notes or authors</strong>  This is not a forum; we do not encourage nor permit discussions here.  Further, if a note is referenced directly and is later removed or modified it causes confusion.
+  </li>
+  <li><strong>Code collaboration or improvements</strong> This is not to suggest that your code snippet is bad; this is simply not the place to show it off.  You should publish elsewhere (perhaps on your blog).</li>
+  <li><strong>Links to your website, blog, code, or a third-party website</strong> On occasion we permit the posting of websites such as faqs.org or the MySQL manual, but links to other sites will be removed, no matter how well-intended.</li>
+  <li><strong>Complaints that your notes keep getting deleted</strong> Most likely you didn't bother to read this page and you violated one of these rules.</li>
+  <li><strong>Notes in languages other than English</strong> 不 gach duine понимает el lenguaje जिसमें Sie sprechen.</li>
+  <li><strong>Your disdain for PHP and/or its maintainers</strong> Go learn FORTRAN instead.</li>
+</ul>
+</div>
+<p>User notes may be edited or deleted for any reason, whether in the list above or not!</p>
+</section>
+
+
+<div id="email_and_formatting" class="clearfix">
+  <section>
+    <h3>Email address conversion</h3>
+    <p>
+      We have a simple conversion in place to convert the @ signs and dots in your
+      address. You may still want to include a part in the email address
+      that is understandable only by humans as our conversion can be performed in
+      the opposite direction. You may submit your email address as
+      <code>user@NOSPAM.example.com</code> for example (which will be displayed
+      as <code>user at NOSPAM dot example dot com</code>. If we remove your note we can
+      only send an email if you use your real email address.
+    </p>
+  </section>
+  <section>
+    <h3>Formatting</h3>
+    <p>
+      Note that HTML tags are not allowed in the posts, but the note formatting
+      is preserved. URLs will be turned into clickable links, PHP code blocks
+      enclosed in the PHP tags &lt;?php and ?&gt; will
+      be source highlighted automatically. So always enclose PHP snippets in
+      these tags. <em>Double-check that your note appears
+      as you want during the preview; that's why it is there!</em>
+    </p>
+  </section>
+</div>
+
+<div class="row-fluid clearfix">
+<div class="span12">
+<h3>Additional information</h3>
+<p>
+ Please note that periodically the developers go through the notes and
+ may incorporate information from them into the documentation. This means
+ that any note submitted here becomes the property of the PHP Documentation
+ Group and will be available under the <a href="/license/index.php#doc-lic">same license</a> as the documentation.
+</p>
+<p>
+ Your IP Address will be logged with the submitted note and made public on the
+ PHP manual user notes mailing list. The IP address is logged as part of the
+ notes moderation process, and won't be shown within the PHP manual itself.
+</p>
+<p>It may take up to an hour for your note to appear in the documentation.</p>
+<p>
+ The SPAM challenge requires numbers to written out in English, so, an appropriate
+ answer may be <em>nine</em> but not <em>9</em>.
+</p>
+</div>
+</div>
+
+<?php
+}
+
+// If the user name was not specified, provide a default
+if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
+
+// There is no section to add note to
+if (!isset($_POST['sect'], $_POST['redirect'])) {
+    echo '<p class="formerror">To add a note, you must click on the "Add Note" button (the plus sign)  ',
+         'on the bottom of a manual page so we know where to add the note!</p>';
+}
+
+// Everything is in place, so we can display the form
+else {?>
+<form method="post" action="/manual/add-note.php">
+ <p>
+  <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>">
+  <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>">
+ </p>
+ <table border="0" cellpadding="3" class="standard">
+  <tr>
+   <td colspan="2">
+    <b>
+     <a href="/support.php">Click here to go to the support pages.</a><br>
+     <a href="https://github.com/php/doc-<?=clean($_POST['repo'])?>/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F<?=clean($_POST['sect'])?>%0A%0A---">Click here to submit an issue about the documentation.</a><br>
+     <a href="https://github.com/php/php-src/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F<?=clean($_POST['sect'])?>%0A%0A---">Click here to submit an issue about PHP itself.</a><br>
+     (Again, please note, if you ask a question, report an issue, or request a feature,
+     your note <i>will be deleted</i>.)
+    </b>
+   </td>
+  </tr>
+  <tr>
+   <th class="subr"><label for="form-user">Your email address</label>:</th>
+   <td><input id="form-user" type="email" name="user" size="60" maxlength="40" required value="<?php echo clean($_POST['user']); ?>"></td>
+  </tr>
+  <tr>
+   <th class="subr"><label for="form-note">Your notes</label>:</th>
+   <td><textarea id="form-note" name="note" rows="20" cols="60" wrap="virtual" required maxlength="4095" minlength="32"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
+   <br>
+  </td>
+  </tr>
+  <tr>
+   <th class="subr"><label for="form-answer">Answer to this simple question (SPAM challenge)</label>:<br>
+   <?php $c = gen_challenge(); echo $c[3]; ?>?</th>
+   <td><input id="form-answer" type="text" name="answer" size="60" maxlength="10" required> (Example: nine)</td>
+  </tr>
+  <tr>
+   <th colspan="2">
+    <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
+    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>">
+    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>">
+    <input type="submit" name="action" value="Preview">
+    <input type="submit" name="action" value="Add Note">
+   </th>
+  </tr>
+ </table>
+</form>
+<?php
+}
+
+// Print out common footer
+site_footer();
+?>
