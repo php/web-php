@@ -98,7 +98,7 @@ if (!$begun) {
 <div class="tip">
  <p>
   If you would like to suggest an upcoming event to be listed on this
-  calendar, you can use <a href="../submit-event.php">our event submission
+  calendar, you can use <a href="/submit-event.php">our event submission
   form</a>.
  </p>
  <p>
