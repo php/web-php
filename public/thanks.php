@@ -1,0 +1,189 @@
+<?php
+$_SERVER['BASE_PAGE'] = 'thanks.php';
+require_once __DIR__ . '/../include/prepend.inc';
+require_once __DIR__ . '/../include/historical_mirrors.inc';
+site_header("Thanks", ["current" => "community"]);
+?>
+
+<h1>Thanks</h1>
+
+<ul class="thanks-list">
+    <li class="thanks">
+        <a href="http://www.easydns.com/?V=698570efeb62a6e2" class="thanks__logo">
+            <img src="images/sponsors/easydns.png" alt="easyDNS">
+        </a>
+        <section>
+            <strong class="thanks__heading"><a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a></strong>
+            <p class="thanks__description">Provides DNS services for the PHP domains.</p>
+        </section>
+    </li>
+
+    <li class="thanks">
+        <a href="https://www.myrasecurity.com/ddos-protection/" class="thanks__logo thanks__logo--dark">
+            <img src="images/sponsors/myra.png" alt="Myra Security">
+        </a>
+        <section>
+            <strong class="thanks__heading"><a href="https://www.myrasecurity.com/ddos-protection/">Myra Security</a></strong>
+            <p class="thanks__description">DDoS protection, along with hosting our mail server for us.</p>
+        </section>
+    </li>
+
+    <li class="thanks">
+        <a href="https://sinnerg.nl" class="thanks__logo thanks__logo--white">
+            <img src="images/sponsors/sinnerg.jpg" alt="SinnerG">
+        </a>
+        <section>
+            <strong class="thanks__heading"><a href="https://sinnerg.nl">SinnerG</a></strong>
+            <p class="thanks__description">
+                Provides a server and bandwidth for rsync.php.net.
+            </p>
+        </section>
+    </li>
+
+    <li class="thanks">
+        <a href="https://digitalocean.com" class="thanks__logo">
+            <img src="images/sponsors/digitalocean.png" alt="DigitalOcean">
+        </a>
+        <section>
+            <strong class="thanks__heading"><a href="https://digitalocean.com">DigitalOcean</a></strong>
+            <p class="thanks__description">
+                Provides VMs and bandwidth for all PHP web services, and our rsync server.
+            </p>
+        </section>
+    </li>
+
+    <li class="thanks">
+        <a href="https://eukhost.com/" class="thanks__logo">
+            <img src="images/sponsors/eukhost.svg" alt="EUKhost">
+        </a>
+        <section>
+            <strong class="thanks__heading"><a href="https://eukhost.com/">EUKhost</a></strong>
+            <p class="thanks__description">
+                Provides a server and bandwidth for various PEAR services.
+            </p>
+        </section>
+    </li>
+</ul>
+
+<h1>Thanks Emeritus</h1>
+
+<p>
+    Special 'legacy' thanks go to the people and companies who have helped
+    us in our past.
+</p>
+<ul>
+    <li>
+        <a href="https://www.appveyor.com">AppVeyor</a> provided continuous
+        integration for Windows builds of PHP.
+    </li>
+
+    <li>
+        <a href="https://www.bauer-kirch.de">Bauer + Kirch GmbH</a> provided us
+        with SSL certificates and a server and bandwidth for the php.net
+        monitoring infrastructure.
+    </li>
+
+    <li>
+        <a href="https://www.deft.com/">Deft</a> provided a server and
+        bandwidth for rsync.php.net.
+    </li>
+
+    <li>
+        <a href="https://directi.com">Directi</a> provided IP address to
+        country lookup information.
+    </li>
+
+    <li>
+        <a href="https://duocast.nl/">Duocast</a> provided servers and
+        bandwidth used for buildbot testing and various Windows based servers.
+    </li>
+
+    <li>
+        <a href="https://krystal.uk/">Krystal.uk</a> provided a server and
+        bandwidth for the ci.qa.php.net build and quality assurance
+        infrastructure.
+    </li>
+
+    <li>
+        <a href="https://www.nexcess.net/">NEXCESS.NET</a> provided servers and
+        resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://www.osuosl.org/">Oregon State University Open Source Lab</a>
+        provided servers and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://promote.pair.com/direct.pl?php.net">pair Networks</a>
+        provided servers and resources for hosting PEAR, PECL, and the mailing lists.
+    </li>
+
+    <li>
+        <a href="https://rackspace.com/">Rackspace</a> provided servers and
+        resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://redpill-linpro.com/">Redpill Linpro</a> provided servers and
+        resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://servergrove.com/">ServerGrove</a> provided managed
+        servers and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://sinnerg.nl">SinnerG</a> provided servers and bandwidth
+        for svn.php.net, gtk.php.net, and people.php.net.
+    </li>
+
+    <li>
+        <a href="https://www.spry.com/">Spry VPS Hosting</a> provided servers
+        and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://synacor.com">Synacor</a> provided us with many
+        terabytes of bandwidth and hosting for www.php.net and others for
+        many years.
+    </li>
+
+    <li>
+        <a href="https://www.travis-ci.org">Travis CI</a> provided continuous
+        integration for builds of PHP.
+    </li>
+
+    <li>
+        <a href="https://vasoftware.com">VA Software Corp.</a> helped us
+        by donating a server and resources to enable us to build manuals
+        and distribute our content via rsync.
+    </li>
+
+    <li>
+        <a href="https://yahoo.com/">Yahoo! Inc.</a> provided us with many many
+        terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
+        for many years.
+    </li>
+</ul>
+
+<p>
+    And special thanks to all the companies who donated server space and
+    bandwidth to host our historical international array of mirror sites.
+</p>
+
+<ul>
+    <?php
+    $last_country = '';
+    foreach ($historical_mirrors as $m) {
+        ?>
+        <li><?php echo $COUNTRIES[$m[0]]; ?>: <a href='<?php echo $m[3]; ?>'><?php echo $m[2]; ?></a></li>
+        <?php
+    }
+    ?>
+</ul>
+
+<p>PHP.net is very grateful for all their support.</p>
+
+<?php site_footer(); ?>

@@ -1,5 +1,7 @@
 <?php
 // Try to make this page non-cached
+use phpweb\ProjectGlobals;
+
 header_nocache();
 
 // No file to download
@@ -18,7 +20,7 @@ $site_config = [
 // Find out what is the exact file requested
 $file = false;
 foreach ($possible_files as $name) {
-    if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
+    if (@file_exists(ProjectGlobals::getPublicRoot() . '/distributions/' . $name)) {
         $file = $name;
         break;
     }
@@ -41,7 +43,7 @@ if ($file === false) {
 EOT;
 } else {
     // Set local file name
-    $local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $file;
+    $local_file = ProjectGlobals::getPublicRoot() . '/distributions/' . $file;
     // Try to get filesize to display
     $size = @filesize($local_file);
 }

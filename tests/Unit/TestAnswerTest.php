@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace phpweb\Test\Unit;
 
 use PHPUnit\Framework;
+use phpweb\ProjectGlobals;
 
 #[Framework\Attributes\CoversFunction('test_answer')]
 #[Framework\Attributes\UsesFunction('minus')]
@@ -13,7 +14,7 @@ final class TestAnswerTest extends Framework\TestCase
 {
     public static function setUpBeforeClass(): void
     {
-        require_once __DIR__ . '/../../manual/spam_challenge.php';
+        require_once ProjectGlobals::getPublicRoot() . '/manual/spam_challenge.php';
     }
 
     #[Framework\Attributes\DataProvider('provideFunctionArgumentsAnswerAndExpectedIsValid')]
