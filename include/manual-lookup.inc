@@ -110,9 +110,9 @@ function find_manual_page($lang, $keyword)
     $dbh = false;
     if (class_exists('PDO')) {
         if (in_array('sqlite', PDO::getAvailableDrivers(), true)) {
-            if (file_exists(ProjectGlobals::getPublicRoot() . '/backend/manual-lookup.sqlite')) {
+            if (file_exists(ProjectGlobals::getProjectRoot() . '/backend/manual-lookup.sqlite')) {
                 try {
-                    $dbh = new PDO( 'sqlite:' . ProjectGlobals::getPublicRoot() . '/backend/manual-lookup.sqlite', '', '', [PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true] );
+                    $dbh = new PDO( 'sqlite:' . ProjectGlobals::getProjectRoot() . '/backend/manual-lookup.sqlite', '', '', [PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true] );
                 } catch (PDOException $e) {
                     return find_manual_page_slow($lang, $keyword);
                 }
