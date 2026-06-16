@@ -59,7 +59,7 @@ foreach (Languages::ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 
 <p>
  Information about php.net URL shortcuts can be found by visiting our
- <a href="../urlhowto.php">Navigation tips &amp; tricks page</a>.
+ <a href="/urlhowto.php">Navigation tips &amp; tricks page</a>.
 </p>
 
 <h2 class="content-header">More documentation</h2>
