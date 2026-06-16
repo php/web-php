@@ -105,10 +105,6 @@ if (!isset($config["languages"])) {
 <script type="text/javascript" src="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>"></script>
 <?php endforeach ?>
 
-<?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
-<?php endif ?>
-
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
 <?php if (is_primary_site()) { ?>
