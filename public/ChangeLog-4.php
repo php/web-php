@@ -2873,7 +2873,7 @@ More information on this release on <a href="/releases.php#4.0.3">our Releases p
 <li>Fixed mSQL_close(). (nick@loman.net)</li>
 <li>Made return() in a require()'d file work like return() in an include()'d
   file (Andi &amp; Zeev, Zend Engine)</li>
-<li>Changed require_once() to work using the same table as require_once()
+<li>Changed require_once() to work using the same table as include_once()
   (Andi &amp; Zeev, Zend Engine)</li>
 <li>Fixed PostgreSQL module to work when the link handle is omitted (Zeev)</li>
 <li>Fixed the Sybase modules to work properly with PHP 4.0 (Zeev)</li>
@@ -3075,7 +3075,7 @@ More information on this release on <a href="/releases.php#4.0.2">our Releases p
 <li>Fixed stripcslashes() to remove to strip \ in unknown escapes instead of
   leaving it. (Andrei)</li>
 <li>Changed WDDX to always serialize arrays as structs. (Andrei)</li>
-<li>Fixed require_once() to issue a warning in case the supplied file name is
+<li>Fixed include_once() to issue a warning in case the supplied file name is
   not found (Zeev, Zend Engine)</li>
 <li>Fixed a bug in get_declared_classes() which could return the same class
   multiple times under certain circumstances (Zeev, Zend Engine)</li>
@@ -3240,7 +3240,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Fixed several problems with the PATH_TRANSLATED and PHP_SELF under Apache
   (Paul Gregg &amp; Zeev)</li>
 <li>Ported ldap_get_values_len() function from PHP3 to PHP4. (Sterling)</li>
-<li>Fixed a problem in require_once() with non constant arguments (Andi &amp; Zeev,
+<li>Fixed a problem in include_once() with non constant arguments (Andi &amp; Zeev,
   Zend Engine)</li>
 <li>Added php.ini-optimized (Zeev)</li>
 <li>Ported ldap_errno(), ldap_err2str() and ldap_error() from PHP3 to PHP4.
@@ -3332,7 +3332,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
   easy reuse of configuration options (Sascha)</li>
 <li>Added support for embedded MySQL client library. Unless you specify a path
   to --with-mysql, the bundled MySQL client library will be used (Sascha)</li>
-<li>Added require_once() and require_once() functionality (Andi, Zend Engine)</li>
+<li>Added include_once() and require_once() functionality (Andi, Zend Engine)</li>
 <li>Removed support for pdflib &lt; 3.0 (Uwe)</li>
 <li>Added auto-registration of everything in $HTTP_SESSION_VARS[] if
   register_globals is turned off. (Andrei)</li>
