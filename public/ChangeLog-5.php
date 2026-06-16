@@ -11001,7 +11001,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     (Dmitry, Pierre)</li>
 		<li>Changed exception handling. Now each op_array doesn't contain
     ZEND_HANDLE_EXCEPTION opcode in the end. (Dmitry)</li>
-		<li>Optimized require_once() and require_once() by eliminating fopen(3) on
+		<li>Optimized require_once() and include_once() by eliminating fopen(3) on
     second usage. (Dmitry)</li>
 		<li>Optimized ZEND_FETCH_CLASS + ZEND_ADD_INTERFACE into single
     ZEND_ADD_INTERFACE opcode. (Dmitry)</li>
@@ -11424,7 +11424,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   (Matteo)</li>
 	<li><?php bugfix(47771); ?> (Exception during object construction from arg call calls
   object's destructor). (Dmitry)</li>
-	<li><?php bugfix(47767); ?> (require_once does not resolve windows symlinks or junctions)
+	<li><?php bugfix(47767); ?> (include_once does not resolve windows symlinks or junctions)
   (Kanwaljeet Singla, Venkat Raman Don)</li>
 	<li><?php bugfix(47757); ?> (rename JPG to JPEG in phpinfo). (Pierre)</li>
 	<li><?php bugfix(47745); ?> (FILTER_VALIDATE_INT doesn't allow minimum integer). (Dmitry)</li>
@@ -13390,7 +13390,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <li>Optimized array/HashTable copying. (Matt Wilmas, Dmitry)</li>
 <li>Optimized zend_try/zend_catch macros by eliminating memcpy(3). (Dmitry)</li>
-<li>Optimized require_once() and require_once() by eliminating fopen(3) on second usage. (Dmitry)</li>
+<li>Optimized require_once() and include_once() by eliminating fopen(3) on second usage. (Dmitry)</li>
 <li>Optimized request shutdown sequence. Restoring ini directives now iterates only over modified directives instead of all. (Dmitry)</li>
 
 <li>Changed priority of PHPRC environment variable on win32 to be higher then value from registry. (Dmitry)</li>
@@ -13540,7 +13540,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li><?php bugfix(38637); ?> curl_copy_handle() fails to fully copy the cURL handle). (Tony, Ilia)</li>
 <li><?php bugfix(38624); ?> Strange warning when incrementing an object property and  exception is thrown from __get method). (Tony)</li>
 <li><?php bugfix(38623); ?> leaks in a tricky code with switch() and exceptions). (Dmitry)</li>
-<li><?php bugfix(38579); ?> require_once() may include the same file twice). (Dmitry)</li>
+<li><?php bugfix(38579); ?> include_once() may include the same file twice). (Dmitry)</li>
 <li><?php bugfix(38574); ?> missing curl constants and improper constant detection). (Ilia)</li>
 <li><?php bugfix(38543); ?> shutdown_executor() may segfault when memory_limit is too low). (Dmitry)</li>
 <li><?php bugfix(38535); ?> memory corruption in pdo_pgsql driver on error retrieval inside a failed query executed via query() method). (Ilia)</li>
@@ -14508,7 +14508,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li><?php bugfix(32933); ?> (Cannot extend class "SQLiteDatabase"). (Marcus)</li>
 <li><?php bugfix(32932); ?> (Oracle LDAP: ldap_get_entries(), invalid pointer). (Jani)</li>
 <li><?php bugfix(32930); ?> (class extending DOMDocument doesn't clone properly). (Rob)</li>
-<li><?php bugfix(32924); ?> (file included with "auto_prepend_file" can be included  with require_once() or require_once()). (Stas)</li>
+<li><?php bugfix(32924); ?> (file included with "auto_prepend_file" can be included  with require_once() or include_once()). (Stas)</li>
 <li><?php bugfix(32904); ?> (pg_get_notify() ignores result_type parameter). (Tony)</li>
 <li><?php bugfix(32852); ?> (Crash with singleton and __destruct when  zend.ze1_compatibility_mode = On). (Dmitry)</li>
 <li><?php bugfix(32833); ?> (Invalid opcode). (Dmitry)</li>
@@ -15695,7 +15695,7 @@ input filter.  support is used. (Derick)</li>
 <li>Changed rename(), rmdir() and mkdir() to be routed via streams
 API. (Sara)</li>
 <li>Changed stat() and family to be routed via streams API. (Sara)</li>
-<li>Fixed require_once() / require_once() on Windows to honor
+<li>Fixed include_once() / require_once() on Windows to honor
 case-insensitivity; of files. (Andi)</li>
 <li>Fixed get_declared_classes() to return only classes. (Andrey,
 Marcus)</li>
