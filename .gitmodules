@@ -1,3 +1,0 @@
-[submodule "distributions"]
-	path = distributions
-	url = git@github.com:php/web-php-distributions.git
