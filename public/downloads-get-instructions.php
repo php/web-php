@@ -68,8 +68,8 @@ if ($source) {
 $version = $options['version'];
 $versionNoDot = str_replace('.', '', $version);
 
-if (file_exists(__DIR__ . "/include/download-instructions/{$file}.php")) {
-    include __DIR__ . "/include/download-instructions/{$file}.php";
+if (file_exists(__DIR__ . "/../include/download-instructions/{$file}.php")) {
+    require __DIR__ . "/../include/download-instructions/{$file}.php";
     if ($source) {
         return false;
     }
