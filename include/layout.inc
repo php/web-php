@@ -3,6 +3,7 @@
 use phpweb\I18n\Languages;
 use phpweb\Navigation\NavItem;
 use phpweb\News\NewsHandler;
+use phpweb\ProjectGlobals;
 
 $_SERVER['STATIC_ROOT'] = $MYSITE;
 $_SERVER['MYSITE'] = $MYSITE;
@@ -95,7 +96,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
 
     // Get width and height values if possible
-    if ($addsize && ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file"))) {
+    if ($addsize && ($size = @getimagesize(ProjectGlobals::getPublicRoot() . "$dir/$file"))) {
         $sizeparams = ' ' . trim($size[3]);
     } else {
         $sizeparams = '';
@@ -564,12 +565,12 @@ function get_news_changes()
 }
 
 function doc_toc($lang): void {
-    $file = __DIR__ . "/../manual/$lang/toc/index.inc";
+    $file = ProjectGlobals::getPublicRoot() . "/manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
         $lang = "en"; // Fallback on English if the translation doesn't exist
-        $file = __DIR__ . "/../manual/en/toc/index.inc";
+        $file = ProjectGlobals::getPublicRoot() . "/manual/en/toc/index.inc";
     }
-    require __DIR__ . "/../manual/$lang/toc/index.inc";
+    require ProjectGlobals::getPublicRoot() . "/manual/$lang/toc/index.inc";
 
     echo "<dl>\n";
     doc_toc_list($lang, $TOC, "getting-started");
@@ -611,7 +612,7 @@ function doc_toc($lang): void {
 
 }
 function doc_toc_list($lang, $index, $file): void {
-    include __DIR__ . "/../manual/$lang/toc/$file.inc";
+    include ProjectGlobals::getPublicRoot() . "/manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
     foreach ($TOC as $entry) {
