@@ -1,8 +1,10 @@
 <?php
+
+use phpweb\Releases\Branches;
+
 $_SERVER['BASE_PAGE'] = 'eol.php';
 
 require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
 
 // Notes for specific branches can be added here, and will appear in the table.
 $BRANCH_NOTES = [
@@ -46,9 +48,9 @@ site_header('Unsupported Branches');
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_eol_branches() as $major => $branches): ?>
+		<?php foreach (Branches::eol() as $major => $branches): ?>
 			<?php foreach ($branches as $branch => $detail): ?>
-				<?php $eolDate = get_branch_security_eol_date($branch) ?>
+				<?php $eolDate = Branches::getBranchSecurityEOLDate($branch) ?>
 				<?php $eolPeriod = format_interval($eolDate, new DateTime('now')) ?>
 					<tr>
 						<td><?php echo htmlspecialchars($branch); ?></td>

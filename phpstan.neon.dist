@@ -19,3 +19,9 @@ parameters:
 			- include/releases.inc
 			- include/pregen-news.inc
 			- include/pregen-confs.inc
+
+	# Can do cleanup after, without the previous items themsleves being new errors
+	reportUnmatchedIgnoredErrors: false
+
+	editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
+	editorUrlTitle: '%%relFile%%:%%line%%'

@@ -1,8 +1,12 @@
 <?php
 
+use phpweb\Releases\Branches;
+
 header("Content-Type: application/atom+xml");
 
 require __DIR__ . "/../../include/version.inc";
+
+$RELEASES = Branches::getReleaseData();
 
 echo <<<XML
 <?xml version="1.0" encoding="UTF-8"?>

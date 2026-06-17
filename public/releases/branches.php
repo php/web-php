@@ -1,7 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../../include/prepend.inc';
-require_once __DIR__ . '/../../include/branches.inc';
+use phpweb\Releases\Branches;
+
+include_once __DIR__ . '/../include/prepend.inc';
 
 header('Content-Type: application/json; charset=UTF-8');
 
@@ -10,15 +11,15 @@ function formatDate($date = null) {
 }
 
 $current = [];
-foreach (get_all_branches() as $major => $releases) {
+foreach (Branches::all() as $major => $releases) {
     foreach ($releases as $branch => $release) {
         $current[$branch] = [
             'branch' => $branch,
-            'latest' => ($release['version'] ?? null),
-            'state' => get_branch_support_state($branch),
-            'initial_release' => formatDate(get_branch_release_date($branch)),
-            'active_support_end' => formatDate(get_branch_bug_eol_date($branch)),
-            'security_support_end' => formatDate(get_branch_security_eol_date($branch)),
+            'latest' => $release['version'],
+            'state' => Branches::getBranchSupportStatus($branch),
+            'initial_release' => formatDate(Branches::getBranchReleaseDate($branch)),
+            'active_support_end' => formatDate(Branches::getBranchBugsEOLDate($branch)),
+            'security_support_end' => formatDate(Branches::getBranchSecurityEOLDate($branch)),
         ];
     }
 }

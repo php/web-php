@@ -1,8 +1,10 @@
 <?php
+
+use phpweb\Releases\Branches;
+
 $_SERVER['BASE_PAGE'] = 'supported-versions.php';
 
 require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
 
 site_header('Supported Versions', ['css' => ['supported-versions.css']]);
 
@@ -51,14 +53,14 @@ $VERSION_NOTES = [
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_active_branches(false) as $major => $releases): ?>
+		<?php foreach (Branches::active(false) as $major => $releases): ?>
 			<?php ksort($releases) ?>
 			<?php foreach ($releases as $branch => $release): ?>
 				<?php
-                $state = get_branch_support_state($branch);
-                $initial = get_branch_release_date($branch);
-                $until = get_branch_bug_eol_date($branch);
-                $eol = get_branch_security_eol_date($branch);
+                $state = Branches::getBranchSupportStatus($branch);
+                $initial = Branches::getBranchReleaseDate($branch);
+                $until = Branches::getBranchBugsEOLDate($branch);
+                $eol = Branches::getBranchSecurityEOLDate($branch);
                 $now = new DateTime('now');
                 ?>
 				<tr class="<?php echo $state ?>">

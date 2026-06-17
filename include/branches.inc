@@ -1,5 +1,7 @@
 <?php
 
+use phpweb\Releases\Branches;
+
 include_once __DIR__ . '/releases.inc';
 include_once __DIR__ . '/version.inc';
 
@@ -10,37 +12,7 @@ include_once __DIR__ . '/version.inc';
  *    - stable:   the end of active support (usually two years after release).
  *    - security: the end of security support (usually release + 3 years).
  */
-$BRANCHES = [
-    /* 3.0 is here because version_compare() can't handle the only version in
-     * $OLDRELEASES, and it saves another special case in
-     * get_branch_security_eol_date(). */
-    '3.0' => [
-        'security' => '2000-10-20',
-    ],
-    '5.3' => [
-        'stable' => '2013-07-11',
-        'security' => '2014-08-14',
-    ],
-    '5.4' => [
-        'stable' => '2014-09-14',
-        'security' => '2015-09-03',
-    ],
-    '5.5' => [
-        'stable' => '2015-07-10',
-        'security' => '2016-07-21',
-    ],
-    '5.6' => [
-        'stable' => '2017-01-19',
-        'security' => '2018-12-31',
-    ],
-    '7.0' => [
-        'stable' => '2018-01-04',
-        'security' => '2019-01-10',
-    ],
-    '8.4' => [
-        'date' => '2024-11-21',
-    ],
-];
+$BRANCHES = require __DIR__ . '/branch-overrides.inc';
 
 /* Time to keep EOLed branches in the array returned by get_active_branches(),
  * which is used on the front page download links and the supported versions
@@ -98,6 +70,7 @@ function version_number_to_branch(string $version): ?string {
     return null;
 }
 
+#[Deprecated('Use Branches::get_all_branches()')]
 function get_all_branches() {
     $branches = [];
 
@@ -135,7 +108,8 @@ function get_all_branches() {
     return $branches;
 }
 
-function get_active_branches($include_recent_eols = true) {
+#[Deprecated('Use Branches::active()')]
+function get_active_branches(bool $include_recent_eols = true) {
     $branches = [];
     $now = new DateTime();
 
@@ -170,6 +144,7 @@ function get_active_branches($include_recent_eols = true) {
 /* If you provide an array to $always_include, note that the version numbers
  * must be in $RELEASES _and_ must be the full version number, not the branch:
  * ie provide array('5.3.29'), not array('5.3'). */
+#[Deprecated('Use Branches::eol()')]
 function get_eol_branches($always_include = null) {
     $always_include = $always_include ?: [];
     $branches = [];
@@ -246,6 +221,7 @@ function get_eol_branches($always_include = null) {
  * MAJOR.MINOR.REVISION (the REVISION will be ignored if provided). This will
  * return either null (if no release exists on the given branch), or the usual
  * version metadata from $RELEASES for a single release. */
+#[Deprecated('Use Branches::getInitialRelease')]
 function get_initial_release($branch) {
     $branch = version_number_to_branch($branch);
     if (!$branch) {
@@ -274,6 +250,7 @@ function get_initial_release($branch) {
     return null;
 }
 
+#[Deprecated('Use Branches::getFinalRelease')]
 function get_final_release($branch) {
     $branch = version_number_to_branch($branch);
     if (!$branch) {
@@ -305,6 +282,7 @@ function get_final_release($branch) {
     return null;
 }
 
+#[Deprecated('Use Branches::getBranchBugsEOLDate')]
 function get_branch_bug_eol_date($branch): ?DateTime
 {
     if (isset($GLOBALS['BRANCHES'][$branch]['stable'])) {
@@ -324,6 +302,7 @@ function get_branch_bug_eol_date($branch): ?DateTime
     return $date?->setDate($date->format('Y'), 12, 31);
 }
 
+#[Deprecated('Use Branches::getBranchSecurityEOLDate')]
 function get_branch_security_eol_date($branch): ?DateTime
 {
     if (isset($GLOBALS['BRANCHES'][$branch]['security'])) {
@@ -351,6 +330,7 @@ function get_branch_security_eol_date($branch): ?DateTime
     return $date?->setDate($date->format('Y'), 12, 31);
 }
 
+#[Deprecated('Use Branches::getBranchReleaseDate')]
 function get_branch_release_date($branch): ?DateTime
 {
     $initial = get_initial_release($branch);
@@ -358,6 +338,7 @@ function get_branch_release_date($branch): ?DateTime
     return isset($initial['date']) ? new DateTime($initial['date']) : null;
 }
 
+#[Deprecated('Use Branches::getBranchSupportState')]
 function get_branch_support_state($branch) {
     $initial = get_branch_release_date($branch);
     $bug = get_branch_bug_eol_date($branch);
@@ -399,7 +380,7 @@ function compare_version(array $arrayA, string $versionB)
     return 0;
 }
 
-function version_array(string $version, ?int $length = null)
+function version_array(string $version, ?int $length = null): mixed
 {
     $versionArray = array_map(
         'intval',
@@ -419,6 +400,7 @@ function version_array(string $version, ?int $length = null)
     return $versionArray;
 }
 
+#[Deprecated('Use Branches::getCurrentReleaseForBranch')]
 function get_current_release_for_branch(int $major, ?int $minor): ?string {
     global $RELEASES, $OLDRELEASES;
 
@@ -441,3 +423,80 @@ function get_current_release_for_branch(int $major, ?int $minor): ?string {
 
     return null;
 }
+
+
+// Get latest release version and info.
+/**
+ * @return array{mixed,mixed}
+ */
+function release_get_latest(): array {
+    $RELEASES = Branches::getReleaseData();
+
+    $version = '0.0.0';
+    $current = null;
+    foreach ($RELEASES as $versions) {
+        foreach ($versions as $ver => $info) {
+            if (version_compare($ver, $version) > 0) {
+                $version = $ver;
+                $current = $info;
+            }
+        }
+    }
+
+    return [$version, $current];
+}
+
+function show_source_releases(): void
+{
+    $RELEASES = Branches::getReleaseData();
+
+    $SHOW_COUNT = 4;
+
+    $current_uri = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
+
+    $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+    $releases = array_slice($major_releases, 0, $SHOW_COUNT);
+    ?>
+    <a id="v<?php echo $MAJOR; ?>"></a>
+    <?php foreach ($releases as $v => $a): ?>
+    <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
+    <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
+
+    <h3 id="v<?php echo $v; ?>" class="title">
+        <span class="release-state"><?php echo $stable; ?></span>
+        PHP <?php echo $v; ?>
+        (<a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog</a>)
+    </h3>
+    <div class="content-box">
+
+        <ul>
+            <?php foreach ($a['source'] as $rel): ?>
+                <li>
+                    <?php download_link($rel['filename'], $rel['filename']); ?>
+                    <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
+                    <?php
+                    if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
+                    if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
+                    ?>
+                    <?php if (isset($rel['note']) && $rel['note']): ?>
+                        <p>
+                            <strong>Note:</strong>
+                            <?php echo $rel['note']; ?>
+                        </p>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+            <li>
+                <a href="/downloads.php?os=windows&osvariant=windows-downloads&version=<?php echo urlencode($mver); ?>">
+                    Windows downloads
+                </a>
+            </li>
+        </ul>
+
+        <a href="<?php echo $current_uri; ?>#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
+    </div>
+<?php endforeach; ?>
+<?php endforeach; /* major releases loop end */ ?>
+    <?php
+}
+
