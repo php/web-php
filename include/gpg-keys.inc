@@ -1,5 +1,6 @@
 <?php
-require __DIR__ . '/branches.inc';
+
+use phpweb\Releases\Branches;
 
 // GPG keys used for signing releases.
 
@@ -224,7 +225,7 @@ function gpg_key_get_branches(bool $activeOnly): array {
 
     if (!$activeOnly) { return $branches; }
 
-    $active = get_active_branches();
+    $active = Branches::active();
     return array_filter($branches, function ($branch) use ($active) {
         [$major] = explode('.', $branch, 2);
         return isset($active[$major][$branch]);
