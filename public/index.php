@@ -1,6 +1,7 @@
 <?php
 
 use phpweb\News\NewsHandler;
+use phpweb\Releases\Branches;
 
 (function ($uri): void {
     // Special redirect cases not able to be captured in error.php
@@ -51,9 +52,7 @@ header("Last-Modified: " . $tsstring);
 
 $_SERVER['BASE_PAGE'] = 'index.php';
 require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
 require_once __DIR__ . '/../include/pregen-confs.inc';
-require_once __DIR__ . '/../include/version.inc';
 
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
 
@@ -92,7 +91,7 @@ $intro = <<<EOF
 EOF;
 
 $intro .= "<ul class='hero__versions'>\n";
-$active_branches = get_active_branches();
+$active_branches = Branches::active();
 krsort($active_branches);
 foreach ($active_branches as $major => $releases) {
     krsort($releases);

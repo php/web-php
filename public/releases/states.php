@@ -3,12 +3,11 @@
 # Please use /releases/branches.php instead.
 # This API *may* be removed at an indeterminate point in the future.
 
-use phpweb\ProjectGlobals;
+use phpweb\Releases\Branches;
 
 $_SERVER['BASE_PAGE'] = 'releases/active.php';
 
 require_once __DIR__ . '/../../include/prepend.inc';
-require_once ProjectGlobals::getPublicRoot() . '/include/branches.inc';
 
 header('Content-Type: application/json; charset=UTF-8');
 
@@ -18,14 +17,14 @@ function formatDate($date = null) {
     return $date !== null ? $date->format('c') : null;
 }
 
-foreach (get_all_branches() as $major => $releases) {
+foreach (Branches::all() as $major => $releases) {
     $states[$major] = [];
     foreach ($releases as $branch => $release) {
         $states[$major][$branch] = [
-            'state' => get_branch_support_state($branch),
-            'initial_release' => formatDate(get_branch_release_date($branch)),
-            'active_support_end' => formatDate(get_branch_bug_eol_date($branch)),
-            'security_support_end' => formatDate(get_branch_security_eol_date($branch)),
+            'state' => Branches::getBranchSupportStatus($branch),
+            'initial_release' => formatDate(Branches::getBranchReleaseDate($branch)),
+            'active_support_end' => formatDate(Branches::getBranchBugsEOLDate($branch)),
+            'security_support_end' => formatDate(Branches::getBranchSecurityEOLDate($branch)),
         ];
     }
     krsort($states[$major]);
