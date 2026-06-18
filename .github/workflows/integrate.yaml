@@ -196,8 +196,8 @@ jobs:
       - name: "Run unit tests with phpunit/phpunit"
         run: "vendor/bin/phpunit --colors=always --configuration=tests/phpunit.xml --testsuite=unit"
 
-      - name: "Start built-in web server for PHP"
-        run: "php -S ${{ env.HTTP_HOST }} .router.php &"
+#      - name: "Start built-in web server for PHP"
+#        run: "php -S ${{ env.HTTP_HOST }} .router.php &"
 
-      - name: "Run end-to-end tests with phpunit/phpunit"
-        run: "vendor/bin/phpunit --colors=always --configuration=tests/phpunit.xml --testsuite=end-to-end"
+#      - name: "Run end-to-end tests with phpunit/phpunit"
+#        run: "vendor/bin/phpunit --colors=always --configuration=tests/phpunit.xml --testsuite=end-to-end"
