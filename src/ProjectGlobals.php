@@ -13,6 +13,11 @@ class ProjectGlobals
             ?: throw new Error('Unable to locate project root');
     }
 
+    public static function getBackendRoot(): string
+    {
+        return self::getProjectRoot() . '/public/backend';
+    }
+
     public static function getPublicRoot(): string
     {
         return realpath(__DIR__ . '/../public')

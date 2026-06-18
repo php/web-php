@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     $response = [];
     $hash = substr(md5($_REQUEST['page']), 0, 16);
-    $notes_file = ProjectGlobals::getPublicRoot() . "/backend/notes/" . substr($hash, 0, 2) . "/$hash";
+    $notes_file = ProjectGlobals::getBackendRoot() . "/notes/" . substr($hash, 0, 2) . "/$hash";
     if (!file_exists($notes_file)) {
       $response["success"] = false;
       $response["msg"] = "Invalid request.";
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
       else {
         $hash = substr(md5($_REQUEST['page']), 0, 16);
-        $notes_file = ProjectGlobals::getPublicRoot(). "/backend/notes/" . substr($hash, 0, 2) . "/$hash";
+        $notes_file = ProjectGlobals::getBackendRoot(). "/notes/" . substr($hash, 0, 2) . "/$hash";
         if (file_exists($notes_file)) {
           $data = [
               "noteid" => $_REQUEST['id'],
