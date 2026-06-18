@@ -14,7 +14,7 @@ parameters:
 		analyse:
 			- vendor/
 			- include/download-instructions/
-			- var/
+			- var/ (?)
 			- public/manual/en
 			- include/releases.inc
 			- include/pregen-news.inc
