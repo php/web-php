@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\ProjectGlobals;
+
 $_SERVER['BASE_PAGE'] = 'qa.php';
 require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/release-qa.php';
@@ -114,7 +117,7 @@ whether no regressions have been introduced.
 
 <h2 id="windows">Windows Builds</h2>
 <?php
-$winQaFile = __DIR__ . '/backend/win-qa-releases.json';
+$winQaFile = ProjectGlobals::getBackendRoot() . '/win-qa-releases.json';
 $winQaBase = 'https://downloads.php.net/~windows/qa/';
 $winQaMessage = '';
 $winQaReleases = [];

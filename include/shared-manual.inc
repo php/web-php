@@ -97,7 +97,7 @@ END_USERNOTE_HEADER;
 function manual_notes_load(string $id): array
 {
     $hash = substr(md5($id), 0, 16);
-    $notes_file = ProjectGlobals::getPublicRoot() . "/backend/notes/" .
+    $notes_file = ProjectGlobals::getBackendRoot() . "/notes/" .
                   substr($hash, 0, 2) . "/$hash";
 
     // Open the note file for reading and get the data (12KB)

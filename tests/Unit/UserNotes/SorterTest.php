@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace phpweb\Test\Unit\UserNotes;
 
 use PHPUnit\Framework;
+use phpweb\ProjectGlobals;
 use phpweb\UserNotes\Sorter;
 use phpweb\UserNotes\UserNote;
 
@@ -98,7 +99,7 @@ final class SorterTest extends Framework\TestCase
 
     public function testSortSortsFullNotes(): void
     {
-        $file = file(__DIR__ . '/../../../public/backend/notes/d7/d7742c269d23ea86');
+        $file = file(ProjectGlobals::getBackendRoot() . '/notes/d7/d7742c269d23ea86');
 
         $notes = [];
 
