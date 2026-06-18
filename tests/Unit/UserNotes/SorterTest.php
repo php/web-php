@@ -98,7 +98,7 @@ final class SorterTest extends Framework\TestCase
 
     public function testSortSortsFullNotes(): void
     {
-        $file = file(__DIR__ . '/../../../backend/notes/d7/d7742c269d23ea86');
+        $file = file(__DIR__ . '/../../../public/backend/notes/d7/d7742c269d23ea86');
 
         $notes = [];
 
