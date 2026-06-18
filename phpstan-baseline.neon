@@ -1,418 +1,322 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function compare_version\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/1998.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function compare_version\(\) has parameter \$arrayA with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
-			path: archive/1999.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function format_interval\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2000.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function format_interval\(\) has parameter \$from with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2001.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_active_branches\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2002.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_active_branches\(\) has parameter \$include_recent_eols with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2003.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_all_branches\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2004.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_branch_bug_eol_date\(\) has parameter \$branch with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2005.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_branch_release_date\(\) has parameter \$branch with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2006.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_branch_security_eol_date\(\) has parameter \$branch with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2007.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_branch_support_state\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2008.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_branch_support_state\(\) has parameter \$branch with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2009.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_eol_branches\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2010.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_eol_branches\(\) has parameter \$always_include with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2011.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_final_release\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2012.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_final_release\(\) has parameter \$branch with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2013.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_initial_release\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2014.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_initial_release\(\) has parameter \$branch with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: archive/2015.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function version_array\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: archive/2016.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2017.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2018.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2019.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2020.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2021.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2022.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2023.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2024.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2025.php
-
-		-
-			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: archive/2026.php
-
-		-
-			message: '#^Variable \$cm might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: cal.php
-
-		-
-			message: '#^Variable \$cy might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: cal.php
-
-		-
-			message: '#^Variable \$MYSITE might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Parameter \#1 \$year of method DateTime\:\:setDate\(\) expects int, string given\.$#'
+			identifier: argument.type
 			count: 2
-			path: conferences/index.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$LANG might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Parameter \#3 \$length of function substr expects int\|null, int\<0, max\>\|false given\.$#'
+			identifier: argument.type
 			count: 2
-			path: docs.php
+			path: include/branches.inc
 
 		-
-			message: '#^Variable \$LANG might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function bugfix\(\) has parameter \$number with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: download-docs.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$MYSITE might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function bugl\(\) has parameter \$number with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: downloads.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$LANG might not be defined\.$#'
-			identifier: variable.undefined
-			count: 8
-			path: error.php
-
-		-
-			message: '#^Variable \$userPreferences might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function changelog_footer\(\) has parameter \$minor_versions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
-			path: error.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function changelog_header\(\) has parameter \$minor_versions with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
-			path: include/download-instructions/linux-debian-cli-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function githubissue\(\) has parameter \$number with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-debian-web-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/linux-docker-cli-community.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/linux-docker-web-community.php
-
-		-
-			message: '#^Variable \$multiversion might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function githubissue\(\) has parameter \$repo with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-fedora-cli-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function githubissuel\(\) has parameter \$number with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-fedora-cli-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$versionNoDot might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function githubissuel\(\) has parameter \$repo with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-fedora-cli-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$multiversion might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function githubsecurityl\(\) has parameter \$id with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-fedora-web-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function githubsecurityl\(\) has parameter \$repo with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-fedora-web-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$versionNoDot might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function implemented\(\) has parameter \$number with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-fedora-web-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$multiversion might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function peclbugfix\(\) has parameter \$number with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-redhat-cli-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function peclbugl\(\) has parameter \$number with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-redhat-cli-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$versionNoDot might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function release_date\(\) has parameter \$in with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-redhat-cli-community.php
+			path: include/changelogs.inc
 
 		-
-			message: '#^Variable \$multiversion might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function download_file\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-redhat-web-community.php
+			path: include/do-download.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function download_file\(\) has parameter \$mirror with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-redhat-web-community.php
+			path: include/do-download.inc
 
 		-
-			message: '#^Variable \$versionNoDot might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_actual_download_file\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: include/download-instructions/linux-redhat-web-community.php
+			path: include/do-download.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function get_actual_download_file\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/linux-ubuntu-cli-community.php
+			path: include/do-download.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function blacklisted\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: include/download-instructions/linux-ubuntu-web-community.php
+			path: include/email-validation.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/osx-docker-cli.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/osx-docker-web.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/osx-homebrew-php.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/osx-homebrew.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/osx-macports.php
-
-		-
-			message: '#^Variable \$versionNoDot might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/osx-macports.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function blacklisted\(\) has parameter \$email with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/windows-chocolatey.php
+			path: include/email-validation.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/windows-docker-cli.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: include/download-instructions/windows-docker-web.php
-
-		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function clean_AntiSPAM\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: include/download-instructions/windows-downloads.php
+			path: include/email-validation.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function clean_AntiSPAM\(\) has parameter \$email with no type specified\.$#'
+			identifier: missingType.parameter
 			count: 1
-			path: include/download-instructions/windows-native.php
+			path: include/email-validation.inc
 
 		-
-			message: '#^Variable \$versionNoDot might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Function is_emailable_address\(\) has no return type specified\.$#'
+			identifier: missingType.return
 			count: 1
-			path: include/download-instructions/windows-scoop-versions.php
+			path: include/email-validation.inc
 
 		-
-			message: '#^Variable \$version might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: include/download-instructions/windows-winget.php
+			message: '#^Function is_emailable_address\(\) has parameter \$email with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/email-validation.inc
+
+		-
+			message: '#^Comparison operation "\<" between int\<2, 3\> and 2 is always false\.$#'
+			identifier: smaller.alwaysFalse
+			count: 1
+			path: include/errors.inc
+
+		-
+			message: '#^Function error_inactive_manual_page\(\) has parameter \$en_page with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/errors.inc
+
+		-
+			message: '#^Function error_inactive_manual_page\(\) has parameter \$lang_name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/errors.inc
+
+		-
+			message: '#^Function error_nomirror\(\) has parameter \$mirror with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/errors.inc
+
+		-
+			message: '#^Parameter \#1 \$json of function json_decode expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/errors.inc
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
 			path: include/get-download.inc
+
+		-
+			message: '#^Function gpg_key_get_branches\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: include/gpg-keys.inc
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, float\|int\|string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/header.inc
 
 		-
 			message: '#^Variable \$CSS might not be defined\.$#'
@@ -463,10 +367,466 @@ parameters:
 			path: include/header.inc
 
 		-
+			message: '#^Function i2c_realip\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/ip-to-country.inc
+
+		-
 			message: '#^Variable \$userPreferences might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
 			path: include/langchooser.inc
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and 0\|0\.0\|''''\|array\{\}\|numeric\-string\|false\|null results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Cannot access offset ''fragment'' on array\{scheme\?\: string, host\?\: string, port\?\: int\<0, 65535\>, user\?\: string, pass\?\: string, path\?\: string, query\?\: string, fragment\?\: string\}\|false\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Cannot call method getTimestamp\(\) on DateTime\|false\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: include/layout.inc
+
+		-
+			message: '#^Cannot call method modify\(\) on DateTime\|false\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Comparison operation "\<" between int\<80400, 80500\> and 80300 is always false\.$#'
+			identifier: smaller.alwaysFalse
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function clean\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function clean\(\) has parameter \$var with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function clean_note\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function clean_note\(\) has parameter \$text with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function display_errors\(\) has parameter \$errors with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function display_event\(\) has parameter \$event with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function display_event\(\) has parameter \$include_date with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc\(\) has parameter \$lang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc_list\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc_list\(\) has parameter \$index with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc_list\(\) has parameter \$lang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc_title\(\) has parameter \$elm with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc_title\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc_title\(\) has parameter \$index with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function doc_toc_title\(\) has parameter \$lang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function download_link\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function download_link\(\) has parameter \$title with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function get_nav_items\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function get_news_changes\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function highlight_php\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function highlight_php\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function highlight_php\(\) has parameter \$return with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function highlight_php_trimmed\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function highlight_php_trimmed\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function highlight_php_trimmed\(\) has parameter \$return with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_image\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_image\(\) has parameter \$addsize with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_image\(\) has parameter \$align with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_image\(\) has parameter \$alt with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_image\(\) has parameter \$dir with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_image\(\) has parameter \$extras with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_image\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_popup_link\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_popup_link\(\) has parameter \$extras with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_popup_link\(\) has parameter \$linktext with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_popup_link\(\) has parameter \$target with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_popup_link\(\) has parameter \$url with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_popup_link\(\) has parameter \$windowprops with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_submit\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_submit\(\) has parameter \$align with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_submit\(\) has parameter \$alt with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_submit\(\) has parameter \$border with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_submit\(\) has parameter \$dir with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_submit\(\) has parameter \$extras with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function make_submit\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function news_image\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function news_image\(\) has parameter \$URL with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function news_image\(\) has parameter \$align with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function news_image\(\) has parameter \$alt with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function news_image\(\) has parameter \$image with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function news_image\(\) has parameter \$print with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_image\(\) has parameter \$align with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_image\(\) has parameter \$alt with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_image\(\) has parameter \$dir with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_image\(\) has parameter \$extras with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_image\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_news\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_news\(\) has parameter \$dog with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_news\(\) has parameter \$max with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_news\(\) has parameter \$news with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function print_news\(\) has parameter \$return with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function resize_image\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function resize_image\(\) has parameter \$height with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function resize_image\(\) has parameter \$img with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function resize_image\(\) has parameter \$width with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function site_footer\(\) has parameter \$config with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Function site_header\(\) has parameter \$config with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Parameter \#1 \(array\<string\>\|string\|null\) of echo cannot be converted to string\.$#'
+			identifier: echo.nonString
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 3
+			path: include/layout.inc
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, array\|float\|int\|string\|false\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/layout.inc
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
@@ -493,6 +853,126 @@ parameters:
 			path: include/layout.inc
 
 		-
+			message: '#^Binary operation "\.\=" between array\<string\>\|non\-empty\-string\|null and ''\.php'' results in an error\.$#'
+			identifier: assignOp.invalid
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function find_manual_page\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function find_manual_page\(\) has parameter \$keyword with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function find_manual_page\(\) has parameter \$lang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function find_manual_page_slow\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function find_manual_page_slow\(\) has parameter \$keyword with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function find_manual_page_slow\(\) has parameter \$lang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function tryprefix\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function tryprefix\(\) has parameter \$keyword with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function tryprefix\(\) has parameter \$lang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Function tryprefix\(\) has parameter \$prefix with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Parameter \#1 \$haystack of function strpos expects string, array\<string\>\|string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Parameter \#1 \$path of function pathinfo expects string, array\<string\>\|string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Parameter \#1 \$string of function strlen expects string, array\<string\>\|string\|null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Parameter \#1 \$string of function urldecode expects string, array\<string\>\|string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Part \$dasp \(array\<string\>\|string\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Part \$keyword \(array\<string\>\|string\|null\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Part \$nosp \(array\<string\>\|string\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Part \$noul \(array\<string\>\|string\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
+			message: '#^Part \$prefix \(0\|0\.0\|''''\|''0''\|array\{\}\|false\|null\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: include/manual-lookup.inc
+
+		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 2
@@ -505,145 +985,1723 @@ parameters:
 			path: include/mozsearch.inc
 
 		-
+			message: '#^Function posttohost\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/posttohost.inc
+
+		-
+			message: '#^Function posttohost\(\) has parameter \$data with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/posttohost.inc
+
+		-
+			message: '#^Function posttohost\(\) has parameter \$url with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/posttohost.inc
+
+		-
+			message: '#^Cannot access offset ''host'' on array\{scheme\?\: string, host\?\: string, port\?\: int\<0, 65535\>, user\?\: string, pass\?\: string, path\?\: string, query\?\: string, fragment\?\: string\}\|false\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: include/prepend.inc
+
+		-
+			message: '#^Comparison operation "\>" between 0 and 0 is always false\.$#'
+			identifier: greater.alwaysFalse
+			count: 1
+			path: include/release-qa.php
+
+		-
+			message: '#^Offset ''active'' on array\{active\: true, release\: array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…''\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…''\}\} in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.offset
+			count: 1
+			path: include/release-qa.php
+
+		-
+			message: '#^Offset ''baseurl'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…''\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…''\} in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.offset
+			count: 1
+			path: include/release-qa.php
+
+		-
+			message: '#^Offset ''bz2''\|''gz''\|''xz'' on non\-empty\-array\{bz2\?\: array\{sha256\: '''', path\?\: ''https\://downloads…''\}, gz\?\: array\{sha256\: '''', path\?\: ''https\://downloads…''\}, xz\?\: array\{sha256\: '''', path\?\: ''https\://downloads…''\}\} in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.offset
+			count: 1
+			path: include/release-qa.php
+
+		-
+			message: '#^Offset ''files'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…'', enabled\?\: false, \.\.\.\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…'', version\: ''8\.2\.27RC0''\|''8\.3\.31RC0''\|''8\.4\.22RC0''\|''8\.5\.7RC0'', \.\.\.\} in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.offset
+			count: 1
+			path: include/release-qa.php
+
+		-
+			message: '#^Offset ''number'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…'', enabled\: false\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…'', enabled\: false\} in empty\(\) always exists and is always falsy\.$#'
+			identifier: empty.offset
+			count: 1
+			path: include/release-qa.php
+
+		-
+			message: '#^Offset ''sha256_bz2''\|''sha256_gz''\|''sha256_xz'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…''\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…''\} in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.offset
+			count: 1
+			path: include/release-qa.php
+
+		-
+			message: '#^Right side of && is always true\.$#'
+			identifier: booleanAnd.rightAlwaysTrue
+			count: 2
+			path: include/release-qa.php
+
+		-
+			message: '#^Function autogen\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function contributors\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function contributors\(\) has parameter \$setup with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_footer\(\) has parameter \$setup with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_language_chooser\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_language_chooser\(\) has parameter \$currentlang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_language_chooser\(\) has parameter \$currentpage with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_breadcrumbs\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_breadcrumbs\(\) has parameter \$setup with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_deprecated\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_deprecated\(\) has parameter \$setup with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_methodname\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_methodname\(\) has parameter \$methodname with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_related\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_navigation_related\(\) has parameter \$setup with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_note_display\(\) has parameter \$voteOption with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function manual_setup\(\) has parameter \$setup with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Function relTime\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Parameter \#1 \$string of function chop expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Parameter \#6 \$text of class phpweb\\UserNotes\\UserNote constructor expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/shared-manual.inc
+
+		-
+			message: '#^Call to function method_exists\(\) with ''PDO'' and ''getavailabledrivers'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function default_language\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function default_language\(\) has parameter \$site with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function get_available_sqlites\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function get_manual_search_sections\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function get_shortname\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function get_shortname\(\) has parameter \$page with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function is_official_mirror\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function is_official_mirror\(\) has parameter \$site with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function is_primary_site\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function is_primary_site\(\) has parameter \$site with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_provider\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_provider\(\) has parameter \$site with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_provider_url\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_provider_url\(\) has parameter \$site with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_redirect\(\) has parameter \$absoluteURI with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_setcookie\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_setcookie\(\) has parameter \$content with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_setcookie\(\) has parameter \$exptime with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_setcookie\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_type\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function mirror_type\(\) has parameter \$site with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Offset ''de''\|''en''\|''es''\|''fr''\|''it''\|''ja''\|''pl''\|''pt_BR''\|''ro''\|''ru''\|''tr''\|''uk''\|''zh'' on array\{en\: ''English'', de\: ''German'', es\: ''Spanish'', fr\: ''French'', it\: ''Italian'', ja\: ''Japanese'', pl\: ''Polish'', pt_BR\: ''Brazilian Portuguese'', \.\.\.\} in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.offset
+			count: 1
+			path: include/site.inc
+
+		-
+			message: '#^Function release_get_latest\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/version.inc
+
+		-
+			message: '#^Function show_source_releases\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: include/version.inc
+
+		-
+			message: '#^Offset ''announcement'' on array\{version\: ''8\.2\.31'', date\: ''07 May 2026'', tags\: array\{''security''\}, sha256\: array\{''tar\.gz''\: ''083c2f61cc5f527eb29…'', ''tar\.bz2''\: ''948183fa04cf261c9b9…'', ''tar\.xz''\: ''95eae411d594fe6f6e5…''\}\}\|array\{version\: ''8\.3\.31'', date\: ''07 May 2026'', tags\: array\{''security''\}, sha256\: array\{''tar\.gz''\: ''4e7baaf0a690e954a20…'', ''tar\.bz2''\: ''e6986b1fd37eb254021…'', ''tar\.xz''\: ''66410cee07f4b2baeb0…''\}\}\|array\{version\: ''8\.4\.22'', date\: ''04 Jun 2026'', tags\: array\{\}, sha256\: array\{''tar\.gz''\: ''a012c2c9724baf214a7…'', ''tar\.bz2''\: ''4b16e7e2c384ce25e07…'', ''tar\.xz''\: ''696c0f6ad92e94c5905…''\}\}\|array\{version\: ''8\.5\.7'', date\: ''04 Jun 2026'', tags\: array\{\}, sha256\: array\{''tar\.gz''\: ''e5eba93fd6dd3241d0e…'', ''tar\.bz2''\: ''4ef9355f784d4b32015…'', ''tar\.xz''\: ''01ba2ed1c2658dacf91…''\}\} on left side of \?\? does not exist\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: include/version.inc
+
+		-
+			message: '#^Parameter \#3 \$length of function substr expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/version.inc
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/1998.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/1999.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2000.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2001.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2002.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2003.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2004.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2005.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2006.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2007.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2008.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2009.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2010.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2011.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2012.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2013.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2014.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2015.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2016.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2017.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2018.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2019.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2020.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2021.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2022.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2023.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2024.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2025.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/archive/2026.php
+
+		-
+			message: '#^Parameter \#1 \$filename of function filemtime expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cached.php
+
+		-
+			message: '#^Parameter \#1 \$filename of function readfile expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cached.php
+
+		-
+			message: '#^Parameter \#1 \$string of function substr expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 3
+			path: public/cached.php
+
+		-
+			message: '#^Parameter \#1 \$string1 of function strncmp expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cached.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cached.php
+
+		-
+			message: '#^Constant cal not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function date_for_recur\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function date_for_recur\(\) has parameter \$bom with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function date_for_recur\(\) has parameter \$day with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function date_for_recur\(\) has parameter \$eom with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function date_for_recur\(\) has parameter \$recur with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function display_events_for_day\(\) has parameter \$day with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function display_events_for_day\(\) has parameter \$events with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function load_event\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function load_event\(\) has parameter \$id with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function load_events\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function load_events\(\) has parameter \$from with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function load_events\(\) has parameter \$whole_month with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function phpdate not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function read_event\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function read_event\(\) has parameter \$fp with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function valid_year\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Function valid_year\(\) has parameter \$year with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlentities expects string, int\<min, \-1\>\|int\<1, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 14
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#3 \$year of function checkdate expects int, int\<min, \-1\>\|int\<1, max\>\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#4 \$month of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#5 \$day of function mktime expects int\|null, float\|int\<\-13, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, int\<min, \-1\>\|int\<1, max\>\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#6 \$year of function mktime expects int\|null, string given\.$#'
+			identifier: argument.type
+			count: 4
+			path: public/cal.php
+
+		-
+			message: '#^Variable \$cm might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Variable \$cy might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/cal.php
+
+		-
+			message: '#^Parameter \#1 \$object of function date_format expects DateTimeInterface, DateTime\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/conferences/index.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: public/conferences/index.php
+
+		-
+			message: '#^Offset 1 might not exist on array\{\}\|array\{non\-falsy\-string, string\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: public/credits.php
+
+		-
+			message: '#^Parameter \#2 \$subject of function preg_match expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/credits.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: public/docs.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\<0, max\>\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/download-docs.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/download-docs.php
+
+		-
+			message: '#^Function random_bgcolor\(\) has parameter \$max with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/download-logos.php
+
+		-
+			message: '#^Function random_bgcolor\(\) has parameter \$min with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/download-logos.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between ''Y'' and ''Y'' will always evaluate to true\.$#'
+			identifier: identical.alwaysTrue
+			count: 1
+			path: public/downloads-get-instructions.php
+
+		-
+			message: '#^Call to function array_key_exists\(\) with ''os'' and non\-empty\-array will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 2
+			path: public/downloads.php
+
+		-
+			message: '#^Call to function array_key_exists\(\) with ''osvariant'' and non\-empty\-array will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: public/downloads.php
+
+		-
+			message: '#^Call to function array_key_exists\(\) with ''version'' and non\-empty\-array will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: public/downloads.php
+
+		-
+			message: '#^Function option\(\) has parameter \$attributes with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/downloads.php
+
+		-
+			message: '#^Result of && is always true\.$#'
+			identifier: booleanAnd.alwaysTrue
+			count: 1
+			path: public/downloads.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/downloads.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 8
+			path: public/error.php
+
+		-
+			message: '#^Variable \$userPreferences might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: public/error.php
+
+		-
+			message: '#^Parameter \#1 \$json of function json_decode expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/images/elephpants.php
+
+		-
+			message: '#^Parameter \#1 \$string of function base64_encode expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/images/elephpants.php
+
+		-
+			message: '#^Function get_accepted_encodings\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/images/logo.php
+
+		-
+			message: '#^Function imgheader\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/images/logo.php
+
+		-
+			message: '#^Function imgheader\(\) has parameter \$filename with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/images/logo.php
+
+		-
+			message: '#^Function serve_compressed_if_available\(\) has parameter \$logo with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/images/logo.php
+
+		-
+			message: '#^Function branches_to_show\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/images/supported-versions.php
+
+		-
+			message: '#^Function date_horiz_coord\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/images/supported-versions.php
+
+		-
+			message: '#^Parameter \#1 \$object of function date_format expects DateTimeInterface, DateTime\|false given\.$#'
+			identifier: argument.type
+			count: 2
+			path: public/index.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/index.php
+
+		-
 			message: '#^Variable \$CONF_TEASER might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: index.php
+			path: public/index.php
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 5
-			path: index.php
+			path: public/index.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, int\<0, max\>\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/js/search-index.php
+
+		-
+			message: '#^Function output_lists_table\(\) has parameter \$mailing_lists with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/mailing-lists.php
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: mailing-lists.php
+			path: public/mailing-lists.php
 
 		-
 			message: '#^Variable \$LANG might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: manual-lookup.php
+			path: public/manual-lookup.php
+
+		-
+			message: '#^Argument of an invalid type list\<string\>\|false supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: public/manual/add-note.php
+
+		-
+			message: '#^Parameter \#4 \$ts of class phpweb\\UserNotes\\UserNote constructor expects string, int\<1, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/manual/add-note.php
 
 		-
 			message: '#^Variable \$LANG might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: manual/index.php
+			path: public/manual/index.php
+
+		-
+			message: '#^Function gen_challenge\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function gen_minus\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function gen_minus\(\) has parameter \$a with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function gen_plus\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function gen_plus\(\) has parameter \$a with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function minus\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function minus\(\) has parameter \$a with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function minus\(\) has parameter \$b with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function plus\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function plus\(\) has parameter \$a with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function plus\(\) has parameter \$b with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_infix\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_infix\(\) has parameter \$a with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_infix\(\) has parameter \$b with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_infix\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_prefix\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_prefix\(\) has parameter \$a with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_prefix\(\) has parameter \$b with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function print_prefix\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function test_answer\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function test_answer\(\) has parameter \$an with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function test_answer\(\) has parameter \$answer with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function test_answer\(\) has parameter \$bn with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
+
+		-
+			message: '#^Function test_answer\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/manual/spam_challenge.php
 
 		-
 			message: '#^Variable \$N might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: manual/vote-note.php
+			path: public/manual/vote-note.php
 
 		-
 			message: '#^Variable \$LAST_UPDATED might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: mirror-info.php
+			path: public/mirror-info.php
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: mirror-info.php
+			path: public/mirror-info.php
 
 		-
 			message: '#^Variable \$LAST_UPDATED might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: mirror.php
+			path: public/mirror.php
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: mirror.php
+			path: public/mirror.php
 
 		-
 			message: '#^Variable \$MIRRORS might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: my.php
+			path: public/my.php
 
 		-
 			message: '#^Variable \$userPreferences might not be defined\.$#'
 			identifier: variable.undefined
 			count: 11
-			path: my.php
+			path: public/my.php
+
+		-
+			message: '#^Offset ''format'' on non\-empty\-array\<mixed\> on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: public/pre-release-builds.php
+
+		-
+			message: '#^Parameter \#1 \$version1 of function version_compare expects string, TKey of int\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/pre-release-builds.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\<0, max\>\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/pre-release-builds.php
+
+		-
+			message: '#^Parameter \#2 \$version2 of function version_compare expects string, TKey of int\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/pre-release-builds.php
+
+		-
+			message: '#^Ternary operator condition is always true\.$#'
+			identifier: ternary.alwaysTrue
+			count: 1
+			path: public/pre-release-builds.php
 
 		-
 			message: '#^Variable \$QA_CHECKSUM_TYPES might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: pre-release-builds.php
+			path: public/pre-release-builds.php
 
 		-
 			message: '#^Variable \$QA_RELEASES might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: pre-release-builds.php
+			path: public/pre-release-builds.php
+
+		-
+			message: '#^Function quickref_table\(\) has parameter \$functions with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/quickref.php
+
+		-
+			message: '#^Function quickref_table\(\) has parameter \$sort with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/quickref.php
+
+		-
+			message: '#^Parameter \#1 \$dir_handle of function closedir expects resource\|null, resource\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/quickref.php
+
+		-
+			message: '#^Parameter \#1 \$dir_handle of function readdir expects resource\|null, resource\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/quickref.php
 
 		-
 			message: '#^Variable \$LANG might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: quickref.php
+			path: public/quickref.php
+
+		-
+			message: '#^Function releases\\php80\\message\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.0/common.php
+
+		-
+			message: '#^Function releases\\php80\\message\(\) has parameter \$language with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.0/common.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/8.0/common.php
+
+		-
+			message: '#^Function releases\\php81\\message\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.1/common.php
+
+		-
+			message: '#^Function releases\\php81\\message\(\) has parameter \$language with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.1/common.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/8.1/common.php
+
+		-
+			message: '#^Function releases\\php82\\message\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.2/common.php
+
+		-
+			message: '#^Function releases\\php82\\message\(\) has parameter \$language with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.2/common.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/8.2/common.php
+
+		-
+			message: '#^Function releases\\php83\\message\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.3/common.php
+
+		-
+			message: '#^Function releases\\php83\\message\(\) has parameter \$language with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.3/common.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/8.3/common.php
+
+		-
+			message: '#^Function releases\\php84\\message\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.4/common.php
+
+		-
+			message: '#^Function releases\\php84\\message\(\) has parameter \$language with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.4/common.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/8.4/common.php
+
+		-
+			message: '#^Function releases\\php85\\message\(\) has parameter \$code with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.5/common.php
+
+		-
+			message: '#^Function releases\\php85\\message\(\) has parameter \$interpolations with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/releases/8.5/common.php
+
+		-
+			message: '#^Function releases\\php85\\message\(\) has parameter \$language with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/8.5/common.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/8.5/common.php
+
+		-
+			message: '#^Function formatDate\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/releases/branches.php
+
+		-
+			message: '#^Function formatDate\(\) has parameter \$date with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/branches.php
+
+		-
+			message: '#^Parameter \#1 \.\.\.\$arg1 of function max expects non\-empty\-array, 0\|list\<\(int\|false\)\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/feed.php
+
+		-
+			message: '#^Parameter \#1 \.\.\.\$arg1 of function max expects non\-empty\-array, list\<\(int\|false\)\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/feed.php
 
 		-
 			message: '#^Variable \$RELEASES might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: releases/feed.php
+			path: public/releases/feed.php
+
+		-
+			message: '#^Function mk_rel\(\) has parameter \$announcement with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/releases/index.php
+
+		-
+			message: '#^Function mk_rel\(\) has parameter \$source with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/releases/index.php
+
+		-
+			message: '#^Function mk_rel\(\) has parameter \$windows with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: public/releases/index.php
+
+		-
+			message: '#^Parameter \#1 \.\.\.\$arg1 of function max expects non\-empty\-array, list\<int\|string\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/releases/index.php
 
 		-
 			message: '#^Variable \$OLDRELEASES might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: releases/index.php
+			path: public/releases/index.php
 
 		-
 			message: '#^Variable \$RELEASES might not be defined\.$#'
 			identifier: variable.undefined
 			count: 2
-			path: releases/index.php
+			path: public/releases/index.php
+
+		-
+			message: '#^Function formatDate\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: public/releases/states.php
+
+		-
+			message: '#^Function formatDate\(\) has parameter \$date with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/releases/states.php
 
 		-
 			message: '#^Variable \$LANG might not be defined\.$#'
 			identifier: variable.undefined
 			count: 2
-			path: search.php
+			path: public/search.php
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: search.php
+			path: public/search.php
+
+		-
+			message: '#^Cannot access offset ''host'' on array\{scheme\?\: string, host\?\: string, port\?\: int\<0, 65535\>, user\?\: string, pass\?\: string, path\?\: string, query\?\: string, fragment\?\: string\}\|false\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: public/submit-event.php
+
+		-
+			message: '#^Function display_options\(\) has parameter \$current with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/submit-event.php
+
+		-
+			message: '#^Function display_options\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/submit-event.php
+
+		-
+			message: '#^Offset ''email'' on non\-empty\-array\<mixed\> in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.offset
+			count: 1
+			path: public/submit-event.php
+
+		-
+			message: '#^Offset ''scheme'' might not exist on array\{scheme\?\: string, host\: non\-falsy\-string, port\?\: int\<0, 65535\>, user\?\: string, pass\?\: string, path\?\: string, query\?\: string, fragment\?\: string\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: public/submit-event.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 2
+			path: public/submit-event.php
 
 		-
 			message: '#^Variable \$COUNTRIES might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: submit-event.php
+			path: public/submit-event.php
+
+		-
+			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, float\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: public/supported-versions.php
+
+		-
+			message: '#^Possibly invalid array key type float\|string\.$#'
+			identifier: offsetAccess.invalidOffset
+			count: 1
+			path: public/supported-versions.php
 
 		-
 			message: '#^Variable \$COUNTRIES might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: thanks.php
+			path: public/thanks.php
 
 		-
 			message: '#^Variable \$historical_mirrors might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: thanks.php
+			path: public/thanks.php
+
+		-
+			message: '#^Function a\(\) has parameter \$href with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: public/urlhowto.php
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 19
-			path: urlhowto.php
+			path: public/urlhowto.php
+
+		-
+			message: '#^Method phpweb\\LangChooser\:\:chooseCode\(\) has parameter \$langParam with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/LangChooser.php
+
+		-
+			message: '#^Method phpweb\\News\\Entry\:\:ce\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Method phpweb\\News\\Entry\:\:ce\(\) has parameter \$attrs with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Method phpweb\\News\\Entry\:\:ce\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Method phpweb\\News\\Entry\:\:setCategories\(\) has parameter \$cats with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Property phpweb\\News\\Entry\:\:\$categories has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Property phpweb\\News\\Entry\:\:\$conf_time has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Property phpweb\\News\\Entry\:\:\$content has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Property phpweb\\News\\Entry\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Property phpweb\\News\\Entry\:\:\$image has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Property phpweb\\News\\Entry\:\:\$title has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/News/Entry.php
+
+		-
+			message: '#^Call to function is_array\(\) with null will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/News/NewsHandler.php
+
+		-
+			message: '#^Method phpweb\\News\\NewsHandler\:\:getLastestNews\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/News/NewsHandler.php
+
+		-
+			message: '#^Method phpweb\\News\\NewsHandler\:\:getPregeneratedNews\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/News/NewsHandler.php
+
+		-
+			message: '#^Method phpweb\\Themes\\FeatureComparison\:\:__construct\(\) has parameter \$links with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Themes/FeatureComparison.php
+
+		-
+			message: '#^Method phpweb\\Themes\\ReleasePage\:\:getCodeBlock\(\) has parameter \$links with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Themes/ReleasePage.php
+
+		-
+			message: '#^Offset 2 might not exist on array\{\}\|array\{non\-empty\-string, string, string, non\-empty\-string\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/Themes/ReleasePage.php
+
+		-
+			message: '#^Offset 3 might not exist on array\{\}\|array\{non\-empty\-string, string, string, non\-empty\-string\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/Themes/ReleasePage.php
+
+		-
+			message: '#^Method phpweb\\UserNotes\\Sorter\:\:calcSortPriority\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$ageFactor has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$ageWeight has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$maxAge has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$maxVote has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$minAge has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$minVote has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$ratingWeight has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$voteFactor has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Property phpweb\\UserNotes\\Sorter\:\:\$voteWeight has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UserNotes/Sorter.php
+
+		-
+			message: '#^Offset 0 on non\-empty\-list\<string\> on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: src/UserPreferences.php
+
+		-
+			message: '#^Parameter \#1 \$search of function str_replace expects array\<string\>\|string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/EndToEnd/SmokeTest.php
+
+		-
+			message: '#^Parameter \#2 \$options of function curl_setopt_array expects array\{19913\: bool, 10002\: non\-empty\-string\}, array\{19913\: true, 10002\: string\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/EndToEnd/SmokeTest.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function str_replace expects array\<string\>\|string, list\<string\>\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/EndToEnd/SmokeTest.php
+
+		-
+			message: '#^Method phpweb\\Test\\Unit\\I18n\\LanguagesTest\:\:languageCodeProvider\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/Unit/I18n/LanguagesTest.php
+
+		-
+			message: '#^Argument of an invalid type list\<string\>\|false supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: tests/Unit/UserNotes/SorterTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertSame\(\) with array\{110464\: array\{downvotes\: 2, id\: ''110464'', ts\: ''1351105628'', upvotes\: 10\}, 93816\: array\{downvotes\: 1, id\: ''93816'', ts\: ''1254343074'', upvotes\: 4\}, 92849\: array\{downvotes\: 1, id\: ''92849'', ts\: ''1249997359'', upvotes\: 4\}, 70394\: array\{downvotes\: 3, id\: ''70394'', ts\: ''1160823504'', upvotes\: 7\}, 106407\: array\{downvotes\: 2, id\: ''106407'', ts\: ''1320695958'', upvotes\: 5\}, 87868\: array\{downvotes\: 2, id\: ''87868'', ts\: ''1230396484'', upvotes\: 5\}, 82229\: array\{downvotes\: 1, id\: ''82229'', ts\: ''1207066654'', upvotes\: 3\}, 80363\: array\{downvotes\: 1, id\: ''80363'', ts\: ''1200066332'', upvotes\: 3\}, \.\.\.\} and array\<string, array\> will always evaluate to false\.$#'
+			identifier: staticMethod.impossibleType
+			count: 1
+			path: tests/Unit/UserNotes/SorterTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertSame\(\) with array\{2\: array\{downvotes\: 3, id\: ''3'', ts\: ''1508179844'', upvotes\: 14\}, 3\: array\{downvotes\: 3, id\: ''4'', ts\: ''1508179844'', upvotes\: 14\}, 1\: array\{downvotes\: 0, id\: ''2'', ts\: ''1508180150'', upvotes\: 0\}, 0\: array\{downvotes\: 2, id\: ''1'', ts\: ''1613487094'', upvotes\: 0\}\} and array\<string, array\> will always evaluate to false\.$#'
+			identifier: staticMethod.impossibleType
+			count: 1
+			path: tests/Unit/UserNotes/SorterTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertSame\(\) with array\{array\{downvotes\: 0, id\: ''1'', ts\: ''1613487094'', upvotes\: 0\}\} and array\<string, array\> will always evaluate to false\.$#'
+			identifier: staticMethod.impossibleType
+			count: 1
+			path: tests/Unit/UserNotes/SorterTest.php
+
+		-
+			message: '#^Method phpweb\\Test\\Unit\\UserNotes\\SorterTest\:\:normalize\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/Unit/UserNotes/SorterTest.php
+
+		-
+			message: '#^Parameter \#1 \$notes of method phpweb\\UserNotes\\Sorter\:\:sort\(\) expects array\<string, phpweb\\UserNotes\\UserNote\>, array\<int, phpweb\\UserNotes\\UserNote\> given\.$#'
+			identifier: argument.type
+			count: 2
+			path: tests/Unit/UserNotes/SorterTest.php
+
+		-
+			message: '#^Parameter \#6 \$text of class phpweb\\UserNotes\\UserNote constructor expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/Unit/UserNotes/SorterTest.php
