@@ -2533,24 +2533,6 @@ parameters:
 			path: src/News/Entry.php
 
 		-
-			message: '#^Call to function is_array\(\) with null will always evaluate to false\.$#'
-			identifier: function.impossibleType
-			count: 1
-			path: src/News/NewsHandler.php
-
-		-
-			message: '#^Method phpweb\\News\\NewsHandler\:\:getLastestNews\(\) return type has no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: src/News/NewsHandler.php
-
-		-
-			message: '#^Method phpweb\\News\\NewsHandler\:\:getPregeneratedNews\(\) return type has no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: src/News/NewsHandler.php
-
-		-
 			message: '#^Method phpweb\\Themes\\FeatureComparison\:\:__construct\(\) has parameter \$links with no value type specified in iterable type array\.$#'
 			identifier: missingType.iterableValue
 			count: 1

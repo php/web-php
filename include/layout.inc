@@ -542,7 +542,7 @@ function get_news_changes()
         return false;
     }
 
-    $date = date_create($lastNews["updated"]);
+    $date = date_create($lastNews["updated"] ?? $lastNews["published"]);
     if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
         return false;
     }
@@ -557,6 +557,8 @@ function get_news_changes()
 
     $date->modify("+1 week");
     if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
+        assert(isset($lastNews["link"][0]["href"]));
+
         $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $lastNews["link"][0]["href"]);
         $title = $lastNews["title"];
         return "<a href='{$link}'>{$title}</a>";

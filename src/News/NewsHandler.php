@@ -5,15 +5,42 @@ declare(strict_types=1);
 namespace phpweb\News;
 
 use DateTimeImmutable;
-
 use function array_filter;
 use function array_values;
+use function count;
 use function is_array;
 
+/**
+ * @phpstan-type NewsEntryStruct array{
+ *     title: string,
+ *     id: string,
+ *     published: string,
+ *     updated?: string,
+ *     link?: list<array{
+ *        href: string,
+ *        rel: string,
+ *        type?: string,
+ *     }>,
+ *     category: list<array{
+ *         term: string,
+ *         label: string,
+ *     }>,
+ *     newsImage?: array{
+ *         link: string,
+ *         content: string,
+ *     },
+ *     content: string,
+ *     intro?: string,
+ *     finalTeaserDate?: string,
+ * }
+ */
 final class NewsHandler
 {
     private const MAX_FRONT_PAGE_NEWS = 25;
 
+    /**
+     * @return NewsEntryStruct|null
+     */
     public function getLastestNews(): array|null
     {
         $news = $this->getPregeneratedNews();
@@ -24,45 +51,48 @@ final class NewsHandler
         return $news[0];
     }
 
-    /** @return list<array> */
-    public function getFrontPageNews(): array
+    /**
+     * @param list<string> $tags
+     * @return list<NewsEntryStruct>
+     */
+    public function getTaggedEntries(array $tags, ?int $limit = null): array
     {
-        $frontPage = [];
+        $entries = [];
         foreach ($this->getPregeneratedNews() as $entry) {
-            foreach ($entry['category'] as $category) {
-                if ($category['term'] !== 'frontpage') {
-                    continue;
-                }
-
-                $frontPage[] = $entry;
-                if (count($frontPage) >= self::MAX_FRONT_PAGE_NEWS) {
-                    break 2;
-                }
+            if (!self::isTagged($entry, $tags)) {
+                continue;
             }
-        }
 
-        return $frontPage;
-    }
-
-    /** @return list<array> */
-    public function getConferences(): array
-    {
-        $conferences = [];
-        foreach ($this->getPregeneratedNews() as $entry) {
-            foreach ($entry['category'] as $category) {
-                if ($category['term'] !== 'cfp' && $category['term'] !== 'conferences') {
-                    continue;
-                }
-
-                $conferences[] = $entry;
+            $entries[] = $entry;
+            if ($limit !== null && count($entries) >= $limit) {
                 break;
             }
         }
 
-        return $conferences;
+        return $entries;
     }
 
-    /** @return list<array> */
+    /**
+     *  Looks up generated news with frontpage tags.
+     *
+     * @return list<NewsEntryStruct>
+     */
+    public function getFrontPageNews(int $limit = self::MAX_FRONT_PAGE_NEWS): array
+    {
+        return $this->getTaggedEntries(['frontpage'], $limit);
+    }
+
+    /**
+     * @return list<NewsEntryStruct>
+     */
+    public function getConferences(?int $limit = null): array
+    {
+        return $this->getTaggedEntries(['cfp', 'conferences'], $limit);
+    }
+
+    /**
+     * @return list<NewsEntryStruct>
+     */
     public function getNewsByYear(int $year): array
     {
         return array_values(array_filter(
@@ -71,11 +101,32 @@ final class NewsHandler
         ));
     }
 
+    /**
+     * @return list<NewsEntryStruct>
+     */
     public function getPregeneratedNews(): array
     {
         $NEWS_ENTRIES = null;
         include __DIR__ . '/../../include/pregen-news.inc';
 
+        /** @phpstan-ignore-next-line - pregen-news sets global variable */
         return is_array($NEWS_ENTRIES) ? $NEWS_ENTRIES : [];
+    }
+
+    /**
+     * @param NewsEntryStruct $data
+     * @param list<string>|string $tags
+     */
+    public static function isTagged(array $data, array|string $tags): bool
+    {
+        $tags = is_array($tags) ? $tags : [$tags];
+
+        foreach ($data['category'] as $category) {
+            if (in_array($category['term'], $tags, true)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

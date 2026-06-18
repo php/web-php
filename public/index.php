@@ -61,7 +61,7 @@ $content = "<div class='home-content'>";
 foreach ((new NewsHandler())->getFrontPageNews() as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
-    $date = date_create($entry['updated']);
+    $date = date_create($entry['updated'] ?? $entry['published']);
     $date_human = date_format($date, 'd M Y');
     $date_w3c = date_format($date, DATE_W3C);
     $content .= <<<NEWSENTRY
