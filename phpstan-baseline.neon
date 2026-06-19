@@ -415,12 +415,6 @@ parameters:
 			path: include/layout.inc
 
 		-
-			message: '#^Comparison operation "\<" between int\<80400, 80500\> and 80300 is always false\.$#'
-			identifier: smaller.alwaysFalse
-			count: 1
-			path: include/layout.inc
-
-		-
 			message: '#^Function clean\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1

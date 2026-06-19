@@ -34,10 +34,6 @@ function highlight_php($code, $return = false)
 {
     $highlighted = highlight_string($code, true);
 
-    if (PHP_VERSION_ID < 80300) {
-        $highlighted = normalize_highlight_string($highlighted);
-    }
-
     // Fix output to use CSS classes
     $search = ['<code style="color: ', '<span style="color: '];
     $replace = ['<code class="', '<span class="'];

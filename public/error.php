@@ -9,6 +9,8 @@
 
 */
 
+use phpweb\Framework\Kernel\HttpKernel;
+use phpweb\Framework\Services\ServiceLocator;
 use phpweb\I18n\Languages;
 use phpweb\ProjectGlobals;
 use phpweb\UserPreferences;
@@ -21,6 +23,9 @@ require_once __DIR__ . '/../include/errors.inc';
 // See langchooser.inc for more info on STRIPPED_URI
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
 $queryString = $_SERVER['QUERY_STRING'] ?? '';
+
+/* this will exit processing if a response is provided */
+ServiceLocator::make()->get(HttpKernel::class)->handleErrorInteropEntry();
 
 // ============================================================================
 // Mozilla Search Sidebar plugin resource file handling (need to be mirror

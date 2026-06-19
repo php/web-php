@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../include/branches.inc';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/Framework/functions.php';
 
 /**
  * @see https://github.com/php-fig/fig-standards/blob/a1a0674a742c9d07c5dd450209fb33b115ee7b40/accepted/PSR-4-autoloader-examples.md#closure-example
