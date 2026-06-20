@@ -40,22 +40,23 @@ h3:after {
   display:none;
 }
 
-a:link,
-a:visited {
+a:not(.plaina):link,
+a:not(.plaina):visited {
   color: var(--background-text-color);
 }
 #layout-content a:link,
 #layout-content a:visited {
   color: #369;
 }
-a:hover,
-a:focus,
-#layout-content a:hover,
-#layout-content a:focus {
+a:not(.plaina):hover,
+a:not(.plaina):focus,
+#layout-content a:not(.plaina):hover,
+#layout-content a:not(.plaina):focus {
   color: var(--medium-magenta-color);
   border-color: var(--medium-magenta-color);
   outline:0;
 }
+
 
 
 ul {

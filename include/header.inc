@@ -7,6 +7,7 @@ $css_files = [
     '/fonts/Font-Awesome/css/fontello.css',
     '/styles/theme-base.css',
     '/styles/theme-medium.css',
+//    '/styles/theme-gst.css',
 ];
 
 if (isset($config['css'])) {
@@ -364,6 +365,7 @@ if (!isset($config["languages"])) {
 </div>
 <?php endif;?>
 
-
+<?php if (($config['include_section'] ?? true) === true) { ?>
 <div id="layout" class="clearfix">
   <section id="layout-content">
+<?php } ?>
