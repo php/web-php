@@ -1,4 +1,10 @@
-    </section><!-- layout-content -->
+
+<?php use phpweb\Themes\FooterRenderer;
+
+if (($config['include_section'] ?? true) === true) { ?>
+</section><!-- layout-content -->
+<?php } ?>
+
     <?php
     if (!empty($config['spanning-content'])) {
         echo "<div class='spanning-content'>";
@@ -59,7 +65,11 @@
 
   </div><!-- layout -->
 
-<?php if(!isset($config['footer']) || $config['footer']): ?>
+<?php if (($config['footer_style'] ?? '') === 'new') { ?>
+<div role="doc-footnote">
+    <?php FooterRenderer::renderFooter() ?>
+</div>
+<?php } else if(!isset($config['footer']) || $config['footer']): ?>
   <footer>
     <div class="container footer-content">
       <div class="row-fluid">
