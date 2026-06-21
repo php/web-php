@@ -1,213 +1,643 @@
 <?php
 
 use phpweb\News\NewsHandler;
+use phpweb\Releases\Branches;
+use phpweb\Releases\VersionLogos;
+use phpweb\Themes\ClickableCard;
+use phpweb\Themes\ThemeRenderer;
+
+require_once __DIR__ . '/../include/prepend.inc';
 
 (function ($uri): void {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [
-        '/?:' => '/language.operators.comparison#language.operators.comparison.ternary',
-        '/??' => '/language.operators.comparison#language.operators.comparison.coalesce',
-        '/??=' => '/language.operators.assignment#language.operators.assignment.other',
+            '/?:' => '/language.operators.comparison#language.operators.comparison.ternary',
+            '/??' => '/language.operators.comparison#language.operators.comparison.coalesce',
+            '/??=' => '/language.operators.assignment#language.operators.assignment.other',
     ];
     if (isset($shortcuts[$uri])) {
         header("Location: {$shortcuts[$uri]}");
         exit;
     }
-})($_SERVER['REQUEST_URI'] ?? '');
-
-// Get the modification date of this PHP file
-$timestamps = [@getlastmod()];
-
-/*
-   The date of prepend.inc represents the age of ALL
-   included files. Please touch it if you modify any
-   other include file (and the modification affects
-   the display of the index page). The cost of stat'ing
-   them all is prohibitive.
-*/
-$timestamps[] = @filemtime("include/prepend.inc");
-
-// These are the only dynamic parts of the frontpage
-$timestamps[] = @filemtime("include/pregen-confs.inc");
-$timestamps[] = @filemtime("include/pregen-news.inc");
-$timestamps[] = @filemtime("include/version.inc");
-$timestamps[] = @filemtime("js/common.js");
-
-// The latest of these modification dates is our real Last-Modified date
-$timestamp = max($timestamps);
-
-// Note that this is not a RFC 822 date (the tz is always GMT)
-$tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
-
-// Check if the client has the same page cached
-if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
-    ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring)) {
-    header("HTTP/1.1 304 Not Modified");
-    exit();
-}
-
-// Inform the user agent what is our last modification date
-header("Last-Modified: " . $tsstring);
-
-$_SERVER['BASE_PAGE'] = 'index.php';
-require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
-require_once __DIR__ . '/../include/pregen-confs.inc';
-require_once __DIR__ . '/../include/version.inc';
-
-mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
-
-$content = "<div class='home-content'>";
-foreach ((new NewsHandler())->getFrontPageNews() as $entry) {
-    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
-    $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
-    $date = date_create($entry['updated'] ?? $entry['published']);
-    $date_human = date_format($date, 'd M Y');
-    $date_w3c = date_format($date, DATE_W3C);
-    $content .= <<<NEWSENTRY
-<article class="newsentry">
-  <header class="title">
-    <time datetime="$date_w3c">$date_human</time>
-    <h2 class="newstitle">
-      <a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a>
-    </h2>
-  </header>
-  <div class="newscontent">
-    {$entry["content"]}
-  </div>
-</article>
-NEWSENTRY;
-}
-$content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';
-$content .= "</div>";
-
-$intro = <<<EOF
-  <div class="hero">
-    <img class="hero__logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
-    <p class="hero__text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
-    <div class="hero__actions">
-      <a href="/releases/8.5/index.php" class="hero__btn hero__btn--primary">What's new in 8.5</a>
-      <a href="/downloads.php" class="hero__btn hero__btn--secondary">Download</a>
-    </div>
-EOF;
-
-$intro .= "<ul class='hero__versions'>\n";
-$active_branches = get_active_branches();
-krsort($active_branches);
-foreach ($active_branches as $major => $releases) {
-    krsort($releases);
-    foreach ((array)$releases as $release) {
-        $version = $release['version'];
-        [$major, $minor, $_] = explode('.', $version);
-        $intro .= "
-            <li class='hero__version'><a class='hero__version-link' href='/downloads.php?version=$major.$minor'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
-    }
-}
-$intro .= "</ul>\n";
-$intro .= <<<EOF
-  </div>
-EOF;
-
-site_header(NULL,
-    [
-        'current' => 'home',
-        'headtags' => [
-            '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom">',
-            '<script>',
-            "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
-            "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='" . $MYSITE . "images/php_konami.gif'}});",
-            '</script>',
-        ],
-        'link' => [
-            [
-                "rel" => "search",
-                "type" => "application/opensearchdescription+xml",
-                "href" => $MYSITE . "phpnetimprovedsearch.src",
-                "title" => "Add PHP.net search",
-            ],
-            [
-                "rel" => "alternate",
-                "type" => "application/atom+xml",
-                "href" => $MYSITE . "releases/feed.php",
-                "title" => "PHP Release feed",
-            ],
-
-        ],
-        'css' => ['home.css'],
-        'intro' => $intro,
-    ],
+})(
+        $_SERVER['REQUEST_URI'] ?? ''
 );
 
-// Print body of home page.
-echo $content;
+/**
+ * @phpstan-import-type NormalizedReleaseStruct from Branches
+ */
+readonly class FrontPageController
+{
+    private ThemeRenderer $theme;
 
-// Prepare announcements.
-if (is_array($CONF_TEASER)) {
-    $conftype = [
-        'conference' => 'Upcoming conferences',
-        'cfp' => 'Conferences calling for papers',
-    ];
-    $announcements = "";
-    foreach ($CONF_TEASER as $category => $entries) {
-        if ($entries) {
-            $announcements .= '<div class="panel">';
-            $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] . '</a>';
-            $announcements .= '<div class="body"><ul>';
-            foreach (array_slice($entries, 0, 4) as $url => $title) {
-                $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", "$1", $title);
-                $announcements .= "<li><a href='$url' title='$title'>$title</a></li>";
-            }
-            $announcements .= '</ul></div>';
-            $announcements .= '</div>';
-        }
+    /** @return list<ClickableCard> */
+    private static function getLanguageDevelopmentCards(): array
+    {
+        return [
+            new ClickableCard(
+                title: 'PHP on Github',
+                href: 'https://github.com/php',
+                image: '/images/language-development/github_invertocat_white.svg',
+                body: 'Browse and contribute to the source code behind the PHP engine and infrastructure.',
+            ),
+            new ClickableCard(
+                title: 'RFCs / Language Proposals',
+                href: 'https://wiki.php.net/rfc',
+                image: '/images/language-development/rfcs.png',
+                body: 'Requests for Comments are the mechanism PHP internals uses to propose language changes.',
+            ),
+            new ClickableCard(
+                title: 'PHP Internals',
+                href: 'https://news-web.php.net/php.internals',
+                image: '/images/language-development/php-internals.png',
+                body: 'Browse discussions from PHP Internals mailing list about current and future enhancements.',
+            ),
+            new ClickableCard(
+                title: 'Get Involved',
+                href: '/get-involved.php',
+                image: '/images/language-development/get-involved.png',
+                body: 'Find ways to contribute to the PHP engine, documentation and more.',
+            ),
+            new ClickableCard(
+                title: 'Submit a Bug Report',
+                href: 'https://github.com/php/php-src/issues',
+                image: '/images/language-development/submit-bug-report.png',
+                body: 'Found a bug in the PHP runtime? Help us out by submitting it to our issue tracker.',
+            ),
+            new ClickableCard(
+                title: 'Documentation Translation',
+                href: 'https://doc.php.net/guide/',
+                image: '/images/language-development/documentation.png',
+                body: 'Help our team translate our documentation into multiple languages.',
+            ),
+        ];
     }
-} else {
-    $announcements = '';
+
+    /** @return list<ClickableCard> */
+    private static function getCommunityLinks(): array
+    {
+        return [
+            new ClickableCard(
+                title: 'Reddit',
+                href: 'https://www.reddit.com/r/PHP/',
+                image: '/images/community/reddit.png',
+                body: 'Reddit has an active PHP community discussing the language and its ecosystem.',
+            ),
+            new ClickableCard(
+                title: 'PHP Community (Discord)',
+                href: 'https://discord.phpc.social/',
+                image: '/images/community/phpc-discord.png',
+                body: 'Join thousands of users on Discord talking about PHP.',
+            ),
+            new ClickableCard(
+                title: 'Official Mailing Lists',
+                href: '/mailing-lists.php',
+                image: '/images/community/mailing-lists.png',
+                body: 'Help and guidance, as well as proposals & discussions on the future of the language.',
+            ),
+            new ClickableCard(
+                title: 'PHP Developers (Discord)',
+                href: 'https://discord.gg/php-developers-484326318851358720',
+                image: '/images/community/phpdevelopers-discord.webp',
+                body: 'Born in 2018, it is the first community on Discord dedicated to PHP developers. Open for both experts and apprentices.',
+            ),
+            new ClickableCard(
+                title: 'Libera.Chat',
+                href: 'https://libera.chat/',
+                image: '/images/community/libera.svg',
+                body: 'Providing a community platform for free and open-source software and peer directed projects..',
+            ),
+            new ClickableCard(
+                title: 'LinkedIn',
+                href: 'https://www.linkedin.com/search/results/content/?keywords=php',
+                image: '/images/community/linkedin.svg',
+                body: 'PHP related posts on the world\'s largest professional network.',
+            ),
+            new ClickableCard(
+                title: 'phpc.social (Mastodon)',
+                href: 'https://phpc.social/',
+                image: '/images/community/mastodon.svg',
+                body: 'A place for PHP programmers & friends to discuss topics related to the PHP programming language, frameworks, packages, tools, open source, tech, life, and more',
+            ),
+        ];
+    }
+
+    private const array HERO_TIPS = [
+        [
+            'title' => 'Fast & Modern',
+            'about' => 'PHP provides blistering fast performance and a modern developer-focused experience.',
+        ],
+        [
+            'title' => 'A Massive Ecosystem',
+            'about' => 'Leverage over 450,000 existing open source packages for your projects, along with powerful tooling.',
+        ],
+        [
+            'title' => 'An Established Community',
+            'about' => 'Millions of developers and businesses already use PHP to achieve their goals every day.',
+        ],
+    ];
+
+    public function __construct()
+    {
+        $this->theme = new ThemeRenderer();
+    }
+
+    public function render(): void
+    {
+        $latestReleases = [];
+        foreach (Branches::active(false) as $releases) {
+            foreach ($releases as $versionId => $release) {
+                $latestReleases[$versionId] = $release;
+            }
+        }
+
+        $latestReleases = array_reverse($latestReleases);
+        $latestRelease = array_shift($latestReleases);
+        assert($latestRelease !== null);
+
+        $conferenceCards =[];
+        $now = new DateTimeImmutable(); // ->sub(new DateInterval('P180D')); add this to include more for testing
+        foreach (new NewsHandler()->getConferences() as $conference) {
+            $cutoff = NewsHandler::parseTeaserCutoff($conference);
+            if (!$cutoff || $cutoff < $now) {
+                continue;
+            }
+
+            $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $conference["link"][0]["href"] ?? '');
+            if (!$link) {
+                continue;
+            }
+
+            $image = $conference['newsImage']['content'] ?? '';
+            if ($image) {
+                $image = '/images/news/' . $image;
+            }
+
+            $conferenceCards[] = new ClickableCard(
+                title: $conference['title'],
+                href: $link,
+                image: $image,
+                body: NewsHandler::extractTeaser($conference, 160),
+            );
+        }
+
+        site_header(null, $this->getHeaderConfig());
+        $this->drawStyles();
+
+        $this->drawSection('header gst-header-block', 'hero', function() {
+            ?>
+            <div class="lp-header">
+                <div style="flex: 999999 0 300px; display: flex;">
+                    <svg style="padding: 1em; width: 100%; height: 200px" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 100 50">
+                        <path d="m7.579 10.123 14.204 0c4.169 0.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-0.247 1.873-0.795 3.71-1.643 5.512-0.813 1.802-1.943 3.427-3.392 4.876-1.767 1.837-3.657 3.003-5.671 3.498-2.014 0.495-4.099 0.742-6.254 0.742l-6.36 0-2.014 10.07-7.367 0 7.579-38.001 0 0m6.201 6.042-3.18 15.9c0.212 0.035 0.424 0.053 0.636 0.053 0.247 0 0.495 0 0.742 0 3.392 0.035 6.219-0.3 8.48-1.007 2.261-0.742 3.781-3.321 4.558-7.738 0.636-3.71 0-5.848-1.908-6.413-1.873-0.565-4.222-0.83-7.049-0.795-0.424 0.035-0.83 0.053-1.219 0.053-0.353 0-0.724 0-1.113 0l0.053-0.053"/>
+                        <path d="m41.093 0 7.314 0-2.067 10.123 6.572 0c3.604 0.071 6.289 0.813 8.056 2.226 1.802 1.413 2.332 4.099 1.59 8.056l-3.551 17.649-7.42 0 3.392-16.854c0.353-1.767 0.247-3.021-0.318-3.763-0.565-0.742-1.784-1.113-3.657-1.113l-5.883-0.053-4.346 21.783-7.314 0 7.632-38.054 0 0"/>
+                        <path d="m70.412 10.123 14.204 0c4.169 0.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-0.247 1.873-0.795 3.71-1.643 5.512-0.813 1.802-1.943 3.427-3.392 4.876-1.767 1.837-3.657 3.003-5.671 3.498-2.014 0.495-4.099 0.742-6.254 0.742l-6.36 0-2.014 10.07-7.367 0 7.579-38.001 0 0m6.201 6.042-3.18 15.9c0.212 0.035 0.424 0.053 0.636 0.053 0.247 0 0.495 0 0.742 0 3.392 0.035 6.219-0.3 8.48-1.007 2.261-0.742 3.781-3.321 4.558-7.738 0.636-3.71 0-5.848-1.908-6.413-1.873-0.565-4.222-0.83-7.049-0.795-0.424 0.035-0.83 0.053-1.219 0.053-0.353 0-0.724 0-1.113 0l0.053-0.053"/>
+                    </svg>
+
+                </div>
+                <div style="flex: 1 1 450px">
+                    <?php foreach (self::HERO_TIPS as $tip) { ?>
+                        <div class="lp-header-promo">
+                            <div class="lp-header-title"><?= $this->safe($tip['title']) ?></div>
+                            <div class="lp-header-tagline"><?= $this->safe($tip['about']) ?></div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php
+//            echo $this->theme->clickableCards(self::getHeaderCards(), id: 'header-cards');
+        });
+
+        $this->drawSection('primary', 'releases', function() use ($latestRelease, $latestReleases) {
+            $this->drawLatestVersionHeader($latestRelease);
+            ?>
+
+            <div class="gst-cgrid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr))">
+                <?php foreach ($latestReleases as $release) { ?>
+                    <?php $this->drawSupportedMinorVersion($release); ?>
+                <?php } ?>
+            </div>
+            <?php
+        });
+
+        $this->drawSection('secondary', 'php-foundation', function() {
+            ?>
+            <div class="banner-container">
+                <div class="banner-graphic-container">
+                    <img src="https://web-php-revamp26-558551258802.europe-west4.run.app/images/logos/php-foundation.svg"
+                         alt="PHP Foundation Logo" />
+                </div>
+                <div class="banner-content">
+                    <div class="banner-content-highlight">
+                        The PHP Foundation is a collective of people and organizations,
+                        united in the mission to ensure the long-term prosperity of the PHP language.
+                    </div>
+
+                    <div class="banner-content-links">
+                        <a class="button-primary" target="_blank" href="https://thephp.foundation/">
+                            Learn About the PHP Foundation
+                        </a>
+                        &nbsp;·&nbsp;
+
+                        <a class="button-primary" target="_blank" href="https://opencollective.com/phpfoundation/contribute">
+                            Donate Via Open Collective
+                        </a>
+                        &nbsp;·&nbsp;
+
+                        <a class="button-primary" target="_blank" href="https://github.com/sponsors/ThePHPF">
+                            Donate Via GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php
+        });
+
+        $this->drawSection('primary', 'community', function() use ($conferenceCards): void {
+            echo $this->theme->sectionHeader(
+                title: 'Community',
+                subtitle: 'Find places to engage with other PHP users across the internet',
+            );
+
+            echo $this->theme->clickableCards(self::getCommunityLinks(), id: 'community-cards', shuffleLimit: 6);
+
+            if ($conferenceCards) {
+                echo $this->theme->sectionHeader(
+                    title: 'Events & Conferences',
+                );
+
+                echo $this->theme->clickableCards(
+                    cards: $conferenceCards,
+                    id: 'event-cards',
+                    shuffleLimit: 6,
+                    cssImage: 'gst-card-title-icon lp-conf-image-background',
+                );
+
+                ?>
+                <div class="gst-readable" style="text-align: center; margin-top: 1.5em">
+                    <a href="/conferences/">View more conferences</a>
+                </div>
+                <?php
+            }
+        });
+
+        $this->drawSection('secondary', 'composer', function() {
+            ?>
+            <div class="banner-container">
+                <div class="banner-graphic-container">
+                    <img src="https://web-php-revamp26-558551258802.europe-west4.run.app/images/logos/composer.png"
+                         alt="Composer Logo" />
+                </div>
+                <div class="banner-content">
+                    <div class="banner-content-highlight">
+                        PHP has one of the largest collections of open-source libraries in the world.
+                        <br /><br />
+
+                        Ranging from individual helpers to entire application frameworks, all packages are
+                        easily installable via the <em>Composer</em> package manager.
+                    </div>
+
+                    <div class="banner-content-links">
+                        <a class="button-primary" target="_blank" href="https://getcomposer.org/">
+                            Get Composer
+                        </a>
+                        &nbsp;·&nbsp;
+
+                        <a class="button-primary" target="_blank" href="https://packagist.org/">
+                            Browse Package Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php
+        });
+
+        $this->drawSection('primary', 'language-development', function() {
+            echo $this->theme->sectionHeader(
+                title: 'Language Development',
+                subtitle: 'It takes a broad effort to develop the PHP language',
+            );
+
+            echo $this->theme->clickableCards(self::getLanguageDevelopmentCards(), id: 'language-development-cards');
+        });
+
+        site_footer([
+            'footer_style' => 'new',
+            "atom" => "/feed.atom", // Add a link to the feed at the bottom
+        ]);
+    }
+
+
+    private function safe(string $content): string
+    {
+        return htmlspecialchars($content, ENT_QUOTES);
+    }
+
+    /**
+     * @param NormalizedReleaseStruct $release
+     */
+    private function drawLatestVersionHeader(array $release): void
+    {
+        [$major, $minor] = explode('.', $release['version']);
+        $versionId = $major . '.' . $minor;
+        $highlights = (require __DIR__ . '/../include/branch-highlights.inc')[$versionId]['features'] ?? [];
+
+        ?>
+        <div class="gst-theme-inverted gst-card gst-container">
+            <div class="gst-card-content">
+                <div class="lp-lrh">
+                    <div class="lp-lrh-left">
+                        <?= VersionLogos::getLogo($versionId, highlight: '#000000', style: 'width: 100%; height: 100px') ?>
+
+                        <?php $this->drawUnifiedVersionHeader($release) ?>
+
+                        <div style="width: 100%; margin-top: 1rem">
+                            <div class="lp-lhr-button-split">
+                                <a class="gst-chunky-btn plaina" href="/releases/<?= $versionId ?>/">Discover More</a>
+                                <a class="gst-chunky-btn plaina" href="/downloads.php?version=<?= $versionId ?>">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lp-lhr-highlights">
+                        <?php foreach ($highlights as $highlight) { ?>
+                        <div class="lp-lrh-highlight">
+                            <div class="lp-lrh-highlight-title"><?= $this->safe($highlight['title']) ?></div>
+                            <div class="lp-lrh-highlight-text"><?= $this->safe($highlight['about'] ?? $highlight['short'] ?? '') ?></div>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <?php
+    }
+
+    /**
+     * @param NormalizedReleaseStruct $release
+     */
+    private function drawUnifiedVersionHeader(array $release): void
+    {
+        $releaseId = $release['version'];
+        [$major, $minor, $patch] = explode('.', $releaseId);
+        $versionId = $major . '.' . $minor;
+
+        $timeLabel = function (string $label, ?DateTime $time): string {
+            return sprintf('<span><span style="font-weight: 500; margin-right: 0.5em">%s:</span>%s</span>',
+                    $label,
+                    $time ? $time->format('Y-m-d') : 'End  of  Life',
+            );
+        };
+
+        ?>
+        <div style="text-align: center">
+            <div>
+                <a href="/releases/<?= $major . '_' . $minor . '_' . $patch ?>.php"><?= $releaseId ?></a>
+                &nbsp;
+                <a href="/manual/migration<?= $major . $minor ?>">Migration Guide</a>
+            </div>
+            <div style="font-size: smaller; margin-top: 0.1rem">
+                <?= $timeLabel('Bugfixes', Branches::getBranchBugsEOLDate($versionId)) ?>
+                &nbsp;
+                &nbsp;
+                <?= $timeLabel('Security', Branches::getBranchSecurityEOLDate($versionId)) ?>
+            </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * @param NormalizedReleaseStruct $release
+     */
+    private function drawSupportedMinorVersion(array $release): void
+    {
+        [$major, $minor] = explode('.', $release['version']);
+        $versionId = $major . '.' . $minor;
+
+        $upgrades = (require __DIR__ . '/../include/branch-highlights.inc')[$versionId]['features'] ?? [];
+
+        ?>
+        <div class="gst-card gst-default-card gst-cgrid-card">
+            <div class="gst-card-content" style="display: flex; flex-direction: column; gap: 1.5em; padding-bottom: 0">
+                <div style="margin-top: 1em">
+                    <?= VersionLogos::getLogo($versionId, style: 'width: 100%; height: 70px; object-fit: contain') ?>
+                </div>
+
+                <div style="margin-left: auto; margin-right: auto">
+                    <?php $this->drawUnifiedVersionHeader($release) ?>
+                </div>
+
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 0.25em">Major Features:</div>
+                    <ul>
+                        <?php foreach ($upgrades as $idx => $upgrade) { ?>
+                            <li class="<?= $idx >= 2 ? 'hidden-phone': '' ?>"><?= $this->safe($upgrade['short'] ?? $upgrade['title'] ?? '')?></li>
+                        <?php } ?>
+                        <li>
+                            Plus much more...
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gst-card-footer lp-lhr-button-split" >
+                <a class="gst-chunky-btn plaina" href="/releases/<?= $versionId ?>/">Discover More</a>
+                <a class="gst-chunky-btn plaina" href="/downloads.php?version=<?= $versionId ?>">Download</a>
+            </div>
+        </div>
+        <?php
+    }
+
+    private function drawSection(string $template, string $id, Closure $contents): void
+    {
+        ?>
+        <div class="<?= "gst-theme-$template gst-container" ?>" id="<?= $this->safe($id) ?>">
+            <div class="gst-content-p-wide">
+                <?php $contents() ?>
+            </div>
+        </div>
+        <?php
+    }
+
+    private function drawStyles(): void
+    {
+        ?>
+        <style>
+            .no-transition * {
+                transition: none !important;
+            }
+
+            .lp-header {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1.5em;
+                align-items: center;
+            }
+
+            .lp-header-promo {
+                padding: 1em;
+            }
+
+            .lp-header-promo + .lp-header-promo {
+                border-top: 1px dashed #4a5568;
+            }
+
+            .lp-header-title {
+                font-size: larger;
+                margin-bottom: 0.25em;
+            }
+
+            .lp-header-tagline {
+                margin-bottom: 0;
+            }
+
+            .lp-lrh {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5em;
+                align-items: center;
+            }
+
+            .lp-lrh-left {
+                display: flex;
+                align-items: center;
+                flex: 1 0 300px;
+                flex-direction: column;
+                gap: 1.5em;
+            }
+
+            .lp-lhr-highlights {
+                flex: 1 1 300px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+                gap: 1.5em;
+            }
+
+            .lp-lhr-button-split {
+                display: grid;
+                gap: 1em;
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+
+            .lp-lhr-label {
+                font-size: smaller;
+                font-weight: bold;
+            }
+
+            .lp-lrh-highlight {
+                padding: 1em;
+                border-radius: 0.5em;
+                background: rgba(var(--gst-contrast-rgb), 0.05);
+                border: 1px solid color-mix(in srgb, currentColor 10%, transparent)
+            }
+
+            @media (max-width: 600px) {
+                .lp-lhr-highlights {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                .lp-lrh-highlight {
+                    background: none;
+                    border: 0;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+
+                .lp-lrh-highlight + .lp-lrh-highlight {
+                    border-top: 1px dashed color-mix(in srgb, currentColor 10%, transparent);
+                }
+            }
+
+            .lp-lrh-highlight-title {
+                font-size: smaller;
+                font-weight: 500;
+                margin-bottom: 0.25rem;
+            }
+
+            .lp-lrh-highlight-text {
+                font-size: smaller;
+            }
+
+            .banner-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5em;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: min(1100px, 100%);
+            }
+
+            .banner-graphic-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1 0 160px;
+            }
+
+            .banner-graphic-container img {
+                width: 160px;
+                aspect-ratio: 1;
+                object-fit: contain;
+                background: white;
+                border-radius: 0.5rem;
+            }
+
+            .banner-content {
+                flex: 999999 0 300px;
+            }
+
+            .banner-content-highlight {
+                font-size: 140%;
+                margin-bottom: 1rem;
+                line-height: 1.4;
+            }
+
+            .lp-conf-image-background {
+                background: white;
+                padding: 0.5em;
+            }
+        </style>
+        <?php
+    }
+
+    /**
+     * @return mixed[]
+     */
+    private function getHeaderConfig(): array
+    {
+        global $MYSITE;
+
+        return [
+            'include_section' => false,
+            'footer_style' => 'new',
+            'current' => 'home',
+            'css' => ['theme-gst.css', 'landing.css'],
+            'headtags' => [
+                '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom">',
+                '<script>',
+                "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
+                "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='" . $MYSITE . "images/php_konami.gif'}});",
+                '</script>',
+            ],
+            'link' => [
+                [
+                    "rel" => "search",
+                    "type" => "application/opensearchdescription+xml",
+                    "href" => $MYSITE . "phpnetimprovedsearch.src",
+                    "title" => "Add PHP.net search",
+                ],
+                [
+                    "rel" => "alternate",
+                    "type" => "application/atom+xml",
+                    "href" => $MYSITE . "releases/feed.php",
+                    "title" => "PHP Release feed",
+                ],
+            ],
+        ];
+    }
 }
 
-$SIDEBAR = <<<SIDEBAR_DATA
-
-    <div class='panel'>
-      <a href='https://thephp.foundation/' class='headline'>The PHP Foundation</a>
-      <div class='body'>
-        <p>The PHP Foundation is a collective of people and organizations, united in the mission to ensure the long-term prosperity of the PHP language.
-        <p><a href='https://thephp.foundation/donate/' target="_blank" rel="noopener noreferrer" class='btn btn-primary'>Donate</a></p>
-      </div>
-    </div>
-$announcements
-    <p class='panel'><a href='/cal.php'>User Group Events</a></p>
-    <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
-    <div class='panel social-media'>
-      <span class='headline'>Social media</span>
-      <div class='body'>
-        <ul>
-          <li>
-            <a href="https://twitter.com/official_php" target="_blank" rel="noopener noreferrer">
-              <i class="icon-x-twitter"></i>
-              @official_php
-            </a>
-          </li>
-          <li>
-            <a href="https://fosstodon.org/@php" target="_blank" rel="noopener noreferrer">
-              <i class="icon-mastodon"></i>
-              @php@fosstodon.org
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/phpnet" target="_blank" rel="noopener noreferrer">
-              <i class="icon-linkedin"></i>
-              @phpnet
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-SIDEBAR_DATA;
-
-// Print the common footer.
-site_footer([
-    "atom" => "/feed.atom", // Add a link to the feed at the bottom
-    'elephpants' => true,
-    'sidebar' => $SIDEBAR,
-]);
+new FrontPageController()->render();

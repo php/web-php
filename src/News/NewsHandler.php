@@ -9,6 +9,10 @@ use function array_filter;
 use function array_values;
 use function count;
 use function is_array;
+use function preg_match;
+use function str_replace;
+use function strip_tags;
+use function trim;
 
 /**
  * @phpstan-type NewsEntryStruct array{
@@ -128,5 +132,42 @@ final class NewsHandler
         }
 
         return false;
+    }
+
+    /**
+     * @param NewsEntryStruct $data
+     */
+    public static function parseTeaserCutoff(array $data): ?DateTimeImmutable
+    {
+        $finalTeaserDate = $data['finalTeaserDate'] ?? null;
+        if (!$finalTeaserDate) {
+            return null;
+        }
+
+        return new DateTimeImmutable($finalTeaserDate);
+    }
+
+    /**
+     * Attempts to get a single line of plain text that can be used to
+     * describe this news article.
+     *
+     * Tries to extract the top paragraph. In the future, if we add a plain
+     * text key, it can try for that first.
+     *
+     * @param NewsEntryStruct $data
+     */
+    public static function extractTeaser(array $data, int $maxLength = 160): string
+    {
+        if (preg_match('/<p>(.*?)<\/p>/s', $data['content'], $matches)) {
+            $content = trim(strip_tags(str_replace("\n", " ", trim($matches[1]))));
+
+            if (mb_strlen($content) > $maxLength) {
+                $content = mb_substr($content, 0, $maxLength) . '...';
+            }
+
+            return $content;
+        }
+
+        return '';
     }
 }
