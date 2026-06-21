@@ -34,11 +34,11 @@ class FooterRenderer
                         href: '/contact.php',
                         id: 'footer-contact',
                     ),
-//                new NavItem(
-//                    name: 'Other PHP.net sites',
-//                    href: '/sites.php',
-//                    id: 'footer-sites',
-//                ),
+                    new NavItem(
+                        name: 'Other PHP.net sites',
+                        href: '/sites.php',
+                        id: 'footer-sites',
+                    ),
                 ],
             ),
             new NavItem(
@@ -98,7 +98,7 @@ class FooterRenderer
     public static function renderFooter(): void
     {
         ?>
-        <div class="gst-primary gst-footer-block">
+        <footer class="gst-theme-footer gst-container gst-footer-block">
             <div class="gst-content-p-wide">
                 <div style="display: flex; gap: 3em; flex-wrap: wrap; align-items: center; font-size: 90%">
                     <div style="flex: 1 1 400px">
@@ -132,10 +132,10 @@ class FooterRenderer
                 </div>
 
                 <div style="text-align: center; font-size: 90%; margin-top: 2em">
-                    <a href="/site/policy/copyright">Copyright © 2001 - <?= idate('Y') ?> the PHP Group. All Rights Reserved.</a>
+                    <a href="/copyright.php">Copyright © 2001 - <?= idate('Y') ?> the PHP Group. All Rights Reserved.</a>
                 </div>
             </div>
-        </div>
+        </footer>
         <?php
     }
 }

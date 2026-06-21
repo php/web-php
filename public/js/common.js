@@ -879,3 +879,87 @@ function applyTheme(theme) {
 }
 
 applyTheme(savedTheme)
+
+const GstCardHelpers = {
+  shuffleImmutableArray: (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  },
+
+  shuffleDOMChildrenWithLimit: (parent, limit) => {
+    const children = Array.from(parent.children);
+    const replacements = GstCardHelpers.shuffleImmutableArray(children).slice(0, limit);
+
+    while (parent.children.length) {
+      parent.removeChild(parent.children[0]);
+    }
+
+    replacements.forEach(n => parent.appendChild(n));
+  },
+
+  dynamicAlignment: (parent, targetWidth) => {
+    parent.style.display = 'flex';
+    parent.style.flexWrap = 'wrap';
+    parent.style.justifyContent = 'center';
+
+    let resizeTimer;
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      // Instantly apply the class that kills transitions on children
+      // the transition is there for the hover effects but it makes it ugly when resizing
+      parent.classList.add('gst-no-transition');
+
+      // Clear previous timeout and set a new one to restore transitions
+      // 100ms after the resize completely stops.
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        parent.classList.remove('gst-no-transition');
+      }, 100);
+
+      for (const entry of entries) {
+        const containerWidth = entry.contentRect.width;
+        const children = Array.from(parent.children);
+        const itemCount = children.length;
+
+        // Prevent dividing by zero or calculating for empty containers
+        if (itemCount === 0 || containerWidth === 0) continue;
+
+        const computedStyle = window.getComputedStyle(parent);
+        const columnGap = parseFloat(computedStyle.columnGap) || 0;
+
+        // Calculate the max number of items that can theoretically fit in one row
+        let columnsPerRow = Math.floor((containerWidth + columnGap) / (targetWidth + columnGap));
+        if (columnsPerRow < 1) columnsPerRow = 1;
+
+        let itemWidth;
+
+        if (itemCount >= columnsPerRow) {
+          // We have enough items to completely fill at least one row.
+          // Calculate exact width needed to stretch across the full container.
+          const exactWidth = (containerWidth - (columnsPerRow - 1) * columnGap) / columnsPerRow;
+
+          // Subtract 0.5px margin of error to guarantee that browser rounding
+          // engines never accidentally push the final item onto the next row.
+          itemWidth = exactWidth - 0.5;
+        } else {
+          // We DO NOT have enough items to completely fill a single row.
+          // Constrain them to the targetWidth, clamping it if the container is tiny.
+          itemWidth = Math.min(targetWidth, containerWidth);
+        }
+
+        // Apply synchronously so it paints in the same frame
+        children.forEach((child) => {
+          child.style.boxSizing = 'border-box';
+          child.style.width = `${itemWidth}px`;
+          child.style.flex = `0 0 ${itemWidth}px`;
+        });
+      }
+    });
+
+    resizeObserver.observe(parent);
+  }
+};
