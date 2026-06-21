@@ -141,25 +141,44 @@ site_header(NULL,
 // Print body of home page.
 echo $content;
 
-// Prepare announcements.
-if (is_array($CONF_TEASER)) {
+// Prepare announcements from conferences.
+$conferences = (new NewsHandler())->getConferences();
+if ($conferences) {
+    $confsByCategory = [];
+    foreach ($conferences as $entry) {
+        foreach ($entry['category'] as $cat) {
+            if ($cat['term'] === 'conferences' || $cat['term'] === 'cfp') {
+                $confsByCategory[$cat['term']][] = $entry;
+                break;
+            }
+        }
+    }
     $conftype = [
-        'conference' => 'Upcoming conferences',
+        'conferences' => 'Upcoming conferences',
         'cfp' => 'Conferences calling for papers',
     ];
     $announcements = "";
-    foreach ($CONF_TEASER as $category => $entries) {
-        if ($entries) {
-            $announcements .= '<div class="panel">';
-            $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] . '</a>';
-            $announcements .= '<div class="body"><ul>';
-            foreach (array_slice($entries, 0, 4) as $url => $title) {
-                $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", "$1", $title);
-                $announcements .= "<li><a href='$url' title='$title'>$title</a></li>";
+    foreach ($confsByCategory as $category => $entries) {
+        $announcements .= '<div class="panel">';
+        $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] . '</a>';
+        $announcements .= '<div class="body"><ul>';
+        foreach (array_slice($entries, 0, 4) as $entry) {
+            $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", "$1", $entry['title']);
+            $link = $entry['newsImage']['link'] ?? preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry['id']);
+            $dateInfo = '';
+            if (!empty($entry['finalTeaserDate'])) {
+                $confDate = date_create($entry['finalTeaserDate']);
+                if ($confDate) {
+                    $dateInfo = ' <small>' . date_format($confDate, 'M j') . '</small>';
+                }
             }
-            $announcements .= '</ul></div>';
-            $announcements .= '</div>';
+            $announcements .= "<li><a href='" . htmlspecialchars($link) . "' title='" . htmlspecialchars($title) . "'>" . htmlspecialchars($title) . "</a>$dateInfo</li>";
         }
+        $announcements .= '</ul></div>';
+        if (count($entries) > 4) {
+            $announcements .= '<div class="body"><a href="/conferences">View all &raquo;</a></div>';
+        }
+        $announcements .= '</div>';
     }
 } else {
     $announcements = '';
