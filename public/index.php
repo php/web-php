@@ -3,6 +3,8 @@
 use phpweb\News\NewsHandler;
 use phpweb\Releases\Branches;
 use phpweb\Releases\VersionLogos;
+use phpweb\Themes\ClickableCard;
+use phpweb\Themes\ThemeRenderer;
 
 require_once __DIR__ . '/../include/prepend.inc';
 
@@ -21,184 +23,104 @@ require_once __DIR__ . '/../include/prepend.inc';
         $_SERVER['REQUEST_URI'] ?? ''
 );
 
-class FrontPageClickableCard
-{
-    public function __construct(
-        public string $title,
-        public string $href,
-        public string $href_label,
-        public string $image = '',
-        public string $body = '',
-    ) {
-    }
-}
-
 /**
  * @phpstan-import-type NormalizedReleaseStruct from Branches
  */
-class FrontPageController
+readonly class FrontPageController
 {
-    /** @return list<FrontPageClickableCard> */
-    private static function getHeaderCards(): array
-    {
-        return [
-            new FrontPageClickableCard(
-                title: 'Learn',
-                href: '/docs.php',
-                href_label: '',
-//                image: '/images/language-development/documentation.png', //'Browse Docs',
-                body: 'Browse the documentation, including extensive tutorials and guidance.',
-            ),
-            new FrontPageClickableCard(
-                title: 'Releases',
-                href: '#releases',
-                href_label: '',
-//                image: '/images/php8/logo_php8_5.svg', //'View Runtimes',
-                body: 'View currently supported PHP runtimes including download logs and highlight features.',
-            ),
-            new FrontPageClickableCard(
-                title: 'Community',
-                href: '#community',
-                href_label: '', //'Get Engaged',
-//                image: '/images/language-development/get-involved.png',
-                body: 'Get involved with the PHP Community via forums, live chat and conferences.',
-            ),
-            new FrontPageClickableCard(
-                title: 'Language Development',
-                href: '/#language-development',
-                href_label: '', //'Find Out More',
-                body: 'See how the PHP language works to evolve, and maybe even get involved yourself!',
-            ),
-        ];
-    }
+    private ThemeRenderer $theme;
 
-    /** @return list<FrontPageClickableCard> */
+    /** @return list<ClickableCard> */
     private static function getLanguageDevelopmentCards(): array
     {
         return [
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'PHP on Github',
                 href: 'https://github.com/php',
-                href_label: '', //'Visit GitHub',
                 image: '/images/language-development/github_invertocat_white.svg',
                 body: 'Browse and contribute to the source code behind the PHP engine and infrastructure.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'RFCs / Language Proposals',
                 href: 'https://wiki.php.net/rfc',
-                href_label: '', //'View Proposals',
                 image: '/images/language-development/rfcs.png',
                 body: 'Requests for Comments are the mechanism PHP internals uses to propose language changes.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'PHP Internals',
                 href: 'https://news-web.php.net/php.internals',
-                href_label: '', //'Browse Mailing List',
                 image: '/images/language-development/php-internals.png',
                 body: 'Browse discussions from PHP Internals mailing list about current and future enhancements.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'Get Involved',
                 href: '/get-involved.php',
-                href_label: '', //'Get Involved',
                 image: '/images/language-development/get-involved.png',
                 body: 'Find ways to contribute to the PHP engine, documentation and more.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'Submit a Bug Report',
                 href: 'https://github.com/php/php-src/issues',
-                href_label: '', //'Browse & Submit Issues',
                 image: '/images/language-development/submit-bug-report.png',
                 body: 'Found a bug in the PHP runtime? Help us out by submitting it to our issue tracker.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'Documentation Translation',
                 href: 'https://doc.php.net/guide/',
-                href_label: '', //'Learn About Translation',
                 image: '/images/language-development/documentation.png',
                 body: 'Help our team translate our documentation into multiple languages.',
             ),
         ];
     }
 
-    /** @return list<FrontPageClickableCard> */
+    /** @return list<ClickableCard> */
     private static function getCommunityLinks(): array
     {
         return [
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'Reddit',
                 href: 'https://www.reddit.com/r/PHP/',
-                href_label: '',
                 image: '/images/community/reddit.png',
                 body: 'Reddit has an active PHP community discussing the language and its ecosystem.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'PHP Community (Discord)',
                 href: 'https://discord.phpc.social/',
-                href_label: '',
                 image: '/images/community/phpc-discord.png',
                 body: 'Join thousands of users on Discord talking about PHP.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'Official Mailing Lists',
                 href: '/mailing-lists.php',
-                href_label: '',
                 image: '/images/community/mailing-lists.png',
                 body: 'Help and guidance, as well as proposals & discussions on the future of the language.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'PHP Developers (Discord)',
                 href: 'https://discord.gg/php-developers-484326318851358720',
-                href_label: '',
                 image: '/images/community/phpdevelopers-discord.webp',
                 body: 'Born in 2018, it is the first community on Discord dedicated to PHP developers. Open for both experts and apprentices.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'Libera.Chat',
                 href: 'https://libera.chat/',
-                href_label: '',
                 image: '/images/community/libera.svg',
                 body: 'Providing a community platform for free and open-source software and peer directed projects..',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'LinkedIn',
                 href: 'https://www.linkedin.com/search/results/content/?keywords=php',
-                href_label: '',
                 image: '/images/community/linkedin.svg',
                 body: 'PHP related posts on the world\'s largest professional network.',
             ),
-            new FrontPageClickableCard(
+            new ClickableCard(
                 title: 'phpc.social (Mastodon)',
                 href: 'https://phpc.social/',
-                href_label: '',
                 image: '/images/community/mastodon.svg',
                 body: 'A place for PHP programmers & friends to discuss topics related to the PHP programming language, frameworks, packages, tools, open source, tech, life, and more',
             ),
         ];
     }
-
-    private const array FOUNDATION_SPONSORS = [
-        ['name' => 'JetBrains', 'icon' => 'https://images.opencollective.com/jetbrains/fe76f99/logo.png'],
-        ['name' => 'Private Packagist', 'icon' => 'https://images.opencollective.com/packagist/2ac48ff/logo.png'],
-        ['name' => 'Cybozu', 'icon' => 'https://images.opencollective.com/cybozu/933e46d/logo.png'],
-        ['name' => 'Aternos GmbH', 'icon' => 'https://images.opencollective.com/aternos/5436b31/logo.png'],
-        ['name' => 'Mercari Inc.', 'icon' => 'https://images.opencollective.com/mercari/454ef50/logo.png'],
-        ['name' => 'pixiv Inc.', 'icon' => 'https://images.opencollective.com/user-ecfec7e5/2f4c2c4/logo.png'],
-        ['name' => 'SPY', 'icon' => 'https://images.opencollective.com/spy/261d722/logo.png'],
-        ['name' => 'Symfony Corp', 'icon' => 'https://images.opencollective.com/symfony-sas/b1f53fd/logo.png'],
-        ['name' => 'shopware AG', 'icon' => 'https://images.opencollective.com/stefan-hamann/2865d41/logo.png'],
-        ['name' => 'OP.GG', 'icon' => 'https://images.opencollective.com/opgg/7e44af2/logo.png'],
-        ['name' => 'Passbolt', 'icon' => 'https://images.opencollective.com/passbolt/2468aab/logo.png'],
-        ['name' => 'Spryker', 'icon' => 'https://images.opencollective.com/spryker/a634346/logo.png'],
-        ['name' => 'Digital Scholar', 'icon' => 'https://images.opencollective.com/digital-scholar/logo.png'],
-        ['name' => 'Cambium Learning, Inc.', 'icon' => 'https://images.opencollective.com/cambium-learning-inc/30c5f1c/logo.png'],
-        ['name' => 'Craft CMS', 'icon' => 'https://images.opencollective.com/craftcms/1fd28bf/logo.png'],
-        ['name' => 'GoDaddy.com', 'icon' => 'https://images.opencollective.com/godaddy/c37e587/logo.png'],
-        ['name' => 'Laravel', 'icon' => 'https://images.opencollective.com/laravel/4ad04b8/logo.png'],
-        ['name' => 'Livesport s.r.o.', 'icon' => 'https://images.opencollective.com/livesport-s-r-o/be081c5/logo.png'],
-        ['name' => 'Aligent Consulting', 'icon' => 'https://images.opencollective.com/aligent-consulting/ee7abd9/logo.png'],
-        ['name' => 'Moodle', 'icon' => 'https://images.opencollective.com/moodle/141a57d/logo.png'],
-    ];
 
     private const array HERO_TIPS = [
         [
@@ -215,6 +137,11 @@ class FrontPageController
         ],
     ];
 
+    public function __construct()
+    {
+        $this->theme = new ThemeRenderer();
+    }
+
     public function render(): void
     {
         $latestReleases = [];
@@ -228,18 +155,44 @@ class FrontPageController
         $latestRelease = array_shift($latestReleases);
         assert($latestRelease !== null);
 
-        $conferences =[];
+        $conferenceCards =[];
+        $now = new DateTimeImmutable(); // ->sub(new DateInterval('P180D')); add this to include more for testing
         foreach (new NewsHandler()->getConferences() as $conference) {
+            $cutoff = NewsHandler::parseTeaserCutoff($conference);
+            if (!$cutoff || $cutoff < $now) {
+                continue;
+            }
 
+            $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $conference["link"][0]["href"] ?? '');
+            if (!$link) {
+                continue;
+            }
+
+            $image = $conference['newsImage']['content'] ?? '';
+            if ($image) {
+                $image = '/images/news/' . $image;
+            }
+
+            $conferenceCards[] = new ClickableCard(
+                title: $conference['title'],
+                href: $link,
+                image: $image,
+                body: NewsHandler::extractTeaser($conference, 160),
+            );
         }
 
         site_header(null, $this->getHeaderConfig());
         $this->drawStyles();
 
-        $this->drawSection('primary', 'hero', function() {
+        $this->drawSection('header gst-header-block', 'hero', function() {
             ?>
             <div class="lp-header">
-                <div style="flex: 999999 0 400px">
+                <div style="flex: 999999 0 300px; display: flex;">
+                    <svg style="padding: 1em; width: 100%; height: 200px" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 100 50">
+                        <path d="m7.579 10.123 14.204 0c4.169 0.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-0.247 1.873-0.795 3.71-1.643 5.512-0.813 1.802-1.943 3.427-3.392 4.876-1.767 1.837-3.657 3.003-5.671 3.498-2.014 0.495-4.099 0.742-6.254 0.742l-6.36 0-2.014 10.07-7.367 0 7.579-38.001 0 0m6.201 6.042-3.18 15.9c0.212 0.035 0.424 0.053 0.636 0.053 0.247 0 0.495 0 0.742 0 3.392 0.035 6.219-0.3 8.48-1.007 2.261-0.742 3.781-3.321 4.558-7.738 0.636-3.71 0-5.848-1.908-6.413-1.873-0.565-4.222-0.83-7.049-0.795-0.424 0.035-0.83 0.053-1.219 0.053-0.353 0-0.724 0-1.113 0l0.053-0.053"/>
+                        <path d="m41.093 0 7.314 0-2.067 10.123 6.572 0c3.604 0.071 6.289 0.813 8.056 2.226 1.802 1.413 2.332 4.099 1.59 8.056l-3.551 17.649-7.42 0 3.392-16.854c0.353-1.767 0.247-3.021-0.318-3.763-0.565-0.742-1.784-1.113-3.657-1.113l-5.883-0.053-4.346 21.783-7.314 0 7.632-38.054 0 0"/>
+                        <path d="m70.412 10.123 14.204 0c4.169 0.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-0.247 1.873-0.795 3.71-1.643 5.512-0.813 1.802-1.943 3.427-3.392 4.876-1.767 1.837-3.657 3.003-5.671 3.498-2.014 0.495-4.099 0.742-6.254 0.742l-6.36 0-2.014 10.07-7.367 0 7.579-38.001 0 0m6.201 6.042-3.18 15.9c0.212 0.035 0.424 0.053 0.636 0.053 0.247 0 0.495 0 0.742 0 3.392 0.035 6.219-0.3 8.48-1.007 2.261-0.742 3.781-3.321 4.558-7.738 0.636-3.71 0-5.848-1.908-6.413-1.873-0.565-4.222-0.83-7.049-0.795-0.424 0.035-0.83 0.053-1.219 0.053-0.353 0-0.724 0-1.113 0l0.053-0.053"/>
+                    </svg>
 
                 </div>
                 <div style="flex: 1 1 450px">
@@ -252,10 +205,10 @@ class FrontPageController
                 </div>
             </div>
             <?php
-            $this->drawClickableCards(self::getHeaderCards(), id: 'header-cards');
+//            echo $this->theme->clickableCards(self::getHeaderCards(), id: 'header-cards');
         });
 
-        $this->drawSection('secondary', 'releases', function() use ($latestRelease, $latestReleases) {
+        $this->drawSection('primary', 'releases', function() use ($latestRelease, $latestReleases) {
             $this->drawLatestVersionHeader($latestRelease);
             ?>
 
@@ -267,7 +220,7 @@ class FrontPageController
             <?php
         });
 
-        $this->drawSection('primary', 'php-foundation', function() {
+        $this->drawSection('secondary', 'php-foundation', function() {
             ?>
             <div class="banner-container">
                 <div class="banner-graphic-container">
@@ -300,23 +253,35 @@ class FrontPageController
             <?php
         });
 
-        $this->drawSection('secondary', 'community', function(): void {
-            $this->drawSectionTitle(
-                    title: 'Community',
-                    subtitle: 'Find places to engage with other PHP users across the internet',
+        $this->drawSection('primary', 'community', function() use ($conferenceCards): void {
+            echo $this->theme->sectionHeader(
+                title: 'Community',
+                subtitle: 'Find places to engage with other PHP users across the internet',
             );
 
-            $this->drawClickableCards(self::getCommunityLinks(), id: 'community-cards', shuffleLimit: 6);
+            echo $this->theme->clickableCards(self::getCommunityLinks(), id: 'community-cards', shuffleLimit: 6);
 
-            $this->drawSectionTitle(
+            if ($conferenceCards) {
+                echo $this->theme->sectionHeader(
                     title: 'Events & Conferences',
-                    subtitle: 'Events & Conferences',
-            );
+                );
 
-            $this->drawClickableCards(self::getCommunityLinks(), id: 'event-cards', shuffleLimit: 6);
+                echo $this->theme->clickableCards(
+                    cards: $conferenceCards,
+                    id: 'event-cards',
+                    shuffleLimit: 6,
+                    cssImage: 'gst-card-title-icon lp-conf-image-background',
+                );
+
+                ?>
+                <div class="gst-readable" style="text-align: center; margin-top: 1.5em">
+                    <a href="/conferences/">View more conferences</a>
+                </div>
+                <?php
+            }
         });
 
-        $this->drawSection('primary', 'composer', function() {
+        $this->drawSection('secondary', 'composer', function() {
             ?>
             <div class="banner-container">
                 <div class="banner-graphic-container">
@@ -347,13 +312,13 @@ class FrontPageController
             <?php
         });
 
-        $this->drawSection('secondary', 'language-development', function() {
-            $this->drawSectionTitle(
-                    title: 'Language Development',
-                    subtitle: 'It takes a broad effort to develop the PHP language',
+        $this->drawSection('primary', 'language-development', function() {
+            echo $this->theme->sectionHeader(
+                title: 'Language Development',
+                subtitle: 'It takes a broad effort to develop the PHP language',
             );
 
-            $this->drawClickableCards(self::getLanguageDevelopmentCards(), id: 'language-development-cards');
+            echo $this->theme->clickableCards(self::getLanguageDevelopmentCards(), id: 'language-development-cards');
         });
 
         site_footer([
@@ -368,6 +333,9 @@ class FrontPageController
         return htmlspecialchars($content, ENT_QUOTES);
     }
 
+    /**
+     * @param NormalizedReleaseStruct $release
+     */
     private function drawLatestVersionHeader(array $release): void
     {
         [$major, $minor] = explode('.', $release['version']);
@@ -375,24 +343,39 @@ class FrontPageController
         $highlights = (require __DIR__ . '/../include/branch-highlights.inc')[$versionId]['features'] ?? [];
 
         ?>
-        <div class="lp-lrh">
-            <div class="lp-lrh-left">
-                <?= VersionLogos::getLogo($versionId, highlight: '#000000', style: 'width: 100%; height: 100px') ?>
+        <div class="gst-theme-inverted gst-card gst-container">
+            <div class="gst-card-content">
+                <div class="lp-lrh">
+                    <div class="lp-lrh-left">
+                        <?= VersionLogos::getLogo($versionId, highlight: '#000000', style: 'width: 100%; height: 100px') ?>
 
-                <?php $this->drawUnifiedVersionHeader($release) ?>
-            </div>
-            <div class="lp-lhr-highlights">
-                <?php foreach ($highlights as $highlight) { ?>
-                <div class="lp-lrh-highlight">
-                    <div class="lp-lrh-highlight-title"><?= $this->safe($highlight['title']) ?></div>
-                    <div class="lp-lrh-highlight-text"><?= $this->safe($highlight['about'] ?? $highlight['short'] ?? '') ?></div>
+                        <?php $this->drawUnifiedVersionHeader($release) ?>
+
+                        <div style="width: 100%; margin-top: 1rem">
+                            <div class="lp-lhr-button-split">
+                                <a class="gst-chunky-btn plaina" href="/releases/<?= $versionId ?>/">Discover More</a>
+                                <a class="gst-chunky-btn plaina" href="/downloads.php?version=<?= $versionId ?>">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lp-lhr-highlights">
+                        <?php foreach ($highlights as $highlight) { ?>
+                        <div class="lp-lrh-highlight">
+                            <div class="lp-lrh-highlight-title"><?= $this->safe($highlight['title']) ?></div>
+                            <div class="lp-lrh-highlight-text"><?= $this->safe($highlight['about'] ?? $highlight['short'] ?? '') ?></div>
+                        </div>
+                        <?php } ?>
+                    </div>
                 </div>
-                <?php } ?>
             </div>
         </div>
+        <br />
         <?php
     }
 
+    /**
+     * @param NormalizedReleaseStruct $release
+     */
     private function drawUnifiedVersionHeader(array $release): void
     {
         $releaseId = $release['version'];
@@ -434,7 +417,7 @@ class FrontPageController
         $upgrades = (require __DIR__ . '/../include/branch-highlights.inc')[$versionId]['features'] ?? [];
 
         ?>
-        <div class="gst-card gst-cgrid-card">
+        <div class="gst-card gst-default-card gst-cgrid-card">
             <div class="gst-card-content" style="display: flex; flex-direction: column; gap: 1.5em; padding-bottom: 0">
                 <div style="margin-top: 1em">
                     <?= VersionLogos::getLogo($versionId, style: 'width: 100%; height: 70px; object-fit: contain') ?>
@@ -447,77 +430,27 @@ class FrontPageController
                 <div>
                     <div style="font-weight: bold; margin-bottom: 0.25em">Major Features:</div>
                     <ul>
-                        <?php foreach ($upgrades as $upgrade) { ?>
-                            <li><?= $this->safe($upgrade['short'] ?? $upgrade['title'] ?? '')?></li>
+                        <?php foreach ($upgrades as $idx => $upgrade) { ?>
+                            <li class="<?= $idx >= 2 ? 'hidden-phone': '' ?>"><?= $this->safe($upgrade['short'] ?? $upgrade['title'] ?? '')?></li>
                         <?php } ?>
+                        <li>
+                            Plus much more...
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="gst-card-footer" style="display: flex; gap: 1em; flex-wrap: wrap; padding-top: 0">
-                <a style="flex: 1 1; padding: 1em" class="gst-card-chunky-btn" href="/releases/<?= $versionId ?>/">Discover More</a>
-                <a style="flex: 1 1; padding: 1em" class="gst-card-chunky-btn" href="/downloads.php?version=<?= $versionId ?>">Download</a>
+            <div class="gst-card-footer lp-lhr-button-split" >
+                <a class="gst-chunky-btn plaina" href="/releases/<?= $versionId ?>/">Discover More</a>
+                <a class="gst-chunky-btn plaina" href="/downloads.php?version=<?= $versionId ?>">Download</a>
             </div>
         </div>
-        <?php
-    }
-
-    /**
-     * @param FrontPageClickableCard[] $cards
-     * @return void
-     */
-    private function drawClickableCards(array $cards, int $width = 340, string $id = '', ?int $shuffleLimit = null): void
-    {
-        ?>
-        <div class="gst-cgrid"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(<?= $width ?>px, 1fr));)"
-            id="<?= $id ?>"
-        >
-            <?php foreach ($cards as $card) { ?>
-                <div class="gst-cgrid-card gst-card gst-navcard">
-                    <div style="position: absolute; top: 0; right: 0; padding-top: 0.25em; padding-right: 0.25em">
-                        <svg class="gst-navcard-indicator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160C96 124.7 124.7 96 160 96L480 96zM368 360C368 373.3 378.7 384 392 384C405.3 384 416 373.3 416 360L416 248C416 234.7 405.3 224 392 224L280 224C266.7 224 256 234.7 256 248C256 261.3 266.7 272 280 272L334.1 272L231.1 375C221.7 384.4 221.7 399.6 231.1 408.9C240.5 418.2 255.7 418.3 265 408.9L368 305.9L368 360z"/></svg>
-                    </div>
-                    <div class="gst-card-title">
-                        <?php if ($card->image) { ?>
-                            <img src="<?= $this->safe($card->image) ?>"
-                                 style="width: 64px; height: 64px; border-radius: 0.25em; object-fit: contain"
-                                 aria-hidden="true" alt=""/>
-                        <?php } ?>
-
-                        <div role="heading" id="<?= $id ?>-title-text" class="gst-navcard-title-text" style="flex: 1 0 200px">
-                            <a class="plaina gst-navcard-title-link" href="<?= $this->safe($card->href) ?>"><?= $this->safe($card->title) ?></a>
-                        </div>
-                    </div>
-                    <div class="gst-card-content" id="<?= $id ?>-content-text">
-                        <?= $this->safe($card->body) ?>
-                    </div>
-
-                    <?php if ($card->href_label) { ?>
-                    <div class="gst-card-footer">
-                        <span class="gst-navcard-btn"><?= $this->safe($card->href_label) ?></span>
-                    </div>
-                    <?php } ?>
-                </div>
-            <?php } ?>
-        </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const parent = document.querySelector('#<?= $id ?>');
-
-                <?php if ($shuffleLimit !== null) { ?>
-                shuffleDOMChildrenWithLimit(parent, <?= $shuffleLimit ?>);
-                <?php } ?>
-
-                dynamicAlignment(parent, <?= $width ?>);
-            });
-        </script>
         <?php
     }
 
     private function drawSection(string $template, string $id, Closure $contents): void
     {
         ?>
-        <div class="<?= "gst-$template gst-$template-container" ?>" id="<?= $this->safe($id) ?>">
+        <div class="<?= "gst-theme-$template gst-container" ?>" id="<?= $this->safe($id) ?>">
             <div class="gst-content-p-wide">
                 <?php $contents() ?>
             </div>
@@ -525,111 +458,9 @@ class FrontPageController
         <?php
     }
 
-    private function drawSectionTitle(string $title, string $subtitle = ''): void
-    {
-        ?>
-        <div class="gst-section-title">
-            <div role="heading" style="font-size: 40px; line-height: 1.2"><?= $this->safe($title) ?></div>
-
-            <?php if (!empty($subtitle)) { ?>
-                <div style="margin-top: 0.75em; font-size: 20px; font-weight: 500;">
-                    <?= $this->safe($subtitle) ?>
-                </div>
-            <?php } ?>
-        </div>
-        <?php
-    }
-
     private function drawStyles(): void
     {
         ?>
-        <script type="text/javascript">
-            function shuffleImmutableArray(array) {
-                const newArray = [...array];
-                for (let i = newArray.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-                }
-                return newArray;
-            }
-
-            function shuffleDOMChildrenWithLimit(parent, limit) {
-                const children = Array.from(parent.children);
-                const  replacements = shuffleImmutableArray(children).slice(0, limit);
-
-                while (parent.children.length) {
-                    parent.removeChild(parent.children[0]);
-                }
-
-                replacements.forEach(n => parent.appendChild(n));
-            }
-
-            function dynamicAlignment(parent, targetWidth)
-            {
-                parent.style.display = 'flex';
-                parent.style.flexWrap = 'wrap';
-                parent.style.justifyContent = 'center';
-
-                let resizeTimer;
-
-                const resizeObserver = new ResizeObserver((entries) => {
-                    // Instantly apply the class that kills transitions on children
-                    parent.classList.add('no-transition');
-
-                    // Clear previous timeout and set a new one to restore transitions
-                    // 100ms after the resize completely stops.
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(() => {
-                        parent.classList.remove('no-transition');
-                    }, 100);
-
-                    for (const entry of entries) {
-                        const containerWidth = entry.contentRect.width;
-                        const children = Array.from(parent.children);
-                        const itemCount = children.length;
-
-                        // Prevent dividing by zero or calculating for empty containers
-                        if (itemCount === 0 || containerWidth === 0) continue;
-
-                        const computedStyle = window.getComputedStyle(parent);
-                        const columnGap = parseFloat(computedStyle.columnGap) || 0;
-
-                        // Calculate the max number of items that can theoretically fit in one row
-                        let columnsPerRow = Math.floor((containerWidth + columnGap) / (targetWidth + columnGap));
-                        if (columnsPerRow < 1) columnsPerRow = 1;
-
-                        let itemWidth;
-
-                        if (itemCount >= columnsPerRow) {
-                            // We have enough items to completely fill at least one row.
-                            // Calculate exact width needed to stretch across the full container.
-                            const exactWidth = (containerWidth - (columnsPerRow - 1) * columnGap) / columnsPerRow;
-
-                            // Subtract 0.5px margin of error to guarantee that browser rounding
-                            // engines never accidentally push the final item onto the next row.
-                            itemWidth = exactWidth - 0.5;
-                        } else {
-                            // We DO NOT have enough items to completely fill a single row.
-                            // Constrain them to the targetWidth, clamping it if the container is tiny.
-                            itemWidth = Math.min(targetWidth, containerWidth);
-                        }
-
-                        // Apply synchronously so it paints in the same frame
-                        children.forEach((child) => {
-                            child.style.boxSizing = 'border-box';
-                            child.style.width = `${itemWidth}px`;
-                            child.style.flex = `0 0 ${itemWidth}px`;
-                        });
-                    }
-                });
-
-                resizeObserver.observe(parent);
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                shuffleDOMChildrenWithLimit(document.querySelector('#community-cards'), 6);
-            });
-        </script>
         <style>
             .no-transition * {
                 transition: none !important;
@@ -640,7 +471,7 @@ class FrontPageController
                 flex-direction: row;
                 flex-wrap: wrap;
                 gap: 1.5em;
-                margin-bottom: 2em;
+                align-items: center;
             }
 
             .lp-header-promo {
@@ -661,19 +492,10 @@ class FrontPageController
             }
 
             .lp-lrh {
-                background: #4F5B93;
-                border-radius: var(--gst-card-radius);
-                padding: 2em;
-                margin-bottom: 1.5em;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 1.5em;
                 align-items: center;
-                color: white;
-
-                & a {
-                    color: white;;
-                }
             }
 
             .lp-lrh-left {
@@ -691,6 +513,12 @@ class FrontPageController
                 gap: 1.5em;
             }
 
+            .lp-lhr-button-split {
+                display: grid;
+                gap: 1em;
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+
             .lp-lhr-label {
                 font-size: smaller;
                 font-weight: bold;
@@ -701,6 +529,25 @@ class FrontPageController
                 border-radius: 0.5em;
                 background: rgba(var(--gst-contrast-rgb), 0.05);
                 border: 1px solid color-mix(in srgb, currentColor 10%, transparent)
+            }
+
+            @media (max-width: 600px) {
+                .lp-lhr-highlights {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                .lp-lrh-highlight {
+                    background: none;
+                    border: 0;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+
+                .lp-lrh-highlight + .lp-lrh-highlight {
+                    border-top: 1px dashed color-mix(in srgb, currentColor 10%, transparent);
+                }
             }
 
             .lp-lrh-highlight-title {
@@ -726,6 +573,7 @@ class FrontPageController
             .banner-graphic-container {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 flex: 1 0 160px;
             }
 
@@ -745,6 +593,11 @@ class FrontPageController
                 font-size: 140%;
                 margin-bottom: 1rem;
                 line-height: 1.4;
+            }
+
+            .lp-conf-image-background {
+                background: white;
+                padding: 0.5em;
             }
         </style>
         <?php
