@@ -6,11 +6,6 @@ use phpweb\Utils;
 
 class ThemeRenderer
 {
-    private function safe(string|int|float $value): string
-    {
-        return htmlspecialchars((string)$value);
-    }
-
     /**
      * @param ClickableCard[] $cards
      */
@@ -22,7 +17,7 @@ class ThemeRenderer
         string $cssClass = 'gst-default-card',
         string $cssImage = 'gst-card-title-icon',
     ): string {
-        return Utils::bufferOutput(function() use ($cards, $width, $id, $shuffleLimit, $cssClass, $cssImage) { ?>
+        return Utils::bufferOutput(function () use ($cards, $width, $id, $shuffleLimit, $cssClass, $cssImage): void { ?>
             <ul class="gst-cgrid" style="grid-template-columns: repeat(auto-fit, minmax(<?= $width ?>px, 1fr));)" id="<?= $id ?>">
                 <?php foreach ($cards as $card) { ?>
                     <li class="gst-cgrid-card gst-card gst-navcard <?= $cssClass ?> gst-apply-theme">
@@ -69,7 +64,7 @@ class ThemeRenderer
 
     public function sectionHeader(string $title, string $subtitle = ''): string
     {
-        return Utils::bufferOutput(function() use ($title, $subtitle) { ?>
+        return Utils::bufferOutput(function () use ($title, $subtitle): void { ?>
             <hgroup class="gst-section-title">
                 <h2><?= $this->safe($title) ?></h2>
 
@@ -79,5 +74,10 @@ class ThemeRenderer
             </hgroup>
             <?php
         });
+    }
+
+    private function safe(string|int|float $value): string
+    {
+        return htmlspecialchars((string)$value);
     }
 }
