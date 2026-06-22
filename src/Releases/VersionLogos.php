@@ -9,30 +9,6 @@ use function str_replace;
  */
 class VersionLogos
 {
-    private const array MAPPING = [
-        '8.1' => self::LOGO_81,
-        '8.2' => self::LOGO_82,
-        '8.3' => self::LOGO_83,
-        '8.4' => self::LOGO_84,
-        '8.5' => self::LOGO_85,
-    ];
-
-    public static function getLogo(string $version, string $color = 'currentColor', string $highlight = '#4F5B93', string $style = ''): ?string
-    {
-        $found = self::MAPPING[$version] ?? null;
-        if (!$found) {
-            return null;
-        }
-
-        $replace = [
-            '{{fill}}' => $color,
-            '{{highlight}}' => $highlight,
-            '{{style}}' => $style,
-        ];
-
-        return str_replace(array_keys($replace), array_values($replace), $found);
-    }
-
     public const LOGO_85 = <<<SVG
         <svg style="{{style}}" width="467" height="133" viewBox="0 0 467 133" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <path fill-rule="evenodd" clip-rule="evenodd" d="M21.7998 125.799H0.799805L19.4998 29.6992H59.7998C71.8998 29.6992 80.7998 32.8992 86.2998 39.1992C91.8998 45.5992 93.4998 54.3992 91.2998 65.8992C90.3998 70.5992 88.7998 74.8992 86.6998 78.7992C84.4998 82.6992 81.6998 86.2992 78.1998 89.4992C73.9998 93.3992 69.3998 96.1992 64.2998 97.8992C59.1998 99.5992 52.6998 100.399 44.6998 100.399H26.6998L21.7998 125.799ZM67.6998 49.1992C64.9998 46.2992 59.6998 44.7992 51.7998 44.7992H37.4998L29.6998 85.0992H42.3998C50.7998 85.0992 57.0998 83.4992 61.2998 80.2992C65.3998 77.0992 68.1998 71.7992 69.6998 64.3992C70.9998 57.1992 70.2998 52.1992 67.6998 49.1992Z" fill="white"/>
@@ -136,4 +112,27 @@ class VersionLogos
         </svg>
     SVG;
 
+    public const array MAPPING = [
+        '8.1' => self::LOGO_81,
+        '8.2' => self::LOGO_82,
+        '8.3' => self::LOGO_83,
+        '8.4' => self::LOGO_84,
+        '8.5' => self::LOGO_85,
+    ];
+
+    public static function getLogo(string $version, string $color = 'currentColor', string $highlight = '#4F5B93', string $style = ''): ?string
+    {
+        $found = self::MAPPING[$version] ?? null;
+        if (!$found) {
+            return null;
+        }
+
+        $replace = [
+            '{{fill}}' => $color,
+            '{{highlight}}' => $highlight,
+            '{{style}}' => $style,
+        ];
+
+        return str_replace(array_keys($replace), array_values($replace), $found);
+    }
 }
