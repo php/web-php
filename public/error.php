@@ -25,7 +25,9 @@ $URI = substr($_SERVER['STRIPPED_URI'], 1);
 $queryString = $_SERVER['QUERY_STRING'] ?? '';
 
 /* this will exit processing if a response is provided */
-ServiceLocator::make()->get(HttpKernel::class)->handleErrorInteropEntry();
+$kernel = ServiceLocator::make()->get(HttpKernel::class);
+assert($kernel instanceof HttpKernel);
+$kernel->handleErrorInteropEntry();
 
 // ============================================================================
 // Mozilla Search Sidebar plugin resource file handling (need to be mirror
