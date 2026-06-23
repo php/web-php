@@ -13,11 +13,14 @@ use Psr\Log\LoggerInterface;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionClass;
+use ReflectionFunction;
+use ReflectionMethod;
 use SplFileInfo;
 use Throwable;
 use function count;
 use function fwrite;
 use function is_array;
+use function sprintf;
 use function time;
 use function token_get_all;
 use function trim;
@@ -84,7 +87,28 @@ class BuildTools
                 /* this allows our cache to kick in */
                 BuildTools::updateLastModifiedTime(time());
             } catch (BuildStepFailureException $e) {
-                fwrite(STDERR, 'Error building ' . $classId . ': ' . $e->getMessage());
+                $logger->critical("Build step '$classId' failed with an exception! " . $e->getMessage());
+
+                fwrite(STDERR,  "--------------------------\n");
+                fwrite(STDERR, "Step:    $classId\n");
+                fwrite(STDERR, "Error:   {$e->getMessage()}\n");
+
+                $target = $e->target;
+                if ($target instanceof ReflectionMethod) {
+                    fwrite(
+                        STDERR,
+                        sprintf("Target:  %s%s%s\n",
+                            $target->getDeclaringClass()->getName(),
+                            ($target->isStatic() ? '::' : '->'),
+                            $target->getName(),
+                        ),
+                    );
+                } elseif ($target instanceof ReflectionClass) {
+                    fwrite(STDERR, "Target:  {$target->getName()}\n");
+                } elseif ($target instanceof ReflectionFunction) {
+                    fwrite(STDERR, "Target:  {$target->getName()}\n");
+                }
+
                 exit(1);
             } catch (Throwable $e) {
                 fwrite(STDERR, 'Unhandled exception building ' . $classId . ': ' . $e->getMessage() . "\n");

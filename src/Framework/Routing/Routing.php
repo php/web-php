@@ -14,8 +14,10 @@ use phpweb\Framework\Services\Service;
 use phpweb\ProjectGlobals;
 use ReflectionClass;
 use ReflectionException;
+use RuntimeException;
 use Stringable;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\CompiledUrlMatcher;
@@ -23,7 +25,6 @@ use Symfony\Component\Routing\Matcher\Dumper\CompiledUrlMatcherDumper;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
-use function array_unique;
 use function class_exists;
 use function explode;
 use function http_build_query;
@@ -55,12 +56,12 @@ class Routing implements BuildStep
     /**
      * Returns an array of the resolved route information, otherwise throws
      *
-     * @throws ResourceNotFoundException
-     * @throws MethodNotAllowedException
-     *
      * @return null|array{
      *    _controller: array{class-string, string}
      * }
+     * @throws MethodNotAllowedException
+     *
+     * @throws ResourceNotFoundException
      */
     public function match(Request $request): ?array
     {
@@ -72,7 +73,7 @@ class Routing implements BuildStep
             $requestContext,
         );
 
-        /** @phpstan-ignore return.type  */
+        /** @phpstan-ignore return.type */
         return $matcher->matchRequest($request);
     }
 
@@ -86,10 +87,31 @@ class Routing implements BuildStep
                 continue;
             }
 
+            if (!$class->isInstantiable()) {
+                throw new BuildStepFailureException(
+                    message: 'Controller #[Route]s cannot be placed on non-instantiable classes',
+                    target: $class,
+                );
+            }
+
             foreach ($class->getMethods() as $method) {
                 $methodAttr = ReflectionHelpers::getAttribute($method, RouteAttribute::class);
                 if (!$methodAttr) {
                     continue;
+                }
+
+                /* type checking */
+                $type = (string)$method->getReturnType();
+                if ($type !== Response::class && !is_subclass_of($type, Response::class)) {
+                    throw new BuildStepFailureException('Controller routes must return a Response', target: $method);
+                }
+
+                $methods = $methodAttr->methods ?: $classAttr->methods;
+                if (!$methods) {
+                    throw new BuildStepFailureException(
+                        message: 'Controller #[Route] must define at least one method at either class or method level',
+                        target: $method,
+                    );
                 }
 
                 /* titles get concatenated */
@@ -101,20 +123,27 @@ class Routing implements BuildStep
                 /* to make our lives easier, we can replace the substitution tokens in the paths with
                  * symfony requires */
                 $replacements = $requirements = [];
-                preg_match_all(self::PATTERN_MATCH, $path, $matches, PREG_SET_ORDER);
-                foreach ($matches as $match) {
-                    [$full, $inner] = $match;
-
-                    [$name, $pattern] = self::parsePlaceholder($inner);
-                    $requirements[$name] = $pattern;
-                    $replacements[$full] = '{' . $name . '}';
+                try {
+                    preg_match_all(self::PATTERN_MATCH, $path, $matches, PREG_SET_ORDER);
+                    foreach ($matches as $match) {
+                        [$full, $inner] = $match;
+                        [$name, $pattern] = self::parsePlaceholder($inner);
+                        $requirements[$name] = $pattern;
+                        $replacements[$full] = '{' . $name . '}';
+                    }
+                } catch (\RuntimeException $e) {
+                    throw new BuildStepFailureException(
+                        message: "Controller #[Route] parsing error for '$path'; {$e->getMessage()}",
+                        target: $method,
+                    );
                 }
 
                 $normalizedPath = str_replace(array_keys($replacements), $replacements, $path);
-                $methods = array_values(array_unique($methodAttr->methods ?: $classAttr->methods ?: ['GET']));
                 $methodString = implode('|', $methods);
 
-                $context->logger->debug("Routing ($methodString) '$normalizedPath' to {$class->getName()}->{$method->getName()}");
+                $context->logger->debug(
+                    "Routing ($methodString) '$normalizedPath' to {$class->getName()}->{$method->getName()}",
+                );
 
                 $routes->add(
                     $normalizedPath,
@@ -212,6 +241,7 @@ class Routing implements BuildStep
 
     /**
      * @return array{string,string}
+     * @throws \RuntimeException
      */
     private static function parsePlaceholder(string $input): array
     {
@@ -219,7 +249,7 @@ class Routing implements BuildStep
         [$name, $type] = explode(':', $withoutCurley);
 
         $matchPattern = self::PATTERNS[$type]
-            ?? throw new BuildStepFailureException("Unknown routing pattern '$type' for placeholder '$name'");
+            ?? throw new RuntimeException("Unknown routing pattern '$type' for placeholder '$name'");
 
         return [$name, $matchPattern];
     }
