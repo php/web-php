@@ -3,6 +3,7 @@
 namespace phpweb\Themes;
 
 use phpweb\Utils;
+use function preg_replace;
 
 class ThemeRenderer
 {
@@ -76,8 +77,20 @@ class ThemeRenderer
         });
     }
 
-    private function safe(string|int|float $value): string
+    public function textWithCode(string $input): HTML
     {
+        $html = preg_replace('/`(.+?)`/i', '<code>$1</code>', htmlspecialchars($input));
+        assert(is_string($html));
+
+        return new HTML($html);
+    }
+
+    private function safe(string|int|float|HTML $value): string
+    {
+        if ($value instanceof HTML) {
+            return $value->html;
+        }
+
         return htmlspecialchars((string)$value);
     }
 }
