@@ -4,6 +4,7 @@ use phpweb\News\NewsHandler;
 use phpweb\Releases\Branches;
 use phpweb\Releases\VersionLogos;
 use phpweb\Themes\ClickableCard;
+use phpweb\Themes\HTML;
 use phpweb\Themes\ThemeRenderer;
 
 require_once __DIR__ . '/../include/prepend.inc';
@@ -205,7 +206,6 @@ readonly class FrontPageController
                 </div>
             </div>
             <?php
-//            echo $this->theme->clickableCards(self::getHeaderCards(), id: 'header-cards');
         });
 
         $this->drawSection('primary', 'releases', function() use ($latestRelease, $latestReleases) {
@@ -328,8 +328,12 @@ readonly class FrontPageController
     }
 
 
-    private function safe(string $content): string
+    private function safe(string|HTML $content): string
     {
+        if ($content instanceof HTML) {
+            return $content->html;
+        }
+
         return htmlspecialchars($content, ENT_QUOTES);
     }
 
@@ -361,8 +365,12 @@ readonly class FrontPageController
                     <div class="lp-lhr-highlights">
                         <?php foreach ($highlights as $highlight) { ?>
                         <div class="lp-lrh-highlight">
-                            <div class="lp-lrh-highlight-title"><?= $this->safe($highlight['title']) ?></div>
-                            <div class="lp-lrh-highlight-text"><?= $this->safe($highlight['about'] ?? $highlight['short'] ?? '') ?></div>
+                            <div class="lp-lrh-highlight-title">
+                                <?= $this->safe($this->theme->textWithCode($highlight['title'])) ?>
+                            </div>
+                            <div class="lp-lrh-highlight-text">
+                                <?= $this->safe($this->theme->textWithCode($highlight['about'] ?? $highlight['short'] ?? '')) ?>
+                            </div>
                         </div>
                         <?php } ?>
                     </div>
