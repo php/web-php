@@ -9,15 +9,15 @@ return [
             ],
             [
                 'title' => 'Pipe Operator',
-                'about' => 'The |> operator enables chaining callables left-to-right, passing values smoothly through multiple functions without intermediary variables.',
+                'about' => 'The `|>` operator enables chaining callables left-to-right, passing values smoothly through multiple functions without intermediary variables.',
             ],
             [
                 'title' => 'Clone With',
-                'about' => 'Clone objects and update properties with the new clone() syntax, making the "with-er" pattern simple for readonly classes.',
+                'about' => 'Clone objects and update properties with the new `clone()` syntax, making the "with-er" pattern simple for readonly classes.',
             ],
             [
-                'title' => '#[\NoDiscard] Attribute',
-                'about' => 'The #[\NoDiscard] attribute warns when a return value isn’t used, helping prevent mistakes and improving overall API safety.',
+                'title' => '`#[\NoDiscard]` Attribute',
+                'about' => 'The `#[\NoDiscard]` attribute warns when a return value isn’t used, helping prevent mistakes and improving overall API safety.',
             ],
             [
                 'title' => 'Closures and First-Class Callables in Constant Expressions',
@@ -42,7 +42,7 @@ return [
             ],
             [
                 'title' => '#[Deprecated] Attribute',
-                'short' => '#[Deprecated] attribute signals removal intent',
+                'short' => '`#[Deprecated]` attribute signals removal intent',
             ],
             [
                 'title' => 'Additional Array Functions',
@@ -84,7 +84,7 @@ return [
             ],
             [
                 'title' => 'Improved Standalone Types',
-                'short' => 'Null, true and false are now usable as types',
+                'short' => '`Null`, `true` and `false` are now usable as types',
             ],
         ],
     ],
