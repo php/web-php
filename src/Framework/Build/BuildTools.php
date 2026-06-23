@@ -41,7 +41,12 @@ class BuildTools
      * Used for protecting developers from hurting themselves by relying on data which
      * might have stale caches or otherwise be unready for use during build steps
      */
-    public static bool $building = false;
+    private static bool $building = false;
+
+    public static function isBuilding(): bool
+    {
+        return self::$building;
+    }
 
     /**
      * @return array<string, ReflectionClass<object>>
@@ -70,7 +75,7 @@ class BuildTools
         }
 
         /* protect us against doing silly things */
-        BuildTools::$building = true;
+        self::$building = true;
 
         if (!$logger) {
             $logger = new Logger('build');
