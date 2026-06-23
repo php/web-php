@@ -82,16 +82,22 @@ class Routing implements BuildStep
         $routes = new RouteCollection();
 
         foreach (BuildTools::getReflectionClasses() as $class) {
-            $classAttr = ReflectionHelpers::getAttribute($class, RouteAttribute::class);
-            if (!$classAttr) {
+            if (!$class->isInstantiable()) {
                 continue;
             }
 
-            if (!$class->isInstantiable()) {
-                throw new BuildStepFailureException(
-                    message: 'Controller #[Route]s cannot be placed on non-instantiable classes',
-                    target: $class,
-                );
+            $classAttr = ReflectionHelpers::getAttribute($class, RouteAttribute::class);
+            if (!$classAttr) {
+                foreach ($class->getMethods() as $method) {
+                    if (ReflectionHelpers::getAttribute($method, RouteAttribute::class)) {
+                        throw new BuildStepFailureException(
+                            message: 'Controller [#Routes] on methods must be paired with a #[Route] on the class',
+                            target: $method,
+                        );
+                    }
+                }
+
+                continue;
             }
 
             foreach ($class->getMethods() as $method) {
