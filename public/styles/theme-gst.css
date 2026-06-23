@@ -1,0 +1,575 @@
+:root {
+    /* common */
+    --gst-card-radius: 0.5rem;
+    --gst-card-padding: 2rem;
+    --gst-card-padding-mobile: 1rem;
+    --gst-navcard-outline-thickness: 3px;
+    --gst-button-padding: 1rem;
+}
+
+:root {
+    /* defaults applied across this display */
+    --gst-container-highlight: #7588d6;
+
+    /* defaults */
+    --gst-container-bg: #303030;
+    --gst-container-color: #ffffff;
+    --gst-card-shadow: 0 1px 1px rgba(255, 255, 255, 0.08), 0 4px 12px rgba(0, 0, 0, 0.4);
+    --gst-section-title: whitesmoke;
+    --gst-leader-color: whitesmoke;
+
+    /* contrast becomes lighter */
+    --gst-contrast-rgb: 255, 255, 255;
+
+    /* php code theming */
+    --gst-php-code-bg: #1e1e1e;
+    --gst-php-code-text: #d4d4d4;
+    --gst-php-code-border: #333333;
+    --gst-php-code-keyword: #569cd6;
+    --gst-php-code-string: #ce9178;
+    --gst-php-code-comment: #6a9955;
+    --gst-php-code-variable: #9cdcfe;
+    --gst-php-code-function: #dcdcaa;
+    --gst-php-code-number: #b5cea8;
+
+    & .gst-theme-header, & .gst-theme-footer {
+        /* dedicated block style for header */
+        --gst-container-bg: #202020;
+        --gst-container-color: #eeeeee;
+        --gst-container-border: #333333;
+        --gst-container-highlight: #9eadf3;
+    }
+
+    & .gst-theme-primary {
+        /* spec: main content area, solid background */
+        --gst-container-bg: #252525;
+        --gst-container-color: whitesmoke;
+        --gst-container-border: #333333;
+    }
+
+    & .gst-theme-primary .gst-default-card,
+    & .gst-primary-card {
+        --gst-container-bg: #303030;
+        --gst-container-color: whitesmoke;
+        --gst-container-border: #222222;
+    }
+
+    & .gst-theme-secondary {
+        /* spec: secondary content area, allows background to show through, not for main text */
+        --gst-container-bg: transparent;
+        --gst-container-bg-image: url(/images/bg-texture-00.svg);
+        --gst-container-color: whitesmoke;
+    }
+
+    & .gst-theme-secondary .gst-default-card,
+    & .gst-secondary-card {
+        --gst-container-bg: #444444;
+        --gst-container-color: whitesmoke;
+        --gst-container-border: #222222;
+        --gst-container-highlight: #9ca4e1;
+    }
+
+    & .gst-theme-inverted {
+        --gst-container-bg: #4F5B93;
+        --gst-container-color: #ffffff;
+        --gst-container-border: #323b62;
+        --gst-contrast-rgb: 0, 0, 0;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        background-color: #fafafa;
+        background-repeat: repeat;
+        --gst-container-border: none;
+
+        /* defaults */
+        --gst-container-bg: #F8F9FA;
+        --gst-container-color: #333333;
+
+        /* php code theming */
+        --gst-php-code-bg: #f8f9fa;
+        --gst-php-code-text: #212529;
+        --gst-php-code-border: #e9ecef;
+        --gst-php-code-keyword: #d73a49; /* e.g., function, return, if */
+        --gst-php-code-string: #032f62; /* e.g., "hello world" */
+        --gst-php-code-comment: #6a737d; /* e.g., // comment */
+        --gst-php-code-variable: #e36209; /* e.g., $my_var */
+        --gst-php-code-function: #6f42c1; /* e.g., array_map() */
+        --gst-php-code-number: #005cc5; /* e.g., 42, 3.14 */
+
+        & .gst-theme-header, & .gst-theme-footer {
+            /* dedicated block style for header */
+            --gst-container-bg: #ffffff;
+            --gst-container-color: #222222;
+            --gst-container-border: #dddddd;
+        }
+
+        & .gst-theme-primary {
+            --gst-container-bg: #F8F9FA;
+            --gst-container-color: #333333;
+            --gst-container-border: #eeeeee;
+        }
+
+        & .gst-theme-primary .gst-default-card,
+        & .gst-primary-card {
+            --gst-container-bg: #ffffff;
+            --gst-container-color: #222222;
+            --gst-container-border: #e9ecef;
+            --gst-card-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --gst-container-highlight: #4F5B93;
+        }
+
+        & .gst-theme-secondary {
+            /* SECONDARY content area (Slightly deeper/cooler grey for contrast) */
+            --gst-container-bg: #edf0f2;
+            --gst-container-bg-image: url(/images/bg-texture-light.png);
+            --gst-container-color: #333333;
+        }
+
+        & .gst-theme-secondary .gst-default-card,
+        & .gst-secondary-card {
+            --gst-container-bg: #ffffff;
+            --gst-container-color: #222222;
+            --gst-container-border: #dbe1e6;
+            --gst-card-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --gst-container-highlight: #4F5B93;
+        }
+
+        & .gst-inverted-card {
+            --gst-container-bg: #333333;
+            --gst-container-color: #ffffff;
+            --gst-container-border: #555555;
+            --gst-contrast-rgb: 255, 255, 255;
+        }
+
+        --gst-section-title: #222222;
+        --gst-leader-color: #222222;
+
+        /* contrast becomes darker */
+        --gst-contrast-rgb: 0, 0, 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    :root {
+        --gst-card-padding: 1rem;
+    }
+}
+
+/*
+ * Global Theming
+ */
+
+.gst-header-block {
+    border-bottom: var(--gst-container-border);
+}
+
+.gst-footer-block {
+    border-top: var(--gst-container-border);
+}
+
+
+/**
+ * The container is responsible for setting the styling beneath the container to be
+ * whatever the previously defined variables are, but doesn't actually apply them
+ */
+.gst-container,
+.gst-card {
+    background-color: var(--gst-container-bg);
+    background-image: var(--gst-container-bg-image);
+    background-repeat: repeat;
+    color: var(--gst-container-color);
+
+    & h1, & h2, & h3, & h4, & h5,  & h6 {
+        color: var(--gst-container-color);
+    }
+
+    & :is(a:not(.plaina), .gst-linkcolor) {
+        color: var(--gst-container-color);
+    }
+
+    & .gst-accent {
+        color: var(--gst-container-highlight);
+    }
+}
+
+.gst-chunky-btn {
+    all: unset;
+    background-color: color-mix(in srgb, var(--gst-container-color) 100%, var(--gst-container-bg));
+    color: var(--gst-container-bg);
+    border-radius: var(--gst-card-radius);
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    padding: var(--gst-button-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--gst-container-color) 70%, var(--gst-container-bg));
+    }
+
+    &:focus {
+        background-color: var(--gst-container-bg);
+        outline: var(--gst-navcard-outline-thickness) solid var(--gst-container-highlight);
+        color: var(--gst-container-highlight);
+    }
+}
+
+.gst-content, .gst-content-p {
+    width: min(1220px, 100%);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.gst-content-wide, .gst-content-p-wide {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.gst-content-p-thin {
+    width: min(800px, 100%);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.gst-content-p-wide, .gst-content-p, .gst-content-p-thin {
+    padding: 5em 1em;
+}
+
+.gst-readable {
+    width: min(800px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.gst-sbc {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .gst-sbc {
+        flex-direction: column;
+    }
+}
+
+.gst-sbc-main {
+    flex: 999999 0 300px;
+}
+
+.gst-sbc-sidebar {
+    flex: 1 0 320px;
+}
+
+@media (max-width: 600px) {
+    .gst-content-p-wide {
+        padding: 1em 1em;
+    }
+}
+
+/*
+ * Section Titles
+ */
+
+.gst-section-title {
+    padding-top: 5em;
+    padding-bottom: 3em;
+    text-align: center;
+
+    & h2 {
+        all: unset;
+        font-size: 300%;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+    }
+
+    & h2:after {
+        content: "";
+        all: unset;
+    }
+
+    & p {
+        margin: 0.75em 0 0;
+        font-size: 130%;
+        font-weight: 500;
+    }
+}
+
+
+.gst-section-title:first-child {
+    padding-top: 0;
+}
+
+.gst-content-p-wide .gst-section-title:first-child {
+    padding-top: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* maintain compatibility with previous versions by only knocking out padding if we have a card in it */
+aside.tips:has(.gst-card) {
+    padding: 0 !important;
+}
+
+/*
+ * Clickable Navigation Card
+ */
+
+.gst-navcard {
+    outline: var(--gst-navcard-outline-thickness) solid transparent;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.gst-navcard:hover {
+    outline: var(--gst-navcard-outline-thickness) solid var(--gst-container-highlight);
+    border: 1px solid var(--gst-container-highlight);
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    background: rgba(var(--gst-contrast-rgb), 0.2);
+    transform: translateY(-5px);
+}
+
+.gst-navcard:focus-within {
+    outline: var(--gst-navcard-outline-thickness) solid rgba(var(--gst-contrast-rgb), 0.9);
+}
+
+.gst-navcard-title-link {
+    all: unset;
+    color: var(--gst-container-color);
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.gst-navcard-title-link:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+.gst-navcard-indicator {
+    width: 32px;
+    height: 32px;
+    fill: rgba(var(--gst-contrast-rgb), 0.25);
+    transition: all 0.2s ease-in-out;
+}
+
+.gst-navcard:hover .gst-navcard-indicator {
+    fill: var(--gst-container-highlight);
+}
+
+.gst-navcard-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* "Chunk" styling: chunky padding and thick borders */
+    padding: 14px 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+
+    /* Colors & Border */
+    color: #111111 !important;
+    background-color: #ffffff;
+    border: 2px solid #111111;
+    border-radius: 0.5em;
+
+    /* Smooth transitions for hover/active states */
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .gst-navcard-btn {
+        padding: 4px 16px !important;
+    }
+}
+
+/*
+ * Basic Card
+ */
+
+.gst-card {
+    border-radius: var(--gst-card-radius);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.gst-card {
+    border: 1px solid var(--gst-container-border);
+    box-shadow: var(--gst-card-shadow);
+}
+
+.gst-card-title {
+    flex: 0 0 fit-content;
+    padding: var(--gst-card-padding);
+    padding-bottom: 0.5em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gst-card-title-text {
+    font-weight: bold;
+    flex: 99999 0 180px;
+    font-size: 120%;
+}
+
+.gst-card-title-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 0.25em;
+    object-fit: contain;
+}
+
+.gst-card-content {
+    flex: 1 1;
+    padding: var(--gst-card-padding);
+}
+
+.gst-card-footer {
+    padding: var(--gst-card-padding);
+    flex: 0 0 fit-content;
+}
+
+.gst-card-title + .gst-card-content {
+    padding-top: calc(var(--gst-card-padding) / 2);
+}
+
+.gst-card-content:has(+.gst-card-footer) {
+    padding-bottom: calc(var(--gst-card-padding) / 2);
+}
+
+.gst-card-content + .gst-card-footer {
+    padding-top: 0;
+}
+
+/*
+ * CGRID
+ *
+ * Displays in an auto-repeating grid, however, when the space is too small, it significantly collapses
+ * the gap and changes the separation from such large padding, into a vertical list
+ */
+
+.gst-cgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.gst-cgrid-card {
+    border-radius: var(--gst-card-radius);
+    overflow: hidden;
+}
+
+@media (max-width: 700px) {
+    .gst-cgrid {
+        gap: 0;
+        overflow: hidden;
+        border-radius: var(--gst-card-radius);
+    }
+
+    .gst-cgrid-card {
+        border-radius: 0 !important;
+        overflow: hidden;
+    }
+
+    .gst-cgrid-card + .gst-cgrid-card {
+        margin-top: 3px;
+    }
+}
+
+/*
+ * Banners
+ */
+
+.gst-warning {
+    border-radius: var(--gst-card-radius);
+    padding: 1em;
+    background: #5d3b3b;
+    border: 1px solid #442c2c;
+    color: white;
+}
+
+.gst-tip {
+    border-radius: var(--gst-card-radius);
+    padding: 1em;
+    background: #5c5d3b;
+    border: 1px solid #44442c;
+    color: white;
+}
+
+/*
+ * Utility
+ */
+
+.gst-no-transition * {
+    transition: none !important;
+}
+
+/*
+ * Code blocks
+ */
+
+.gst-code-php {
+    background-color: var(--gst-php-code-bg);
+    color: var(--gst-php-code-text);
+    border: 1px solid var(--gst-php-code-border);
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+
+    & .keyword {
+        color: var(--gst-php-code-keyword);
+        font-weight: bold;
+    }
+
+    & .string {
+        color: var(--gst-php-code-string);
+    }
+
+    & .comment {
+        color: var(--gst-php-code-comment);
+        font-style: italic;
+    }
+
+    & .variable {
+        color: var(--gst-php-code-variable);
+    }
+
+    & .function {
+        color: var(--gst-php-code-function);
+    }
+
+    & .number {
+        color: var(--gst-php-code-number);
+    }
+}

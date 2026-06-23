@@ -1,8 +1,12 @@
 <?php
 
+use phpweb\Releases\Branches;
+
 $_SERVER['BASE_PAGE'] = 'releases/index.php';
 require_once __DIR__ . '/../../include/prepend.inc';
-require_once __DIR__ . "/../../include/branches.inc";
+
+$RELEASES = Branches::getReleaseData();
+$OLDRELEASES = Branches::getOldReleaseData();
 
 if (isset($_GET["serialize"]) || isset($_GET["json"])) {
     $RELEASES = $RELEASES + $OLDRELEASES;
@@ -10,7 +14,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
     $machineReadable = [];
 
     $supportedVersions = [];
-    foreach (get_active_branches(false) as $major => $releases) {
+    foreach (Branches::active() as $major => $releases) {
         $supportedVersions[$major] = array_keys($releases);
     }
 
@@ -53,9 +57,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
         }
     } else {
         foreach ($RELEASES as $major => $release) {
-            $version = key($release);
             $r = current($release);
-            $r["version"] = $version;
             $r['supported_versions'] = $supportedVersions[$major] ?? [];
             $machineReadable[$major] = $r;
         }
@@ -84,6 +86,8 @@ echo ">our downloads page</a>. Please note that
 </p>\n";
 
 $active_majors = array_keys($RELEASES);
+assert(!empty($active_majors));
+
 $latest = max($active_majors);
 foreach ($OLDRELEASES as $major => $a) {
     echo '<a id="v' . $major . '"></a>';
