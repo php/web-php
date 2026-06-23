@@ -402,10 +402,11 @@ readonly class FrontPageController
         [$major, $minor, $patch] = explode('.', $releaseId);
         $versionId = $major . '.' . $minor;
 
-        $timeLabel = function (string $label, ?DateTime $time): string {
+        $now = new DateTimeImmutable();
+        $timeLabel = function (string $label, ?DateTime $time) use ($now): string {
             return sprintf('<span><span style="font-weight: 500; margin-right: 0.5em">%s:</span>%s</span>',
                     $label,
-                    $time ? $time->format('Y-m-d') : 'End  of  Life',
+                    ($time && $time > $now) ? $time->format('Y-m-d') : 'End of Life',
             );
         };
 
