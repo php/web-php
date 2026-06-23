@@ -6,6 +6,7 @@ use CompiledServiceContainer;
 use Error;
 use phpweb\Framework\Build\BuildContext;
 use phpweb\Framework\Build\BuildStep;
+use phpweb\Framework\Build\BuildStepFailureException;
 use phpweb\Framework\Build\BuildTools;
 use phpweb\Framework\Build\ReflectionHelpers;
 use phpweb\Framework\IO\FS;
@@ -13,6 +14,7 @@ use phpweb\Framework\Routing\Route;
 use phpweb\ProjectGlobals;
 use Psr\Container\ContainerInterface;
 use ReflectionClass;
+use ReflectionException;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -49,13 +51,51 @@ class ServiceLocator implements BuildStep
             if ($attr && $attr->factory) {
                 [$factoryClassId, $factoryMethod] = $attr->factory;
 
-                if (!new ReflectionClass($factoryClassId)->getMethod($factoryMethod)->isStatic()) {
+                try {
+                    $factoryClassReflection = new ReflectionClass($factoryClassId);
+                }
+                /** @phpstan-ignore-next-line - It doesn't know ReflectionClass constructor can throw */
+                catch (ReflectionException) {
+                    throw new BuildStepFailureException(
+                        message: "#[Service] specifies factory class '$factoryClassId' that does not exist",
+                        target: $class,
+                    );
+                }
+
+                try {
+                    $factoryMethodReflection = $factoryClassReflection->getMethod($factoryMethod);
+                } catch (ReflectionException) {
+                    throw new BuildStepFailureException(
+                        message: "#[Service] specifies factory class method {$factoryClassId}::{$factoryMethod} that does not exist'",
+                        target: $class,
+                    );
+                }
+
+                if (!$factoryMethodReflection->isPublic()) {
+                    throw new BuildStepFailureException(
+                        message: "#[Service] specifies factory class method {$factoryClassId}::{$factoryMethod} that is not public'",
+                        target: $class,
+                    );
+                }
+
+                /* non-static methods must be on a class that is by itself a service */
+                if (!$factoryMethodReflection->isStatic()) {
+                    $targetFactoryClass = new ReflectionClass($factoryClassId);
+                    if (!ReflectionHelpers::getAttribute($targetFactoryClass, Service::class)) {
+                        throw new BuildStepFailureException(
+                            message: "#[Service] specifies factory class '$factoryClassId' that is not registered a service",
+                            target: $class,
+                        );
+                    }
+
+                    /* by using a reference we call upon the service */
                     $factoryClassId = new Reference($factoryClassId);
                 }
 
                 $definition->setFactory([$factoryClassId, $factoryMethod]);
             }
 
+            $context->logger->debug("Registered {$class->getName()} as a service");
             $builder->setDefinition($classId, $definition);
         }
 
