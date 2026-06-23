@@ -603,6 +603,7 @@ readonly class FrontPageController
                 object-fit: contain;
                 background: white;
                 border-radius: 0.5rem;
+                padding: 1em;
             }
 
             .banner-content {
