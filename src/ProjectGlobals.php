@@ -23,4 +23,9 @@ class ProjectGlobals
         return realpath(__DIR__ . '/../public')
             ?: throw new Error('Unable to locate public root');
     }
+
+    public static function isDevelopmentMode(): bool
+    {
+        return ($_ENV['DEVELOPMENT'] ?? '') === '1';
+    }
 }

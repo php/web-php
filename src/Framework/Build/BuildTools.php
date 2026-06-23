@@ -155,7 +155,7 @@ class BuildTools
     public static function getLastModifiedTime(): int
     {
         /* in development mode we always assume that we've recently refreshed our data */
-        if (isset($_ENV['DEVELOPMENT'])) {
+        if (ProjectGlobals::isDevelopmentMode()) {
             return time();
         }
 
