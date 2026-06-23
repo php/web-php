@@ -8,7 +8,7 @@ class ClickableCard
         public string|HTML $title,
         public string $href,
         public string $href_label = '',
-        public string $image = '',
+        public string|SVG $image = '',
         public string|HTML $body = '',
     ) {
     }
