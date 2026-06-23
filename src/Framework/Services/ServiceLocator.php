@@ -26,8 +26,6 @@ class ServiceLocator implements BuildStep
 {
     public static function build(BuildContext $context): void
     {
-        ini_set('memory_limit', '1G');
-
         // 1. Initialize the Standalone Container Builder
         $builder = new ContainerBuilder();
 

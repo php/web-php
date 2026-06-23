@@ -19,6 +19,7 @@ use SplFileInfo;
 use Throwable;
 use function count;
 use function fwrite;
+use function ini_set;
 use function is_array;
 use function sprintf;
 use function time;
@@ -56,6 +57,8 @@ class BuildTools
      */
     public static function executeBuild(?LoggerInterface $logger = null): int
     {
+        ini_set('memory_limit', '1G');
+
         /** @var list<class-string<BuildStep>> $buildSteps */
         $buildSteps = [];
         foreach (BuildTools::parseClassHierarchy(ProjectGlobals::getProjectRoot() . '/src') as $class) {
