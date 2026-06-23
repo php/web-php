@@ -152,7 +152,7 @@ class Routing implements BuildStep
                 );
 
                 $routes->add(
-                    $normalizedPath,
+                    implode('|', $methods) . ':' . $normalizedPath,
                     new Route(
                         path: $path,
                         defaults: [
