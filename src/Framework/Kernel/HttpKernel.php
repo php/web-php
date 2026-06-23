@@ -74,9 +74,6 @@ readonly class HttpKernel
         $response = $controller->{$controllerMethodId}($request);
         assert($response instanceof Response);
 
-        /* does additional checks and mutations based on contents */
-        $response->prepare($request);
-
         return $response;
     }
 }
