@@ -24,7 +24,6 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 use function array_unique;
-use function assert;
 use function class_exists;
 use function explode;
 use function http_build_query;
@@ -87,8 +86,6 @@ class Routing implements BuildStep
                 continue;
             }
 
-            assert(is_string($classAttr->path), 'Route path must be a string');
-
             foreach ($class->getMethods() as $method) {
                 $methodAttr = ReflectionHelpers::getAttribute($method, RouteAttribute::class);
                 if (!$methodAttr) {
@@ -96,7 +93,7 @@ class Routing implements BuildStep
                 }
 
                 /* titles get concatenated */
-                $path = $classAttr->path;
+                $path = ($classAttr->path ?? '');
                 if (is_string($methodAttr->path)) {
                     $path .= $methodAttr->path;
                 }
