@@ -214,6 +214,7 @@
     }
 
     &:focus {
+        background-color: var(--gst-container-bg);
         outline: var(--gst-navcard-outline-thickness) solid var(--gst-container-highlight);
         color: var(--gst-container-highlight);
     }
