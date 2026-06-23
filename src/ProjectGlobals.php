@@ -3,6 +3,7 @@
 namespace phpweb;
 
 use Error;
+use function filter_var;
 use function realpath;
 
 class ProjectGlobals
@@ -26,6 +27,6 @@ class ProjectGlobals
 
     public static function isDevelopmentMode(): bool
     {
-        return ($_ENV['DEVELOPMENT'] ?? '') === '1';
+        return filter_var(($_ENV['DEVELOPMENT'] ?? ''), FILTER_VALIDATE_BOOL);
     }
 }
