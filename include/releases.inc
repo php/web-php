@@ -1,5 +1,5 @@
 <?php
-$OLDRELEASES = array (
+return $OLDRELEASES = array (
   8 => 
   array (
     '8.4.21' => 

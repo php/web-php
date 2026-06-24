@@ -1,21 +1,24 @@
 #!/usr/bin/env php
 <?php
+
+use phpweb\Releases\Branches;
+
 (PHP_SAPI === 'cli') or die("Please run this script using the cli sapi");
 
-require_once __DIR__ . "/../include/branches.inc";
-require_once __DIR__ . "/../include/version.inc";
-require_once __DIR__ . "/../include/releases.inc";
+require __DIR__ . '/../include/releases.inc';
+require __DIR__ . '/../src/autoload.php';
 
 if ($_SERVER['argc'] < 1) {
 	fwrite(STDERR, "Usage: {$_SERVER['argv'][0]} major_version [ minor_version ]\n");
 	exit(1);
 }
 
+$RELEASES = Branches::getReleaseData();
 $major = (int) $_SERVER['argv'][1];
 isset($RELEASES[$major]) or die("Unknown major version $major");
 $minor = isset($_SERVER['argv'][2]) ? (int) $_SERVER['argv'][2] : null;
 
-$version = get_current_release_for_branch($major, $minor);
+$version = Branches::getCurrentReleaseForBranch($major, $minor);
 $info = $RELEASES[$major][$version] ?? null;
 
 if ($info === null) {
@@ -34,7 +37,7 @@ $OLDRELEASES[$major] = array_merge(
 );
 
 file_put_contents(__DIR__ . "/../include/releases.inc", [
-	"<?php\n\$OLDRELEASES = ",
+	"<?php\nreturn \$OLDRELEASES = ",
 	var_export($OLDRELEASES, true),
 	";\n",
 ]);
