@@ -19,7 +19,9 @@ include_once __DIR__ . '/include/errors.inc';
 // Get URI for this request, strip leading slash
 // See langchooser.inc for more info on STRIPPED_URI
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
-$queryString = $_SERVER['QUERY_STRING'] ?? '';
+$uriParts = explode('?', $URI, 2);
+$URI = $uriParts[0];
+$queryString = isset($uriParts[1]) ? html_entity_decode($uriParts[1], ENT_QUOTES, 'UTF-8') : '';
 
 // ============================================================================
 // Mozilla Search Sidebar plugin resource file handling (need to be mirror
@@ -38,8 +40,8 @@ if ($URI == 'phpnetimprovedsearch.src') {
 
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
-if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
-    mirror_redirect("https://bugs.php.net/?$array[1]");
+if ($URI === 'bugs.php' && $queryString !== '') {
+    mirror_redirect("https://bugs.php.net/?$queryString");
 }
 
 // ============================================================================
