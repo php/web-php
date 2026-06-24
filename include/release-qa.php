@@ -80,7 +80,7 @@ $QA_RELEASES = [
             'sha256_gz'  => 'ab863318f529ace5e1f96db1670e3ca537d10668fbe055ca76b7d9d098303137',
             'sha256_xz'  => 'c5d532ac0d599413a1771ed894102f4d5a255e47a81ffa3475c6dae6d097227a',
             'date'       => '18 Jun 2026',
-            'baseurl'    => 'https://downloads.php.net/calvinb/',
+            'baseurl'    => 'https://downloads.php.net/~calvinb/',
         ],
     ],
 
