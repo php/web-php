@@ -31,12 +31,6 @@ parameters:
 			path: include/branches.inc
 
 		-
-			message: '#^Function get_active_branches\(\) has parameter \$include_recent_eols with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: include/branches.inc
-
-		-
 			message: '#^Function get_all_branches\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
@@ -109,8 +103,8 @@ parameters:
 			path: include/branches.inc
 
 		-
-			message: '#^Function version_array\(\) has no return type specified\.$#'
-			identifier: missingType.return
+			message: '#^Offset ''note'' on array\{filename\: string, name\: string, md5\?\: string, sha256\?\: string, date\: string\} in isset\(\) does not exist\.$#'
+			identifier: isset.offset
 			count: 1
 			path: include/branches.inc
 
@@ -121,9 +115,27 @@ parameters:
 			path: include/branches.inc
 
 		-
+			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/branches.inc
+
+		-
 			message: '#^Parameter \#3 \$length of function substr expects int\|null, int\<0, max\>\|false given\.$#'
 			identifier: argument.type
 			count: 2
+			path: include/branches.inc
+
+		-
+			message: '#^Parameter \#3 \$length of function substr expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: include/branches.inc
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 1
 			path: include/branches.inc
 
 		-
@@ -399,12 +411,6 @@ parameters:
 		-
 			message: '#^Cannot call method modify\(\) on DateTime\|false\.$#'
 			identifier: method.nonObject
-			count: 1
-			path: include/layout.inc
-
-		-
-			message: '#^Comparison operation "\<" between int\<80400, 80500\> and 80300 is always false\.$#'
-			identifier: smaller.alwaysFalse
 			count: 1
 			path: include/layout.inc
 
@@ -1315,26 +1321,8 @@ parameters:
 			path: include/site.inc
 
 		-
-			message: '#^Function release_get_latest\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: include/version.inc
-
-		-
-			message: '#^Function show_source_releases\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: include/version.inc
-
-		-
 			message: '#^Offset ''announcement'' on array\{version\: ''8\.2\.31'', date\: ''07 May 2026'', tags\: array\{''security''\}, sha256\: array\{''tar\.gz''\: ''083c2f61cc5f527eb29…'', ''tar\.bz2''\: ''948183fa04cf261c9b9…'', ''tar\.xz''\: ''95eae411d594fe6f6e5…''\}\}\|array\{version\: ''8\.3\.31'', date\: ''07 May 2026'', tags\: array\{''security''\}, sha256\: array\{''tar\.gz''\: ''4e7baaf0a690e954a20…'', ''tar\.bz2''\: ''e6986b1fd37eb254021…'', ''tar\.xz''\: ''66410cee07f4b2baeb0…''\}\}\|array\{version\: ''8\.4\.22'', date\: ''04 Jun 2026'', tags\: array\{\}, sha256\: array\{''tar\.gz''\: ''a012c2c9724baf214a7…'', ''tar\.bz2''\: ''4b16e7e2c384ce25e07…'', ''tar\.xz''\: ''696c0f6ad92e94c5905…''\}\}\|array\{version\: ''8\.5\.7'', date\: ''04 Jun 2026'', tags\: array\{\}, sha256\: array\{''tar\.gz''\: ''e5eba93fd6dd3241d0e…'', ''tar\.bz2''\: ''4ef9355f784d4b32015…'', ''tar\.xz''\: ''01ba2ed1c2658dacf91…''\}\} on left side of \?\? does not exist\.$#'
 			identifier: nullCoalesce.offset
-			count: 1
-			path: include/version.inc
-
-		-
-			message: '#^Parameter \#3 \$length of function substr expects int\|null, int\|false given\.$#'
-			identifier: argument.type
 			count: 1
 			path: include/version.inc
 
@@ -2323,10 +2311,16 @@ parameters:
 			path: public/releases/feed.php
 
 		-
-			message: '#^Variable \$RELEASES might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Cannot access offset ''date'' on array\{version\: string, announcement\: bool, tags\: list\<string\>, date\: string, source\: list\<array\{filename\: string, name\: string, md5\?\: string, sha256\?\: string, date\: string\}\>\}\|false\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
 			count: 1
-			path: public/releases/feed.php
+			path: public/releases/index.php
+
+		-
+			message: '#^Cannot access offset ''supported_versions'' on array\{version\: string, announcement\: bool, tags\: list\<string\>, date\: string, source\: list\<array\{filename\: string, name\: string, md5\?\: string, sha256\?\: string, date\: string\}\>\}\|false\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: public/releases/index.php
 
 		-
 			message: '#^Function mk_rel\(\) has parameter \$announcement with no value type specified in iterable type array\.$#'
@@ -2347,21 +2341,27 @@ parameters:
 			path: public/releases/index.php
 
 		-
-			message: '#^Parameter \#1 \.\.\.\$arg1 of function max expects non\-empty\-array, list\<int\|string\> given\.$#'
-			identifier: argument.type
+			message: '#^Offset ''announcement'' on array\{version\: string, announcement\: bool, tags\: list\<string\>, date\: string, source\: list\<array\{filename\: string, name\: string, md5\?\: string, sha256\?\: string, date\: string\}\>\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
 			count: 1
 			path: public/releases/index.php
 
 		-
-			message: '#^Variable \$OLDRELEASES might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
+			message: '#^Offset ''museum'' on array\{version\: string, announcement\: bool, tags\: list\<string\>, date\: string, source\: list\<array\{filename\: string, name\: string, md5\?\: string, sha256\?\: string, date\: string\}\>\} on left side of \?\? does not exist\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
 			path: public/releases/index.php
 
 		-
-			message: '#^Variable \$RELEASES might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
+			message: '#^Offset ''source'' on array\{version\: string, announcement\: bool, tags\: list\<string\>, date\: string, source\: list\<array\{filename\: string, name\: string, md5\?\: string, sha256\?\: string, date\: string\}\>\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: public/releases/index.php
+
+		-
+			message: '#^Offset ''windows'' on array\{version\: string, announcement\: bool, tags\: list\<string\>, date\: string, source\: list\<array\{filename\: string, name\: string, md5\?\: string, sha256\?\: string, date\: string\}\>\} on left side of \?\? does not exist\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
 			path: public/releases/index.php
 
 		-
@@ -2429,18 +2429,6 @@ parameters:
 			identifier: variable.undefined
 			count: 1
 			path: public/submit-event.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, float\|string given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/supported-versions.php
-
-		-
-			message: '#^Possibly invalid array key type float\|string\.$#'
-			identifier: offsetAccess.invalidOffset
-			count: 1
-			path: public/supported-versions.php
 
 		-
 			message: '#^Variable \$COUNTRIES might not be defined\.$#'

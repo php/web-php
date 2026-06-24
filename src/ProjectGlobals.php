@@ -3,6 +3,7 @@
 namespace phpweb;
 
 use Error;
+use function filter_var;
 use function realpath;
 
 class ProjectGlobals
@@ -22,5 +23,10 @@ class ProjectGlobals
     {
         return realpath(__DIR__ . '/../public')
             ?: throw new Error('Unable to locate public root');
+    }
+
+    public static function isDevelopmentMode(): bool
+    {
+        return filter_var(($_ENV['DEVELOPMENT'] ?? ''), FILTER_VALIDATE_BOOL);
     }
 }

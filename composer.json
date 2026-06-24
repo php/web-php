@@ -8,7 +8,14 @@
         "source": "https://github.com/php/web-php"
     },
     "require": {
-        "php": "~8.4.0"
+        "php": "~8.4",
+        "ext-dom": "*",
+        "monolog/monolog": "^3.10",
+        "symfony/config": "^7.4",
+        "symfony/dependency-injection": "^7.4",
+        "symfony/http-foundation": "^7.4",
+        "symfony/http-kernel": "^7.4",
+        "symfony/routing": "^7.4"
     },
     "require-dev": {
         "ext-curl": "*",
@@ -30,7 +37,7 @@
     },
     "config": {
         "platform": {
-            "php": "8.4.0"
+            "php": "8.4.1"
         },
         "sort-packages": true,
         "allow-plugins": {
