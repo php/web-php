@@ -136,7 +136,9 @@ if (is_readable($winQaFile)) {
 
     $buildLabel = static function (string $key, array $entry): string {
       $tool = 'VS';
-      if (strpos($key, 'vs17') !== false) {
+      if (strpos($key, 'vs18') !== false) {
+        $tool .= '18';
+      } elseif (strpos($key, 'vs17') !== false) {
         $tool .= '17';
       } elseif (strpos($key, 'vs16') !== false) {
         $tool .= '16';

@@ -19,7 +19,9 @@ $fullVersion = isset($verBlock['version']) ? $verBlock['version'] : $version;
 
 function ws_build_label(string $k, array $entry): string {
 	$tool = 'VS';
-	if (strpos($k, 'vs17') !== false) {
+	if (strpos($k, 'vs18') !== false) {
+		$tool .= '18';
+	} elseif (strpos($k, 'vs17') !== false) {
 		$tool .= '17';
 	} elseif (strpos($k, 'vs16') !== false) {
 		$tool .= '16';
