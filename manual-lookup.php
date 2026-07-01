@@ -27,6 +27,14 @@ if (!empty($_GET['scope']) && is_string($_GET['scope'])) {
 if ($function) {
     $function = strtolower($function);
 
+    // Check known terms and variables (operators like @, magic constants, etc.)
+    if ($path = is_known_variable(str_replace('_', '-', $function))) {
+        mirror_redirect("/manual/$LANG/$path");
+    }
+    if ($path = is_known_term($function)) {
+        mirror_redirect("/manual/$LANG/$path");
+    }
+
     // Try to find appropriate manual page
     if ($file = find_manual_page($LANG, $function)) {
         mirror_redirect($file);
