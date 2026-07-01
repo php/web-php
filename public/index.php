@@ -236,7 +236,7 @@ readonly class FrontPageController
             ?>
             <div class="banner-container">
                 <div class="banner-graphic-container">
-                    <img src="https://web-php-revamp26-558551258802.europe-west4.run.app/images/logos/php-foundation.svg"
+                    <img src="/images/logos/php-foundation.svg"
                          alt="PHP Foundation Logo" />
                 </div>
                 <div class="banner-content">
@@ -297,7 +297,7 @@ readonly class FrontPageController
             ?>
             <div class="banner-container">
                 <div class="banner-graphic-container">
-                    <img src="https://web-php-revamp26-558551258802.europe-west4.run.app/images/logos/composer.png"
+                    <img src="/images/logos/composer.png"
                          alt="Composer Logo" />
                 </div>
                 <div class="banner-content">
