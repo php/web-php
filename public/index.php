@@ -636,7 +636,7 @@ readonly class FrontPageController
             'include_section' => false,
             'footer_style' => 'new',
             'current' => 'home',
-            'css' => ['theme-gst.css', 'landing.css'],
+            'css' => ['theme-gst.css'],
             'headtags' => [
                 '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom">',
                 '<script>',
