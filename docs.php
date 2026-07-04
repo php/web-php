@@ -9,7 +9,6 @@ site_header(
     "Documentation",
     [
         "current" => "docs",
-        'intro' => $intro,
         'cache_control' => 5 * 60, // 5 minutes
     ]
 );
