@@ -251,6 +251,7 @@ $manual_page_moves = [
     'install.xitami' => 'install.windows.xitami',
     'install.windows.installer.msi' => 'install.windows',
     'install.windows.installer' => 'install.windows',
+    'install.windows.tools' => 'install.windows',
 
     // Internals docs where moved
     'zend' => 'internals2.ze1.zendapi',
