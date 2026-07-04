@@ -128,10 +128,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  the repository for the source code to the latest version of PHP itself.
  Checking out the source code can be done <a href="git.php">anonymously</a>.
 </p>
-<p>
- Using <a href="https://heap.space/">OpenGrok</a> is another option to view the
- source code, and it offers additional features like search and cross referencing.
-</p>
 </div>
 
 <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
