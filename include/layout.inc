@@ -504,6 +504,13 @@ function site_footer(array $config = []): void
     require __DIR__ . "/footer.inc";
 }
 
+function sha256_html(string $checksum): string
+{
+    $checksum = htmlspecialchars($checksum, ENT_QUOTES, 'UTF-8');
+
+    return '<span class="sha256-row"><span class="sha256">' . $checksum . '</span><button type="button" class="sha256-copy" data-copy-text="' . $checksum . '" aria-label="Copy sha256 checksum">Copy</button></span>';
+}
+
 function get_nav_items(): array {
   return [
     new NavItem(

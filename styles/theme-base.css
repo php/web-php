@@ -783,19 +783,48 @@ fieldset {
 .content-header .changelog {
     color:#369;
 }
-.content-box .md5sum, .content-box .sha256 {
+.content-box .sha256,
+.downloads .sha256 {
     display: block;
     font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.content-box .md5sum:before {
-    content: "md5: ";
-    font-family: var(--font-family-sans-serif);
-}
-.content-box .sha256:before {
+.content-box .sha256:before,
+.downloads .sha256:before {
     content: "sha256: ";
     font-family: var(--font-family-sans-serif);
+}
+.content-box .sha256-row,
+.downloads .sha256-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.content-box .sha256-row .sha256,
+.downloads .sha256-row .sha256 {
+    min-width: 0;
+}
+.content-box .sha256-copy,
+.downloads .sha256-copy {
+    border: 1px solid var(--dark-blue-color);
+    border-radius: 30px;
+    background-color: var(--dark-blue-color);
+    color: #fff;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    cursor: pointer;
+    min-width: 4.25rem;
+    text-align: center;
+    white-space: nowrap;
+}
+.content-box .sha256-copy:hover,
+.content-box .sha256-copy:focus,
+.downloads .sha256-copy:hover,
+.downloads .sha256-copy:focus {
+    border-color: var(--dark-magenta-color);
+    background-color: var(--dark-magenta-color);
 }
 .content-box .releasedate {
     float: right;

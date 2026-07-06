@@ -139,8 +139,9 @@ function show_source_releases()
                   <?php download_link($rel['filename'], $rel['filename']); ?>
                   <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
                   <?php
-                    if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
-                    if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
+                    if (isset($rel['sha256'])) {
+                        echo sha256_html($rel['sha256']);
+                    }
                    ?>
                   <?php if (isset($rel['note']) && $rel['note']): ?>
                     <p>
