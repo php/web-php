@@ -5,7 +5,7 @@ on:
     types:
       - completed
 
-# pull_request_target needs explicit perms; fork PRs default to read-only.
+# workflow_run needs explicit perms for PR comments.
 permissions:
   contents: read
   issues: write
@@ -16,7 +16,7 @@ jobs:
     runs-on: "ubuntu-22.04"
     if: >
       github.repository_owner == 'php' &&
-      github.event.workflow_run.event == 'pull_request_target'
+      github.event.workflow_run.event == 'pull_request'
 
     steps:
       - name: Download PR number
