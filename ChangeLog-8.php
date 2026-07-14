@@ -230,7 +230,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Streams:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set). (CVE-2026-12184)</li>
 </ul></li>
 <li>URI:
 <ul>
@@ -1155,7 +1155,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 22187); ?> (Memory corruption (zend_mm_heap corrupted) in openssl_encrypt with AES-WRAP-PAD).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22187); ?> (Memory corruption (zend_mm_heap corrupted) in openssl_encrypt with AES-WRAP-PAD). (CVE-2026-14355)</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -1313,7 +1313,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Streams:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set). (CVE-2026-12184)</li>
 </ul></li>
 <li>XSL:
 <ul>
