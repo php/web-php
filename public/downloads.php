@@ -1,4 +1,6 @@
 <?php
+use phpweb\Downloads\OptionResolver;
+
 $_SERVER['BASE_PAGE'] = 'downloads.php';
 require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/gpg-keys.inc';
@@ -99,43 +101,11 @@ $versions = [
 ];
 
 
-$platform = $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '';
-$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-$auto_os = null;
-$auto_osvariant = null;
-
-if (!empty($platform) || !empty($ua)) {
-    $platform = strtolower(trim($platform, '"'));
-    if ($platform === 'windows' || stripos($ua, 'Windows') !== false) {
-        $auto_os = 'windows';
-    } elseif ($platform === 'macos' || stripos($ua, 'Mac') !== false) {
-        $auto_os = 'osx';
-    } elseif ($platform === 'linux' || stripos($ua, 'Linux') !== false) {
-        $auto_os = 'linux';
-        if (stripos($ua, 'Ubuntu') !== false) {
-            $auto_osvariant = 'linux-ubuntu';
-        } elseif (stripos($ua, 'Debian') !== false) {
-            $auto_osvariant = 'linux-debian';
-        } elseif (stripos($ua, 'Fedora') !== false) {
-            $auto_osvariant = 'linux-fedora';
-        } elseif (stripos($ua, 'Red Hat') !== false || stripos($ua, 'RedHat') !== false) {
-            $auto_osvariant = 'linux-redhat';
-        }
-    }
-}
-
-$defaults = [
-    'os' => $auto_os ?? 'linux',
-    'version' => 'default',
-];
-
-$options = array_merge($defaults, $_GET);
-
-if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants']))) {
-    $options['osvariant'] = $auto_osvariant;
-} elseif (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants'])) {
-    $options['osvariant'] = array_key_first($os[$options['os']]['variants']);
-}
+$options = (new OptionResolver($os))->resolve(
+    $_GET,
+    $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '',
+    $_SERVER['HTTP_USER_AGENT'] ?? '',
+);
 ?>
 <h1>Downloads &amp; Installation Instructions</h1>
 
