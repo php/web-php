@@ -11,14 +11,13 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phptek.io" title="PHP Tek 2027 Logo">php-tek-2027.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     Join us for the 19th Annual Web Developer Conference, PHP Tek 2027, April 27-29 2026.
-     
-     PHP Tek combines leadership, expertise, and networking in one event. A relaxing atmosphere for tech leaders and developers to share, learn and grow professionally while also providing you with the knowledge to solve your everyday problems.
-     
-     We are the longest-running web developer conference in the United States, focusing on the PHP programming language. The event is broken up into multiple days. The main conference happens over the course of 3 days (April 27-29) and includes keynotes, talks, and networking options. It will be broken into three tracks and will cover a range of topics.  There will be two dedicated PHP Tracks, and then each day will have a different 3rd track (JS/Laravel/DevOps)
-     
-     Head over to https://phptek.io and get yours today!
-     
+     <p>Join us for the 19th Annual Web Developer Conference, PHP Tek 2027, April 27-29 2026.</p>
+
+     <p>PHP Tek combines leadership, expertise, and networking in one event. A relaxing atmosphere for tech leaders and developers to share, learn and grow professionally while also providing you with the knowledge to solve your everyday problems.</p>
+
+     <p>We are the longest-running web developer conference in the United States, focusing on the PHP programming language. The event is broken up into multiple days. The main conference happens over the course of 3 days (April 27-29) and includes keynotes, talks, and networking options. It will be broken into three tracks and will cover a range of topics.  There will be two dedicated PHP Tracks, and then each day will have a different 3rd track (JS/Laravel/DevOps)</p>
+
+     <p>Head over to <a href="https://phptek.io">https://phptek.io</a> and get yours today!</p>
     </div>
   </content>
 </entry>
