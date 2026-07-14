@@ -112,7 +112,8 @@ function find_manual_page($lang, $keyword)
         if (in_array('sqlite', PDO::getAvailableDrivers(), true)) {
             if (file_exists(ProjectGlobals::getBackendRoot() . '/manual-lookup.sqlite')) {
                 try {
-                    $dbh = new PDO( 'sqlite:' . ProjectGlobals::getBackendRoot() . '/manual-lookup.sqlite', '', '', [PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true] );
+                    // Check prepare()/execute() for false to fall back to the slow search
+                    $dbh = new PDO( 'sqlite:' . ProjectGlobals::getBackendRoot() . '/manual-lookup.sqlite', '', '', [PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT] );
                 } catch (PDOException $e) {
                     return find_manual_page_slow($lang, $keyword);
                 }
@@ -211,7 +212,8 @@ function find_manual_page($lang, $keyword)
                 }
             }
         } else {
-            error_noservice();
+            // prepare() failed, fall back to the slow search
+            return find_manual_page_slow($langs[0], $kw);
         }
     }
 
