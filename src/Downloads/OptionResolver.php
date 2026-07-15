@@ -17,10 +17,14 @@ class OptionResolver
      * Resolve the selected download options from the request, auto-detecting the
      * operating system from client hints / user agent when not explicitly chosen.
      *
+     * When the client supplies an invalid os parameter (e.g. bots requesting
+     * ?os=<garbage> or ?os[]=x, which previously crashed while indexing the os
+     * list), the returned Resolution carries a redirect query pointing at the
+     * auto-detected results instead of silently rendering a default.
+     *
      * @param array<string, mixed> $get GET parameters (os, osvariant, version, ...)
-     * @return array<string, mixed>
      */
-    public function resolve(array $get, string $platformHeader, string $uaHeader): array
+    public function resolve(array $get, string $platformHeader, string $uaHeader): Resolution
     {
         [$autoOs, $autoOsVariant] = $this->autoDetect($platformHeader, $uaHeader);
 
@@ -31,9 +35,10 @@ class OptionResolver
 
         $options = array_merge($defaults, $get);
 
-        // Ignore an invalid or non-string os parameter (e.g. bots requesting
-        // ?os=<garbage> or ?os[]=x) so indexing $osList below stays safe.
-        if (!is_string($options['os']) || !array_key_exists($options['os'], $this->osList)) {
+        $invalidOs = array_key_exists('os', $get)
+            && (!is_string($get['os']) || !array_key_exists($get['os'], $this->osList));
+
+        if ($invalidOs) {
             $options['os'] = $defaults['os'];
         }
 
@@ -43,7 +48,29 @@ class OptionResolver
             $options['osvariant'] = array_key_first($this->osList[$options['os']]['variants']);
         }
 
-        return $options;
+        return new Resolution(
+            $options,
+            $invalidOs ? $this->redirectQuery($options) : null,
+        );
+    }
+
+    /**
+     * Build the canonical query string for the auto-detected results, preserving
+     * the resolved os/variant/version so the redirect lands on a valid page.
+     *
+     * @param array<string, mixed> $options
+     */
+    private function redirectQuery(array $options): string
+    {
+        $query = [];
+
+        foreach (['os', 'osvariant', 'version'] as $key) {
+            if (array_key_exists($key, $options) && is_string($options[$key])) {
+                $query[$key] = $options[$key];
+            }
+        }
+
+        return http_build_query($query);
     }
 
     /**

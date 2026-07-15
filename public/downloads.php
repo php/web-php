@@ -9,6 +9,58 @@ require_once __DIR__ . '/../include/version.inc';
 // Try to make this page non-cached
 header_nocache();
 
+$os = [
+    'linux' => [
+        'name' => 'Linux',
+        'variants' => [
+            'linux-debian' => 'Debian',
+            'linux-fedora' => 'Fedora',
+            'linux-redhat' => 'RedHat',
+            'linux-ubuntu' => 'Ubuntu',
+            'linux-docker-cli' => 'Docker (Command Line Interface)',
+            'linux-docker-web' => 'Docker (Web Development)',
+        ],
+    ],
+    'osx' => [
+        'name' => 'macOS',
+        'variants' => [
+            'osx-homebrew' => 'Homebrew',
+            'osx-homebrew-php' => 'Homebrew-PHP',
+            'osx-docker-cli' => 'Docker (Command Line Interface)',
+            'osx-docker-web' => 'Docker (Web Development)',
+            'osx-macports' => 'MacPorts',
+        ],
+    ],
+    'windows' => [
+        'name' => 'Windows',
+        'variants' => [
+            'windows-downloads' => 'ZIP Downloads',
+            'windows-native' => 'Single Line Installer',
+            'windows-chocolatey' => 'Chocolatey',
+            'windows-scoop' => 'Scoop',
+            'windows-winget' => 'Winget',
+            'windows-docker-cli' => 'Docker (Command Line Interface)',
+            'windows-docker-web' => 'Docker (Web Development)',
+            'windows-wsl-debian' => 'WSL/Debian',
+            'windows-wsl-ubuntu' => 'WSL/Ubuntu',
+        ],
+    ],
+];
+
+// An invalid ?os= redirects to the auto-detected results before any output.
+$resolution = (new OptionResolver($os))->resolve(
+    $_GET,
+    $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '',
+    $_SERVER['HTTP_USER_AGENT'] ?? '',
+);
+
+if ($resolution->redirectQuery !== null) {
+    header('Location: /downloads.php?' . $resolution->redirectQuery, true, 302);
+    exit;
+}
+
+$options = $resolution->options;
+
 $SIDEBAR_DATA = '
 <div class="panel">
   <a href="/supported-versions.php">Supported Versions</a>
@@ -54,44 +106,6 @@ function option(string $value, string $desc, $attributes = []): string
     return '<option value="' . $value . '"' . implode(' ', array_keys(array_filter($attributes))) . '>' . $desc . '</option>';
 }
 
-$os = [
-    'linux' => [
-        'name' => 'Linux',
-        'variants' => [
-            'linux-debian' => 'Debian',
-            'linux-fedora' => 'Fedora',
-            'linux-redhat' => 'RedHat',
-            'linux-ubuntu' => 'Ubuntu',
-            'linux-docker-cli' => 'Docker (Command Line Interface)',
-            'linux-docker-web' => 'Docker (Web Development)',
-        ],
-    ],
-    'osx' => [
-        'name' => 'macOS',
-        'variants' => [
-            'osx-homebrew' => 'Homebrew',
-            'osx-homebrew-php' => 'Homebrew-PHP',
-            'osx-docker-cli' => 'Docker (Command Line Interface)',
-            'osx-docker-web' => 'Docker (Web Development)',
-            'osx-macports' => 'MacPorts',
-        ],
-    ],
-    'windows' => [
-        'name' => 'Windows',
-        'variants' => [
-            'windows-downloads' => 'ZIP Downloads',
-            'windows-native' => 'Single Line Installer',
-            'windows-chocolatey' => 'Chocolatey',
-            'windows-scoop' => 'Scoop',
-            'windows-winget' => 'Winget',
-            'windows-docker-cli' => 'Docker (Command Line Interface)',
-            'windows-docker-web' => 'Docker (Web Development)',
-            'windows-wsl-debian' => 'WSL/Debian',
-            'windows-wsl-ubuntu' => 'WSL/Ubuntu',
-        ],
-    ],
-];
-
 $versions = [
     '8.5' => 'version 8.5',
     '8.4' => 'version 8.4',
@@ -100,12 +114,6 @@ $versions = [
     'default' => 'default PHP version for OS',
 ];
 
-
-$options = (new OptionResolver($os))->resolve(
-    $_GET,
-    $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '',
-    $_SERVER['HTTP_USER_AGENT'] ?? '',
-);
 ?>
 <h1>Downloads &amp; Installation Instructions</h1>
 
