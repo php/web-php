@@ -26,9 +26,12 @@ header("Permissions-Policy: interest-cohort=()");
     }
 
     $host = parse_url($_SERVER["HTTP_ORIGIN"]);
-    if (!preg_match('/^(.+\.)?php\.net$/', $host["host"])) {
-        if ($host["host"] != $_SERVER["SERVER_NAME"]) {
-            exit(10);
+    if (!preg_match('/^(.+\.)?php\.net$/', $host["host"] ?? '')) {
+        if (($host["host"] ?? '') != $_SERVER["SERVER_NAME"]) {
+            // Unknown origin: just skip the CORS headers. Don't exit,
+            // or we send a blank 200 with no Cache-Control that the CDN
+            // happily caches as an empty homepage (see issue #1955).
+            return;
         }
     }
     if (isset($host["port"])) {
