@@ -9,12 +9,14 @@ include_once __DIR__ . '/../../include/prepend.inc';
 const LANGUAGES = [
     'en' => 'English',
     'es' => 'Español',
+    'fr' => 'Français',
     'ja' => '日本語',
     'pt_BR' => 'Brazilian Portuguese',
     'ru' => 'Русский',
     'tr' => 'Türkçe',
     'uk' => 'Українська',
     'zh' => '简体中文',
+    'vi' => 'Tiếng Việt',
 ];
 
 function common_header(string $description): void {
@@ -52,7 +54,7 @@ META
     ]);
 }
 
-function message($code, $language = 'en', array $interpolations = [])
+function message($code, $language = 'en', array $interpolations = []): string
 {
     $original = require __DIR__ . '/languages/en.php';
     if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {

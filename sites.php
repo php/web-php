@@ -6,13 +6,13 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 
 <h1 class="content-header">PHP.net: A Tourist's Guide</h1>
 <p class="content-box">
- Everyone knows the <code>php.net</code> site. All of us went there sooner or later,
+ Everyone knows the <code>www.php.net</code> site. All of us went there sooner or later,
  and will keep going back there. This is the central reference point for PHP
  users, and there is a wealth of information there. Not all of it is obvious.
  Come with me, I'll show you.
 </p>
 
-<h2 id="www" class="content-header"><a href="http://php.net/">php.net</a>: Main Website</h2>
+<h2 id="www" class="content-header"><a href="https://www.php.net/">php.net</a>: Main Website</h2>
 
 <div class="content-box">
 <p>
@@ -25,7 +25,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  This is the home of the <a href="/downloads.php">download page</a>, for
  everyone to get the latest version of the PHP source code and binaries
  for Windows. The current and next-to-current versions are available there.
- (There is also a <a href="http://museum.php.net/">PHP Museum</a>, which has
+ (There is also a <a href="https://museum.php.net/">PHP Museum</a>, which has
  all of the source distributions since June 1996.)
 </p>
 
@@ -52,7 +52,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </div>
 
 <h2 id="talks" class="content-header">
- <a href="http://talks.php.net/">talks.php.net</a>: Conference Materials
+ <a href="https://talks.php.net/">talks.php.net</a>: Conference Materials
 </h2>
 
 <p class="content-box">
@@ -63,20 +63,20 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="news" class="content-header">
- <a href="http://news.php.net/">news.php.net</a>:
+ <a href="https://news-web.php.net/">news-web.php.net</a>:
  Mailing Lists Web and NNTP Interface
 </h2>
 
 <p class="content-box">
- news.php.net is the web interface to the PHP mailing lists. If you're not
+ news-web.php.net is the web interface to the PHP mailing lists. If you're not
  subscribed to the mailing lists, but you still want to keep in touch regularly,
  this is your place. An infinite pile of fresh news and trends of PHP. You can
- also point your news reader at the NNTP server at news.php.net to follow the
+ also point your news reader at the NNTP server at <a href="news://news.php.net">news server</a> to follow the
  lists.
 </p>
 
 <h2 id="pear" class="content-header">
- <a href="http://pear.php.net/">pear.php.net</a>:
+ <a href="https://pear.php.net/">pear.php.net</a>:
  The PHP Extension and Application Repository
 </h2>
 
@@ -89,7 +89,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="pecl" class="content-header">
- <a href="http://pecl.php.net/">pecl.php.net</a>:
+ <a href="https://pecl.php.net/">pecl.php.net</a>:
  The PHP Extension Community Library
 </h2>
 
@@ -128,10 +128,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  the repository for the source code to the latest version of PHP itself.
  Checking out the source code can be done <a href="git.php">anonymously</a>.
 </p>
-<p>
- Using <a href="https://heap.space/">OpenGrok</a> is another option to view the
- source code, and it offers additional features like search and cross referencing.
-</p>
 </div>
 
 <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
@@ -140,13 +136,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  Home of the official PHP wiki, this site contains information related to php.net like
  RFCs, GSOC information, and TODO files. Most every aspect of the PHP project
  has a wiki section and everyone is able to apply for wiki commit access.
-</p>
-
-<h2 id="windows" class="content-header"><a href="https://windows.php.net/">windows.php.net</a>: PHP for Windows</h2>
-
-<p class="content-box">
- This site is dedicated to supporting PHP on Microsoft Windows.
- It also supports ports of PHP extensions or features as well as providing special builds for the various Windows architectures.
 </p>
 
 <h2 id="people" class="content-header"><a href="https://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
@@ -168,7 +157,6 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#doc">Documentation collaboration</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
-<p class='panel'><a href="#windows">PHP for Windows</a></h2>
 <p class='panel'><a href="#people">The PHP Developers Profiles</a></h2>
 
 SIDEBAR_DATA;

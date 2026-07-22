@@ -35,7 +35,7 @@ https://wiki.php.net/web/mirror
 
 ## Code requirements
 
-Code must function on a vanilla PHP 8.2 installation.
+Code must function on a vanilla PHP 8.4 installation.
 Please keep this in mind before filing a pull request.
 
 ## Contributing

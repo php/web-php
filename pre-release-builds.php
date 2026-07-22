@@ -97,9 +97,8 @@ whether no regressions have been introduced.
           <a href="<?php echo $file_info['path'] ?>"><?php echo "php-{$info['version']}.tar.{$file_type}"; ?></a>
           <span class="releasedate"><?php echo date('d M Y', strtotime($info['date'])); ?></span>
             <?php foreach ($QA_CHECKSUM_TYPES as $algo): ?>
-              <span class="<?php echo $algo; ?>">
               <?php if (isset($file_info[$algo]) && strlen($file_info[$algo])) : ?>
-                <?php echo $file_info[$algo]; ?>
+                <?php echo sha256_html($file_info[$algo]); ?>
               <?php else: ?>
                 <em><small>No checksum value available</small></em>)&nbsp;
               <?php endif; ?>
@@ -136,7 +135,9 @@ if (is_readable($winQaFile)) {
 
     $buildLabel = static function (string $key, array $entry): string {
       $tool = 'VS';
-      if (strpos($key, 'vs17') !== false) {
+      if (strpos($key, 'vs18') !== false) {
+        $tool .= '18';
+      } elseif (strpos($key, 'vs17') !== false) {
         $tool .= '17';
       } elseif (strpos($key, 'vs16') !== false) {
         $tool .= '16';
@@ -187,7 +188,7 @@ if (is_readable($winQaFile)) {
       }
 
       if ($includeSha && $sha !== '') {
-        $parts[] = '<span class="sha256">' . htmlspecialchars($sha, ENT_QUOTES, 'UTF-8') . '</span>';
+        $parts[] = sha256_html($sha);
       }
 
       return '<li>' . implode(' ', $parts) . '</li>';
@@ -309,4 +310,3 @@ if ($winQaMessage !== '') {
 
 <?php
 site_footer(['sidebar' => $SIDEBAR_DATA]);
-

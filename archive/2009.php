@@ -260,7 +260,7 @@ site_header("News Archive - 2009", ["cache" => true]);
       or <a href="http://www.flickr.com/search/?w=all&amp;q=testfest+mug&amp;m=tags">TestFest mugs</a>
       have been picked at random from the people that contributed the
       <a href="http://testfest.php.net/repos/testfest/">887 tests</a>
-      during the <a href="http://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
+      during the <a href="https://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
      </p>
      <h2>Winners of elePHPhants</h2>
      <ul>
@@ -345,13 +345,13 @@ site_header("News Archive - 2009", ["cache" => true]);
       The migration from CVS to Subversion is complete.  The web interface is at
       <a href="http://svn.php.net">svn.php.net</a>.  You can read about it at
       <a href="http://php.net/svn.php">php.net/svn.php</a>,
-      <a href="http://wiki.php.net/vcs/svnfaq">wiki.php.net/vcs/svnfaq</a>.  The
+      <a href="https://wiki.php.net/vcs/svnfaq">wiki.php.net/vcs/svnfaq</a>.  The
       URL to feed to your svn client is http://svn.php.net/repository.
      </p>
      <p>
       There is also a <a href="http://github.com/php">github mirror</a>.  Please
       use that instead of trying to do a full git clone from the svn repository.  See
-      the instructions at <a href="http://wiki.php.net/vcs/svnfaq#git">wiki.php.net/vcs/svnfaq#git</a>
+      the instructions at <a href="https://wiki.php.net/vcs/svnfaq#git">wiki.php.net/vcs/svnfaq#git</a>
      </p>
      <p>
       Many thanks to Gwynne who did the bulk of the work and also all the other folks who pitched in.
@@ -371,14 +371,14 @@ site_header("News Archive - 2009", ["cache" => true]);
         <div>
      <p>
       So finally we are at the end of the
-      <a href="http://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
+      <a href="https://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
       It has been an outstanding success with the
       <a href="http://gcov.php.net/PHP_5_3/lcov_html/">coverage increasing</a>
       by about 2.5% overall and 887 new tests contributed in the TestFest SVN
       repository of which 637 have already been added to PHP CVS.
      </p>
      <p>
-      <a href="http://wiki.php.net/usergroups">User groups</a> from all
+      <a href="https://wiki.php.net/usergroups">User groups</a> from all
       over the world have worked hard to make this happen and we thank
       <a href="http://results.testfest.php.net">each and every one of you</a>
       for your contribution to PHP!
@@ -482,8 +482,7 @@ site_header("News Archive - 2009", ["cache" => true]);
      <p>
       The keynote speaker is Jan Schneider, who will also
       talk about the Horde project. In addition, we will
-      have sessions about other frameworks and include a
-      <a href="http://qa.php.net/testfest.php">PHP TestFest</a>.
+      have sessions about other frameworks and include a PHP TestFest.
      </p>
      <p>
       PHP'n Rio sessions go from 6-9 pm. Then the PHP TestFest follows up
@@ -522,7 +521,7 @@ site_header("News Archive - 2009", ["cache" => true]);
       Please download and test these release candidates, and report any issues
       found. A stable release is expected next week . In case of critical
       issues we will continue producing weekly RCs. Downloads and further
-      information is available at <a href="http://qa.php.net/">qa.php.net</a>.
+      information is available at <a href="https://qa.php.net/">qa.php.net</a>.
       See also the work in progress
       <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?revision=PHP_5_3">5.3 upgrade guide</a>.
      </p>
@@ -565,7 +564,7 @@ site_header("News Archive - 2009", ["cache" => true]);
     <h1 class="summary entry-title"><a id="id2009-06-12-1" href="http://www.php.net/archive/2009.php#id2009-06-12-1" rel="bookmark" class="bookmark">PHP 5.2.10RC2 and PHP 5.3.0RC3 Release Announcements</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-12T17:39:42+02:00">[12-Jun-2009]</abbr>
-        <div>     <p>      The PHP development team is proud to announce the second release candidate of PHP 5.2.10 (PHP 5.2.10RC2) and      the third release candidate of PHP 5.3.0 (PHP 5.3.0RC3).      These RCs focuses on bug fixes and stability improvements, and we hope only minimal changes are required      for the next candidate or final stable releases.     </p>     <p>      PHP 5.2.10 is a pure maintenance release for providing bugfixes and stability updates. PHP 5.3.0      is a newly developed version of PHP featuring long-awaited features like namespaces, late      static binding, closures and much more.     </p>     <p>      Please download and test these release candidates, and report any issues found.      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.     </p></div>
+        <div>     <p>      The PHP development team is proud to announce the second release candidate of PHP 5.2.10 (PHP 5.2.10RC2) and      the third release candidate of PHP 5.3.0 (PHP 5.3.0RC3).      These RCs focuses on bug fixes and stability improvements, and we hope only minimal changes are required      for the next candidate or final stable releases.     </p>     <p>      PHP 5.2.10 is a pure maintenance release for providing bugfixes and stability updates. PHP 5.3.0      is a newly developed version of PHP featuring long-awaited features like namespaces, late      static binding, closures and much more.     </p>     <p>      Please download and test these release candidates, and report any issues found.      Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.      See also the work in progress <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.     </p></div>
 
     </div>
 </div>
@@ -665,8 +664,7 @@ site_header("News Archive - 2009", ["cache" => true]);
         have 2 months left to go.
       </p>
       <p>
-        Getting involved couldn't be simpler. Visit the
-        <a href="http://qa.php.net/testfest.php">QA TestFest page</a> to
+        Getting involved couldn't be simpler. Visit the QA TestFest page to
         find out how you can organize a TestFest event in your community.
         We are looking forward to seeing your communities tests being
         committed into PHP.
@@ -695,8 +693,8 @@ site_header("News Archive - 2009", ["cache" => true]);
      </p>
      <p>
       Please download and test this release candidate, and report any issues found.
-      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.
-      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
+       Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.
+       See also the work in progress <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
      </p>
     </div>
 
@@ -806,7 +804,7 @@ site_header("News Archive - 2009", ["cache" => true]);
        at this years GSoC.
       </p>
       <p>
-       We invite everyone to look at the <a href="http://wiki.php.net/gsoc/2009">list of ideas</a> for
+       We invite everyone to look at the <a href="https://wiki.php.net/gsoc/2009">list of ideas</a> for
        this years GSoC, and get involved. Students are welcome to propose their own ideas, and we
        will consider all applications that are received before the April 3rd deadline. So, thanks to
        everyone involved and we look forward to seeing many students join us on this great adventure!
@@ -829,7 +827,7 @@ site_header("News Archive - 2009", ["cache" => true]);
         <li>Support for <a href="http://php.net/namespaces">namespaces</a></li>
         <li>Under the hood performance improvements</li>
         <li><a href="http://php.net/lsb">Late static binding</a></li>
-        <li><a href="http://docs.php.net/functions.anonymous">Lambda functions and closures</a></li>
+        <li><a href="https://www.php.net/functions.anonymous">Lambda functions and closures</a></li>
         <li>
          Syntax additions:
          <a href="http://php.net/manual/language.types.string.php#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO,

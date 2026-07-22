@@ -14,23 +14,17 @@ return [
     'key_features' => 'Principais recursos do PHP 8.5',
     'key_features_description' => '<p><strong>Mais rápido</strong>, <strong>mais limpo</strong> e <strong>feito para desenvolvedores</strong>.</p>',
 
-    'features_pipe_operator_title' => 'Operador Pipe',
     'features_pipe_operator_description' => '<p>O operador <code>|></code> permite encadear funções da esquerda para a direita, passando valores entre múltiplas chamadas sem variáveis intermediárias.</p>',
-    'features_persistent_curl_share_handles_title' => 'cURL Share Handles Persistentes',
     'features_persistent_curl_share_handles_description' => '<p>Agora é possível manter handles compartilhados entre várias requisições PHP, evitando o custo de inicializar conexões repetidas para os mesmos hosts.</p>',
-    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Clone objetos e atualize propriedades usando a nova sintaxe <code>clone()</code>, facilitando o padrão “with-er” para classes <code>readonly</code>.</p>',
-    'features_uri_extension_title' => 'Extensão URI',
     'features_uri_extension_description' => '<p>O PHP 8.5 adiciona uma extensão nativa para analisar, normalizar e manipular URLs seguindo os padrões <em>RFC 3986</em> e <em>WHATWG URL</em>.</p>',
-    'features_no_discard_title' => 'Atributo #[\NoDiscard]',
     'features_no_discard_description' => '<p>O atributo <code>#[\NoDiscard]</code> emite um aviso quando o valor de retorno não é usado, ajudando a evitar erros e aumentando a segurança de APIs.</p>',
-    'features_fcc_in_const_expr_title' => 'Closures e First-Class Callables em Expressões Constantes',
     'features_fcc_in_const_expr_description' => '<p>Closures estáticas e first-class callables agora podem ser usadas em expressões constantes, como parâmetros de atributos.</p>',
 
     'pipe_operator_title' => 'Operador Pipe',
     'pipe_operator_description' => '<p>O operador pipe permite encadear chamadas de função sem lidar com variáveis intermediárias. Isso substitui chamadas aninhadas por um fluxo mais legível de cima para baixo.</p><p>Saiba mais sobre os bastidores desse recurso no <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">blog da The PHP Foundation</a>.</p>',
 
-    'array_first_last_title' => 'Funções array_first() e array_last()',
+    'array_first_last_title' => 'Funções <code>array_first()</code> e <code>array_last()</code>',
     'array_first_last_description' => '<p>As funções <code>array_first()</code> e <code>array_last()</code> retornam, respectivamente, o primeiro ou o último valor de um array. Se o array estiver vazio, retornam <code>null</code>, o que facilita o uso com o operador <code>??</code>.</p>',
 
     'clone_with_title' => 'Clone With',
@@ -39,7 +33,7 @@ return [
     'uri_extension_title' => 'Extensão URI',
     'uri_extension_description' => '<p>A nova extensão URI, sempre disponível, fornece APIs para analisar e modificar URIs e URLs seguindo os padrões RFC 3986 e WHATWG URL.</p><p>Baseada nas bibliotecas <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) e <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL).</p><p>Saiba mais sobre esse recurso no <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">blog da The PHP Foundation</a>.</p>',
 
-    'no_discard_title' => 'Atributo #[\NoDiscard]',
+    'no_discard_title' => 'Atributo <code>#[\NoDiscard]</code>',
     'no_discard_description' => '<p>Ao marcar uma função com <code>#[\NoDiscard]</code>, o PHP verificará se o valor retornado foi usado e emitirá um aviso caso não seja. Isso aumenta a segurança de APIs em que o retorno é importante, mas pode ser facilmente ignorado.</p><p>O cast <code>(void)</code> pode ser usado para indicar que o valor está sendo descartado intencionalmente.</p>',
 
     'persistent_curl_share_handles_title' => 'cURL Share Handles Persistentes',

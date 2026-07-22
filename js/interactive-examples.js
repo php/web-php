@@ -94,11 +94,13 @@ async function main() {
 
       const runPhp = await PHP.loadPhp();
       runPhp(phpcode.innerText);
+      const output = PHP.buffer.join("").replace(/^\n+|\n+$/g, "");
+
       if (exampleScreenPreElement !== null) {
         exampleTitleParagraphElement.innerText = generateExampleOutputTitle(PHP.version);
-        exampleScreenPreElement.innerText = PHP.buffer.join("");
+        exampleScreenPreElement.innerText = output;
       } else {
-        lastOutput = createOutput(PHP.buffer.join(""));
+        lastOutput = createOutput(output);
         phpcode.parentNode.appendChild(lastOutput);
       }
       PHP.buffer.length = 0;

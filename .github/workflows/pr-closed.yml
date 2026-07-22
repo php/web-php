@@ -8,7 +8,7 @@ jobs:
     runs-on: "ubuntu-22.04"
     if: github.repository_owner == 'php'
     steps:
-      - uses: appleboy/ssh-action@v1.2.4
+      - uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.PREVIEW_REMOTE_HOST }}
           username: ${{ secrets.PREVIEW_REMOTE_USER }}

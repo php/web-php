@@ -104,7 +104,7 @@ Mousetrap.bind("b o r k", function () {
 function cycle(to, from) {
     from.removeClass("current");
     to.addClass("current");
-    $.scrollTo(to.offset().top);
+    scrollToActiveItem();
 }
 
 function getNextOrPreviousSibling(node, forward) {
@@ -118,9 +118,6 @@ function cycleMenuItems(current, forward) {
     var nextOrPreviousSibling = getNextOrPreviousSibling(current, forward);
     if (nextOrPreviousSibling.length) {
         cycle(nextOrPreviousSibling, current);
-        curr.children("a").first().focus().css({
-            outline: "none"
-        });
     }
 }
 
@@ -145,6 +142,18 @@ function cycleHeaders(matches, forward) {
         cycle($(matches[forward ? 0 : matches.length - 1]), $(matches[forward ? matches.length - 1 : 0]));
     }
 }
+
+function scrollToActiveItem() {
+    const sidebar = document.querySelector(".layout-menu");
+    const activeItem = sidebar?.querySelector(".current");
+
+    if (sidebar && activeItem) {
+        sidebar.scrollTo({
+            top: activeItem.offsetTop - sidebar.offsetTop - (sidebar.clientHeight / 2) + (activeItem.clientHeight / 2)
+        });
+    }
+}
+
 Mousetrap.bind("j", function () {
     /* Doc page */
     var node = $(".layout-menu .current");
@@ -248,7 +257,7 @@ function globalsearch(txt) {
     }
 
     const language = getLanguage()
-    const key = `search-${language}`;
+    const key = `search2-${language}`;
     let cache = window.localStorage.getItem(key);
     cache = JSON.parse(cache);
 
@@ -691,6 +700,8 @@ $(document).ready(function () {
         flashMessage($(this));
     });
     /* }}} */
+
+    scrollToActiveItem();
 });
 
 /* {{{ add-user.php animations */
@@ -868,3 +879,18 @@ function applyTheme(theme) {
 }
 
 applyTheme(savedTheme)
+
+const downloads = document.querySelector('.downloads');
+downloads?.addEventListener('click', function (event) {
+  var button = event.target.closest('.sha256-copy');
+  if (!button || !navigator.clipboard) {
+    return;
+  }
+
+  navigator.clipboard.writeText(button.dataset.copyText).then(function () {
+    button.textContent = 'Copied';
+    setTimeout(function () {
+      button.textContent = 'Copy';
+    }, 1500);
+  });
+});

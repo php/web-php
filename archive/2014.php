@@ -674,7 +674,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC4 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -832,7 +832,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC3 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -965,7 +965,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC2 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -1155,7 +1155,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC1 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -1196,7 +1196,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For more information about the new features you can check out the work-in-progress
-        <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+        <a href="https://www.php.net/manual/en/migration56.new-features.php">documentation</a>
         or you can read the full list of changes in the
         <a href="https://github.com/php/php-src/blob/php-5.6.0beta4/NEWS">NEWS file</a>
         contained in the release archive.
@@ -1204,7 +1204,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0beta4 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -1395,7 +1395,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
 
      <p>For more information about the new features you can check out the work-in-progress
-      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      <a href="https://www.php.net/manual/en/migration56.new-features.php">documentation</a>
       or you can read the full list of changes in the
       <a href="https://github.com/php/php-src/blob/php-5.6.0beta3/NEWS">NEWS file</a> contained
       in the release archive.
@@ -1403,7 +1403,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
      <p>
       For source downloads of PHP 5.6.0beta3 please visit
-      the <a href="http://qa.php.net/">download page</a>. Windows binaries
+      the <a href="https://qa.php.net/">download page</a>. Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
@@ -1445,7 +1445,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      </ul>
 
      <p>For more information about the new features you can check out the work-in-progress
-      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      <a href="https://www.php.net/manual/en/migration56.new-features.php">documentation</a>
       or you can read the full list of changes in the
       <a href="https://github.com/php/php-src/blob/php-5.6.0beta2/NEWS">NEWS file</a> contained
       in the release archive.
@@ -1453,7 +1453,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
      <p>
       For source downloads of PHP 5.6.0beta2 please visit
-      the <a href="http://qa.php.net/">download page</a>. Windows binaries
+      the <a href="https://qa.php.net/">download page</a>. Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
@@ -1540,7 +1540,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      </ul>
 
      <p>For more information about the new features you can check out the work-in-progress
-      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      <a href="https://www.php.net/manual/en/migration56.new-features.php">documentation</a>
       or you can read the full list of changes in the
       <a href="https://github.com/php/php-src/blob/php-5.6.0beta1/NEWS">NEWS file</a> contained
       in the release archive.
@@ -1548,7 +1548,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
      <p>
       For source downloads of PHP 5.6.0beta1 please visit
-      the <a href="http://qa.php.net/">download page</a>. Windows binaries
+      the <a href="https://qa.php.net/">download page</a>. Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
@@ -1731,7 +1731,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      </ul>
 
      <p>For more information about the new features you can check out the work-in-progress
-      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      <a href="https://www.php.net/manual/en/migration56.new-features.php">documentation</a>
       or you can read the full list of changes in the
       <a href="https://github.com/php/php-src/blob/php-5.6.0alpha3/NEWS">NEWS file</a> contained
       in the release archive.
@@ -1804,7 +1804,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      </ul>
 
      <p>For more information about the new features you can check out the work-in-progress
-      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      <a href="https://www.php.net/manual/en/migration56.new-features.php">documentation</a>
       or you can read the full list of changes in the
       <a href="https://github.com/php/php-src/blob/php-5.6.0alpha2/NEWS">NEWS file</a> contained
       in the release archive.
@@ -1952,7 +1952,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      </ul>
 
      <p>For more information about the new features you can check out the work-in-progress
-      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      <a href="https://www.php.net/manual/en/migration56.new-features.php">documentation</a>
       or you can read the full list of changes in the
       <a href="https://github.com/php/php-src/blob/php-5.6.0alpha1/NEWS">NEWS file</a> contained
       in the release archive.

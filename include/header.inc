@@ -49,6 +49,11 @@ if ($config["cache"]) {
     }
     header("Last-Modified: " . $tsstring);
 }
+
+if ($config["cache_control"] && is_numeric($config["cache_control"])) {
+    header("Cache-Control: public, max-age=" . (int) $config["cache_control"]);
+}
+
 if (!isset($config["languages"])) {
     $config["languages"] = [];
 }
@@ -105,10 +110,6 @@ if (!isset($config["languages"])) {
 <script type="text/javascript" src="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>"></script>
 <?php endforeach ?>
 
-<?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
-<?php endif ?>
-
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
 <?php if (is_primary_site()) { ?>
@@ -149,6 +150,7 @@ if (!isset($config["languages"])) {
       tabindex="-1"
       class="navbar__offcanvas"
       aria-label="Menu"
+      role="navigation"
     >
       <button
         id="navbar__close-button"

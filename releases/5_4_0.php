@@ -17,8 +17,8 @@ and includes a large number of new features and bug fixes.
 </p>
 <ul>
  <li>New language syntax including <a href="http://php.net/traits">Traits</a>,
-    <a href="http://docs.php.net/manual/language.types.array.php">shortened array syntax</a>
-    and <a href="http://docs.php.net/manual/migration54.new-features.php">more</a></li>
+    <a href="https://www.php.net/manual/language.types.array.php">shortened array syntax</a>
+    and <a href="https://www.php.net/manual/migration54.new-features.php">more</a></li>
  <li>Improved performance and reduced memory consumption</li>
  <li>Support for multibyte languages now available in all builds of PHP at the flip of a runtime switch</li>
  <li><a href="http://php.net/manual/features.commandline.webserver.php">
@@ -38,7 +38,7 @@ and includes a large number of new features and bug fixes.
 </ul>
 
 <p>
-<b>Extensions moved to <a href="http://pecl.php.net">PECL</a>:</b>
+<b>Extensions moved to <a href="https://pecl.php.net">PECL</a>:</b>
 </p>
 <ul>
   <li><a href="http://www.php.net/manual/ref.sqlite.php">ext/sqlite</a> (<a href="http://www.php.net/manual/book.sqlite3.php">ext/sqlite3</a> and <a href="http://www.php.net/manual/ref.pdo-sqlite.php">ext/pdo_sqlite</a> are not affected)</li>

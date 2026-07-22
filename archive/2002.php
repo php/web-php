@@ -157,7 +157,7 @@ site_header("News Archive - 2002", ["cache" => true]);
  browser specific magic you can now use our
  <a href="/sidebars.php">Search Bar</a> from the major browsers. Please help
  us to test this new service, and provide feedback via
- <a href="http://bugs.php.net/">the bug system</a> (categorize your bug
+ <a href="https://bugs.php.net/">the bug system</a> (categorize your bug
  as a PHP.net website bug please).
 </p>
 
@@ -456,7 +456,7 @@ site_header("News Archive - 2002", ["cache" => true]);
  various sites that make up the PHP.net family of sites. Did you know you can
  browse a hyperlinked version of the PHP source code at <a
  href="http://lxr.php.net/">lxr.php.net</a>? View the archives of all of the
- mailing lists at <a href="http://news.php.net/">news.php.net</a>? See what else
+ mailing lists at <a href="https://news-web.php.net/">news-web.php.net</a>? See what else
  you've been missing.
 </p>
 
@@ -568,7 +568,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <p>
  <span class="newsdate">[24-Jan-2002]</span>
- <a href="http://gtk.php.net/">PHP-GTK</a> has reached version
+ <a href="https://gtk.php.net/">PHP-GTK</a> has reached version
  0.5.0, also known as <em>"monday starts on saturday"</em>. The version number
  was bumped from 0.1.1 to this one to indicate that PHP-GTK is now a fairly
  mature and stable extension and can be used for a variety of applications

@@ -5,25 +5,20 @@ use phpweb\I18n\Languages;
 $_SERVER['BASE_PAGE'] = 'docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-site_header("Documentation", ["current" => "docs"]);
-
+site_header(
+    "Documentation",
+    [
+        "current" => "docs",
+        'cache_control' => 5 * 60, // 5 minutes
+    ]
+);
 ?>
 
 <h1>Documentation</h1>
-<div class="content-box">
-
 <p>
  The PHP Manual is available online in a selection of languages.
  Please pick a language from the list below.
 </p>
-
-<p>
- Note, that many languages are just under translation, and
- the untranslated parts are still in English. Also some translated
- parts might be outdated. The translation teams are
- <a href="https://doc.php.net/">open to contributions</a>.
-</p>
-</div>
 
 <p>
   View Online:
@@ -49,6 +44,13 @@ foreach (Languages::ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 </p>
 
 <p>
+ Note that many languages are still being translated, and
+ the untranslated parts are still in English. Some translated
+ parts might be outdated. The translation teams are
+ <a href="https://doc.php.net/">open to contributions</a>.
+</p>
+
+<p>
  The language currently being used as the default for you should be in
  <strong>bold</strong> above. You can change the setting for this on the
  <a href="/my.php">My PHP.net customization page</a>.
@@ -71,7 +73,7 @@ foreach (Languages::ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
   you should read the <a href="https://doc.php.net/guide/">contribution guide</a>.
  </li>
  <li>
-  <a href="http://pear.php.net/manual/">Documentation of PEAR and the various
+  <a href="https://pear.php.net/manual/">Documentation of PEAR and the various
   packages</a> can be found on a separate server.
  </li>
  <li>

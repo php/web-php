@@ -325,6 +325,7 @@ function manual_setup($setup): void {
         "prev" => $setup["prev"],
         "next" => $setup["next"],
         "cache" => $lastmod,
+        'cache_control' => 5 * 60, // 5 minutes
         "description" => $setup["this"][2] ?? null,
     ];
     site_header($setup["this"][1] . " - Manual", $config);
@@ -490,7 +491,7 @@ function autogen(string $text, string $lang) {
         throw new \InvalidArgumentException("Cannot autogenerate text for '$text'");
     }
 
-    $translationFile = __DIR__ . \DIRECTORY_SEPARATOR . "ui_translation" . \DIRECTORY_SEPARATOR . $lang . ".ini";
+    $translationFile = __DIR__ . \DIRECTORY_SEPARATOR . "ui_translation" . \DIRECTORY_SEPARATOR . strtolower($lang) . ".ini";
 
     if (!\file_exists($translationFile)) {
         if ($lang !== "en") {

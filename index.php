@@ -135,6 +135,7 @@ site_header(NULL,
         ],
         'css' => ['home.css'],
         'intro' => $intro,
+        'cache_control' => 5 * 60, // 5 minutes
     ],
 );
 

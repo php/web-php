@@ -41,7 +41,7 @@ site_header("PHP 4.2.1 Release Announcement");
 <p>
  PHP 4.2.1 also has improved (but still experimental) support for Apache version 2.
  We do <strong>not</strong> recommend that you use this in a production environment,
- but feel free to test it and report bugs to the <a href="http://bugs.php.net">bug
+ but feel free to test it and report bugs to the <a href="https://bugs.php.net">bug
  system</a>.
 </p>
 

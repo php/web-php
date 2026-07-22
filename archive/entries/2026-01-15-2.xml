@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.3.30 Released!</title>
+  <id>https://www.php.net/archive/2026.php#2026-01-15-2</id>
+  <published>2026-01-15T23:05:01+00:00</published>
+  <updated>2026-01-15T23:05:01+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-01-15-2" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-01-15-2" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team announces the immediate availability of PHP 8.3.30. This is a bug fix release.</p>
+
+<p>All PHP 8.3 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.3.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can also be found <a href="https://www.php.net/downloads.php?os=windows&amp;version=8.3">there</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.3.30">ChangeLog</a>.
+</p>    </div>
+  </content>
+</entry>

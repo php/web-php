@@ -15,6 +15,10 @@ if (!empty($_GET['function']) && is_string($_GET['function'])) {
 
 if (!empty($_GET['scope']) && is_string($_GET['scope'])) {
     $scope = htmlspecialchars($_GET['scope'], ENT_QUOTES, 'UTF-8');
+
+    if ($scope == '404quickref') {
+        status_header(404);
+    }
 } else {
     $scope = '';
 }

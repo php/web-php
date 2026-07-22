@@ -18,23 +18,17 @@ return [
     'key_features' => 'PHP 8.5 的主要特性',
     'key_features_description' => '<p><strong>更快</strong>、<strong>更简洁</strong>、<strong>为开发者而生</strong>。</p>',
 
-    'features_pipe_operator_title' => '管道操作符',
     'features_pipe_operator_description' => '<p><code>|></code> 操作符允许从左到右连接可调用项，让数值在多个函数间顺畅传递，无需中间变量。</p>',
-    'features_persistent_curl_share_handles_title' => '持久化 cURL Share 句柄',
     'features_persistent_curl_share_handles_description' => '<p>句柄现在可以在多个 PHP 请求之间保持，不再需要重复初始化到同一主机的连接。</p>',
-    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>使用新的 <code>clone()</code> 语法可以克隆对象并更新属性，让 <code>readonly</code> 类的 "with-er" 模式变得简单。</p>',
-    'features_uri_extension_title' => 'URI 扩展',
     'features_uri_extension_description' => '<p>PHP 8.5 增加了内置的 URI 扩展，用于按照 <em>RFC 3986</em> 和 <em>WHATWG URL</em> 标准解析、规范化和处理 URL。</p>',
-    'features_no_discard_title' => '#[\NoDiscard] 属性',
     'features_no_discard_description' => '<p><code>#[\NoDiscard]</code> 属性会在返回值未被使用时发出警告，有助于避免错误，提高 API 安全性。</p>',
-    'features_fcc_in_const_expr_title' => '常量表达式中的闭包和 First-class 可调用',
     'features_fcc_in_const_expr_description' => '<p>静态闭包和 First-class 可调用现在可以用于常量表达式，例如属性参数。</p>',
 
     'pipe_operator_title' => '管道操作符',
     'pipe_operator_description' => '<p>管道操作符允许将多个函数调用串联起来，而无需处理中间变量。它可以将许多“嵌套调用”替换成从左到右可读的链式结构。</p><p>在 <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation 的博客</a>中了解该特性的更多背景。</p>',
 
-    'array_first_last_title' => 'array_first() 与 array_last() 函数',
+    'array_first_last_title' => '<code>array_first()</code> 与 <code>array_last()</code> 函数',
     'array_first_last_description' => '<p><code>array_first()</code> 与 <code>array_last()</code> 分别返回数组的第一个或最后一个值。若数组为空，则返回 <code>null</code>（方便与 <code>??</code> 操作符组合）。</p>',
 
     'clone_with_title' => 'Clone With',
@@ -43,7 +37,7 @@ return [
     'uri_extension_title' => 'URI 扩展',
     'uri_extension_description' => '<p>全新的、始终可用的 URI 扩展提供了一组 API，可根据 RFC 3986 和 WHATWG URL 标准安全地解析和修改 URI 与 URL。</p><p>由 <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a>（RFC 3986）和 <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a>（WHATWG URL）库驱动。</p><p>在 <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation 的博客</a>中了解更多背景。</p>',
 
-    'no_discard_title' => '#[\NoDiscard] 属性',
+    'no_discard_title' => '<code>#[\NoDiscard]</code> 属性',
     'no_discard_description' => '<p>为函数添加 <code>#[\NoDiscard]</code> 属性后，PHP 会检查返回值是否被使用，若未使用则发出警告。这样可以提高 API 的安全性，避免关键返回值被忽略。</p><p>可以使用 <code>(void)</code> 来显式表示“我就是不使用这个结果”。</p>',
 
     'persistent_curl_share_handles_title' => '持久化 cURL Share 句柄',

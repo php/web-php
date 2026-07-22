@@ -14,23 +14,17 @@ return [
     'key_features' => 'Основные функции PHP 8.5',
     'key_features_description' => '<p><strong>Быстрее</strong>, <strong>лучше</strong>, <strong>доступнее для разработчиков</strong>.</p>',
 
-    'features_pipe_operator_title' => 'Оператор Pipe',
     'features_pipe_operator_description' => '<p>Оператор <code>|></code> позволяет связывать вызываемые объекты слева направо, передавая значения через несколько функций без промежуточных переменных.</p>',
-    'features_persistent_curl_share_handles_title' => 'Постоянные дескрипторы cURL Share',
     'features_persistent_curl_share_handles_description' => '<p>Теперь дескрипторы могут сохраняться между несколькими запросами PHP, что позволяет избежать затрат на повторную инициализацию соединения с одними и теми же хостами.</p>',
-    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Клонируйте объекты и обновляйте свойства с помощью нового синтаксиса <code>clone()</code>, который упрощает использование шаблона «with-er» для классов <code>readonly</code>.</p>',
-    'features_uri_extension_title' => 'Модуль URI',
     'features_uri_extension_description' => '<p>В PHP 8.5 добавлен модуль URI для анализа, нормализации и обработки URL-адресов в соответствии со стандартами <em>RFC 3986</em> и <em>WHATWG URL</em>.</p>',
-    'features_no_discard_title' => 'Атрибут #[\NoDiscard]',
     'features_no_discard_description' => '<p>Атрибут <code>#[\NoDiscard]</code> выдаёт предупреждение, если возвращаемое значение не используется, что помогает предотвратить ошибки и повысить общую безопасность API.</p>',
-    'features_fcc_in_const_expr_title' => 'Замыкания и вызовы первого класса в константных выражениях',
     'features_fcc_in_const_expr_description' => '<p>Статические замыкания и вызываемые объекты первого класса теперь могут использоваться в константных выражениях, таких как параметры атрибутов.</p>',
 
     'pipe_operator_title' => 'Оператор Pipe',
     'pipe_operator_description' => '<p>Оператор Pipe позволяет связывать вызовы функций в цепочку без использования промежуточных переменных. Позволяет заменить множество «вложенных вызовов» цепочкой.</p><p>Узнайте больше об этой функции в <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
 
-    'array_first_last_title' => 'Функции array_first() и array_last()',
+    'array_first_last_title' => 'Функции <code>array_first()</code> и <code>array_last()</code>',
     'array_first_last_description' => '<p>Функции <code>array_first()</code> и <code>array_last()</code> возвращают первое или последнее значение массива, соответственно. Если массив пустой, возвращается <code>null</code> (что упрощает работу с оператором <code>??</code>).</p>',
 
     'clone_with_title' => 'Clone With',
@@ -39,7 +33,7 @@ return [
     'uri_extension_title' => 'Модуль URI',
     'uri_extension_description' => '<p>Встроенный модуль URI предоставляет API для безопасного анализа и изменения URI и URL в соответствии со стандартами RFC 3986 и WHATWG URL.</p><p>Работает на базе библиотек <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) и <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL).</p><p>Узнайте больше об этой функции в <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
 
-    'no_discard_title' => 'Атрибут #[\NoDiscard]',
+    'no_discard_title' => 'Атрибут <code>#[\NoDiscard]</code>',
     'no_discard_description' => '<p>Добавив атрибут <code>#[\NoDiscard]</code> к функции, PHP будет проверять, используется ли возвращаемое значение, и выдавать предупреждение, если это не так. Позволяет повысить безопасность API, где возвращаемое значение важно, но про него можно легко забыть.</p><p>Связанное приведение типов <code>(void)</code> может использоваться для указания, что значение намеренно не используется.</p>',
 
     'persistent_curl_share_handles_title' => 'Постоянные дескрипторы cURL Share',

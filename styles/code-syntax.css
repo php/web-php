@@ -43,6 +43,10 @@ pre.line-numbers .line-numbers-rows > span:before {
     padding-right: 1em !important;
 }
 
+.token.operator {
+    background: transparent !important;
+}
+
 div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {
     color: #000;
     background: transparent;
@@ -91,4 +95,12 @@ button.copy-to-clipboard-button:hover {
 
 .instructions .sha256 {
     word-break: break-all;
+}
+
+.content-box .code-toolbar {
+    margin: 0 0 1rem;
+}
+
+.content-box .code-toolbar pre.small {
+    padding: 0.75rem;
 }

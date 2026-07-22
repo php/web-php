@@ -75,6 +75,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 site_header("Releases", [
     'current' => 'downloads',
     'css' => '/styles/releases.css',
+    'cache_control' => 60 * 60, // 60 minutes
 ]);
 
 echo "<h1>Unsupported Historical Releases</h1>\n\n";
@@ -140,7 +141,7 @@ site_footer(['sidebar' =>
 </p>
 
 <div class="panel">
- <a href="http://museum.php.net/">PHP Museum</a>
+ <a href="https://museum.php.net/">PHP Museum</a>
 </div>
 
 <div class="panel">
@@ -218,13 +219,8 @@ function mk_rel(int $major,
             echo " <li>\n";
             if (isset($src['filename'])) {
                 download_link($src["filename"], $src["name"]); echo "<br>\n";
-                $linebreak = '';
-                foreach (['md5', 'sha256'] as $cs) {
-                    if (isset($src[$cs])) {
-                        echo $linebreak;
-                        echo "<span class=\"{$cs}sum\">{$cs}: {$src[$cs]}</span>\n";
-                        $linebreak = "<br/>";
-                    }
+                if (isset($src['sha256'])) {
+                    echo sha256_html($src['sha256']), "\n";
                 }
             } else {
                 echo "<a href=\"{$src['link']}\">{$src['name']}</a>";
@@ -237,11 +233,11 @@ function mk_rel(int $major,
             if (!isset($src["filename"])) {
                 continue;
             }
-            printf('<li><a href="http://museum.php.net/php%d/%s">%s</a></li>',
+            printf('<li><a href="https://museum.php.net/php%d/%s">%s</a></li>',
                    $major, $src["filename"], $src["name"]);
         }
         foreach ($windows as $src) {
-            printf('<li><a href="http://museum.php.net/%s/%s">%s</a></li>',
+            printf('<li><a href="https://museum.php.net/%s/%s">%s</a></li>',
                    ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
         }
     }

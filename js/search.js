@@ -57,6 +57,7 @@ const initPHPSearch = async (language) => {
             items = await response.json();
 
             try {
+                // Note: These indexes are also used by globalsearch in common.js
                 localStorage.setItem(
                     key,
                     JSON.stringify({

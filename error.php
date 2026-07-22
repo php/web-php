@@ -19,7 +19,9 @@ include_once __DIR__ . '/include/errors.inc';
 // Get URI for this request, strip leading slash
 // See langchooser.inc for more info on STRIPPED_URI
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
-$queryString = $_SERVER['QUERY_STRING'] ?? '';
+$uriParts = explode('?', $URI, 2);
+$URI = $uriParts[0];
+$queryString = isset($uriParts[1]) ? html_entity_decode($uriParts[1], ENT_QUOTES, 'UTF-8') : '';
 
 // ============================================================================
 // Mozilla Search Sidebar plugin resource file handling (need to be mirror
@@ -38,8 +40,8 @@ if ($URI == 'phpnetimprovedsearch.src') {
 
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
-if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
-    mirror_redirect("https://bugs.php.net/?$array[1]");
+if ($URI === 'bugs.php' && $queryString !== '') {
+    mirror_redirect("https://bugs.php.net/?$queryString");
 }
 
 // ============================================================================
@@ -170,7 +172,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 
 // php.net/42 --> likely a bug number
 if (is_numeric($URI)) {
-    mirror_redirect("http://bugs.php.net/bug.php?id=$URI");
+    mirror_redirect("https://bugs.php.net/bug.php?id=$URI");
 }
 
 // php.net/GH-123 -> php-src GH issue #123
@@ -249,6 +251,7 @@ $manual_page_moves = [
     'install.xitami' => 'install.windows.xitami',
     'install.windows.installer.msi' => 'install.windows',
     'install.windows.installer' => 'install.windows',
+    'install.windows.tools' => 'install.windows',
 
     // Internals docs where moved
     'zend' => 'internals2.ze1.zendapi',
@@ -398,6 +401,38 @@ $uri_aliases = [
     "htaccess" => "configuration.changes",
     "php_value" => "configuration.changes",
 
+    "operator.precedence" => "language.operators.precedence",
+    "operator-precedence" => "language.operators.precedence",
+    "precedence" => "language.operators.precedence",
+    "arithmetic.operators" => "language.operators.arithmetic",
+    "arithmetic-operators" => "language.operators.arithmetic",
+    "assignment.operators" => "language.operators.assignment",
+    "assignment-operators" => "language.operators.assignment",
+    "bitwise.operators" => "language.operators.bitwise",
+    "bitwise-operators" => "language.operators.bitwise",
+    "comparison.operators" => "language.operators.comparison",
+    "comparison-operators" => "language.operators.comparison",
+    "error.control" => "language.operators.errorcontrol",
+    "error-control" => "language.operators.errorcontrol",
+    "backtick" => "language.operators.execution",
+    "backtick.operator" => "language.operators.execution",
+    "backtick-operator" => "language.operators.execution",
+    "execution.operator" => "language.operators.execution",
+    "increment.operators" => "language.operators.increment",
+    "increment-operators" => "language.operators.increment",
+    "logical.operators" => "language.operators.logical",
+    "logical-operators" => "language.operators.logical",
+    "string.operators" => "language.operators.string",
+    "string-operators" => "language.operators.string",
+    "type.operators" => "language.operators.type",
+    "type-operators" => "language.operators.type",
+    "string.type" => "language.types.string",
+    "array.type" => "language.types.array",
+    "object.type" => "language.types.object",
+    "statements" => "control-structures.intro",
+    "control.structures" => "control-structures.intro",
+    "control-structures" => "control-structures.intro",
+
     "ternary" => "language.operators.comparison",
     "instanceof" => "language.operators.type",
     "if" => "language.control-structures",
@@ -542,6 +577,8 @@ $uri_aliases = [
     "tips.php" => "urlhowto",
     "tips" => "urlhowto",
     "release-candidates.php" => "pre-release-builds",
+
+    "changelog-8.php" => "ChangeLog-8",
 ];
 
 $external_redirects = [
@@ -558,13 +595,13 @@ $external_redirects = [
     "php74news" => "https://github.com/php/php-src/raw/PHP-7.4/NEWS",
     "php80news" => "https://github.com/php/php-src/raw/PHP-8.0/NEWS",
     "phptrunknews" => "https://github.com/php/php-src/raw/master/NEWS",
-    "pear" => "http://pear.php.net/",
+    "pear" => "https://pear.php.net/",
     "bugs" => "https://bugs.php.net/",
     "bugstats" => "https://bugs.php.net/stats.php",
     "phpdochowto" => "https://doc.php.net/guide/",
     "rev" => "https://doc.php.net/revcheck.php?p=graph&lang=$LANG",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
-    "ideas.php" => "http://wiki.php.net/ideas", // BC
+    "ideas.php" => "https://wiki.php.net/ideas", // BC
     "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
     "spec" => "https://github.com/php/php-langspec",
     "sunglasses" => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144

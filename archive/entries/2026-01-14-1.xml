@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>PHP Velho Oeste 2026</title>
+    <id>https://www.php.net/archive/2026.php#2026-01-14-1</id>
+    <published>2026-01-14T10:00:00+03:00</published>
+    <updated>2026-01-14T10:00:00+03:00</updated>
+    <link href="https://www.php.net/conferences/index.php#2026-01-14-1" rel="alternate" type="text/html"/>
+    <link href="https://www.phpvelhoeste.com.br" rel="via" type="text/html"/>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-06-01</default:finalTeaserDate>
+    <category term="conferences" label="Conference announcement"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpvelhoeste.com.br"
+                       title="PHP Velho Oeste 2026">php_velho_oeste_350x300px.png
+    </default:newsImage>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                The
+                <a href="https://www.phpvelhoeste.com.br" target="_blank">PHP Velho Oeste</a>
+                is a national-level conference that takes place annually in the West of Santa Catarina, Brazil,
+                known as Velho Oeste(Old West).
+            </p>
+
+            <p>
+                <strong>Knowledge + Networking</strong>
+            </p>
+
+            <p>
+                In this event, several relevant topics will be covered, from the latest language updates to best
+                development practices. You will have the opportunity to expand your PHP knowledge and stay up to date
+                with the latest market trends.
+            </p>
+
+            <p>
+                <strong>Date: May 29-30, 2025</strong>
+            </p>
+
+            <p>
+                <strong>Location: Unochapecó Noble Hall in Chapecó, Santa Catarina, Brazil.</strong>
+            </p>
+
+            <p>See how it was last year:
+                <a href="https://www.phpvelhoeste.com.br/2025/" target="_blank">PHP Velho Oeste 2025</a>.
+            </p>
+
+            <p>Follow us on social media:
+                <a href="https://www.linkedin.com/company/php-velho-oeste" target="_blank">LinkedIn</a>
+                /
+                <a href="https://www.instagram.com/phpvelhooeste/" target="_blank">Instagram</a>
+                /
+                <a href="https://www.youtube.com/@phpvelhooeste" target="_blank">YouTube</a>
+                /
+                <a href="https://x.com/phpvelhooeste" target="_blank">X</a>.
+            </p>
+        </div>
+    </content>
+</entry>

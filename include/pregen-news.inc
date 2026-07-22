@@ -861,7 +861,7 @@ Sorry for the inconvenience.</p>
      </p>
      
      <p>
-     Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
      
      <p>
@@ -992,7 +992,7 @@ Sorry for the inconvenience.</p>
      <p>For source downloads of PHP 7.4.0 Alpha 3 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p>
      
      <p>
-     Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
      
      <p>
@@ -1207,7 +1207,7 @@ Sorry for the inconvenience.</p>
      <p>For source downloads of PHP 7.4.0 Alpha 2 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p>
      
      <p>
-     Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
      
      <p>
@@ -1386,7 +1386,7 @@ Sorry for the inconvenience.</p>
      <p>For source downloads of PHP 7.4.0 Alpha 1 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p>
      
      <p>
-     Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
      
      <p>
@@ -6308,7 +6308,7 @@ the upgrade
      </p>
 
      <p>
-      Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+      Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
 
      <p>
@@ -6704,7 +6704,7 @@ the upgrade
      </p>
 
      <p>
-      Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+      Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
 
      <p>
@@ -7017,7 +7017,7 @@ the upgrade
      <p>For source downloads of PHP 7.3.0 Alpha 1 please visit the <a href="https://downloads.php.net/~stas/">download page</a>.</p>
 
      <p>
-     Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
 
      <p>

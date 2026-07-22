@@ -51,6 +51,7 @@ return [
     'bc_standard' => '<code>stream_bucket_make_writeable()</code> and <code>stream_bucket_new()</code> now return an instance of <code>StreamBucket</code> instead of <code>stdClass</code>.',
     'bc_core' => '<a href="/manual/en/migration84.incompatible.php#migration84.incompatible.core.exit"><code>exit()</code> behavioral change</a>.',
     'bc_warnings' => '<code>E_STRICT</code> constant has been deprecated.',
+    'bc_trigger_error' => 'Passing <code>E_USER_ERROR</code> to <code>trigger_error()</code> is now deprecated.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',
     'footer_description' => '<p>For source downloads of PHP 8.4 please visit the <a href="/downloads">downloads</a> page. Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_4">ChangeLog</a>.</p>
