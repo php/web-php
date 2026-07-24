@@ -21,20 +21,39 @@ header("Permissions-Policy: interest-cohort=()");
 
 /* Fix Silly Same Origin Policies */
 (function (): void {
+    // The presence of CORS headers below depends on the Origin request header,
+    // so shared caches must not reuse a response across different origins.
+    header("Vary: Origin", false);
+
     if (!isset($_SERVER["HTTP_ORIGIN"])) {
         return;
     }
 
+    // Browsers send a literal "null" origin for sandboxed iframes, documents
+    // loaded from data:/file: URLs and some cross origin redirects. parse_url()
+    // reports no host at all for those, so treat them as untrusted.
     $host = parse_url($_SERVER["HTTP_ORIGIN"]);
-    if (!preg_match('/^(.+\.)?php\.net$/', $host["host"])) {
-        if ($host["host"] != $_SERVER["SERVER_NAME"]) {
-            exit(10);
+    $hostname = $host["host"] ?? "";
+
+    $isTrustedOrigin = $hostname !== "" && (
+        preg_match('/^(.+\.)?php\.net$/', $hostname) === 1
+        || $hostname === ($_SERVER["SERVER_NAME"] ?? "")
+    );
+
+    if (!$isTrustedOrigin) {
+        // Serve the page normally, only without any CORS headers.
+        if (in_array($_SERVER["REQUEST_METHOD"] ?? "GET", ["GET", "HEAD", "OPTIONS"], true)) {
+            return;
         }
+
+        // Never respond with an empty body here: that is what ended up cached.
+        header("Cache-Control: no-store");
+        http_response_code(403);
+        exit("Cross-origin requests are not allowed for this endpoint.\n");
     }
+
     if (isset($host["port"])) {
-        $hostname = $host["host"] . ":" . $host["port"];
-    } else {
-        $hostname = $host["host"];
+        $hostname .= ":" . $host["port"];
     }
 
     header("Access-Control-Allow-Origin: http://$hostname");
