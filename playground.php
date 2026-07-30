@@ -31,14 +31,27 @@ site_header(
     <label class="examples">
       <span>Examples</span>
       <select id="examples" aria-label="Load an example">
-        <option value="hello">Hello, world</option>
-        <option value="array">Arrays &amp; functions</option>
-        <option value="classes">Classes &amp; interfaces</option>
-        <option value="include">Multiple files (include)</option>
-        <option value="web">HTML page (Web output)</option>
-        <option value="exception">Uncaught exception (stack trace)</option>
-        <option value="warning">Warning &amp; notice</option>
-        <option value="parse">Parse error</option>
+        <optgroup label="Basics">
+          <option value="hello">Hello, world</option>
+          <option value="array">Arrays &amp; functions</option>
+          <option value="json">Working with JSON</option>
+          <option value="classes">Classes &amp; interfaces</option>
+          <option value="include">Multiple files (include)</option>
+        </optgroup>
+        <optgroup label="Modern PHP">
+          <option value="enums">Enums &amp; match</option>
+          <option value="generators">Generators</option>
+          <option value="hooks">Property hooks (PHP 8.4)</option>
+          <option value="pipe">Pipe operator (PHP 8.5)</option>
+        </optgroup>
+        <optgroup label="Web">
+          <option value="web">HTML page (Web output)</option>
+        </optgroup>
+        <optgroup label="Errors &amp; debugging">
+          <option value="exception">Uncaught exception (stack trace)</option>
+          <option value="warning">Warning &amp; notice</option>
+          <option value="parse">Parse error</option>
+        </optgroup>
       </select>
     </label>
 

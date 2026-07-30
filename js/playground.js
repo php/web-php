@@ -1,10 +1,3 @@
-/*
- * PHP Playground: edit PHP in the browser and run it through the site's PHP
- * WebAssembly build, entirely client-side. Execution happens in a dedicated
- * worker (/js/playground-worker.js); the editor upgrades from a plain
- * <textarea> to CodeMirror 6 (/js/ext/codemirror-php.mjs) when available.
- */
-
 const WORKER_URL = '/js/playground-worker.js';
 const EDITOR_URL = '/js/ext/codemirror-php.mjs';
 
@@ -48,6 +41,29 @@ $even    = array_filter($squares, fn ($n) => $n % 2 === 0);
 
 echo implode(', ', $even), "\\n";
 echo 'Sum: ', array_sum($squares), "\\n";
+`,
+      },
+    ],
+  },
+  json: {
+    entry: 'index.php',
+    files: [
+      {
+        name: 'index.php',
+        content: `<?php
+
+$release = [
+    'name' => 'PHP',
+    'version' => PHP_VERSION,
+    'released' => date('Y-m-d'),
+    'features' => ['pipe operator', 'clone with', 'URI parsing'],
+];
+
+$json = json_encode($release, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+echo $json, "\\n\\n";
+
+$decoded = json_decode($json, associative: true);
+echo 'Newest feature: ', end($decoded['features']), "\\n";
 `,
       },
     ],
@@ -120,6 +136,111 @@ final class Counter
     public function bump(): void { $this->n++; }
     public function value(): int { return $this->n; }
 }
+`,
+      },
+    ],
+  },
+  enums: {
+    entry: 'index.php',
+    files: [
+      {
+        name: 'index.php',
+        content: `<?php
+
+enum Suit: string
+{
+    case Hearts = '♥';
+    case Diamonds = '♦';
+    case Clubs = '♣';
+    case Spades = '♠';
+
+    public function color(): string
+    {
+        return match ($this) {
+            Suit::Hearts, Suit::Diamonds => 'red',
+            Suit::Clubs, Suit::Spades => 'black',
+        };
+    }
+}
+
+foreach (Suit::cases() as $suit) {
+    printf("%s %-8s is %s\\n", $suit->value, $suit->name, $suit->color());
+}
+`,
+      },
+    ],
+  },
+  generators: {
+    entry: 'index.php',
+    files: [
+      {
+        name: 'index.php',
+        content: `<?php
+
+// Generators produce values lazily: the sequence is infinite,
+// but only the values we ask for are ever computed.
+function fibonacci(): Generator
+{
+    [$current, $next] = [0, 1];
+    while (true) {
+        yield $current;
+        [$current, $next] = [$next, $current + $next];
+    }
+}
+
+foreach (fibonacci() as $index => $number) {
+    if ($index >= 10) {
+        break;
+    }
+    echo $number, ' ';
+}
+echo "\\n";
+`,
+      },
+    ],
+  },
+  hooks: {
+    entry: 'index.php',
+    files: [
+      {
+        name: 'index.php',
+        content: `<?php
+
+// Property hooks (PHP 8.4): computed properties without boilerplate getters.
+final class Temperature
+{
+    public float $fahrenheit {
+        get => $this->celsius * 9 / 5 + 32;
+        set => $this->celsius = ($value - 32) * 5 / 9;
+    }
+
+    public function __construct(public float $celsius) {}
+}
+
+$temperature = new Temperature(25.0);
+printf("%.1f °C is %.1f °F\\n", $temperature->celsius, $temperature->fahrenheit);
+
+$temperature->fahrenheit = 100.0;
+printf("100 °F is %.1f °C\\n", $temperature->celsius);
+`,
+      },
+    ],
+  },
+  pipe: {
+    entry: 'index.php',
+    files: [
+      {
+        name: 'index.php',
+        content: `<?php
+
+// The pipe operator (PHP 8.5) chains calls left to right.
+$slug = '  Hello, PHP 8.5 Playground!  '
+    |> trim(...)
+    |> strtolower(...)
+    |> (fn (string $text) => preg_replace('/[^a-z0-9]+/', '-', $text))
+    |> (fn (string $text) => trim($text, '-'));
+
+echo $slug, "\\n";
 `,
       },
     ],
