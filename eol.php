@@ -23,7 +23,7 @@ $BRANCH_NOTES = [
     '4.4' => '<a href="https://php-legacy-docs.zend.com/manual/php5/en/migration5">A guide is available for migrating from PHP 4 to 5.0.</a>',
 ];
 
-site_header('Unsupported Branches');
+site_header('Unsupported Branches', ['cache' => true, 'cache_control' => 60 * 60 * 24]);
 ?>
 
 <h1>Unsupported Branches</h1>
