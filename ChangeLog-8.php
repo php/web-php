@@ -6231,6 +6231,30 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.33"><!-- {{{ 8.2.33 -->
+<h3>Version 8.2.33</h3>
+<b><?php release_date('30-Jul-2026'); ?></b>
+<ul><li>Date:
+<ul>
+  <li>Fixed leak on double DatePeriod::__construct() call.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Upgrade libgd. (CVE-2026-9672)</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '7qpv-r5mr-78m4'); ?> (SQL injection via E'...' backslash breakout). (CVE-2026-17543)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'vc5h-9ppw-p5f3'); ?> (Crash via recursive symlinks). (CVE-2026-7260)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.32"><!-- {{{ 8.2.32 -->
 <h3>Version 8.2.32</h3>
 <b><?php release_date('02-Jul-2026'); ?></b>
