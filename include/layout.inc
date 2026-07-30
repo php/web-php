@@ -534,6 +534,11 @@ function get_nav_items(): array {
       id: 'help',
     ),
     new NavItem(
+      name: 'Playground',
+      href: '/playground.php',
+      id: 'playground',
+    ),
+    new NavItem(
       name: 'PHP 8.5',
       href: '/releases/8.5/index.php',
       id: 'php8',
