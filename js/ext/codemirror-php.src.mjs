@@ -65,7 +65,7 @@ const phpHighlight = HighlightStyle.define([
   { tag: tags.attributeValue, color: 'var(--hl-string)' },
 ]);
 
-/* Editor chrome — tuned to the same surfaces the playground panes use. */
+/* Editor chrome - tuned to the same surfaces the playground panes use. */
 const phpTheme = EditorView.theme(
   {
     '&': {
@@ -106,7 +106,7 @@ const extensions = [
   phpTheme,
 ];
 
-// One EditorState per file — each carries its own document and undo history.
+// One EditorState per file - each carries its own document and undo history.
 export function makeState(text) {
   return EditorState.create({ doc: text, extensions });
 }

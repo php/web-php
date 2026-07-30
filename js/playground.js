@@ -519,7 +519,7 @@ function renderTabs() {
     entryButton.className = 'tab-entry';
     entryButton.textContent = isEntry ? '▶' : '▷';
     entryButton.title = isEntry
-      ? 'Entry point — this file runs on Run'
+      ? 'Entry point - this file runs on Run'
       : 'Set as entry point';
     entryButton.setAttribute('aria-label', entryButton.title);
     entryButton.addEventListener('click', (event) => {
@@ -725,7 +725,7 @@ function renderFinal() {
   }
 }
 
-// Render PHP's output as an HTML document inside a sandboxed iframe — what you
+// Render PHP's output as an HTML document inside a sandboxed iframe - what you
 // would see if the script were served by a web SAPI. Scripts are allowed (so
 // the rendered page is interactive) but the sandbox keeps it off the parent.
 function renderPreview() {

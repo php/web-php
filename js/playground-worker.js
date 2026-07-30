@@ -136,7 +136,7 @@ function mkdirp(FS, path) {
     try {
       FS.mkdir(current);
     } catch (error) {
-      /* EEXIST — fine. */
+      /* EEXIST - fine. */
     }
   }
 }
