@@ -46,6 +46,21 @@ test('styles diagnostics for an uncaught exception', async ({ page }) => {
     await expect(diagnostic).not.toContainText('/playground/');
 });
 
+test('every example runs to completion', async ({ page }) => {
+    await waitUntilReady(page);
+    const exampleKeys = await page.locator('#examples option')
+        .evaluateAll((options) => options.map((option) => (option as HTMLOptionElement).value));
+    expect(exampleKeys.length).toBeGreaterThan(0);
+
+    for (const exampleKey of exampleKeys) {
+        await page.getByLabel('Load an example').selectOption(exampleKey);
+        await page.locator('#run').click();
+        // A finished run re-enables Run and leaves output (or a diagnostic).
+        await expect(page.locator('#run')).toBeEnabled({ timeout: 30_000 });
+        await expect(page.locator('#output')).not.toBeEmpty();
+    }
+});
+
 test('renders HTML output in a sandboxed preview frame', async ({ page }) => {
     await waitUntilReady(page);
     await page.getByLabel('Load an example').selectOption('web');
