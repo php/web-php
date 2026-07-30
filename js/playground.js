@@ -1,8 +1,5 @@
 const WORKER_URL = '/js/playground-worker.js';
 const EDITOR_URL = '/js/ext/codemirror-php.mjs';
-
-// The worker writes files under this directory; PHP reports paths from there
-// ("/playground/lib.php"). Strip the prefix so traces read as plain filenames.
 const WORKDIR = '/playground/';
 
 // A PHP diagnostic headline, with or without the "PHP " log prefix.
@@ -348,11 +345,6 @@ const elModePreview = document.getElementById('mode-preview');
 
 let outputMode = 'raw';
 let hasRun = false;
-
-/* ---- Editor (CodeMirror 6 if it loads, plain textarea otherwise) ------- *
- * editor exposes makeState/createView once the module has loaded; until then
- * (and if the import fails) view stays null and the bare <textarea> is the
- * editor. */
 let editor = null;
 let view = null;
 
@@ -368,13 +360,7 @@ async function initEditor() {
   }
 }
 
-/* ---- File model -------------------------------------------------------- *
- * files: [{ name, doc }] where doc is a CodeMirror EditorState (when CM6
- * loaded) or a plain { value } holder (textarea fallback). One file is the
- * entry point; one is active (shown in the editor).
- *
- * Only the active file's content is live in the editor; syncActiveDocument()
- * snapshots it back into the file before we switch away or read all files. */
+/* ---- File model -------------------------------------------------------- */
 let files = [];
 let entryName = null;
 let activeName = null;
@@ -391,9 +377,6 @@ function fileByName(name) {
   return files.find((file) => file.name === name) ?? null;
 }
 
-// The editor holds the live content of the active file: the view's state with
-// CodeMirror (states are immutable snapshots), the <textarea> value otherwise.
-// Copy it back into the file before switching away or reading all files.
 function syncActiveDocument() {
   const current = activeName ? fileByName(activeName) : null;
   if (!current) {
@@ -694,9 +677,7 @@ function handleFatal(text, ms) {
 
 /* ---- Output rendering ---------------------------------------------------- */
 
-// Live, unstyled echo of stdout while a script runs, so long jobs show
-// progress. The final render (renderFinal) replaces it with styled output.
-// Only meaningful in Raw view; Preview renders the HTML once on completion.
+// Live, unstyled echo of stdout while a script runs, so long jobs show progress.
 function renderLive() {
   if (outputMode !== 'raw') {
     return;
@@ -726,8 +707,7 @@ function renderFinal() {
 }
 
 // Render PHP's output as an HTML document inside a sandboxed iframe - what you
-// would see if the script were served by a web SAPI. Scripts are allowed (so
-// the rendered page is interactive) but the sandbox keeps it off the parent.
+// would see if the script were served by a web SAPI.
 function renderPreview() {
   elOutput.replaceChildren();
   const iframe = document.createElement('iframe');
@@ -865,9 +845,7 @@ function appendExitLine(text) {
 }
 
 // Strip the worker's working-directory prefix so diagnostics and stack frames
-// read as plain filenames: "/playground/lib.php" -> "lib.php", in headlines
-// ("in /playground/lib.php on line 3"), frames ("#0 /playground/lib.php(3):")
-// and the "thrown in …" line alike.
+// read as plain filenames.
 function relabel(line) {
   return line.split(WORKDIR).join('');
 }
@@ -879,8 +857,6 @@ function trimTrailingBlank(lines) {
   return lines;
 }
 
-// A buffer's chunks with the spurious phpw() failure notice removed. The
-// wrapper flushes it as its own write, so it lands as a standalone chunk.
 function dropScriptFailed(chunks) {
   return chunks.filter((chunk) => !SCRIPT_FAILED.test(chunk));
 }
@@ -895,8 +871,6 @@ function setReady() {
   mode = 'idle';
   elRun.disabled = false;
   elStop.disabled = true;
-  // No idle label: the status line is only for the transient "Loading PHP…"
-  // (and "Running…") states, so clear it once we're back to ready.
   setStatus('', 'ready');
 }
 
@@ -904,13 +878,13 @@ function setMode(newMode) {
   if (newMode === outputMode) {
     return;
   }
+
   outputMode = newMode;
   elModeRaw.classList.toggle('is-active', newMode === 'raw');
   elModePreview.classList.toggle('is-active', newMode === 'preview');
   elModeRaw.setAttribute('aria-pressed', String(newMode === 'raw'));
   elModePreview.setAttribute('aria-pressed', String(newMode === 'preview'));
-  // A run in flight will paint itself on completion; otherwise repaint the
-  // last result in the newly selected view.
+
   if (mode !== 'running' && hasRun) {
     renderFinal();
   }
