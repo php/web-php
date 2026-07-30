@@ -784,7 +784,8 @@ fieldset {
     color:#369;
 }
 .content-box .sha256,
-.downloads .sha256 {
+.downloads .sha256,
+.downloads .sbom {
     display: block;
     font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
     overflow: hidden;

@@ -97,6 +97,16 @@ button.copy-to-clipboard-button:hover {
     word-break: break-all;
 }
 
+.instructions .sbom:before {
+    content: "SBOM: ";
+    font-family: var(--font-family-sans-serif);
+}
+
+.instructions .sha256:before,
+.instructions .sbom:before {
+    font-weight: 700;
+}
+
 .content-box .code-toolbar {
     margin: 0 0 1rem;
 }
