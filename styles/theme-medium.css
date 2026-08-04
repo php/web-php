@@ -203,6 +203,7 @@ div.warning a:focus {
 
 .navbar__inner {
   display: flex;
+  gap: 24px;
   height: 64px;
   padding: 0px 16px;
   margin: 0 auto;
@@ -221,7 +222,6 @@ div.warning a:focus {
 .navbar__nav {
   display: flex;
   margin: 0;
-  margin-left: 24px;
 }
 
 .navbar__item {
@@ -279,6 +279,7 @@ div.warning a:focus {
   flex-grow: 1;
 
   max-width: 300px;
+  margin-right: 12px;
   padding: 8px 8px;
 
   background-color: #404f82;
@@ -330,6 +331,7 @@ div.warning a:focus {
   display: flex;
   flex-grow: 1;
   justify-content: end;
+  min-width: 0;
   padding: 12px 0px;
 }
 
@@ -450,6 +452,10 @@ div.warning a:focus {
     display: flex;
     align-items: center;
     text-align: left;
+  }
+
+  .navbar__theme {
+    margin-right: 0 !important;
   }
 }
 
@@ -1123,6 +1129,7 @@ div.elephpants img:focus {
     background-color: rgba(64, 79, 130, 0.7);
     border-radius: 8px;
     margin-right: 12px;
+    min-width: 0;
 }
 
 .navbar__languages:hover {
@@ -1131,6 +1138,7 @@ div.elephpants img:focus {
 
 .navbar__languages select {
     color: hsla(230, 72%, 84%);
+    max-width: 100%;
 }
 
 .navbar__languages option {
@@ -1138,7 +1146,6 @@ div.elephpants img:focus {
 }
 
 .navbar__theme {
-    margin-left: 12px;
     border: 1px solid #6a78be;
     color: hsla(230, 72%, 84%);
     background-color: #404f82;
@@ -1149,6 +1156,7 @@ div.elephpants img:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .navbar__theme:hover {
