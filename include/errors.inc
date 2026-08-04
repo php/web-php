@@ -472,6 +472,16 @@ function is_known_term(string $term): ?string {
         'yield from' => 'language.generators.syntax.php#control-structures.yield.from',
         'yield' => 'language.generators.syntax.php#control-structures.yield',
 
+        '__line__' => 'language.constants.magic.php',
+        '__file__' => 'language.constants.magic.php',
+        '__dir__' => 'language.constants.magic.php',
+        '__function__' => 'language.constants.magic.php',
+        '__class__' => 'language.constants.magic.php',
+        '__trait__' => 'language.constants.magic.php',
+        '__method__' => 'language.constants.magic.php',
+        '__property__' => 'language.constants.magic.php',
+        '__namespace__' => 'language.constants.magic.php',
+
         '__COMPILER_HALT_OFFSET__' => 'function.halt-compiler.php',
         'DEFAULT_INCLUDE_PATH' => 'reserved.constants.php',
         'E_ALL' => 'errorfunc.constants.php',
