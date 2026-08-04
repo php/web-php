@@ -42,12 +42,26 @@ const initPHPSearch = async (language) => {
         return data;
     };
 
+    const cleanupOld = async() => {
+        // Previously used cache key
+        const key = `search-${language}`;
+        const oldCache = window.localStorage.getItem(key);
+        if (!oldCache) {
+            return;
+        }
+
+        // Clear is used to clear all cached languages at the same time
+        // This reduces the chances of hitting quota
+        window.localStorage.clear();
+    }
+
     /**
      * Fetch the search index.
      *
      * @returns {Promise<Array>} The search index.
      */
     const fetchIndex = async () => {
+        await cleanupOld();
         const key = `search2-${language}`;
         let items;
         if (language === 'local') {
@@ -68,7 +82,7 @@ const initPHPSearch = async (language) => {
             } catch (e) {
                 // Local storage might be full, or other error.
                 // Just continue without caching.
-                console.error("Failed to cache search index", e);
+                console.info("Failed to cache search index", e);
             }
         }
 
