@@ -233,20 +233,12 @@ function mk_rel(int $major,
             if (!isset($src["filename"])) {
                 continue;
             }
-            printf('<li><a href="https://museum.php.net/php%d/%s">%s</a>',
+            printf('<li><a href="https://museum.php.net/php%d/%s">%s</a></li>',
                    $major, $src["filename"], $src["name"]);
-            if (isset($src['sha256'])) {
-                echo "<br>\n", sha256_html($src['sha256']);
-            }
-            echo "</li>\n";
         }
         foreach ($windows as $src) {
-            printf('<li><a href="https://museum.php.net/%s/%s">%s</a>',
+            printf('<li><a href="https://museum.php.net/%s/%s">%s</a></li>',
                    ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
-            if (isset($src['sha256'])) {
-                echo "<br>\n", sha256_html($src['sha256']);
-            }
-            echo "</li>\n";
         }
     }
 
