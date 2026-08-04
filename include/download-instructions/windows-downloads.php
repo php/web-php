@@ -125,7 +125,9 @@ foreach (['nts-x64', 'ts-x64', 'nts-x86', 'ts-x86'] as $bk) {
 			if (!empty($entry[$type]['path'])) {
 				$p = $entry[$type]['path'];
 				echo "\t", '<p><strong><a href="' . $baseDownloads . $p . '">' . $package_names[$type] . '</a></strong> <span class="size">' . $entry[$type]['size'] . '</span><br>', PHP_EOL;
-				echo "\t", '<span class="sha256">' . ($entry[$type]['sha256'] ?? '') . '</span>', PHP_EOL;
+				if (!empty($entry[$type]['sha256'])) {
+					echo "\t", sha256_html($entry[$type]['sha256']), PHP_EOL;
+				}
 				if ($type === 'zip' && $hasSbom) {
 					echo "\t", '<span class="sbom"><a href="' . $baseDownloads . $p . '.spdx.json">SPDX</a>|<a href="' . $baseDownloads . $p . '.cdx.json">CDX</a></span>', PHP_EOL;
 				}
