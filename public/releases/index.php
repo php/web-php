@@ -79,7 +79,10 @@ site_header("Releases", [
 ]);
 
 echo "<h1>Unsupported Historical Releases</h1>\n\n";
-echo ">our downloads page</a>. Please note that
+echo "<p>
+ We have collected all the official information and code available for
+ past PHP releases. You can find more details on the current release
+ on <a href=\"/downloads.php\">our downloads page</a>. Please note that
  <em>older releases are listed for archival purposes only, and
  they are no longer supported</em>.
 </p>\n";
