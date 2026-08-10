@@ -38,7 +38,13 @@ $SIDEBAR_DATA = '
 </div>
 ';
 
-site_header("Download documentation", ["current" => "docs"]);
+site_header(
+	"Download documentation",
+	[
+		"current" => "docs",
+		'cache_control' => 5 * 60, // 5 minutes
+	]
+);
 
 // Format to look for
 $formats = [
