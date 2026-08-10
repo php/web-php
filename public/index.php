@@ -52,7 +52,7 @@ header("Last-Modified: " . $tsstring);
 $_SERVER['BASE_PAGE'] = 'index.php';
 require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/branches.inc';
-require_once __DIR__ . '/../include/public/pregen-confs.inc';
+require_once __DIR__ . '/include/pregen-confs.inc';
 require_once __DIR__ . '/../include/version.inc';
 
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
