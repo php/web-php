@@ -71,7 +71,7 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.4.23' => [
+    '8.4.24' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
@@ -79,12 +79,12 @@ $QA_RELEASES = [
             'sha256_bz2' => '',
             'sha256_gz'  => '',
             'sha256_xz'  => '',
-            'date'       => '18 Jun 2026',
+            'date'       => '16 July 2026',
             'baseurl'    => 'https://downloads.php.net/',
         ],
     ],
 
-    '8.5.8' => [
+    '8.5.9' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
@@ -92,8 +92,8 @@ $QA_RELEASES = [
             'sha256_bz2' => '',
             'sha256_gz'  => '',
             'sha256_xz'  => '',
-            'date'       => '18 June 2026',
-            'baseurl'    => 'https://downloads.php.net/~daniels/',
+            'date'       => '16 July 2026',
+            'baseurl'    => 'https://downloads.php.net/~edorian/',
         ],
     ],
 
@@ -101,11 +101,11 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'alpha',
-            'number'     => 1,
-            'sha256_bz2' => 'c4f1733b93f3c0d7fcfe381bdafc28daf283bac42441a2809645897b1f557a1a',
-            'sha256_gz'  => '253d9ff1f03bd17ddf0aaed423b59a37d8f9567858df44d30d3c42c14301a7ab',
-            'sha256_xz'  => '2d4cba8e5511b026b0c786c69b3272fe53dc8643f086cd10fc0e902c20a1757c',
-            'date'       => '2 July 2026',
+            'number'     => 3,
+            'sha256_bz2' => '34bf91f3c6f880ed196ff6855f850ec466a75540f78320540d367b349e49bf16',
+            'sha256_gz'  => 'e63ffdbae7ee90b43ce11b2ec16f62c6b623eec39c726060dba920af6088527b',
+            'sha256_xz'  => '5eec9db06195860097005309eb6176309ae738df28f56eb23c87be5887d86c78',
+            'date'       => '30 July 2026',
             'baseurl'    => 'https://downloads.php.net/~mbeccati/',
         ],
     ],

@@ -58,7 +58,7 @@ if (isset($opts['r'])) {
 	file_put_contents(RELEASES_ABS . $release, "<?php
 \$_SERVER['BASE_PAGE'] = 'releases/$release';
 require_once __DIR__ . '/../../include/prepend.inc';
-site_header('PHP $version Release Announcement');
+site_header('PHP $version Release Announcement', ['cache' => true, 'cache_control' => 30 * 60]);
 ?>
 <h1>PHP $version Release Announcement</h1>
 

@@ -879,3 +879,18 @@ function applyTheme(theme) {
 }
 
 applyTheme(savedTheme)
+
+const downloads = document.querySelector('.downloads');
+downloads?.addEventListener('click', function (event) {
+  var button = event.target.closest('.sha256-copy');
+  if (!button || !navigator.clipboard) {
+    return;
+  }
+
+  navigator.clipboard.writeText(button.dataset.copyText).then(function () {
+    button.textContent = 'Copied';
+    setTimeout(function () {
+      button.textContent = 'Copy';
+    }, 1500);
+  });
+});

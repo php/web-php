@@ -54,7 +54,7 @@ if ($config["cache"]) {
 }
 
 if ($config["cache_control"] && is_numeric($config["cache_control"])) {
-	header("Cache-Control: public, max-age=" . (int) $config["cache_control"]);
+    header("Cache-Control: public, max-age=" . (int) $config["cache_control"]);
 }
 
 if (!isset($config["languages"])) {
