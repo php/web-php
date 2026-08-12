@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
+require_once __DIR__ . '/../../include/prepend.inc';
+require_once __DIR__ . '/../../include/branches.inc';
 
 // Sizing constants.
 $margin_left = 80;
