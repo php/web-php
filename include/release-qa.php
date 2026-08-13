@@ -100,13 +100,13 @@ $QA_RELEASES = [
     '8.6.0' => [
         'active'  => true,
         'release' => [
-            'type'       => 'alpha',
-            'number'     => 3,
-            'sha256_bz2' => '34bf91f3c6f880ed196ff6855f850ec466a75540f78320540d367b349e49bf16',
-            'sha256_gz'  => 'e63ffdbae7ee90b43ce11b2ec16f62c6b623eec39c726060dba920af6088527b',
-            'sha256_xz'  => '5eec9db06195860097005309eb6176309ae738df28f56eb23c87be5887d86c78',
-            'date'       => '30 July 2026',
-            'baseurl'    => 'https://downloads.php.net/~mbeccati/',
+            'type'       => 'beta',
+            'number'     => 1,
+            'sha256_bz2' => '7061a8c930e75e52c71264e5fac43025cec7b40cbd31d941a744218916f53cfd',
+            'sha256_gz'  => 'de760e365ed01a4e80ef40a25e2ce809bf054383cbce1bee3d94146f30eee477',
+            'sha256_xz'  => 'e44571d75b368b36a2d6db6878705e5512af5d2a78e31463c49796a94018d282',
+            'date'       => '13 August 2026',
+            'baseurl'    => 'https://downloads.php.net/~svpernova09/',
         ],
     ],
 ];
