@@ -15,15 +15,15 @@ class Entry
 
     public const PHPWEB = __DIR__ . '/../../';
 
-    public const ARCHIVE_FILE_REL = 'archive/archive.xml';
+    public const ARCHIVE_FILE_REL = 'public/archive/archive.xml';
 
     public const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
 
-    public const ARCHIVE_ENTRIES_REL = 'archive/entries/';
+    public const ARCHIVE_ENTRIES_REL = 'public/archive/entries/';
 
     public const ARCHIVE_ENTRIES_ABS = self::PHPWEB . self::ARCHIVE_ENTRIES_REL;
 
-    public const IMAGE_PATH_REL = 'images/news/';
+    public const IMAGE_PATH_REL = 'public/images/news/';
 
     public const IMAGE_PATH_ABS = self::PHPWEB . self::IMAGE_PATH_REL;
 
