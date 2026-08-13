@@ -23,7 +23,7 @@ class Entry
 
     public const ARCHIVE_ENTRIES_ABS = self::PHPWEB . self::ARCHIVE_ENTRIES_REL;
 
-    public const IMAGE_PATH_REL = 'images/news/';
+    public const IMAGE_PATH_REL = 'public/images/news/';
 
     public const IMAGE_PATH_ABS = self::PHPWEB . self::IMAGE_PATH_REL;
 
