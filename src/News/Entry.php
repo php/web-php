@@ -15,7 +15,7 @@ class Entry
 
     public const PHPWEB = __DIR__ . '/../../';
 
-    public const ARCHIVE_FILE_REL = 'archive/archive.xml';
+    public const ARCHIVE_FILE_REL = 'public/archive/archive.xml';
 
     public const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
 
