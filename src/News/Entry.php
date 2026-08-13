@@ -19,7 +19,7 @@ class Entry
 
     public const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
 
-    public const ARCHIVE_ENTRIES_REL = 'archive/entries/';
+    public const ARCHIVE_ENTRIES_REL = 'public/archive/entries/';
 
     public const ARCHIVE_ENTRIES_ABS = self::PHPWEB . self::ARCHIVE_ENTRIES_REL;
 
