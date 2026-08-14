@@ -1,10 +1,19 @@
 <?php
+
+use phpweb\ProjectGlobals;
+
 $_SERVER['BASE_PAGE'] = 'supported-versions.php';
 
 require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
+require_once ProjectGlobals::getProjectRoot(). '/include/branches.inc';
 
-site_header('Supported Versions', ['css' => ['supported-versions.css']]);
+site_header(
+	'Supported Versions',
+	[
+		'css' => ['supported-versions.css'],
+		'cache_control' => 3 * 60 * 60, // 3 hours
+	]
+);
 
 // Version notes: if you need to make a note about a version having an unusual
 // support lifetime, add it under a heading with an anchor, and add the anchor

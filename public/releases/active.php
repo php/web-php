@@ -8,5 +8,6 @@ require_once __DIR__ . '/../../include/prepend.inc';
 require_once ProjectGlobals::getProjectRoot(). '/include/branches.inc';
 
 header('Content-Type: application/json; charset=UTF-8');
+header('Cache-Control: public, max-age=900');
 
 echo json_encode(get_active_branches());

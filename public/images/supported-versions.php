@@ -1,6 +1,8 @@
 <?php
-require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
+use phpweb\ProjectGlobals;
+
+require_once __DIR__ . '/../../include/prepend.inc';
+require_once ProjectGlobals::getProjectRoot(). '/include/branches.inc';
 
 // Sizing constants.
 $margin_left = 80;
@@ -55,6 +57,7 @@ foreach ($branches as $branch => $version) {
 
 if (!isset($non_standalone)) {
     header('Content-Type: image/svg+xml');
+    header('Cache-Control: public, max-age=10800'); // 3 hours
     echo '<?xml version="1.0"?>';
 }
 

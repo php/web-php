@@ -17,5 +17,5 @@ parameters:
 			- var/ (?)
 			- public/manual/en
 			- include/releases.inc
-			- include/pregen-news.inc
-			- include/pregen-confs.inc
+			- public/include/pregen-news.inc
+			- public/include/pregen-confs.inc
