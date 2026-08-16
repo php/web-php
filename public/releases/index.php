@@ -4,7 +4,7 @@ use phpweb\ProjectGlobals;
 
 $_SERVER['BASE_PAGE'] = 'releases/index.php';
 require_once __DIR__ . '/../../include/prepend.inc';
-require_once ProjectGlobals::getProjectRoot(). '/include/branches.inc';
+require_once ProjectGlobals::getProjectRoot() . '/include/branches.inc';
 
 if (isset($_GET["serialize"]) || isset($_GET["json"])) {
     $RELEASES = $RELEASES + $OLDRELEASES;
