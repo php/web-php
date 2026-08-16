@@ -1003,60 +1003,6 @@ parameters:
 			path: include/posttohost.inc
 
 		-
-			message: '#^Cannot access offset ''host'' on array\{scheme\?\: string, host\?\: string, port\?\: int\<0, 65535\>, user\?\: string, pass\?\: string, path\?\: string, query\?\: string, fragment\?\: string\}\|false\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 2
-			path: include/prepend.inc
-
-		-
-			message: '#^Comparison operation "\>" between 0 and 0 is always false\.$#'
-			identifier: greater.alwaysFalse
-			count: 1
-			path: include/release-qa.php
-
-		-
-			message: '#^Offset ''active'' on array\{active\: true, release\: array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…''\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…''\}\} in isset\(\) always exists and is not nullable\.$#'
-			identifier: isset.offset
-			count: 1
-			path: include/release-qa.php
-
-		-
-			message: '#^Offset ''baseurl'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…''\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…''\} in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.offset
-			count: 1
-			path: include/release-qa.php
-
-		-
-			message: '#^Offset ''bz2''\|''gz''\|''xz'' on non\-empty\-array\{bz2\?\: array\{sha256\: '''', path\?\: ''https\://downloads…''\}, gz\?\: array\{sha256\: '''', path\?\: ''https\://downloads…''\}, xz\?\: array\{sha256\: '''', path\?\: ''https\://downloads…''\}\} in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.offset
-			count: 1
-			path: include/release-qa.php
-
-		-
-			message: '#^Offset ''files'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…'', enabled\?\: false, \.\.\.\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…'', version\: ''8\.2\.27RC0''\|''8\.3\.31RC0''\|''8\.4\.22RC0''\|''8\.5\.7RC0'', \.\.\.\} in empty\(\) always exists and is not falsy\.$#'
-			identifier: empty.offset
-			count: 1
-			path: include/release-qa.php
-
-		-
-			message: '#^Offset ''number'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…'', enabled\: false\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…'', enabled\: false\} in empty\(\) always exists and is always falsy\.$#'
-			identifier: empty.offset
-			count: 1
-			path: include/release-qa.php
-
-		-
-			message: '#^Offset ''sha256_bz2''\|''sha256_gz''\|''sha256_xz'' on array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''05 Dec 2024''\|''07 May 2026''\|''21 May 2026'', baseurl\: ''https\://downloads…''\}\|array\{type\: ''RC'', number\: 0, sha256_bz2\: '''', sha256_gz\: '''', sha256_xz\: '''', date\: ''28 May 2026'', baseurl\: ''https\://downloads…''\} in isset\(\) always exists and is not nullable\.$#'
-			identifier: isset.offset
-			count: 1
-			path: include/release-qa.php
-
-		-
-			message: '#^Right side of && is always true\.$#'
-			identifier: booleanAnd.rightAlwaysTrue
-			count: 2
-			path: include/release-qa.php
-
-		-
 			message: '#^Function autogen\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
@@ -1323,12 +1269,6 @@ parameters:
 		-
 			message: '#^Function show_source_releases\(\) has no return type specified\.$#'
 			identifier: missingType.return
-			count: 1
-			path: include/version.inc
-
-		-
-			message: '#^Offset ''announcement'' on array\{version\: ''8\.2\.31'', date\: ''07 May 2026'', tags\: array\{''security''\}, sha256\: array\{''tar\.gz''\: ''083c2f61cc5f527eb29…'', ''tar\.bz2''\: ''948183fa04cf261c9b9…'', ''tar\.xz''\: ''95eae411d594fe6f6e5…''\}\}\|array\{version\: ''8\.3\.31'', date\: ''07 May 2026'', tags\: array\{''security''\}, sha256\: array\{''tar\.gz''\: ''4e7baaf0a690e954a20…'', ''tar\.bz2''\: ''e6986b1fd37eb254021…'', ''tar\.xz''\: ''66410cee07f4b2baeb0…''\}\}\|array\{version\: ''8\.4\.22'', date\: ''04 Jun 2026'', tags\: array\{\}, sha256\: array\{''tar\.gz''\: ''a012c2c9724baf214a7…'', ''tar\.bz2''\: ''4b16e7e2c384ce25e07…'', ''tar\.xz''\: ''696c0f6ad92e94c5905…''\}\}\|array\{version\: ''8\.5\.7'', date\: ''04 Jun 2026'', tags\: array\{\}, sha256\: array\{''tar\.gz''\: ''e5eba93fd6dd3241d0e…'', ''tar\.bz2''\: ''4ef9355f784d4b32015…'', ''tar\.xz''\: ''01ba2ed1c2658dacf91…''\}\} on left side of \?\? does not exist\.$#'
-			identifier: nullCoalesce.offset
 			count: 1
 			path: include/version.inc
 
@@ -1723,12 +1663,6 @@ parameters:
 			path: public/credits.php
 
 		-
-			message: '#^Parameter \#2 \$subject of function preg_match expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/credits.php
-
-		-
 			message: '#^Variable \$LANG might not be defined\.$#'
 			identifier: variable.undefined
 			count: 2
@@ -1785,12 +1719,6 @@ parameters:
 		-
 			message: '#^Function option\(\) has parameter \$attributes with no type specified\.$#'
 			identifier: missingType.parameter
-			count: 1
-			path: public/downloads.php
-
-		-
-			message: '#^Result of && is always true\.$#'
-			identifier: booleanAnd.alwaysTrue
 			count: 1
 			path: public/downloads.php
 
@@ -2403,12 +2331,6 @@ parameters:
 		-
 			message: '#^Function display_options\(\) has parameter \$options with no type specified\.$#'
 			identifier: missingType.parameter
-			count: 1
-			path: public/submit-event.php
-
-		-
-			message: '#^Offset ''email'' on non\-empty\-array\<mixed\> in isset\(\) always exists and is not nullable\.$#'
-			identifier: isset.offset
 			count: 1
 			path: public/submit-event.php
 

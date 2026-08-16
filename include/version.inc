@@ -70,11 +70,12 @@ $RELEASES = (function () {
 
     $ret = [];
     foreach ($data as $release) {
+        $release += ['announcement' => true];
         $version = $release['version'];
         [$major] = explode('.', $version, 2);
 
         $info = [
-            'announcement' => $release['announcement'] ?? true,
+            'announcement' => $release['announcement'],
             'tags' => $release['tags'],
             'date' => $release['date'],
             'source' => [],
