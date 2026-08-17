@@ -10,7 +10,7 @@
   <category term="conferences" label="Conference announcement"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://longhornphp.com/" title="LonghornPHP">longhornphp.png</default:newsImage>
   <content type="html">
-     &lt;p&gt;Longhorn PHP is back for 2026! The schedule is now live, and tickets are on sale! The conference will be held in Austin, Texas, and will start with an optional tutorial day on Thursday, October 15, followed by a full day of talks, keynotes, open spaces and more, on Friday, October 16. a href="https://longhornphp.com/schedule"&gt;Our full schedule is available now&lt;/a&gt;, , with Early Bird pricing available through end of day September 16th.&lt;/p&gt;
+     <p>Longhorn PHP is back for 2026! The schedule is now live, and tickets are on sale! The conference will be held in Austin, Texas, and will start with an optional tutorial day on Thursday, October 15, followed by a full day of talks, keynotes, open spaces and more, on Friday, October 16. <a href="https://longhornphp.com/schedule">Our full schedule is available now</a>, with Early Bird pricing available through end of day September 16th.</p>
      
 </content>
 </entry>
