@@ -216,6 +216,7 @@ Function Get-VSVersion {
         '7.2' = 'VC15'; '7.3' = 'VC15'; '7.4' = 'vc15'
         '8.0' = 'vs16'; '8.1' = 'vs16'; '8.2' = 'vs16'; '8.3' = 'vs16'
         '8.4' = 'vs17'; '8.5' = 'vs17'
+        '8.6' = 'vs18';
     }
 
     if ($map.ContainsKey($Version)) {

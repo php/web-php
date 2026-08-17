@@ -48,6 +48,8 @@ function changelog_header(int $major_version, array $minor_versions): void {
         'current' => 'docs',
         'css' => ['changelog.css'],
         'layout_span' => 12,
+        'cache' => true,
+        'cache_control' => 30 * 60, // 30 minutes
     ]);
     echo "<h1>PHP {$major_version} ChangeLog</h1>\n";
     $glue = '';

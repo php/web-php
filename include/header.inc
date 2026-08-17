@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\ProjectGlobals;
+
 $css_files = [
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
@@ -39,7 +42,7 @@ if ($config["cache"]) {
     if (is_numeric($config["cache"])) {
         $timestamp = $config["cache"];
     } else {
-        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]);
+        $timestamp = filemtime(ProjectGlobals::getPublicRoot() . "/" . $_SERVER["BASE_PAGE"]);
     }
     $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
@@ -49,6 +52,11 @@ if ($config["cache"]) {
     }
     header("Last-Modified: " . $tsstring);
 }
+
+if ($config["cache_control"] && is_numeric($config["cache_control"])) {
+    header("Cache-Control: public, max-age=" . (int) $config["cache_control"]);
+}
+
 if (!isset($config["languages"])) {
     $config["languages"] = [];
 }
@@ -104,10 +112,6 @@ if (!isset($config["languages"])) {
 <?php foreach($JS as $filename => $modified): ?>
 <script type="text/javascript" src="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>"></script>
 <?php endforeach ?>
-
-<?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
-<?php endif ?>
 
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 

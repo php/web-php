@@ -58,7 +58,7 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.3.30' => [
+    '8.3.31' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
@@ -66,34 +66,47 @@ $QA_RELEASES = [
             'sha256_bz2' => '',
             'sha256_gz'  => '',
             'sha256_xz'  => '',
-            'date'       => '01 Jan 2026',
+            'date'       => '07 May 2026',
             'baseurl'    => 'https://downloads.php.net/',
         ],
     ],
 
-    '8.4.21' => [
+    '8.4.25' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
             'number'     => 1,
-            'sha256_bz2' => '92be1ab180946fb6fe21456cfae08190fe556fb643d56043bd56f034ae145368',
-            'sha256_gz'  => 'e4c3eb09b3948bda0a0e41c73424a73c1d3ca6c7ee81efb22f26f07cb7476929',
-            'sha256_xz'  => 'c1a77cbbfe2dc7dd37b11f88ff68f112dbed6eaa9ba2d232e0a1b57852c93096',
-            'date'       => '23 Apr 2026',
+            'sha256_bz2' => 'bca85bc4cda00e409835dcec133474743cf99090fcbacdf674ae70bbc5d7c6dc',
+            'sha256_gz'  => '0d1b8936e67bae406f20691a4225b398baaa31a1dbdeea5959a553a26c9f5f86',
+            'sha256_xz'  => '666d849f376b20f21dad94c14a0c5faa1649e3c77de50330b05d7967ee5b2441',
+            'date'       => '13 August 2026',
             'baseurl'    => 'https://downloads.php.net/~calvinb/',
         ],
     ],
 
-    '8.5.6' => [
+    '8.5.10' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 3,
-            'sha256_bz2' => '7084b65f8a37558950a657654d0cabda0778d9c3b49f1c79a16bf2c9611d109b',
-            'sha256_gz'  => '01e12f91a9c6924d42d208a1d97a32930562caa410f49f0caae62e07bfe014ff',
-            'sha256_xz'  => '5faeca2a67e766f897a51c7a93414706d168d75c862f86343f6c4658c318eee5',
-            'date'       => '30 Apr 2026',
+            'number'     => 1,
+            'sha256_bz2' => '7de35d39e81f418645a8a81da5802c635fea8c9e367aea36e6e54eaf3e753ad0',
+            'sha256_gz'  => 'ef9a00660be937664e1a02c4bf8487d6addc3a8513a415fc30974a3e84932b39',
+            'sha256_xz'  => '7afb06b0512eadfb3a6f7227aa6cc93530d95f9f97024efa133ec7b05c36cfec',
+            'date'       => '13 August 2026',
             'baseurl'    => 'https://downloads.php.net/~daniels/',
+        ],
+    ],
+
+    '8.6.0' => [
+        'active'  => true,
+        'release' => [
+            'type'       => 'beta',
+            'number'     => 1,
+            'sha256_bz2' => '7061a8c930e75e52c71264e5fac43025cec7b40cbd31d941a744218916f53cfd',
+            'sha256_gz'  => 'de760e365ed01a4e80ef40a25e2ce809bf054383cbce1bee3d94146f30eee477',
+            'sha256_xz'  => 'e44571d75b368b36a2d6db6878705e5512af5d2a78e31463c49796a94018d282',
+            'date'       => '13 August 2026',
+            'baseurl'    => 'https://downloads.php.net/~svpernova09/',
         ],
     ],
 ];

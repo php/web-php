@@ -1,0 +1,21 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+	level: 7
+	paths:
+		- .
+
+	fileExtensions:
+		- php
+		- inc
+
+	excludePaths:
+		analyse:
+			- vendor/
+			- include/download-instructions/
+			- var/ (?)
+			- public/manual/en
+			- include/releases.inc
+			- public/include/pregen-news.inc
+			- public/include/pregen-confs.inc
