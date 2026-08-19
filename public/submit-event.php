@@ -1,10 +1,11 @@
 <?php
 use phpweb\Events\EventInput;
+use phpweb\ProjectGlobals;
 
 $_SERVER['BASE_PAGE'] = 'submit-event.php';
 require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/posttohost.inc';
-require_once __DIR__ . '/../include/email-validation.inc';
+require_once ProjectGlobals::getProjectRoot() . '/include/posttohost.inc';
+require_once ProjectGlobals::getProjectRoot() . '/include/email-validation.inc';
 site_header("Submit an Event", ["current" => "community"]);
 
 // No errors, processing depends on POST data
