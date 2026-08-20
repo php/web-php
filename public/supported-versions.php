@@ -5,7 +5,7 @@ use phpweb\ProjectGlobals;
 $_SERVER['BASE_PAGE'] = 'supported-versions.php';
 
 require_once __DIR__ . '/../include/prepend.inc';
-require_once ProjectGlobals::getProjectRoot(). '/include/branches.inc';
+require_once ProjectGlobals::getProjectRoot() . '/include/branches.inc';
 
 site_header(
 	'Supported Versions',
