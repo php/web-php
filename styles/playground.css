@@ -1,0 +1,342 @@
+.playground-page {
+  --php-purple-dark: var(--dark-blue-color);
+  --php-purple-mid:  var(--medium-blue-color);
+  --php-content:     #ffffff;
+  --php-code-bg:     #F4F5F8;
+  --php-border:      #C6C9DD;
+  --php-text:        #1c1e2b;
+  --php-muted:       #6b6f86;
+
+  /* highlight_string() defaults - keep the editor recognisably "PHP". */
+  --hl-string:  #DD0000;
+  --hl-comment: #FF8000;
+  --hl-keyword: #007700;
+  --hl-default: #0000BB;
+  --hl-html:    #000000;
+
+  --error:   #b71540;
+  --warning: #9c6a00;
+
+  --radius: 6px;
+}
+
+.playground-page .lead {
+  margin: 0 0 6px;
+  max-width: 720px;
+  color: #3a3d51;
+}
+
+/* ---- Toolbar ----------------------------------------------------------- */
+.playground-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 22px 0 14px;
+}
+.playground-toolbar .spacer { flex: 1; }
+
+.playground-page .btn {
+  appearance: none;
+  border: 1px solid var(--php-border);
+  background: var(--php-content);
+  color: var(--php-text);
+  font: inherit;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+.playground-page .btn:hover:not(:disabled) { border-color: var(--php-purple-mid); }
+.playground-page .btn:disabled { opacity: .5; cursor: default; }
+.playground-page .btn-primary {
+  background: var(--php-purple-dark);
+  border-color: var(--php-purple-dark);
+  color: #fff;
+}
+.playground-page .btn-primary:hover:not(:disabled) { background: #45507f; border-color: #45507f; }
+.playground-page .btn-icon { font-size: .85em; }
+
+.playground-page kbd {
+  font-family: var(--font-family-mono);
+  font-size: .8em;
+  background: rgba(0, 0, 0, .08);
+  border-radius: 4px;
+  padding: 2px 5px;
+  line-height: 1;
+}
+.playground-page .btn-primary kbd { background: rgba(255, 255, 255, .2); }
+
+.playground-page .examples {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--php-muted);
+  font-size: .9rem;
+}
+.playground-page .examples select {
+  font: inherit;
+  padding: 7px 10px;
+  border: 1px solid var(--php-border);
+  border-radius: var(--radius);
+  background: var(--php-content);
+  color: var(--php-text);
+}
+
+.playground-page .status { font-size: .88rem; font-weight: 500; }
+.playground-page .status-loading { color: var(--warning); }
+.playground-page .status-ready   { color: #2e7d32; }
+.playground-page .status-running { color: var(--php-purple-dark); }
+.playground-page .status-error   { color: var(--error); }
+
+.playground-page .version-badge {
+  font-family: var(--font-family-mono);
+  font-size: .8rem;
+  background: var(--php-purple-dark);
+  color: #fff;
+  padding: 4px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---- Panes ------------------------------------------------------------- */
+.playground-panes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 32px;
+}
+@media (max-width: 860px) {
+  .playground-panes { grid-template-columns: 1fr; }
+}
+
+.playground-page .pane {
+  background: var(--php-content);
+  border: 1px solid var(--php-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+.playground-page .pane-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: var(--php-code-bg);
+  border-bottom: 1px solid var(--php-border);
+}
+.playground-page .pane-title {
+  font-family: var(--font-family-mono);
+  font-size: .82rem;
+  color: var(--php-muted);
+}
+.playground-page .timing {
+  font-family: var(--font-family-mono);
+  font-size: .78rem;
+  color: var(--php-muted);
+}
+
+/* ---- Output view toggle (Raw / Preview) -------------------------------- */
+.playground-page .seg {
+  display: inline-flex;
+  border: 1px solid var(--php-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--php-content);
+}
+.playground-page .seg-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: .76rem;
+  font-weight: 500;
+  color: var(--php-muted);
+  padding: 3px 11px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.playground-page .seg-btn + .seg-btn { border-left: 1px solid var(--php-border); }
+.playground-page .seg-btn:hover:not(.is-active) { color: var(--php-text); }
+.playground-page .seg-btn.is-active {
+  background: var(--php-purple-dark);
+  color: #fff;
+}
+
+/* ---- File tabs ---------------------------------------------------------- */
+.playground-page .pane-head--editor {
+  padding: 0 8px 0 0;
+  gap: 8px;
+}
+.playground-page .tabs {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: stretch;
+  overflow-x: auto;
+}
+.playground-page .tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px 6px 6px;
+  border-right: 1px solid var(--php-border);
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-family-mono);
+  font-size: .8rem;
+  color: var(--php-muted);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+.playground-page .tab:hover { background: rgba(0, 0, 0, .03); }
+.playground-page .tab.is-active {
+  background: var(--php-content);
+  color: var(--php-text);
+  border-bottom-color: var(--php-purple-dark);
+}
+.playground-page .tab-name { padding: 0 2px; }
+.playground-page .tab.is-entry .tab-name { font-weight: 600; }
+
+.playground-page .tab-entry,
+.playground-page .tab-close {
+  appearance: none;
+  border: none;
+  background: none;
+  font: inherit;
+  line-height: 1;
+  padding: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--php-muted);
+}
+.playground-page .tab-entry { font-size: .7rem; color: #b9bcce; }
+.playground-page .tab-entry:hover { color: var(--php-purple-dark); background: rgba(0, 0, 0, .06); }
+.playground-page .tab.is-entry .tab-entry { color: var(--php-purple-dark); }
+.playground-page .tab-close {
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+.playground-page .tab:hover .tab-close,
+.playground-page .tab.is-active .tab-close { opacity: 1; }
+.playground-page .tab-close:hover { color: var(--error); background: rgba(0, 0, 0, .06); }
+
+.playground-page .tab-add {
+  appearance: none;
+  flex: none;
+  border: 1px solid var(--php-border);
+  background: var(--php-content);
+  color: var(--php-muted);
+  font: inherit;
+  font-size: .78rem;
+  padding: 4px 9px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.playground-page .tab-add:hover { border-color: var(--php-purple-mid); color: var(--php-text); }
+
+/* ---- Editor -------------------------------------------------------------- */
+/* CodeMirror mounts inside the editor pane; the textarea is the fallback. */
+.playground-page .pane-editor .cm-editor {
+  flex: 1;
+  min-height: 0;
+}
+.playground-page #editor {
+  flex: 1;
+  height: auto;
+  padding: 12px 14px;
+  border: none;
+  resize: none;
+  font-family: var(--font-family-mono);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--php-text);
+  background: var(--php-content);
+}
+.playground-page #editor:focus-visible { outline: none; }
+
+/* ---- Output -------------------------------------------------------------- */
+.playground-page .output {
+  flex: 1;
+  margin: 0;
+  padding: 14px 16px;
+  overflow: auto;
+  font-family: var(--font-family-mono);
+  font-size: 13.5px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--php-content);
+}
+/* Empty state: center the placeholder in the pane so a single line of text
+   reads as an intentional prompt rather than floating in the top-left. */
+.playground-page .output:has(.output-placeholder) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.playground-page .output-placeholder {
+  color: var(--php-muted);
+  font-family: var(--font-family-sans-serif);
+  margin: 0;
+}
+
+/* Preview: PHP's output rendered as a real HTML document in a sandboxed
+   frame. The frame fills the pane, so drop the text padding. */
+.playground-page .output.is-preview {
+  padding: 0;
+  white-space: normal;
+}
+.playground-page .preview-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border: 0;
+  background: #fff;
+}
+
+/* stdout text */
+.playground-page .out-stdout { color: var(--php-text); }
+
+/* A diagnostic block: warning/notice/fatal pulled from stderr. */
+.playground-page .diagnostic {
+  margin: 12px 0 0;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--error);
+  background: #fff5f7;
+  padding: 10px 14px;
+  white-space: pre-wrap;
+}
+.playground-page .diagnostic.is-warning {
+  border-left-color: var(--warning);
+  background: #fff9ec;
+}
+.playground-page .diagnostic .diag-headline {
+  font-weight: 600;
+  color: var(--error);
+}
+.playground-page .diagnostic.is-warning .diag-headline { color: var(--warning); }
+.playground-page .diagnostic .diag-trace-head {
+  display: block;
+  margin-top: 6px;
+  color: var(--php-muted);
+}
+.playground-page .diagnostic .diag-frame { color: #3a3d51; display: block; }
+.playground-page .diagnostic .diag-frame .frame-no { color: var(--php-purple-dark); }
+.playground-page .diagnostic .diag-thrown { display: block; margin-top: 4px; color: var(--php-muted); }
+
+.playground-page .exit-line {
+  margin-top: 10px;
+  color: var(--php-muted);
+  font-style: italic;
+}
