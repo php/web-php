@@ -1,4 +1,6 @@
 <?php
+use phpweb\Downloads\OptionResolver;
+
 $_SERVER['BASE_PAGE'] = 'downloads.php';
 require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/gpg-keys.inc';
@@ -6,6 +8,58 @@ require_once __DIR__ . '/../include/version.inc';
 
 // Try to make this page non-cached
 header_nocache();
+
+$os = [
+    'linux' => [
+        'name' => 'Linux',
+        'variants' => [
+            'linux-debian' => 'Debian',
+            'linux-fedora' => 'Fedora',
+            'linux-redhat' => 'RedHat',
+            'linux-ubuntu' => 'Ubuntu',
+            'linux-docker-cli' => 'Docker (Command Line Interface)',
+            'linux-docker-web' => 'Docker (Web Development)',
+        ],
+    ],
+    'osx' => [
+        'name' => 'macOS',
+        'variants' => [
+            'osx-homebrew' => 'Homebrew',
+            'osx-homebrew-php' => 'Homebrew-PHP',
+            'osx-docker-cli' => 'Docker (Command Line Interface)',
+            'osx-docker-web' => 'Docker (Web Development)',
+            'osx-macports' => 'MacPorts',
+        ],
+    ],
+    'windows' => [
+        'name' => 'Windows',
+        'variants' => [
+            'windows-downloads' => 'ZIP Downloads',
+            'windows-native' => 'Single Line Installer',
+            'windows-chocolatey' => 'Chocolatey',
+            'windows-scoop' => 'Scoop',
+            'windows-winget' => 'Winget',
+            'windows-docker-cli' => 'Docker (Command Line Interface)',
+            'windows-docker-web' => 'Docker (Web Development)',
+            'windows-wsl-debian' => 'WSL/Debian',
+            'windows-wsl-ubuntu' => 'WSL/Ubuntu',
+        ],
+    ],
+];
+
+// An invalid ?os= redirects to the auto-detected results before any output.
+$resolution = (new OptionResolver($os))->resolve(
+    $_GET,
+    $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '',
+    $_SERVER['HTTP_USER_AGENT'] ?? '',
+);
+
+if ($resolution->redirectQuery !== null) {
+    header('Location: /downloads.php?' . $resolution->redirectQuery, true, 302);
+    exit;
+}
+
+$options = $resolution->options;
 
 $SIDEBAR_DATA = '
 <div class="panel">
@@ -52,44 +106,6 @@ function option(string $value, string $desc, $attributes = []): string
     return '<option value="' . $value . '"' . implode(' ', array_keys(array_filter($attributes))) . '>' . $desc . '</option>';
 }
 
-$os = [
-    'linux' => [
-        'name' => 'Linux',
-        'variants' => [
-            'linux-debian' => 'Debian',
-            'linux-fedora' => 'Fedora',
-            'linux-redhat' => 'RedHat',
-            'linux-ubuntu' => 'Ubuntu',
-            'linux-docker-cli' => 'Docker (Command Line Interface)',
-            'linux-docker-web' => 'Docker (Web Development)',
-        ],
-    ],
-    'osx' => [
-        'name' => 'macOS',
-        'variants' => [
-            'osx-homebrew' => 'Homebrew',
-            'osx-homebrew-php' => 'Homebrew-PHP',
-            'osx-docker-cli' => 'Docker (Command Line Interface)',
-            'osx-docker-web' => 'Docker (Web Development)',
-            'osx-macports' => 'MacPorts',
-        ],
-    ],
-    'windows' => [
-        'name' => 'Windows',
-        'variants' => [
-            'windows-downloads' => 'ZIP Downloads',
-            'windows-native' => 'Single Line Installer',
-            'windows-chocolatey' => 'Chocolatey',
-            'windows-scoop' => 'Scoop',
-            'windows-winget' => 'Winget',
-            'windows-docker-cli' => 'Docker (Command Line Interface)',
-            'windows-docker-web' => 'Docker (Web Development)',
-            'windows-wsl-debian' => 'WSL/Debian',
-            'windows-wsl-ubuntu' => 'WSL/Ubuntu',
-        ],
-    ],
-];
-
 $versions = [
     '8.5' => 'version 8.5',
     '8.4' => 'version 8.4',
@@ -98,44 +114,6 @@ $versions = [
     'default' => 'default PHP version for OS',
 ];
 
-
-$platform = $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '';
-$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-$auto_os = null;
-$auto_osvariant = null;
-
-if (!empty($platform) || !empty($ua)) {
-    $platform = strtolower(trim($platform, '"'));
-    if ($platform === 'windows' || stripos($ua, 'Windows') !== false) {
-        $auto_os = 'windows';
-    } elseif ($platform === 'macos' || stripos($ua, 'Mac') !== false) {
-        $auto_os = 'osx';
-    } elseif ($platform === 'linux' || stripos($ua, 'Linux') !== false) {
-        $auto_os = 'linux';
-        if (stripos($ua, 'Ubuntu') !== false) {
-            $auto_osvariant = 'linux-ubuntu';
-        } elseif (stripos($ua, 'Debian') !== false) {
-            $auto_osvariant = 'linux-debian';
-        } elseif (stripos($ua, 'Fedora') !== false) {
-            $auto_osvariant = 'linux-fedora';
-        } elseif (stripos($ua, 'Red Hat') !== false || stripos($ua, 'RedHat') !== false) {
-            $auto_osvariant = 'linux-redhat';
-        }
-    }
-}
-
-$defaults = [
-    'os' => $auto_os ?? 'linux',
-    'version' => 'default',
-];
-
-$options = array_merge($defaults, $_GET);
-
-if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants']))) {
-    $options['osvariant'] = $auto_osvariant;
-} elseif (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants'])) {
-    $options['osvariant'] = array_key_first($os[$options['os']]['variants']);
-}
 ?>
 <h1>Downloads &amp; Installation Instructions</h1>
 
