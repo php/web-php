@@ -1031,6 +1031,9 @@ div.tip p:first-child {
     border:1px solid;
 }
 
+.doctable caption {
+  line-height: 2rem;
+}
 /* }}} */
 
 /* {{{ lists */
@@ -1526,6 +1529,11 @@ td {
   /* Make table elements block for stacking */
   table, thead, tbody, th, td, tr {
     display: block;
+  }
+
+  /* Prevent table titles from breaking into multiple lines */
+  table caption {
+    display: inline;
   }
 
   /* Hide the table headers */
