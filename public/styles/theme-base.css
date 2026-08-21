@@ -1003,7 +1003,6 @@ div.tip p:first-child {
 .docs .qandaentry dt .phpcode * {
     font-weight: normal;
 }
-
 /* }}} */
 
 
@@ -1022,15 +1021,20 @@ div.tip p:first-child {
     width: 100%;
     margin:0 0 1.5rem;
 }
+
 .doctable thead tr,
 .segmentedlist thead tr {
     border:1px solid;
 }
+
 .doctable tr,
 .segmentedlist tr {
     border:1px solid;
 }
 
+.doctable caption {
+  line-height: 2rem;
+}
 /* }}} */
 
 /* {{{ lists */
@@ -1528,6 +1532,11 @@ td {
     display: block;
   }
 
+  /* Prevent table titles from breaking into multiple lines */
+  table caption {
+    display: inline;
+  }
+
   /* Hide the table headers */
   thead tr {
     position: absolute;
@@ -1544,6 +1553,7 @@ td {
     border-bottom: 1px solid #eee;
     position: relative;
   }
+  
   td:before {
     left: -.50rem;
     top: -0.3rem;
