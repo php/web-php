@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Last Call for the State of PHP Survey</title>
+  <id>https://www.php.net/archive/2026.php#2026-08-25-1</id>
+  <published>2026-08-25T08:38:33+00:00</published>
+  <updated>2026-08-25T08:38:33+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-08-25-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-08-25-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>
+ The <a href="https://surveys.jetbrains.com/s3/phpnet-state-of-php-2026">State of PHP survey</a> is still open, but not for much longer. It asks how PHP is working for you: what you build with, what is painful, and what you think PHP should focus on next. It takes around 15 minutes.
+</p>
+<p>
+ The survey is run by <a href="https://thephp.foundation/">The PHP Foundation</a> in partnership with <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> by JetBrains.
+</p>
+<p>
+ The aggregated results will be published later this year as the State of PHP 2026 report. The anonymized raw dataset will be released along with it, so anyone in the community can check the numbers or run their own analysis.
+</p>
+<p>
+ More responses mean a better picture of what matters to PHP users. If you have not filled it in yet, please do, and share it with your colleagues and user groups.
+</p>
+    </div>
+  </content>
+</entry>
