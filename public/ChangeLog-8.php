@@ -1236,6 +1236,99 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.25"><!-- {{{ 8.4.25 -->
+<h3>Version 8.4.25</h3>
+<b><?php release_date('27-Aug-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23088); ?> (Stack overflow when comparing deeply nested arrays).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed leak on double DatePeriod::__construct() call.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23116); ?> (Stack overflow when normalizing a deeply nested DOMDocument).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23117); ?> (Stack overflow when normalizing a deeply nested Dom\XMLDocument).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22825); ?> (DOMElement::setAttribute() fails silently when the DTD declares a default value for the attribute).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22447); ?> (UAF at dom_objects_free_storage when setting an attribute node that collides by local name with a namespaced attribute).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23120); ?> (Stack overflow when comparing deeply nested DOM nodes with DOMNode::isEqualNode()).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22752); ?> (Build failure with libxml 2.15).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22779); ?> (mb_strrpos() returns the wrong position for a negative offset in a non-UTF-8 encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21036); ?> (mb_ereg_search_getregs() crashes after mb_eregi() invalidates the regex cache).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22857); ?> (Function JIT emits wrong code for FETCH_OBJ_FUNC_ARG on a property hook getter, losing register-held variables).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22916); ?> (Preserve parent regs in zend_jit_deoptimizer_start()).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix missing error check on invalid alpn protocols.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21134); ?> (Crash with \C + UTF-8). Using \C in UTF-8 patterns is now forbidden.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22905); ?> (Reflection exception messages truncate on null bytes).</li>
+  <li>Fixed ReflectionProperty::isLazy() and skipLazyInitialization() using the parent slot when a child class hooks an inherited property.</li>
+  <li>Fixed segfault in ReflectionMethod::createFromMethodName() on an uninstantiable subclass.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fix corruption in mod_mm.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23043); ?> (broken session id code can cause zend_mm_heap corrupted).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed integer element offsets that cannot resolve aliasing an existing element.</li>
+  <li>Fixed segfault when comparing uninitialized SimpleXMLElement instances.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed various memory related issues in ext/sockets.</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li>Fix leak when trying to close db if blob stream is still open.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23111); ?> (Stack overflow in array_walk_recursive() with deeply nested arrays).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23113); ?> (Stack overflow in array_replace_recursive() with deeply nested arrays).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23115); ?> (Stack overflow in compact() with deeply nested arrays).</li>
+  <li>Fixed stack overflow in count() with COUNT_RECURSIVE and deeply nested arrays.</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15836); ?> (Use-after-free when a user stream filter accesses $this-&gt;stream during the close flush).</li>
+</ul></li>
+<li>Sysvshm:
+<ul>
+  <li>Fixed out-of-bounds write when shm_attach() opens an existing segment with a size larger than the segment actually is.</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li>Fixed use-after-free when a DOMDocument subclass __clone() retains the stylesheet copy made by XSLTProcessor::importStylesheet().</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed ZipArchive::addGlob() and ZipArchive::addPattern() ignoring their default options when no options array is given.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.24"><!-- {{{ 8.4.24 -->
 <h3>Version 8.4.24</h3>
 <b><?php release_date('30-Jul-2026'); ?></b>
