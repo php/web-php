@@ -1699,24 +1699,6 @@ parameters:
 			path: public/downloads-get-instructions.php
 
 		-
-			message: '#^Call to function array_key_exists\(\) with ''os'' and non\-empty\-array will always evaluate to true\.$#'
-			identifier: function.alreadyNarrowedType
-			count: 2
-			path: public/downloads.php
-
-		-
-			message: '#^Call to function array_key_exists\(\) with ''osvariant'' and non\-empty\-array will always evaluate to true\.$#'
-			identifier: function.alreadyNarrowedType
-			count: 1
-			path: public/downloads.php
-
-		-
-			message: '#^Call to function array_key_exists\(\) with ''version'' and non\-empty\-array will always evaluate to true\.$#'
-			identifier: function.alreadyNarrowedType
-			count: 1
-			path: public/downloads.php
-
-		-
 			message: '#^Function option\(\) has parameter \$attributes with no type specified\.$#'
 			identifier: missingType.parameter
 			count: 1
