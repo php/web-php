@@ -51,7 +51,7 @@ $entry->save()->updateArchiveXML();
 $addedFiles = [Entry::ARCHIVE_ENTRIES_REL . $entry->getId() . '.xml'];
 
 // Mint the releases/x_y_z.php archive.
-const RELEASES_REL = 'releases/';
+const RELEASES_REL = 'public/releases/';
 const RELEASES_ABS = __DIR__ . '/../' . RELEASES_REL;
 if (isset($opts['r'])) {
 	$release = strtr($version, '.', '_') . '.php';
