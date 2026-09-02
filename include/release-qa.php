@@ -88,10 +88,10 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 1,
-            'sha256_bz2' => '7de35d39e81f418645a8a81da5802c635fea8c9e367aea36e6e54eaf3e753ad0',
-            'sha256_gz'  => 'ef9a00660be937664e1a02c4bf8487d6addc3a8513a415fc30974a3e84932b39',
-            'sha256_xz'  => '7afb06b0512eadfb3a6f7227aa6cc93530d95f9f97024efa133ec7b05c36cfec',
+            'number'     => 0,
+            'sha256_bz2' => '',
+            'sha256_gz'  => '',
+            'sha256_xz'  => '',
             'date'       => '13 August 2026',
             'baseurl'    => 'https://downloads.php.net/~daniels/',
         ],
@@ -128,44 +128,60 @@ $QA_CHECKSUM_TYPES = ['sha256'];
 // release  : These are encouraged for use (e.g., linked at qa.php.net)
 // reported : These are allowed to report @ the php.qa.reports mailing list
 
-(function(&$QA_RELEASES) use ($QA_CHECKSUM_TYPES) {
-    foreach ($QA_RELEASES as $pversion => $info) {
+$process_qa_releases = /**
+ * @param array<string, array{
+ *     active?: bool,
+ *     release: array{
+ *         type: string,
+ *         number: int,
+ *         sha256_bz2?: string,
+ *         sha256_gz?: string,
+ *         sha256_xz?: string,
+ *         date: string,
+ *         baseurl?: string
+ *     }
+ * }> $qa_releases
+ * @param list<string> $checksum_types
+ * @return array<string, mixed>
+ */
+static function(array $qa_releases, array $checksum_types): array {
+    foreach ($qa_releases as $pversion => $info) {
 
         if (isset($info['active']) && $info['active']) {
 
             // Allow -dev versions of all active types
             // Example: 5.3.6-dev
-            $QA_RELEASES['reported'][] = "{$pversion}-dev";
-            $QA_RELEASES[$pversion]['dev_version'] = "{$pversion}-dev";
+            $qa_releases['reported'][] = "{$pversion}-dev";
+            $qa_releases[$pversion]['dev_version'] = "{$pversion}-dev";
 
             // Allow -dev version of upcoming qa releases (rc/alpha/beta)
             // @todo confirm this php version format for all dev versions
             if ((int)$info['release']['number'] > 0) {
-                $QA_RELEASES['reported'][] = "{$pversion}{$info['release']['type']}{$info['release']['number']}";
+                $qa_releases['reported'][] = "{$pversion}{$info['release']['type']}{$info['release']['number']}";
                 if (!empty($info['release']['baseurl'])) {
 
                     // php.net filename format for qa releases
                     // example: php-5.3.0RC2
                     $fn_base = 'php-' . $pversion . $info['release']['type'] . $info['release']['number'];
 
-                    $QA_RELEASES[$pversion]['release']['version'] = $pversion . $info['release']['type'] . $info['release']['number'];
+                    $qa_releases[$pversion]['release']['version'] = $pversion . $info['release']['type'] . $info['release']['number'];
                     foreach ([ 'bz2', 'gz', 'xz' ] as $file_type) {
-                        foreach ($QA_CHECKSUM_TYPES as $algo) {
+                        foreach ($checksum_types as $algo) {
                             if (isset($info['release'][$algo . '_' . $file_type])) {
-                                $QA_RELEASES[$pversion]['release']['files'][$file_type][$algo] = $info['release'][$algo . '_' . $file_type];
+                                $qa_releases[$pversion]['release']['files'][$file_type][$algo] = $info['release'][$algo . '_' . $file_type];
                             }
                         }
-                        if (!empty($QA_RELEASES[$pversion]['release']['files'][$file_type])) {
-                            $QA_RELEASES[$pversion]['release']['files'][$file_type]['path']= $info['release']['baseurl'] . $fn_base . '.tar.' . $file_type;
+                        if (!empty($qa_releases[$pversion]['release']['files'][$file_type])) {
+                            $qa_releases[$pversion]['release']['files'][$file_type]['path']= $info['release']['baseurl'] . $fn_base . '.tar.' . $file_type;
                         }
                     }
 
-                    if (empty($QA_RELEASES[$pversion]['release']['files'])) {
-                        $QA_RELEASES[$pversion]['release']['enabled'] = false;
+                    if (empty($qa_releases[$pversion]['release']['files'])) {
+                        $qa_releases[$pversion]['release']['enabled'] = false;
                     }
                 }
             } else {
-                $QA_RELEASES[$pversion]['release']['enabled'] = false;
+                $qa_releases[$pversion]['release']['enabled'] = false;
             }
 
         }
@@ -173,11 +189,15 @@ $QA_CHECKSUM_TYPES = ['sha256'];
 
     // Sorted information for later use
     // @todo need these?
-    // $QA_RELEASES['releases']   : All current versions with active qa releases
-    foreach ($QA_RELEASES as $pversion => $info) {
+    // $qa_releases['releases']   : All current versions with active qa releases
+    foreach ($qa_releases as $pversion => $info) {
         if (isset($info['active']) && $info['active'] && !empty($info['release']['number'])) {
-            $QA_RELEASES['releases'][$pversion] = $info['release'];
+            $qa_releases['releases'][$pversion] = $info['release'];
         }
     }
 
-})($QA_RELEASES);
+    return $qa_releases;
+};
+
+$QA_RELEASES = $process_qa_releases($QA_RELEASES, $QA_CHECKSUM_TYPES);
+unset($process_qa_releases);

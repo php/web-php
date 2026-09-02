@@ -25,12 +25,12 @@ $timestamps = [@getlastmod()];
    the display of the index page). The cost of stat'ing
    them all is prohibitive.
 */
-$timestamps[] = @filemtime("include/prepend.inc");
+$timestamps[] = @filemtime("../include/prepend.inc");
 
 // These are the only dynamic parts of the frontpage
 $timestamps[] = @filemtime("include/pregen-confs.inc");
 $timestamps[] = @filemtime("include/pregen-news.inc");
-$timestamps[] = @filemtime("include/version.inc");
+$timestamps[] = @filemtime("../include/version.inc");
 $timestamps[] = @filemtime("js/common.js");
 
 // The latest of these modification dates is our real Last-Modified date

@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
-  <title>PHP Conference Ehime 2026</title>
+  <title>API Platform Conference 2026 - Lille (France) &amp; Online</title>
   <id>https://www.php.net/archive/2026.php#2026-09-02-1</id>
-  <published>2026-09-02T14:30:00+00:00</published>
-  <updated>2026-09-02T14:30:00+00:00</updated>
+  <published>2026-09-02T06:18:52+00:00</published>
+  <updated>2026-09-02T06:18:52+00:00</updated>
   <link href="https://www.php.net/conferences/index.php#2026-09-02-1" rel="alternate" type="text/html"/>
-  <link href="https://phpcon.ehime.jp/?utm_source=php_net&amp;utm_medium=referral&amp;utm_campaign=phpcon_ehime_2026" rel="via" type="text/html"/>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-10-03</default:finalTeaserDate>
+  <link href="https://api-platform.com/con/2026/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-09-18</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon.ehime.jp/?utm_source=php_net&amp;utm_medium=referral&amp;utm_campaign=phpcon_ehime_2026" title="PHP Conference Ehime 2026">phpcon_ehime2026.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://api-platform.com/con/2026/" title="API Platform Conference 2026">api-platform-con-2026.png</default:newsImage>
   <content type="xhtml">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>
-        PHP Conference Ehime will be held for the first time on October 3, 2026 (JST), at Ehime University Johoku Campus in Matsuyama City, Ehime Prefecture, Japan.🍊
-      </p>
-      <p>
-        The theme of the conference is "技術愛とコミュニティ愛と愛媛愛と": love for technology, love for the community, and love for Ehime.
-      </p>
-      <p>
-        Join us in this castle and hot-spring town of Shikoku, and connect with PHP developers from all over Japan.
-      </p>
-      <p>
-        Tickets are <a href="https://fortee.jp/phpconehime-2026/ticket-shop/index" target="_blank">on sale now</a>, and further information is available on the <a href="https://phpcon.ehime.jp/?utm_source=php_net&amp;utm_medium=referral&amp;utm_campaign=phpcon_ehime_2026" target="_blank">event page</a> and on <a href="https://x.com/phpcon_ehime" target="_blank">X(Twitter)</a>.
-      </p>
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>
+    API Platform Conference will return on September 17th and 18th, 2026, both in Lille (France) and online.
+</p>
+<p>
+    The API Platform Conference is a two-day event that highlights the latest trends, best practices, and case studies related to API Platform and its ecosystem, including PHP, Symfony, JavaScript, AI, FrankenPHP, performance, and tools.
+</p>
+<p>
+    With nearly 30 talks delivered in both English and French, the conference is a must-attend for innovative companies, project leaders, and skilled developers. If you're a developer, CTO, or decision-maker specializing in these technologies, this event is tailored for you!
+</p>
+<p>
+    More info at <a href="https://api-platform.com/con/2026/">api-platform.com/con/2026</a>
+</p>
     </div>
   </content>
 </entry>
