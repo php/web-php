@@ -8,6 +8,9 @@ HOST=localhost
 PORT=8080
 # script name
 NAME=${0##*/}
+# project paths
+PROJECT_ROOT=$(cd "$(dirname "$0")/.." && pwd)
+PUBLIC_ROOT="$PROJECT_ROOT/public"
 
 usage () {
   cat <<EOF
@@ -74,8 +77,8 @@ if [[ $# > 1 ]]; then
 fi
 
 # pidfile contents would be hostname:port:pid
-PIDFILE=.build/server/server.pid
-LOGFILE=.build/server/server.log
+PIDFILE="$PROJECT_ROOT/.build/server/server.pid"
+LOGFILE="$PROJECT_ROOT/.build/server/server.log"
 
 validate_server () {
   which php &> /dev/null
@@ -107,12 +110,34 @@ start_server () {
     echo if you are sure no server is running just remove "$PIDFILE" manually and start again
     return 1
   else
-    printf "${GREEN}"$NAME" started on $HOST:$PORT${NORMAL}\n"
-    mkdir -p $(dirname "$LOGFILE")
-    php -S "$HOST":"$PORT" -c tests/php.ini >> "$LOGFILE" 2>&1 &
-    mkdir -p $(dirname "$PIDFILE")
-    echo "$HOST":"$PORT":$! > $PIDFILE
-    return 0
+    mkdir -p "$(dirname "$LOGFILE")"
+    (
+      cd "$PUBLIC_ROOT" || exit 1
+      exec php -S "$HOST":"$PORT" -c "$PROJECT_ROOT/tests/php.ini" .router.php
+    ) >> "$LOGFILE" 2>&1 &
+    SERVER_PID=$!
+    mkdir -p "$(dirname "$PIDFILE")"
+    echo "$HOST":"$PORT":"$SERVER_PID" > "$PIDFILE"
+
+    for _ in {1..50}; do
+      if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+        rm -f "$PIDFILE"
+        printf "${YELLOW}Error: $NAME failed to start. See $LOGFILE for details.${NORMAL}\n"
+        return 1
+      fi
+
+      if php -n -r '$socket = @fsockopen($argv[1], (int) $argv[2], $errorCode, $errorMessage, 0.1); if ($socket === false) { exit(1); } fclose($socket);' "$HOST" "$PORT"; then
+        printf "${GREEN}"$NAME" started on $HOST:$PORT${NORMAL}\n"
+        return 0
+      fi
+
+      sleep 0.1
+    done
+
+    kill "$SERVER_PID" 2>/dev/null
+    rm -f "$PIDFILE"
+    printf "${YELLOW}Error: $NAME did not become ready in time.${NORMAL}\n"
+    return 1
   fi
 }
 
