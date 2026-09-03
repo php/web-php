@@ -35,9 +35,8 @@ tests: vendor ## Runs unit and end-to-end tests with phpunit/phpunit
 	tests/server stop
 
 tests_e2e:
-	tests/server start;
-	npx playwright test
-	tests/server stop
+	tests/server start
+	trap 'tests/server stop' EXIT INT TERM; npx playwright test
 
 vendor: composer.json composer.lock
 	composer validate --strict
