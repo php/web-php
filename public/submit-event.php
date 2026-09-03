@@ -1,32 +1,21 @@
 <?php
+use phpweb\Events\EventInput;
+use phpweb\ProjectGlobals;
+
 $_SERVER['BASE_PAGE'] = 'submit-event.php';
 require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/posttohost.inc';
-require_once __DIR__ . '/../include/email-validation.inc';
+require_once ProjectGlobals::getProjectRoot() . '/include/posttohost.inc';
+require_once ProjectGlobals::getProjectRoot() . '/include/email-validation.inc';
 site_header("Submit an Event", ["current" => "community"]);
 
 // No errors, processing depends on POST data
 $errors = [];
 $process = [] !== $_POST;
 
-// Avoid E_NOTICE errors on incoming vars if not set
-$vars = [
-    'sday', 'smonth', 'syear', 'eday',
-    'emonth', 'eyear', 'recur', 'recur_day',
-];
-foreach ($vars as $varname) {
-    if (empty($_POST[$varname])) {
-        $_POST[$varname] = 0;
-    }
-}
-$vars = [
-    'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc',
-];
-foreach ($vars as $varname) {
-    if (!isset($_POST[$varname])) {
-        $_POST[$varname] = "";
-    }
-}
+// Default the missing fields and coerce the numeric date/recurrence fields to
+// integers, so untrusted input can be passed safely to checkdate()/mktime() below
+// instead of throwing a TypeError.
+$_POST = EventInput::normalize($_POST);
 
 // We need to process some form data
 if ($process) {
