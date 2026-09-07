@@ -8,6 +8,7 @@
   <link href="https://www.php.net/archive/2026.php#2026-08-18-1" rel="via" type="text/html"/>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-10-15</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://longhornphp.com/schedule" title="LonghornPHP">longhornphp.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>Longhorn PHP is back for 2026! The schedule is now live, and tickets are on sale! The conference will be held in Austin, Texas, and will start with an optional tutorial day on Thursday, October 15, followed by a full day of talks, keynotes, open spaces and more, on Friday, October 16. <a href="https://longhornphp.com/schedule">Our full schedule is available now</a>, with Early Bird pricing available through end of day September 16th.</p>
