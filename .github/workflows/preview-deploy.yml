@@ -51,6 +51,9 @@ jobs:
           TARGET: "/home/thephpfoundation/preview/web-php-pr-${{ steps.pr-number.outputs.pr_number }}/public"
           SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php ${{ steps.pr-number.outputs.pr_number }}
           SCRIPT_AFTER: bash /home/thephpfoundation/scripts/pr_created.sh web-php ${{ steps.pr-number.outputs.pr_number }}
+          SCRIPT_BEFORE_REQUIRED: true
+          SCRIPT_AFTER_REQUIRED: true
+          ARGS: "-rlgoDzc"
 
       - name: Find existing preview comment
         uses: peter-evans/find-comment@v4
