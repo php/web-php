@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux Conference 2027, Antwerp Belgium</title>
+  <id>https://www.php.net/archive/2026.php#2026-09-09-1</id>
+  <published>2026-09-09T20:50:57+00:00</published>
+  <updated>2026-09-09T20:50:57+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2026-09-09-1" rel="alternate" type="text/html"/>
+  <link href="https://conference.phpbenelux.eu" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2027-01-23</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://conference.phpbenelux.eu" title="PHPBenelux Conference 2027">phpbenelux_conference_logo_2027.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     PHPBenelux is back!
+
+     After 11 successful editions, the leading PHP conference in Belgium, the Netherlands and Luxembourg is back for a one-day event on Saturday January 23 2027. Join us in Antwerp for a new chapter of technical excellence, community, and connection.
+
+     <a href="https://pretix.eu/phpbenelux/conference2027/">Buy your tickets here</a>, and visit <a href="https://conference.phpbenelux.eu">https://conference.phpbenelux.eu</a> for more information about the conference.
+    </div>
+  </content>
+</entry>
