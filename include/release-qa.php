@@ -71,16 +71,16 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.4.25' => [
+    '8.4.26' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 0,
-            'sha256_bz2' => '',
-            'sha256_gz'  => '',
-            'sha256_xz'  => '',
-            'date'       => '13 August 2026',
-            'baseurl'    => 'https://downloads.php.net/',
+            'number'     => 1,
+            'sha256_bz2' => 'afaf140fa8f2593b3e08e3cff2ec81f62d1d8b21834439309e456c90a9ca1312',
+            'sha256_gz'  => '48a559ba2cb17f21a4bbbf21624e616e5c7e3d4ce92eba7ffbc260c3b52bba5f',
+            'sha256_xz'  => 'c6e6f52752510c3b3fbaf9e34a9ec37fb17f6741fb8b2637d6804a8a71c4fc37',
+            'date'       => '10 September 2026',
+            'baseurl'    => 'https://downloads.php.net/~saki/',
         ],
     ],
 
@@ -88,12 +88,12 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 0,
-            'sha256_bz2' => '',
-            'sha256_gz'  => '',
-            'sha256_xz'  => '',
-            'date'       => '13 August 2026',
-            'baseurl'    => 'https://downloads.php.net/~daniels/',
+            'number'     => 1,
+            'sha256_bz2' => '24574eb0c8c1bceac833a5b984fcfb0cde50a019f6a757c35f28da3dc97300b9',
+            'sha256_gz'  => 'dd0a2dc233ee6dd6d8ef389b671fefc5cd0f49b859d16e53d875582c5e248bbb',
+            'sha256_xz'  => '84e5d0abc91f6b1f69de6c5ec5d3720124582417c7ce6c5df742dcbada179a82',
+            'date'       => '10 September 2026',
+            'baseurl'    => 'https://downloads.php.net/~edorian/',
         ],
     ],
 
@@ -101,12 +101,12 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'beta',
-            'number'     => 2,
-            'sha256_bz2' => 'd296d7862d63f37cf0fb1c268d99d54ea9b9a889bf2c14f3e12d67def2b9d860',
-            'sha256_gz'  => '050002aecf33584ea5caca4afebda0437b6cd224a7b0cb82cdf8e96776060c6b',
-            'sha256_xz'  => '61debd0709c7e95067d3d3ec071f7490acc3519e4a79e0e7982cabcb4f7403cd',
-            'date'       => '27 August 2026',
-            'baseurl'    => 'https://downloads.php.net/~mbeccati/',
+            'number'     => 3,
+            'sha256_bz2' => 'e1517694d025b947430bc31afe41e6e134f68782d944542b962cf0b5132b1936',
+            'sha256_gz'  => '2499bb217d77566319c0e971a36041484b8cb7181ef5adf282a751e132015e8c',
+            'sha256_xz'  => 'e8daf9546c4d4244dad961b5412734db57823c2e967df3fcfbb819a62d520ea6',
+            'date'       => '10 September 2026',
+            'baseurl'    => 'https://downloads.php.net/~svpernova09/',
         ],
     ],
 ];
