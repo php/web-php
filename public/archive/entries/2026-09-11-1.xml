@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>Dutch PHP Conference 2027</title>
+    <id>https://www.php.net/archive/2026.php#2026-09-11-1</id>
+    <published>2026-09-11T07:54:45+00:00</published>
+    <updated>2026-09-11T07:54:45+00:00</updated>
+    <link href="https://www.php.net/conferences/index.php#2026-09-11-1" rel="alternate" type="text/html"/>
+    <link href="https://www.php.net/archive/2026.php#2026-09-11-1" rel="via" type="text/html"/>
+    <link href="https://phpconference.nl/" rel="via" type="text/html"/>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-12-18</default:finalTeaserDate>
+    <category term="cfp" label="Call for Papers"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.nl/" title="Dutch PHP Conference 2027">dpc-logo-2026.png</default:newsImage>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>🚀 Dutch PHP Conference 2027 is coming! 🚀</p>
+            <p>We’re thrilled to announce that the 21st edition of the Dutch PHP Conference will take place from March 16 to March 19, 2027 in Amsterdam! 🗓️</p>
+
+            <p>🎤 Call for Papers is now OPEN! 🎤</p>
+            <p>Got insights, skills, or experience to share? Submit your talk ideas before the deadline on December 18th! We’re looking for both technical and non-technical sessions that will inspire and engage our community.</p>
+
+            <p>🎟️ Early Bird Tickets Available Now! 🎟️</p>
+            <p>This year, we're excited to split our conference into an action-packed 2-day format! A standard DPC conference day ticket now also gives you full access to Webdevcon (your gateway to the latest in web technology 🌐🚀).</p>
+
+            <p>Want the ultimate experience? Our 4-day Early Bird tickets are available now! This all-access pass grants you entry to our intensive workshop days PLUS all co-located conferences, including Appdevcon (where app development meets creativity 📱✨) and the Dutch AI Conference. Secure your spot for a fantastic lineup of workshops, sessions, and social activities.</p>
+
+            <p>Get ready for an incredible edition of #DPC27! 🌟</p>
+            <ul>
+                <li>👉 Submit your CFP =&gt; <a href="https://phpconference.nl/speakers/cfp/">https://phpconference.nl/speakers/cfp/</a>
+                </li>
+                <li>👉 Grab your early bird tickets =&gt; <a href="https://dawntechnology.paydro.com/dawnconferences-2027">https://dawntechnology.paydro.com/dawnconferences-2027</a>
+                </li>
+            </ul>
+            <p>See you there! 🚀🎉</p>
+        </div>
+    </content>
+</entry>
