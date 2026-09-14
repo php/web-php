@@ -11,6 +11,19 @@ require_once __DIR__ . '/../src/autoload.php';
 // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 // for cache control header descriptions (used in many places on the site).
 
+// Our CDN decodes %2F/%5C/%2E and resolves dot segments to build its cache key,
+// but forwards the raw path to us, so a response for such a path can be stored
+// under a different URL (www.php.net "/" was poisoned this way in 2026-09).
+// Keep serving these requests, but never let the response be cached.
+(function (): void {
+    $path = explode('?', $_SERVER['REQUEST_URI'] ?? '/', 2)[0];
+    if (preg_match('~%(?:2f|5c|2e)|\\\\|(?:^|/)\.{1,2}(?:/|$)~i', $path)) {
+        header_register_callback(static function (): void {
+            header('Cache-Control: no-store');
+        });
+    }
+})();
+
 // Provide default content-type, charset and language information
 // Manual pages will override this, and maybe others too
 header("Content-language: en");
