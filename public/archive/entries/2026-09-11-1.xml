@@ -9,7 +9,7 @@
     <link href="https://phpconference.nl/" rel="via" type="text/html"/>
     <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-12-18</default:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
-    <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.nl/" title="Dutch PHP Conference 2027">dpc-logo-2026.png</default:newsImage>
+    <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.nl/" title="Dutch PHP Conference 2027">dpc-2027.png</default:newsImage>
     <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p>🚀 Dutch PHP Conference 2027 is coming! 🚀</p>
