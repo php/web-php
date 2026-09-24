@@ -1466,6 +1466,153 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.26"><!-- {{{ 8.4.26 -->
+<h3>Version 8.4.26</h3>
+<b><?php release_date('24-Sep-2026'); ?></b>
+<ul><li>BCMath:
+<ul>
+  <li>Fixed out-of-bounds read in bc_is_zero_for_scale() when scale exceeds n_scale.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed out-of-bounds reads during automatic UTF-16/32 encoding detection.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15375); ?> (Nested "yield from" skips items after a valid() or next() call on the inner generator).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23232); ?> (lone namespace separator asks the autoloader for an empty class name).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23301); ?> (Nested "yield from" yields a value twice when the middle generator delegates again).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23425); ?> (sapi_cli_server_send_headers() does not check the return value of php_cli_server_client_send_through()).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed NamedNodeMap::getNamedItemNS() with an empty URI not matching the null namespace in spec-following mode.</li>
+  <li>Fixed a use-after-free when cloning a DOMNameSpaceNode after DOMDocument::xinclude().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23331); ?> (UAF when node_list_unlink() skips attribute children that still have a live wrapper).</li>
+  <li>Fixed a use-after-free when Dom\Element::setAttributeNS() replaces the value of an attribute whose child still has a live wrapper.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imageaffinematrixget() and imageaffinematrixconcat() reporting the wrong argument in error messages.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23457); ?> (imagebmp() is extremely slow when writing to a file).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19320); ?> (FPM UID and GID overflow).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '62xp-839h-2637'); ?> (IPv6 ACL bypass in FastCGI listen.allowed_clients due to partial address comparison). (CVE-2026-91768)</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed a buffer overflow in hash_pbkdf2() with a large output length.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed grapheme_strpos() and grapheme_strrpos() with an empty needle returning UTF-16 offsets instead of grapheme offsets.</li>
+  <li>Fixed a memory leak when dumping IntlCalendar instances.</li>
+  <li>Fixed a memory leak when iterating IntlBreakIterator::getPartsIterator() results.</li>
+  <li>Fixed a double-free when IntlGregorianCalendar construction fails after the ICU constructor adopts the TimeZone.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23094); ?> (NumberFormatter parsing offsets use UTF-16 positions for UTF-8 strings).</li>
+  <li>Fixed Locale::parseLocale() reading past a trailing '-' or '_'.</li>
+  <li>Fixed grapheme_str_split() treating UBRK_DONE as a byte index.</li>
+  <li>Fixed a leak in Locale::getKeywords() when a keyword value cannot be read.</li>
+  <li>Fixed a use-after-free when IntlRuleBasedBreakIterator is constructed from compiled rules.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed mb_ereg_replace() emitting a NUL or out-of-bounds bytes in the replacement when a \k&lt;name&gt; backref has no closing delimiter.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'r6x9-5r99-36j7'); ?> (Various packet overreads in mysqlnd wire protocol). (CVE-2025-1218)</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed odbc_field_len(), odbc_field_scale() and odbc_field_type() returning uninitialized memory when SQLColAttribute fails.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed a crash when the huge page SHM remap discarded mappings outside the reserved address range.</li>
+  <li>Fixed opcache.protect_memory race under ZTS.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23288); ?> (Crash on restart when opcache.interned_strings_buffer is overridden in an individual FPM pool).</li>
+  <li>Fixed a tracing JIT crash when compiling a side trace for a method of a class that could not be stored in the inheritance cache.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'vvx9-73fr-5jjx'); ?> (TLS hostname verification falls back to CN after SAN mismatch). (CVE-2026-91769)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'xr7j-rvgx-xq5p'); ?> (Heap buffer overflow in php_openssl_matches_wildcard_name() on crafted server certificate wildcard CN). (CVE-2026-91767)</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed a leak when a persistent connection failed a liveness check with no other live PDO handle.</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23444); ?> (ODBC_ATTR_ASSUME_UTF8 corrupts Unicode data outside Windows).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed PDO::CURSOR_SCROLL statements closing a cursor that does not exist.</li>
+</ul></li>
+<li>PDO Sqlite:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20214); ?> (PDO::FETCH_DEFAULT unexpected behavior with PDOStatement::setFetchMode).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23418); ?> (Use-after-free when looking up mounted directories).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23477); ?> (Memory leak on duplicate native Phar manifest entries).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'j3wh-g957-2m85'); ?> (Integer overflow in phar_tar_number() allowing TAR archive entry injection). (CVE-2026-6103)</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23453); ?> (SNMP::setSecurity() frees a non-malloced address with a context engine ID longer than 32 bytes).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23447); ?> (Segfault when a class passed to SoapServer::setClass() fails to initialize).</li>
+  <li>Fixed WSDL cache corruption when a soap:header defines headerfaults.</li>
+  <li>Fixed stack overflow when parsing a WSDL with self-referential schema groups or attributeGroups.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'rgrp-mwpx-f6rm'); ?> (Unbounded recursion in server-side cleanup_xml_node()). (CVE-2026-91765)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'cj93-vc83-wgqv'); ?> (Integer overflow to buffer overflow in SOAP HTTP parsing). (CVE-2025-14181)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed a segfault when a stream filter callback unsets StreamBucket::$data before re-attaching the bucket.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '7875-c8px-7q5f'); ?> (Out-of-bounds read in the HTTP stream wrapper when following a redirect with an empty Location header). (CVE-2026-93682)</li>
+  <li>Fixed a memory leak in array_merge_recursive() when the recursive merge of an object converted to an array fails.</li>
+  <li>Fixed read buffer compaction in php_stream_filter_flush().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22410); ?> (Incorrect float behavior with large numbers).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 23338); ?> (fsockopen()/pfsockopen() ValueError reported wrong argument number for $timeout).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23576); ?> (Next index for array returned from array_keys() is wrong).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '88hq-2827-7pg6'); ?> (Out-of-bounds read in convert.* stream filters when line-break-chars contains NUL). (CVE-2026-92842)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'fpwc-w8rq-cr92'); ?> (Cross-origin credential leak in HTTP stream wrapper redirects). (CVE-2026-91766)</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed writing to a dimension of the object returned by attributes() not creating the attribute.</li>
+  <li>Fixed child elements of the element returned by SimpleXMLElement::addChild() not being accessible by property name when namespaces are involved.</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '9f67-6fw4-hpfp'); ?> (Reserved device names are not rejected before file and stream I/O). (CVE-2026-17545)</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23276); ?> (ZipArchive subclass storing its own stream cannot be garbage collected).</li>
+  <li>Fixed ZipArchive::extractTo() and ZipArchive::getFrom*() reporting success on corrupted entries.</li>
+  <li>Fixed ZipArchive::getNameIndex() truncating the entry index to int.</li>
+  <li>Fixed fstat() on a zip:// stream reporting success when the archive cannot be opened.</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed fuzzer targets failing to build in isolation.</li>
+  <li>Fixed returns uninitialized value on LiteSpeed lsapi SAPI (Go Kudo)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.25"><!-- {{{ 8.4.25 -->
 <h3>Version 8.4.25</h3>
 <b><?php release_date('27-Aug-2026'); ?></b>
