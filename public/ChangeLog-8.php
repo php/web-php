@@ -3937,6 +3937,50 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.35"><!-- {{{ 8.3.35 -->
+<h3>Version 8.3.35</h3>
+<b><?php release_date('24-Sep-2026'); ?></b>
+<ul><li>Filter:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'ch8v-r6jh-4vvr'); ?> (FILTER_SANITIZE_ENCODED does not encode 0xFF).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '62xp-839h-2637'); ?> (IPv6 ACL bypass in FastCGI listen.allowed_clients due to partial address comparison). (CVE-2026-91768)</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'r6x9-5r99-36j7'); ?> (Various packet overreads in mysqlnd wire protocol). (CVE-2025-1218)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'vvx9-73fr-5jjx'); ?> (TLS hostname verification falls back to CN after SAN mismatch). (CVE-2026-91769)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'xr7j-rvgx-xq5p'); ?> (Heap buffer overflow in php_openssl_matches_wildcard_name() on crafted server certificate wildcard CN). (CVE-2026-91767)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'j3wh-g957-2m85'); ?> (Integer overflow in phar_tar_number() allowing TAR archive entry injection). (CVE-2026-6103)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'rgrp-mwpx-f6rm'); ?> (Unbounded recursion in server-side cleanup_xml_node()). (CVE-2026-91765)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'cj93-vc83-wgqv'); ?> (Integer overflow to buffer overflow in SOAP HTTP parsing). (CVE-2025-14181)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '88hq-2827-7pg6'); ?> (Out-of-bounds read in convert.* stream filters when line-break-chars contains NUL). (CVE-2026-92842)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'fpwc-w8rq-cr92'); ?> (Cross-origin credential leak in HTTP stream wrapper redirects). (CVE-2026-91766)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '7875-c8px-7q5f'); ?> (Out-of-bounds read in the HTTP stream wrapper when following a redirect with an empty Location header). (CVE-2026-93682)</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '9f67-6fw4-hpfp'); ?> (Reserved device names are not rejected before file and stream I/O). (CVE-2026-17545)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.33"><!-- {{{ 8.3.33 -->
 <h3>Version 8.3.33</h3>
 <b><?php release_date('30-Jul-2026'); ?></b>
