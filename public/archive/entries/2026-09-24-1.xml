@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.6.0 RC2 available for testing</title>
+  <id>https://www.php.net/archive/2026.php#2026-09-24-1</id>
+  <published>2026-09-24T08:21:25+00:00</published>
+  <updated>2026-09-24T08:21:25+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-09-24-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-09-24-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP team is pleased to announce the first release candidate of PHP 8.6.0, RC2. It is not a typo: a mistake was made while packaging RC1, so RC2 was released instead. For a full explanation, please see this <a href="https://scherzer.dev/Blog/20260923-no-php86-rc-1">blog post</a>. This continues the PHP 8.6 release cycle, whose rough outline is specified in the <a href="https://wiki.php.net/todo/php86">PHP Wiki</a>.</p>
+     <p>Source downloads of PHP 8.6.0 RC2 are available on the <a href="https://downloads.php.net/~mbeccati/">download page</a>.</p>
+     <p>Please carefully test this version and report any issues found in the <a href="https://github.com/php/php-src/issues/new?template=bug_report.yml">GitHub Issues</a>.</p>
+     <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>
+     <p>For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-8.6.0alpha1/NEWS">NEWS</a> file, or the <a href="https://github.com/php/php-src/blob/php-8.6.0alpha1/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.</p>
+     <p>The next release will be RC3, planned for 8 October 2026.</p>
+     <p>The signatures for the release can be found in the <a href="https://gist.github.com/mbeccati/cfba591777a21f54badd12bf60bcecc9">manifest</a> or on the <a href="https://www.php.net/pre-release-builds.php">pre-release builds page</a>.</p>
+     <p>Thank you for helping us make PHP better.</p>
+    </div>
+  </content>
+</entry>
