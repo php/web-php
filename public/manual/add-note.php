@@ -344,7 +344,7 @@ if (!isset($_POST['sect'], $_POST['redirect'])) {
 
 // Everything is in place, so we can display the form
 else {?>
-<form method="post" action="/manual/add-note.php">
+<form method="post" action="/manual/add-note.php" id="addnote-form">
  <p>
   <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>">
   <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>">
@@ -390,6 +390,66 @@ else {?>
 <?php
 }
 
+?>
+<dialog id="note-confirm-dialog">
+  <form method="dialog">
+    <h3>Before submitting your note</h3>
+    <p>Please confirm that your note:</p>
+    <ul>
+      <li><label><input type="checkbox" required> Is <strong>not</strong> a bug report or feature request</label></li>
+      <li><label><input type="checkbox" required> Is <strong>not</strong> a support question</label></li>
+      <li><label><input type="checkbox" required> Is <strong>not</strong> a code collaboration or link to an external site</label></li>
+      <li><label><input type="checkbox" required> Is written in <strong>English</strong></label></li>
+    </ul>
+    <p>
+      <button type="submit" value="confirm">I confirm, submit my note</button>
+      <button type="submit" value="cancel">Cancel</button>
+    </p>
+  </form>
+</dialog>
+<script>
+(function() {
+    var form = document.getElementById('addnote-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        var action = e.submitter ? e.submitter.value : '';
+        if (action !== 'Add Note') return;
+
+        var dialog = document.getElementById('note-confirm-dialog');
+        if (!dialog || form.dataset.confirmed === '1') {
+            form.dataset.confirmed = '';
+            return;
+        }
+
+        e.preventDefault();
+        dialog.showModal();
+
+        dialog.querySelector('form').onsubmit = function(de) {
+            var checkboxes = dialog.querySelectorAll('input[type="checkbox"]');
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (!checkboxes[i].checked) {
+                    de.preventDefault();
+                    return;
+                }
+            }
+        };
+
+        dialog.addEventListener('close', function handler() {
+            dialog.removeEventListener('close', handler);
+            if (dialog.returnValue === 'confirm') {
+                form.dataset.confirmed = '1';
+                e.submitter.click();
+            }
+            var checkboxes = dialog.querySelectorAll('input[type="checkbox"]');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+            }
+        });
+    });
+})();
+</script>
+<?php
 // Print out common footer
 site_footer();
 ?>
