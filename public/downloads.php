@@ -1,5 +1,6 @@
 <?php
 use phpweb\Downloads\OptionResolver;
+use phpweb\Releases\Releases;
 
 $_SERVER['BASE_PAGE'] = 'downloads.php';
 require_once __DIR__ . '/../include/prepend.inc';
@@ -168,7 +169,7 @@ $versions = [
 <?php if (!$instructionsShown): ?>
 
 <h2>Source Code</h2>
-<?php show_source_releases(); ?>
+<?php new Releases()->showSource(); ?>
 
 <hr>
 <h2>GPG Keys</h2>
