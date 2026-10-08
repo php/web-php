@@ -101,12 +101,12 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 2,
-            'sha256_bz2' => '30110daabfb393576845cc5ca93a3a07d2f66e8fdaa5a02a3478b81c2b9edf88',
-            'sha256_gz'  => '05377bdce249ca54e5c25af53f11662170440fdd8840b23b6d4886a8bccf0f30',
-            'sha256_xz'  => 'ef3fba21c311e9bbace0e2102702446d322c275b8a10e6b33b28f2561299671c',
-            'date'       => '24 September 2026',
-            'baseurl'    => 'https://downloads.php.net/~mbeccati/',
+            'number'     => 3,
+            'sha256_bz2' => '12d024eba9fa4bf379693c045a544eec2144de2d7de71f31a6ed4496717e0307',
+            'sha256_gz'  => 'a40085cef8bfb560ed3649cd83879e768ab22fe4cee467aa56b1b795c92e057d',
+            'sha256_xz'  => '131f87a206bdd90c178d8e44e80243ae0c333c4cee8531f63d1caa9acdd8696a',
+            'date'       => '08 October 2026',
+            'baseurl'    => 'https://downloads.php.net/~svpernova09/',
         ],
     ],
 ];
