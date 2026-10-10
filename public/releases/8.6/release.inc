@@ -20,6 +20,38 @@ common_header(message('common_header', $lang));
 
 $comparisons = [
         new FeatureComparison(
+                id: 'partial-function-application',
+                title: message('pfa_title', $lang),
+                description: message('pfa_description', $lang),
+                links: [
+                        'RFC|https://wiki.php.net/rfc/partial_function_application_v2',
+                ],
+                before: <<<'PHP'
+            $title = 'PHP 8.5 released!';
+
+            $slug = $title
+                |> trim(...)
+                |> (fn($s) => str_replace(' ', '-', $s))
+                |> (fn($s) => str_replace(['.', '/', '…', '!'], '', $s))
+                |> strtolower(...);
+
+            var_dump($slug);
+            // string(15) "php-85-released"
+            PHP,
+                after: <<<'PHP'
+            $title = 'PHP 8.6 released!';
+
+            $slug = $title
+                |> trim(...)
+                |> str_replace(' ', '-', ?)
+                |> str_replace(['.', '/', '…', '!'], '', ?)
+                |> strtolower(...);
+
+            var_dump($slug);
+            // string(15) "php-86-released"
+            PHP,
+        ),
+        new FeatureComparison(
                 id: 'polling-api',
                 title: message('polling_api_title', $lang),
                 description: message('polling_api_description', $lang),
@@ -31,34 +63,6 @@ $comparisons = [
             PHP,
                 after: <<<'PHP'
             // TODO
-            PHP,
-        ),
-        new FeatureComparison(
-                id: 'partial-function-application',
-                title: message('pfa_title', $lang),
-                description: message('pfa_description', $lang),
-                links: [
-                        'RFC|https://wiki.php.net/rfc/partial_function_application_v2',
-                ],
-                before: <<<'PHP'
-            // TODO
-            PHP,
-                after: <<<'PHP'
-            // TODO
-            PHP,
-        ),
-        new FeatureComparison(
-                id: 'readonly-property-defaults',
-                title: message('readonly_property_defaults_title', $lang),
-                description: message('readonly_property_defaults_description', $lang),
-                links: [
-                        'RFC|https://wiki.php.net/rfc/readonly_property_defaults',
-                ],
-                before: <<<'PHP'
-            //TODO
-            PHP,
-                after: <<<'PHP'
-            //TODO
             PHP,
         ),
         new FeatureComparison(
@@ -76,20 +80,6 @@ $comparisons = [
             PHP,
         ),
         new FeatureComparison(
-                id: 'sort-direction-enum',
-                title: message('sort_direction_title', $lang),
-                description: message('sort_direction_description', $lang),
-                links: [
-                        'RFC|https://wiki.php.net/rfc/sort_direction_enum',
-                ],
-                before: <<<'PHP'
-            // TODO
-            PHP,
-                after: <<<'PHP'
-            // TODO
-            PHP,
-        ),
-        new FeatureComparison(
                 id: 'clamp-function',
                 title: message('clamp_title', $lang),
                 description: message('clamp_description', $lang),
@@ -97,10 +87,137 @@ $comparisons = [
                         'RFC|https://wiki.php.net/rfc/clamp_v2',
                 ],
                 before: <<<'PHP'
-            // TODO
+            function clamp(int $value, int $min, int $max): int {
+                if ($max < $min) {
+                    throw new \InvalidArgumentException(
+                        '$min must be smaller than or equal to argument $max'
+                    );
+                }
+                if ($value > $max) {
+                    return $max;
+                }
+                if ($value < $min) {
+                    return $min;
+                }
+
+                return $value;
+            }
             PHP,
                 after: <<<'PHP'
-            // TODO
+            var_dump(clamp(-10, 0, 100));
+            // int(0)
+
+            var_dump(clamp(50, 0, 100));
+            // int(50)
+
+            var_dump(clamp(110, 0, 100));
+            // int(100)
+            PHP,
+        ),
+        new FeatureComparison(
+                id: 'sort-direction-enum',
+                title: message('sort_direction_title', $lang),
+                description: message('sort_direction_description', $lang),
+                links: [
+                        'RFC|https://wiki.php.net/rfc/sort_direction_enum',
+                ],
+                before: <<<'PHP'
+            if (!enum_exists('SortDirection')) {
+                enum SortDirection {
+                    case Ascending;
+                    case Descending;
+                }
+            }
+            PHP,
+                after: <<<'PHP'
+            class QueryBuilder {
+                private SortDirection $sort;
+
+                public function setSort(SortDirection $sort): void {
+                    $this->sort = $sort;
+                }
+
+                private function getSortKeyword(): string {
+                    return match($this->sort) {
+                        SortDirection::Ascending => 'ASC',
+                        SortDirection::Descending => 'DESC',
+                    };
+                }
+            }
+            PHP,
+        ),
+        new FeatureComparison(
+                id: 'doc-comments',
+                title: message('doc_comments_title', $lang),
+                description: message('doc_comments_description', $lang),
+                links: [
+                        'RFC|https://wiki.php.net/rfc/parameter-doccomments',
+                ],
+                before: '',
+                after: <<<'PHP'
+            class DB {
+                /**
+                * Returns collection
+                * @return array
+                */
+                function search(
+                    /** string Terms to search */
+                    string $query,
+
+                    /** int Terms to search */
+                    int $limit = 10
+                ): array {
+                    return [];
+                }
+            }
+
+            var_dump(
+                new ReflectionParameter([DB::class, 'search'], 'query')->getDocComment()
+            );
+            // string(29) "/** string Terms to search */"
+            PHP,
+        ),
+        new FeatureComparison(
+                id: 'isreadable-iswriteable',
+                title: message('isreadable_iswriteable_title', $lang),
+                description: message('isreadable_iswriteable_description', $lang),
+                links: [
+                        'RFC|https://wiki.php.net/rfc/parameter-doccomments',
+                ],
+                before: '',
+                after: <<<'PHP'
+            class NewsEntry {
+                public string $title = 'PHP 8.6 released!';
+
+                public private(set) string $slug = 'php-86-released';
+            }
+
+            $entry = new NewsEntry();
+            foreach (['title', 'slug'] as $item) {
+                $property = new ReflectionProperty(NewsEntry::class, $item);
+                printf(
+                    "%s: isReadable=%s isWritable=%s\n",
+                    $item,
+                    $property->isReadable(null, $entry) ? 'yes' : 'no',
+                    $property->isWritable(null, $entry) ? 'yes' : 'no'
+                );
+            }
+            // title: isReadable=yes isWritable=yes
+            // slug: isReadable=yes isWritable=no
+            PHP,
+        ),
+        new FeatureComparison(
+                id: 'readonly-property-defaults',
+                title: message('readonly_property_defaults_title', $lang),
+                description: message('readonly_property_defaults_description', $lang),
+                links: [
+                        'RFC|https://wiki.php.net/rfc/readonly_property_defaults',
+                ],
+                before: <<<'PHP'
+            //TODO
+            PHP,
+                after: <<<'PHP'
+            //TODO
             PHP,
         ),
 ];
@@ -142,21 +259,6 @@ echo ReleasePage::getHeroSection(
 
         <div class="features-grid-container">
             <div class="features-grid">
-                <div class="features-col features-first-col">
-                    <div class="features-col-container">
-                        <div class="features-col-spacing">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/>
-                            </svg>
-
-                            <a href="#polling-api"><span></span><?= message('polling_api_title', $lang) ?></a>
-                            <?= message('features_polling_api_description', $lang) ?>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="features-col">
                     <div class="features-col-container">
                         <div class="features-col-spacing">
@@ -171,23 +273,20 @@ echo ReleasePage::getHeroSection(
                         </div>
                     </div>
                 </div>
-
-                <div class="features-col features-third-col">
+                <div class="features-col features-first-col">
                     <div class="features-col-container">
                         <div class="features-col-spacing">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/>
+                                      d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/>
                             </svg>
 
-                            <a href="#readonly-property-defaults"><span></span><?= message('readonly_property_defaults_title', $lang) ?>
-                            </a>
-                            <?= message('features_readonly_property_defaults_description', $lang) ?>
+                            <a href="#polling-api"><span></span><?= message('polling_api_title', $lang) ?></a>
+                            <?= message('features_polling_api_description', $lang) ?>
                         </div>
                     </div>
                 </div>
-
                 <div class="features-col features-fourth-col">
                     <div class="features-col-container">
                         <div class="features-col-spacing">
@@ -203,23 +302,6 @@ echo ReleasePage::getHeroSection(
                         </div>
                     </div>
                 </div>
-
-                <div class="features-col">
-                    <div class="features-col-container">
-                        <div class="features-col-spacing">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/>
-                            </svg>
-
-                            <a href="#sort-direction-enum"><span></span><?= message('sort_direction_title', $lang) ?>
-                            </a>
-                            <?= message('features_sort_direction_description', $lang) ?>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="features-col features-sixth-col">
                     <div class="features-col-container">
                         <div class="features-col-spacing">
@@ -235,6 +317,36 @@ echo ReleasePage::getHeroSection(
                         </div>
                     </div>
                 </div>
+                <div class="features-col">
+                    <div class="features-col-container">
+                        <div class="features-col-spacing">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/>
+                            </svg>
+
+                            <a href="#sort-direction-enum"><span></span><?= message('sort_direction_title', $lang) ?>
+                            </a>
+                            <?= message('features_sort_direction_description', $lang) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-col features-third-col">
+                    <div class="features-col-container">
+                        <div class="features-col-spacing">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/>
+                            </svg>
+
+                            <a href="#readonly-property-defaults"><span></span><?= message('readonly_property_defaults_title', $lang) ?>
+                            </a>
+                            <?= message('features_readonly_property_defaults_description', $lang) ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -247,13 +359,22 @@ echo ReleasePage::getHeroSection(
                 <div>
                     <h2 id="additional-improvements"><?= message('new_classes_title', $lang) ?></h2>
                     <ul class="new">
-                        <li>TODO</li>
+                        <li><?= message('new_uri', $lang) ?></li>
+                        <li><?= message('new_gmp', $lang) ?></li>
+                        <li><?= message('new_intl', $lang) ?></li>
+                        <li><?= message('new_mysqli', $lang) ?></li>
+                        <li><?= message('new_reflection', $lang) ?></li>
+                        <li><?= message('new_zip', $lang) ?></li>
+                        <li><?= message('new_stream', $lang) ?></li>
                     </ul>
                 </div>
                 <div>
                     <h2 id="deprecations-and-bc-breaks"><?= message('bc_title', $lang) ?></h2>
                     <ul class="old">
-                        <li>TODO</li>
+                        <li><?= message('deprecated_mysqli', $lang) ?></li>
+                        <li><?= message('deprecated_spl', $lang) ?></li>
+                        <li><?= message('deprecated_standard', $lang) ?></li>
+                        <li><?= message('deprecated_date', $lang) ?></li>
                     </ul>
                 </div>
             </div>
@@ -265,12 +386,6 @@ echo ReleasePage::getPrefooter(
         title: message('footer_title', $lang),
         upgradeNow: message('upgrade_now', $lang),
         description: message('footer_description', $lang),
-        extraCredit: <<<'HTML'
-        <p>Created as part of
-            <a href="https://thephp.foundation/blog/2025/11/05/design-contest-results/" target="_blank">
-                The PHP Foundation Design Contest</a>.
-        </p>
-        HTML,
 );
 
 site_footer(['footer' => false]);

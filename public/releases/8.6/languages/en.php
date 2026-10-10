@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.6 is a major update of the PHP language, with new features including the Polling API, Partial Function Application',
+    'common_header' => 'PHP 8.6 is a major update of the PHP language, with new features including the Partial Function Application, Polling API, new Duration class, and new clamp() function',
     'main_title' => 'Smarter, Faster, Built for Tomorrow.',
-    'main_subtitle' => '<p><strong>PHP 8.6 is a major update of the PHP language</strong>, with new features including the <strong>Polling API</strong>, <strong>Partial Function Application</strong></p>',
+    'main_subtitle' => '<p xmlns="http://www.w3.org/1999/html"><strong>PHP 8.6 is a major update of the PHP language</strong>, with new features including the <strong>Partial Function Application</strong>, <strong>Polling API</strong>, new <strong>Duration</strong> class, and new <strong>clamp()</strong> function</p>',
 
     'whats_new' => 'What\'s new in 8.6',
     'upgrade_now' => 'Upgrade to PHP 8.6',
@@ -33,9 +33,28 @@ return [
     'duration_description' => 'Represents a duration of time.',
     'sort_direction_title' => 'New <code>SortDirection</code> enum',
     'sort_direction_description' => 'Represents a sort directions.',
+    'stream_error_handling_title' => 'Stream Error Handling',
+    'stream_error_handling_description' => 'TODO.',
+    'doc_comments_title' => 'DocComments For Function Parameters',
+    'doc_comments_description' => 'TODO.',
+    'isreadable_iswriteable_title' => 'New <code>ReflectionProperty::isReadable</code> and <code>ReflectionProperty::isWritable</code> methods',
+    'isreadable_iswriteable_description' => 'TODO.',
 
     'new_classes_title' => 'Additional features and improvements',
+    'new_uri' => 'New <code>Uri\Rfc3986\Uri::getUriType()</code>, <code>Uri\WhatWg\Url::isSpecialScheme()</code>, <code>Uri\Rfc3986\Uri::getHostType()</code>, and <code>Uri\WhatWg\Url::getHostType()</code> methods.',
+    'new_gmp' => 'New <code>gmp_powm_sec()</code> and <code>gmp_prevprime()</code> functions.',
+    'new_intl' => 'New <code>grapheme_strrev()</code> function, and <code>IntlDatePatternGenerator::getSkeleton()</code>, <code>IntlDatePatternGenerator::getBaseSkeleton()</code>, <code>Locale::getDisplayKeyword()</code>, <code>Locale::getDisplayKeywordValue()</code>, <code>SpoofChecker::areBidiConfusable()</code>, <code>SpoofChecker::getBidiSkeleton()</code>, <code>SpoofChecker::getSkeleton()</code> methods.',
+    'new_mysqli' => 'New <code>mysqli::quote_string()</code> method and <code>mysqli_quote_string()</code> function.',
+    'new_reflection' => 'New <code>ReflectionConstant::inNamespace()</code>, <code>ReflectionAttribute::inNamespace()</code>, <code>ReflectionAttribute::getNamespaceName()</code>, and <code>ReflectionAttribute::getShortName()</code> methods.',
+    'new_zip' => 'New <code>ZipArchive::openString()</code> and <code>ZipArchive::closeString()</code> methods.',
+    'new_stream' => 'New <code>stream_last_errors()</code> and <code>stream_clear_errors()</code> functions.',
+
     'bc_title' => 'Deprecations and backward compatibility breaks',
+    'deprecated_mysqli' => 'The <code>mysqli_get_charset()</code> function and <code>mysqli::get_charset()</code> method are now deprecated.',
+    'deprecated_spl' => 'The <code>spl_classes()</code>, <code>spl_object_hash()</code> functions, and various <code>ArrayIterator</code> and <code>SplFileObject</code> methods are now deprecated.',
+    'deprecated_standard' => 'The <code>metaphone()</code>, <code>is_double()</code>, <code>is_long()</code>, <code>is_integer()</code>, <code>doubleval()</code>, and <code>strcoll()</code> functions are now deprecated.',
+    'deprecated_date' => 'The <code>DateTime::createFromInterface()</code>, <code>DateTimeImmutable::__set_state()</code>, <code>DateTimeImmutable::modify()</code>, <code>DateTimeImmutable::add()</code>, <code>DateTimeImmutable::sub()</code>, <code>DateTimeImmutable::setTimezone()</code>, <code>DateTimeImmutable::setTime()</code>, <code>DateTimeImmutable::setDate()</code>, <code>DateTimeImmutable::setISODate()</code>, <code>DateTimeImmutable::setTimestamp()</code>, <code>DateTimeImmutable::createFromInterface()</code>, <code>DateTimeZone::__set_state()</code>, <code>DateInterval::__set_state()</code>, <code>DatePeriod::__set_state()</code> methods now have tentative static return types.',
+
     'footer_title' => 'Better syntax, improved performance and type safety.',
     'footer_description' => '<p class="first-paragraph">The full list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_6" target="_blank">ChangeLog</a>.</p><p>Please consult the <a href="/manual/en/migration86.php" target="_blank">migration guide</a> for a detailed list of new features and backward-incompatible changes.</p>',
 ];
