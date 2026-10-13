@@ -17,8 +17,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 <div class="content-box">
 <p>
  This is the primary web site. The front page is where major news is published:
- new PHP versions, security updates, and new projects launched. This site is
- also <a href="/mirrors.php">mirrored in dozens of countries worldwide</a>.
+ new PHP versions, security updates, and new projects launched.
 </p>
 
 <p>
@@ -26,7 +25,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  everyone to get the latest version of the PHP source code and binaries
  for Windows. The current and next-to-current versions are available there.
  (There is also a <a href="https://museum.php.net/">PHP Museum</a>, which has
- all of the source distributions since June 1996.)
+ all of the source distributions since June 1996).
 </p>
 
 <p>
@@ -75,39 +74,22 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  lists.
 </p>
 
-<h2 id="pear" class="content-header">
- <a href="https://pear.php.net/">pear.php.net</a>:
- The PHP Extension and Application Repository
+<h2 id="packagist" class="content-header">
+ <a href="https://packagist.org/">packagist.org</a>: The PHP Package Repository
 </h2>
 
 <p class="content-box">
- PEAR is the next revolution in PHP. This repository is bringing higher level
- programming to PHP. PEAR is a framework and distribution system for reusable
- PHP components. It eases installation by bringing an automated wizard, and
- packing the strength and experience of PHP users into a nicely organised OOP
- library.
+ This repository is bringing higher level programming to PHP. Packagist is a
+ distribution system for reusable PHP code and packages. It eases installation
+ by utilising a command line tool, <a
+ href="https://getcomposer.org">Composer</a> to bring the strength and
+ experience of PHP users into a wealth of installable packages.
 </p>
 
-<h2 id="pecl" class="content-header">
- <a href="https://pecl.php.net/">pecl.php.net</a>:
- The PHP Extension Community Library
-</h2>
-
 <p class="content-box">
- PECL is a repository for PHP Extensions, providing a directory of all known
- extensions and hosting facilities for downloading and development of PHP
- extensions. <br>
-
- The packaging and distribution system used by PECL is shared with
- its sister, PEAR.
-</p>
-
-<h2 id="bugs" class="content-header"><a href="https://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
-
-<p class="content-box">
- The bug database is where you can bring problems with PHP to the attention of
- developers (but don't forget to double-check that somebody else hasn't already
- reported the same problem!).
+ In addition, Packagist also contains a repository for PHP Extensions. These
+ can be installed with a similar tool,
+ <a href="https://php.github.io/pie/#docs/index">PIE</a>.
 </p>
 
 <h2 id="doc" class="content-header"><a href="https://doc.php.net/">doc.php.net</a>: Documentation Tools</h2>
@@ -151,8 +133,7 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#www">Main Website</a></p>
 <p class='panel'><a href="#talks">Conference Materials</a></p>
 <p class='panel'><a href="#news">Mailing Lists Web and NNTP Interface</a></p>
-<p class='panel'><a href="#pear">The PHP Extension and Application Repository</a></p>
-<p class='panel'><a href="#pecl">The PHP Extension Community Library</a></p>
+<p class='panel'><a href="#packagist">PHP Package Repository</a></p>
 <p class='panel'><a href="#bugs">Bug Database</a></p>
 <p class='panel'><a href="#doc">Documentation collaboration</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
