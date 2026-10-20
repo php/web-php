@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Upcoming Criticial PHP Security Release</title>
+  <id>https://www.php.net/archive/2026.php#2026-10-20-1</id>
+  <published>2026-10-20T20:32:00+00:00</published>
+  <updated>2026-10-20T20:32:00+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-10-20-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-10-20-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP security team would like to give advance notice of an upcoming
+        security release, scheduled for Wednesday, 21 October 2026 at 14:00
+        UTC. It addresses two critical vulnerabilities, both rated CVSS v4.0
+        9.2.
+      </p>
+      <p>
+        All PHP users are encouraged to prepare now so they can upgrade as
+        soon as the release is available.
+      </p>
+      <p>
+        We reserve the right to release earlier should details of either
+        vulnerability become public, or should evidence of active exploitation
+        appear in the wild.
+      </p>
+      <p>
+        Full details, affected versions, and the fixed versions will be
+        published with the release.
+      </p>
+      <p>
+        Thank you for helping us keep PHP secure.
+      </p>
+    </div>
+  </content>
+</entry>
