@@ -30,7 +30,6 @@ internal state can survive after its backing memory has been freed. A later requ
 <li>Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35. Source downloads are on our <a href="https://www.php.net/downloads.php?source=Y">downloads page</a>. Windows source and binaries are <a href="https://www.php.net/downloads.php?os=windows">on the same page</a>.</li>
 <li>Linux distributions and LTS vendors received the patches in advance, so check your vendor for updated packages.</li>
 <li><strong>PHP 8.1 and older</strong> no longer receive updates from the PHP project. Some distributions and LTS vendors provide backported fixes, so contact your vendor for details, or upgrade to a supported version.</li>
-<li>If you rely on the volunteer-maintained <code>rpms.remirepo.net</code>, we urge you to switch to distribution packages or build from source, so you can immediately apply updates. The repo will not have updates today.</li>
 
 <li>Given the severity of these vulnerabilities, the PHP security team provided minimal source-backports for <a href="https://github.com/php/php-src/tree/PHP-7.4-CVE-2026-109618-109619">PHP 7.4</a>, <a href="https://github.com/php/php-src/tree/PHP-8.0-CVE-2026-109618-109619">PHP 8.0</a>, and <a href="https://github.com/php/php-src/tree/PHP-8.1-CVE-2026-109618-109619">PHP 8.1</a> to help people building from source or without access to an LTS vendor.
 </li>
