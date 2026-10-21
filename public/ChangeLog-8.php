@@ -1466,6 +1466,193 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.27"><!-- {{{ 8.4.27 -->
+<h3>Version 8.4.27</h3>
+<b><?php release_date('22-Oct-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'w8hw-w9fx-j79w'); ?>, <?php githubsecurityl('php/php-src', '6wmf-4rv5-p3rp'); ?> (Avoid state corruption via bailout).</li>
+  <li>Fix <?php githubissuel('php/php-src', 21999); ?>: GC inconsistency with lazy object, var_dump(), and object comparison.</li>
+  <li>Fixed OSS-Fuzz #536440507 (Immutable class incorrect assertion).</li>
+  <li>Fixed AVX being reported as supported when the OS has not enabled AVX state.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 23980); ?> (ZEND_ASSERT violation @ ZEND_INCLUDE_OR_EVAL).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23896); ?> (Assertion failure in zend_call_function() after a throwing deprecation).</li>
+  <li>Fixed use-after-free when a dl()-loaded extension declares a frameless function and a later request calls it.</li>
+  <li>Fixed System V shared memory emulation for Windows attaching segments past the end of their mapping.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24050); ?> (GC frees an object still held by a resurrected closure when (object) and use share an array).</li>
+  <li>Fixed exception thrown by destructor during GC in a Fiber not being rethrown into the frame that triggered the GC.</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li>Fixed BcMath\Number results that truncate to zero keeping a negative sign and comparing less than zero.</li>
+</ul></li>
+<li>BZ2:
+<ul>
+  <li>Fixed double close of the descriptor and use-after-free of the inner stream when bzopen() is given a stream resource.</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 22567); ?> (Windows ZTS CLI SAPI should refresh its TSRMLS cache during request activation).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23764); ?> (Built-in server leaks a file descriptor on every HEAD request for a static file).</li>
+  <li>Fixed crash in the built-in server when a client is reset before being accepted.</li>
+  <li>Fixed the built-in server truncating an error page and leaking its unsent part after a partial socket write.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed use-after-free when re-constructing a DOMXPath whose php:function registrations are freed while still reachable from the cycle collector.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23365); ?> (DOMNode::insertBefore($n, $n) drops the node and leaves a self-referencing sibling list).</li>
+  <li>Fixed Dom\HTMLDocument::getElementById() not finding ids of SVG and MathML elements.</li>
+  <li>Fixed Dom\HTMLDocument giving attributes the namespace of their element when a fragment is parsed with an xlink, xml or xmlns context element.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23729); ?> (DOMXPath::__construct() use-after-free during an evaluation).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23897); ?> (php:function() assertion failure after a failed registerPHPFunctions()).</li>
+  <li>Fixed DOMXPath and Dom\XPath losing the context node and in-scope namespaces of an evaluation after a php:function() callback evaluated another expression on the same object.</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed crashes with FFI callbacks created from __call() trampolines and array callables whose object is released.</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23619); ?> (cryptic error on servers that don't support TLS session resumption on data connection).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed undefined behavior with GD2 images with `INT_MAX`-sized chunks.</li>
+  <li>Fixed undefined behavior with GIFs with problematic LZW compression data.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed IntlDateFormatter::parse(), localtime() and parseToCalendar() treating the offset as UTF-16 code units instead of bytes.</li>
+  <li>Fixed cloning IntlDateFormatter and MessageFormatter losing PHP-side state such as dateType, timeType, calendar and the message pattern.</li>
+  <li>Fixed Collator attribute and strength methods not rejecting an unconstructed Collator.</li>
+  <li>Fixed grapheme_strstr() and grapheme_stristr() returning incorrect substrings when supplementary characters precede the match.</li>
+  <li>Fixed grapheme_strstr() and grapheme_strpos() missing canonically equivalent matches, and grapheme searches reporting ICU errors for empty haystacks.</li>
+  <li>Fixed grapheme_strrpos() and grapheme_strripos() skipping overlapping matches when using a negative offset.</li>
+</ul></li>
+<li>Lexbor:
+<ul>
+  <li>Merge patches lexbor/lexbor@8a14bc0 and lexbor/lexbor@f67ce4b, fixing a heap buffer overflow in :lexbor-contains() parsing and buffer overflows in malformed decode replay.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23106); ?> (mb_strpos() reads past the end of a haystack ending in a truncated UTF-8 sequence).</li>
+  <li>Fixed mbstring functions emitting surrogates in UTF-8 output and flagging it as valid UTF-8.</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 22854); ?>: Fixed failed assertion when accessing mysqli property after failed reconnection.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed field_count not resetting on OK packet.</li>
+  <li>Fixed memory leak when closing a prepared statement after its connection was killed.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed OSS-Fuzz #546798343 (Heap-buffer-overflow in optimizer with FCCs and inlining).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23693); ?> (Tracing JIT produces wrong results for a guard on a loop-invariant addition).</li>
+  <li>Fixed OSS-Fuzz #5674034779193344 (Read of uninitialized memory in is_cacheable_stream_path()).</li>
+  <li>Fix zend_analyze_calls() call_stack buffer overrun.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23637); ?> (PHP-FPM worker SIGSEGV: run_time_cache map_ptr offset beyond CG(map_ptr_last) when a class is reached through the CE cache).</li>
+  <li>Fix multiple incorrect DCE due to unsound escape analysis.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24063); ?> (OPcache optimizer folds `$cond ? -0.0 : 0.0` into a single `-0.0` constant).</li>
+  <li>Fixed crash when a file cache is reused with a different set of extensions declaring frameless functions.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23991); ?> (JIT generates invalid IR for multiple recursive calls).</li>
+  <li>Fix SCCP evaluation of isset()/empty() on dimension of non-escaping object.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed stream_socket_enable_crypto() leaving the socket non-blocking after a handshake timeout.</li>
+  <li>Fixed feof() on a TLS stream staying false after a close_notify on Windows.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed pcntl_signal_dispatch() dropping the queued signals when it runs while an exception is pending.</li>
+  <li>Fixed pcntl_signal_dispatch() dropping the signals queued behind a handler that throws.</li>
+  <li>Fixed pcntl_setcpuaffinity() error message advertising the cpu count as the inclusive upper bound.</li>
+  <li>Fixed pcntl_setqos_class() requiring its optional $qos_class argument.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23986); ?> (/proc/self paths resolve to the parent process after pcntl_fork()).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed PDOStatement::getColumnMeta() reading out of bounds for an invalid column index.</li>
+  <li>Fixed PDOStatement::bindColumn() registering a binding for a column name that is not in the result set.</li>
+  <li>Fixed PDOStatement::execute() leaving the previous result available after a failed execution.</li>
+  <li>Fixed a use-after-free when bindValue()/execute()/closeCursor() is called from a bound parameter's __toString() during execute().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23962); ?> (Destroying a persistent PDO instance rolls back a transaction still in use by another instance).</li>
+  <li>Fixed PDO::setAttribute() installing a PDO::ATTR_STATEMENT_CLASS class whose constructor arguments it rejects.</li>
+  <li>Fixed PDO::ATTR_STATEMENT_CLASS constructor_args type errors reporting "array given" regardless of the value passed.</li>
+  <li>Fixed PDOStatement::bindParam() and bindColumn() leaking the driver options value.</li>
+  <li>Fixed PDOStatement not reporting its bound parameters and columns to the cycle collector.</li>
+  <li>Fixed PDOStatement::setFetchMode() not applying changes atomically.</li>
+</ul></li>
+<li>PDO_DBLIB:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23741); ?> (segfault after a failed query inside a PDO transaction). Errors raised by beginTransaction(), commit(), rollBack() and lastInsertId() are now reported instead of being dropped.</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23758); ?> (PDO_Firebird returns null for non-null empty BLOBs).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li>Fixed a heap over-read in the interactive shell prompt when cli.prompt is set to an empty string.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed session_start() continuing after a failed create_sid() when session.use_strict_mode rejects the supplied ID.</li>
+  <li>Fixed exceptions from user-defined create_sid() handlers being replaced by return-value validation errors.</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed reconstructing a SimpleXMLElement freeing a child element that another variable still references.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22895); ?> (Heap use-after-free while encoding a Traversable with an illegal key).</li>
+  <li>Fixed memory leak when load_wsdl_ex() failed to load.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed socket_select() silently truncating sets larger than FD_SETSIZE on Windows.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed SplFixedArray::setSize() doing nothing on subclasses whose constructor does not call parent::__construct().</li>
+  <li>Fixed memory leak when __construct(), __wakeup() or __unserialize() is called from an element destructor during setSize(0).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li>Fixed a crash when SQLite3::close() is called from a userland callback.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed sha1_file() returning a digest for incomplete data after a stream read failure.</li>
+  <li>Fixed iptcembed() corrupting JPEG headers when called recursively from an output handler.</li>
+  <li>Fixed proc_open() leaking descriptor zero when descriptor setup fails.</li>
+  <li>Fixed three Windows-only proc_open() defects: an uninitialized PROCESS_INFORMATION, an indeterminate comspec pointer after a failed lookup, and an unchecked CreateFileA() failure.</li>
+  <li>Fix persistent stream context lifetime during shutdown (Levi Morrison)</li>
+  <li>Fix wordwrap() ignoring an existing break at the end of the string (Nicolas Grekas)</li>
+  <li>Fixed convert.quoted-printable-decode decoding lowercase hex digits to the wrong byte.</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fixed a use-after-free when a tidyNode is used after its document is reparsed.</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23730); ?> (use-after-free when XSLTProcessor::importStylesheet() is called during a transformation).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed ZipArchive::extractTo() ignoring files given in a non-list array.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23747); ?> (ZipArchive::close() use-after-free from a progress or cancel callback).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.26"><!-- {{{ 8.4.26 -->
 <h3>Version 8.4.26</h3>
 <b><?php release_date('24-Sep-2026'); ?></b>
