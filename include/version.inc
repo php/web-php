@@ -46,13 +46,13 @@ $RELEASES = (function () {
 
     /* PHP 8.3 Release */
     $data['8.3'] = [
-        'version' => '8.3.35',
-        'date' => '24 Sep 2026',
+        'version' => '8.3.36',
+        'date' => '21 Oct 2026',
         'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'e60396276fd57e8210f88919d9acd4aab98d65fbb7f431c13285ca1fb04ff205',
-            'tar.bz2' => 'e279d9ec90d9bcab900d146816e5b11d3e8924b80e2ba36c7d7dae7d71dcbf2d',
-            'tar.xz' => 'ff4630fbbbd94359134b7d3c223db59329905bdc4f5a9ef93d257b48e358619a',
+            'tar.gz' => 'c93f3441f87f6ab156bef4432db215d7e61ca2c0183bb3a2aa28d9886ab59f53',
+            'tar.bz2' => '46f4b45e3688ed2b1819015a7b532c15b51cc055bdd3b13fd00ddfeebeedcd5f',
+            'tar.xz' => 'dd54693aa334c5c4d72e9aee96b082c2473750a18a6c1d105789c93a3b1692fd',
         ]
     ];
 

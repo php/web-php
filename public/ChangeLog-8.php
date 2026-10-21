@@ -4215,6 +4215,18 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.36"><!-- {{{ 8.3.36 -->
+<h3>Version 8.3.36</h3>
+<b><?php release_date('22-Oct-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'w8hw-w9fx-j79w'); ?>, <?php githubsecurityl('php/php-src', '6wmf-4rv5-p3rp'); ?> (Avoid state corruption via bailout).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.35"><!-- {{{ 8.3.35 -->
 <h3>Version 8.3.35</h3>
 <b><?php release_date('24-Sep-2026'); ?></b>
