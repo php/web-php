@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Security advisory: Critical remote code execution vulnerabilities, update now</title>
+  <id>https://www.php.net/archive/2026.php#2026-10-21-5</id>
+  <published>2026-10-21T00:35:26+00:00</published>
+  <updated>2026-10-21T00:35:26+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-10-21-5" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-10-21-5" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+<strong>PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution. All PHP users are strongly encouraged to update immediately.</strong>
+</p>
+
+<p><strong>Who is at risk:</strong> all PHP installations serving web requests, including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP and LiteSpeed. We consider the risk highest for mod_php, with a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs.</p>
+
+<p><strong>The vulnerabilities:</strong></p>
+
+<ul>
+<li><strong>RCE via OOM corruption</strong>, CVE-2026-109618 (<a href="https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w">GHSA-w8hw-w9fx-j79w</a>): out-of-memory
+handling can interrupt PHP while internal request data is only partially initialized. Request cleanup may then treat the invalid data as valid.</li>
+<li><strong>RCE via stale global state</strong>, CVE-2026-109619 (<a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp">GHSA-6wmf-4rv5-p3rp</a>): request-owned
+internal state can survive after its backing memory has been freed. A later request handled by the same worker may use that stale state before normal initialization resets it.</li>
+</ul>
+
+<p><strong>How to update:</strong></p>
+
+<ul>
+<li>Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35. Source downloads are on our <a href="https://www.php.net/downloads.php?source=Y">downloads page</a>. Windows source and binaries are <a href="https://www.php.net/downloads.php?os=windows">on the same page</a>.</li>
+<li>Linux distributions and LTS vendors received the patches in advance, so check your vendor for updated packages.</li>
+<li><strong>PHP 8.1 and older</strong> no longer receive updates from the PHP project. Some distributions and LTS vendors provide backported fixes, so contact your vendor for details, or upgrade to a supported version.</li>
+<li>If you rely on the volunteer-maintained <code>rpms.remirepo.net</code>, we urge you to switch to distribution packages or build from source, so you can immediately apply updates. The repo will not have updates today.</li>
+
+<li>Given the severity of these vulnerabilities, the PHP security team provided minimal source-backports for <a href="https://github.com/php/php-src/tree/PHP-7.4-CVE-2026-109618-109619">PHP 7.4</a>, <a href="https://github.com/php/php-src/tree/PHP-8.0-CVE-2026-109618-109619">PHP 8.0</a>, and <a href="https://github.com/php/php-src/tree/PHP-8.1-CVE-2026-109618-109619">PHP 8.1</a> to help people building from source or without access to an LTS vendor.
+</li>
+</ul>
+
+<p><strong>If you cannot update immediately:</strong> while only an update is a complete solution, the following measures reduce exposure to specific attack paths but do not make an installation safe.</p>
+
+<p><strong>RCE via OOM corruption (CVE-2026-109618):</strong></p>
+
+<ul>
+<li>Set <code>memory_limit=-1</code>, preferably in a way applications can't override, such as <code>php_admin_value</code> in the FPM pool or Apache configuration, and check that no pool, directory or application setting puts a finite limit back. This removes the controllable PHP memory limit failure, but an underlying allocation failure can still reach the vulnerable path.</li>
+<li>Set a low <code>post_max_size</code>. For applications that don't require file uploads, set <code>post_max_size = 8M</code>. If file uploads are necessary, set <code>post_max_size = 32M</code>. Keep <code>upload_max_filesize</code> below <code>post_max_size</code>.
+Consider enforcing limits at the web server or proxy level for decoded request size, input field count, multipart part count, header count, and nesting depth. These
+limits must also cover requests without a usable <code>Content-Length</code>.</li>
+<li>Use a container or cgroup limit as an availability boundary, preferably with a policy that kills only the affected worker. Do not substitute <code>RLIMIT_AS</code> or
+<code>RLIMIT_DATA</code>, as these can cause the vulnerable allocation failure.</li>
+</ul>
+
+<p><strong>RCE via stale global state (CVE-2026-109619):</strong></p>
+
+<ul>
+<li>Set <code>session.upload_progress.enabled=0</code> and restart every worker. Use <code>php.ini</code>, an FPM pool or server
+configuration that applies before request parsing. Do not rely on <code>ini_set()</code> or FPM <code>.user.ini</code>. This blocks the confirmed session paths but not other variants.</li>
+<li>On PHP 8.5, set <code>fatal_error_backtraces=0</code> and restart every worker. This blocks the confirmed fatal backtrace path only.</li>
+<li>Remove invalid or deprecated settings applied per request that emit diagnostics before initialization. Hiding diagnostics with <code>error_reporting</code>, <code>display_errors</code>
+or <code>@</code> does not help.</li>
+<li>Fix attacker-reachable fatal errors and execution timeouts, including failures in callbacks, upload or import processing and cleanup.</li>
+</ul>
+
+<p>The advisories linked above have the full technical details.</p>
+
+    </div>
+  </content>
+</entry>
