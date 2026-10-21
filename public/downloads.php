@@ -6,9 +6,6 @@ require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/gpg-keys.inc';
 require_once __DIR__ . '/../include/version.inc';
 
-// Try to make this page non-cached
-header_nocache();
-
 $os = [
     'linux' => [
         'name' => 'Linux',
@@ -98,6 +95,7 @@ site_header("Downloads",
         "js_files" => [
             "js/ext/prism.js",
         ],
+        'cache_control' => 3 * 60, // 3 minutes
     ],
 );
 
