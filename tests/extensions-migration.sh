@@ -29,6 +29,7 @@
 #   PHP    php command, needs the dom, intl, mbstring, sqlite3, xmlreader and
 #          xmlwriter extensions (default: php)
 #   PORT   port of the web server (default: 8080)
+#   WORKERS  workers of the web server (default: 8)
 #   KEEP   set to 1 to leave the web server running at the end, to browse
 #          http://localhost:$PORT/manual/fr/extensions.alphabetical.php
 #
@@ -99,7 +100,21 @@ run() {
     fi
 }
 
+# The main manual must build without the extensions manual next to it, as it
+# does in its own CI: doc-base defines an entity for every book of every
+# sibling directory, which would hide an include of a book that moved.
+hide_extensions() {
+    mv "$ROOT/extensions" "$ROOT/.extensions.hidden"
+}
+
+restore_extensions() {
+    if [ -e "$ROOT/.extensions.hidden" ]; then
+        mv "$ROOT/.extensions.hidden" "$ROOT/extensions"
+    fi
+}
+
 cleanup() {
+    restore_extensions
     if [ "${SERVER_PID:-}" != "" ] && [ "$KEEP" != "1" ]; then
         kill "$SERVER_PID" 2>/dev/null || true
     fi
@@ -109,15 +124,18 @@ trap cleanup EXIT
 mkdir -p "$SITE/.build"
 : >"$BUILD_LOG"
 
-step "Build the extensions manual (log: $BUILD_LOG)"
-run $PHP -d memory_limit=-1 "$ROOT/doc-base/configure.php" --with-base-lang=extensions
-run $PHP -d memory_limit=-1 "$ROOT/phd/render.php" --docbook "$ROOT/doc-base/.manual.xml" \
-    --output="$ROOT/extensions/output" --package PHP --format php --lang extensions
-
-step "Build the language manual (fr)"
+step "Build the main manual without the extensions manual next to it (log: $BUILD_LOG)"
+hide_extensions
+run $PHP -d memory_limit=-1 "$ROOT/doc-base/configure.php" --with-lang=en
 run $PHP -d memory_limit=-1 "$ROOT/doc-base/configure.php" --with-lang=fr
 run $PHP -d memory_limit=-1 "$ROOT/phd/render.php" --docbook "$ROOT/doc-base/.manual.xml" \
     --output="$ROOT/fr/output" --package PHP --format php --lang fr
+restore_extensions
+
+step "Build the extensions manual"
+run $PHP -d memory_limit=-1 "$ROOT/doc-base/configure.php" --with-base-lang=extensions
+run $PHP -d memory_limit=-1 "$ROOT/phd/render.php" --docbook "$ROOT/doc-base/.manual.xml" \
+    --output="$ROOT/extensions/output" --package PHP --format php --lang extensions
 
 step "Install both manuals in web-php"
 ln -sfn "$ROOT/fr/output/php-web" "$SITE/public/manual/fr"
@@ -129,7 +147,7 @@ echo "  extensions -> $ROOT/extensions/output/php-web"
 
 step "Start the web server on $BASE"
 : >"$LOG"
-(cd "$SITE/public" && exec $PHP -d display_errors=1 -d error_reporting=E_ALL \
+(cd "$SITE/public" && PHP_CLI_SERVER_WORKERS=${WORKERS:-8} exec $PHP -d display_errors=1 -d error_reporting=E_ALL \
     -S "localhost:$PORT" -t "$SITE/public" "$SITE/public/.router.php") >"$LOG" 2>&1 &
 SERVER_PID=$!
 for attempt in 1 2 3 4 5 6 7 8 9 10; do
