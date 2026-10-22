@@ -51,14 +51,14 @@ $entry->save()->updateArchiveXML();
 $addedFiles = [Entry::ARCHIVE_ENTRIES_REL . $entry->getId() . '.xml'];
 
 // Mint the releases/x_y_z.php archive.
-const RELEASES_REL = 'releases/';
+const RELEASES_REL = 'public/releases/';
 const RELEASES_ABS = __DIR__ . '/../' . RELEASES_REL;
 if (isset($opts['r'])) {
 	$release = strtr($version, '.', '_') . '.php';
 	file_put_contents(RELEASES_ABS . $release, "<?php
 \$_SERVER['BASE_PAGE'] = 'releases/$release';
-include_once __DIR__ . '/../include/prepend.inc';
-site_header('PHP $version Release Announcement');
+require_once __DIR__ . '/../../include/prepend.inc';
+site_header('PHP $version Release Announcement', ['cache' => true, 'cache_control' => 30 * 60]);
 ?>
 <h1>PHP $version Release Announcement</h1>
 

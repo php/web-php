@@ -12,10 +12,10 @@
     },
     "require-dev": {
         "ext-curl": "*",
-        "friendsofphp/php-cs-fixer": "^3.95.11",
+        "friendsofphp/php-cs-fixer": "^3.95.27",
         "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan": "^2.2",
-        "phpstan/phpstan-phpunit": "^2.0",
+        "phpstan/phpstan": "^2.3",
+        "phpstan/phpstan-phpunit": "^2.1",
         "phpunit/phpunit": "^11.5.50"
     },
     "autoload": {

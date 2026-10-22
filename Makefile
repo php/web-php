@@ -12,7 +12,7 @@ code-coverage: vendor ## Collects code coverage from running unit tests with php
 
 .PHONY: coding-standards
 coding-standards: vendor ## Fixes code style issues with friendsofphp/php-cs-fixer
-	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --show-progress=dots --verbose
+	vendor/bin/php-cs-fixer fix --diff --show-progress=dots --verbose
 
 .PHONY: help
 help: ## Displays this list of targets with descriptions
@@ -35,9 +35,8 @@ tests: vendor ## Runs unit and end-to-end tests with phpunit/phpunit
 	tests/server stop
 
 tests_e2e:
-	tests/server start;
-	npx playwright test
-	tests/server stop
+	tests/server start
+	trap 'tests/server stop' EXIT INT TERM; npx playwright test
 
 vendor: composer.json composer.lock
 	composer validate --strict
