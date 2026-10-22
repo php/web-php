@@ -205,9 +205,22 @@ $URI = strtolower($URI);
 //   'in_manual' - manual URI (/manual/{lang}/{from}[.php]) -> /manual/{lang}/{to}.php
 //   'both'      - matches at either entry point
 
-$docRedirects = is_file(__DIR__ . '/manual/en/redirects.json')
-    ? json_decode(file_get_contents(__DIR__ . '/manual/en/redirects.json'), true)
-    : ['shortcut' => [], 'in_manual' => [], 'both' => []];
+// A missing, unreadable or corrupted file gives an empty map.
+$loadRedirects = static function (string $file): array {
+    $empty = ['shortcut' => [], 'in_manual' => [], 'both' => []];
+    if (!is_file($file)) {
+        return $empty;
+    }
+
+    $maps = json_decode((string) file_get_contents($file), true);
+
+    return is_array($maps) ? $maps + $empty : $empty;
+};
+
+$docRedirects = $loadRedirects(__DIR__ . '/manual/en/redirects.json');
+// Pages of the extensions moved to the third-party extensions manual
+// (php/doc-extensions), same format. That manual is English only.
+$extRedirects = $loadRedirects(__DIR__ . '/manual/extensions/redirects.json');
 
 if (preg_match("!^manual/([^/]+)/([^/]+?)(?:\.php)?$!", $URI, $match)) {
     $target = $docRedirects['both'][$match[2]] ?? $docRedirects['in_manual'][$match[2]] ?? null;
@@ -215,6 +228,16 @@ if (preg_match("!^manual/([^/]+)/([^/]+?)(?:\.php)?$!", $URI, $match)) {
         [$id, $anchor] = array_pad(explode('#', $target, 2), 2, '');
         status_header(301);
         mirror_redirect("/manual/$match[1]/$id.php" . ($anchor !== '' ? "#$anchor" : ''));
+    }
+}
+
+// Whatever the language of the requested page, it moves to the English
+// extensions manual. Requests already in that manual are not redirected.
+if (preg_match("#^manual/(?!extensions/)[^/]+/([^/]+?)(?:\.php)?$#", $URI, $match)) {
+    $target = $extRedirects['in_manual'][$match[1]] ?? null;
+    if ($target !== null) {
+        status_header(301);
+        mirror_redirect("/manual/extensions/$target.php");
     }
 }
 
