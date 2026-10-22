@@ -32,6 +32,10 @@
 #   WORKERS  workers of the web server (default: 8)
 #   LANGUAGE language manual to build: fr or es, or any language whose repository
 #          is side by side under its code (default: fr)
+#   PLAYWRIGHT  set to 1 to run the Playwright tests of tests/EndToEnd/ExtensionsMigration
+#          after the checks: thousands of old URLs in every language, variants of
+#          them, links in both directions and journeys in Chromium. It needs
+#          `yarn install` and `npx playwright install chromium` in this repository.
 #   KEEP   set to 1 to leave the web server running at the end, to browse
 #          http://localhost:$PORT/manual/$LANGUAGE/aliases.php
 #
@@ -44,6 +48,7 @@ set -eu
 ROOT=${1:-$(cd "$(dirname "$0")/../.." && pwd)}
 PHP=${PHP:-php}
 PORT=${PORT:-8080}
+PLAYWRIGHT=${PLAYWRIGHT:-0}
 KEEP=${KEEP:-0}
 LANGUAGE=${LANGUAGE:-fr}
 SITE="$ROOT/web-php"
@@ -250,6 +255,17 @@ if grep -q -E 'PHP (Warning|Fatal error|Deprecated|Notice)' "$LOG"; then
     grep -E 'PHP (Warning|Fatal error|Deprecated|Notice)' "$LOG" | sort | uniq -c | head -5
 else
     pass "no warning in $LOG"
+fi
+
+if [ "$PLAYWRIGHT" = "1" ]; then
+    step "Playwright: all the old URLs, the variants, the links and the journeys"
+    if (cd "$SITE" && EXTENSIONS_MIGRATION=1 MANUALS_ROOT="$ROOT" LANGUAGE="$LANGUAGE" HTTP_HOST="$BASE" \
+        npx playwright test --project="Extensions migration (API)" \
+        --project="Extensions migration (Chromium)" --reporter=line); then
+        pass "Playwright tests"
+    else
+        fail "Playwright tests (see above)"
+    fi
 fi
 
 printf '\n'
