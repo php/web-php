@@ -367,6 +367,20 @@ function news_archive_sidebar(): void
     }
 }
 
+// Get Last-Modified timestamp for a year's archive page: 
+// mtime of file or latest article, whicher is newer
+function news_archive_last_modified(array $news, string $pageFile): int
+{
+    $timestamps = array_map(static fn (array $entry): int => strtotime($entry['published']), $news);
+
+    $mtime = filemtime($pageFile);
+    if ($mtime !== false) {
+        $timestamps[] = $mtime;
+    }
+
+    return $timestamps === [] ? time() : max($timestamps);
+}
+
 // Print news
 function print_news($news, $dog, $max = 5, $return = false) {
     $retval = [];
