@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Informational advisory: Session upload progress</title>
+  <id>https://www.php.net/archive/2026.php#2026-10-23-1</id>
+  <published>2026-10-23T10:12:28+00:00</published>
+  <updated>2026-10-23T10:12:28+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-10-23-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-10-23-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        We suggest you set <code>session.upload_progress.enabled=0</code> until the
+        next regular bugfix release, to fully protect from an unlikely RCE vector.
+        This setting was already listed as a mitigation in the
+        <a href="https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp">GHSA-6wmf-4rv5-p3rp</a>
+        advisory for CVE-2026-109619 published on Oct 21st, 2026. If you applied it
+        then, keep it in place and no further action is needed.
+      </p>
+      <p>
+        The issue can only occur under an unusual combination of configuration and
+        application code. An application must set
+        <code>session.serialize_handler</code> to <code>php_binary</code> or
+        <code>php_serialize</code> in its configuration and then switch it to
+        <code>php</code> at runtime with <code>ini_set()</code> before calling
+        <code>session_start()</code>. Session upload progress must also still be
+        enabled. Applications that never change the serialize handler at runtime can
+        keep the feature enabled. Since this setup is unlikely in practice, we are
+        handling it in the regular release cycle and will publish a full advisory for
+        CVE-2026-115560 with the next release.
+      </p>
+    </div>
+  </content>
+</entry>
