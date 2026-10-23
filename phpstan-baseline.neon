@@ -1483,12 +1483,6 @@ parameters:
 			path: public/cached.php
 
 		-
-			message: '#^Constant cal not found\.$#'
-			identifier: constant.notFound
-			count: 1
-			path: public/cal.php
-
-		-
 			message: '#^Function date_for_recur\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
@@ -1557,12 +1551,6 @@ parameters:
 		-
 			message: '#^Function load_events\(\) has parameter \$whole_month with no type specified\.$#'
 			identifier: missingType.parameter
-			count: 1
-			path: public/cal.php
-
-		-
-			message: '#^Function phpdate not found\.$#'
-			identifier: function.notFound
 			count: 1
 			path: public/cal.php
 
