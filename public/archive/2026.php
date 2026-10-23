@@ -7,11 +7,11 @@ require_once __DIR__ . '/../../include/prepend.inc';
 news_archive_sidebar();
 $news = (new NewsHandler())->getNewsByYear(2026);
 
-$lastModified = $news === []
-    ? time()
-    : max(array_map(static fn (array $entry): int => strtotime($entry['published']), $news));
+// Set Last-Modified to the newer of [file mtime or latest article]
+$timestamps = array_map(static fn (array $entry): int => strtotime($entry['published']), $news);
+$timestamps[] = filemtime(__FILE__);
 
-site_header("News Archive - 2026", ['cache' => $lastModified, 'cache_control' => 15 * 60]);
+site_header("News Archive - 2026", ['cache' => max($timestamps), 'cache_control' => 15 * 60]);
 ?>
 
 <h1>News Archive - 2026</h1>
