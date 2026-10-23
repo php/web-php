@@ -367,8 +367,9 @@ function news_archive_sidebar(): void
     }
 }
 
-// Get Last-Modified timestamp for a year's archive page: 
-// mtime of file or latest article, whicher is newer
+// Get Last-Modified timestamp for a year's archive page:
+// mtime of file or latest article, whichever is newer
+/** @param list<array<array-key, mixed>> $news */
 function news_archive_last_modified(array $news, string $pageFile): int
 {
     $timestamps = array_map(static fn (array $entry): int => strtotime($entry['published']), $news);
