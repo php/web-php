@@ -16,6 +16,13 @@ if (isset($config["css_overwrite"])) {
     $css_files = $config["css_overwrite"];
 }
 
+// The fancy footer is the default for classic pages (see footer.inc); load its
+// standalone stylesheet everywhere except the release landing pages, which ship
+// their own footer styles in php85.css.
+if (!in_array('php85.css', $css_files, true) && !in_array('/styles/php85.css', $css_files, true)) {
+    $css_files[] = '/styles/shared-footer.css';
+}
+
 foreach($css_files as $filename) {
     // files that do not start with / are assumed to be located in the /styles
     // directory

@@ -610,38 +610,6 @@ pre.info {
 #results_nav_list li.current {
     font-weight: bolder;
 }
-/* Footer styling */
-
-body > footer {
-  clear: both;
-  overflow: auto;
-  line-height:3rem;
-}
-body > footer .footer-content {
-  margin: 1.5rem auto 0 ;
-  padding:0 1.5rem;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
-
-body > footer ul {
-    margin:0;
-    padding:0;
-}
-
-body > footer .footmenu li {
-  display: inline-block;
-  margin:0 0.75rem;
-}
-body > footer a {
-  display:inline-block;
-  border-bottom:0;
-}
-body > footer a:hover,
-body > footer a:focus {
-    color:var(--light-magenta-color);
-}
-
 /* {{{ ElePHPants photo stream */
 
 div.elephpants {
@@ -1256,8 +1224,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   #breadcrumbs-inner,
   #goto div,
   #trick div,
-  #layout,
-  body > footer .footer-content {
+  #layout {
     width:1170px;
   }
 }
@@ -1267,8 +1234,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   #breadcrumbs-inner,
   #goto div,
   #trick div,
-  #layout,
-  body > footer .footer-content {
+  #layout {
     width:1440px;
   }
 }
