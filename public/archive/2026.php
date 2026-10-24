@@ -5,7 +5,12 @@ use phpweb\News\NewsHandler;
 $_SERVER['BASE_PAGE'] = 'archive/2026.php';
 require_once __DIR__ . '/../../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2026", ['cache' => true, 'cache_control' => 15 * 60]);
+$news = (new NewsHandler())->getNewsByYear(2026);
+
+site_header("News Archive - 2026", [
+    'cache' => news_archive_last_modified($news, __FILE__),
+    'cache_control' => 15 * 60,
+]);
 ?>
 
 <h1>News Archive - 2026</h1>
@@ -18,5 +23,5 @@ site_header("News Archive - 2026", ['cache' => true, 'cache_control' => 15 * 60]
 
 <?php
 
-print_news((new NewsHandler())->getNewsByYear(2026), null, 500);
+print_news($news, null, 500);
 site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);
