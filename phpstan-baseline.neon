@@ -1261,24 +1261,6 @@ parameters:
 			path: include/site.inc
 
 		-
-			message: '#^Function release_get_latest\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: include/version.inc
-
-		-
-			message: '#^Function show_source_releases\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: include/version.inc
-
-		-
-			message: '#^Parameter \#3 \$length of function substr expects int\|null, int\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: include/version.inc
-
-		-
 			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
@@ -2453,6 +2435,12 @@ parameters:
 			identifier: missingType.iterableValue
 			count: 1
 			path: src/News/NewsHandler.php
+
+		-
+			message: '#^Parameter \#3 \$length of function substr expects int\|null, int\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Releases/Releases.php
 
 		-
 			message: '#^Method phpweb\\Themes\\FeatureComparison\:\:__construct\(\) has parameter \$links with no value type specified in iterable type array\.$#'
