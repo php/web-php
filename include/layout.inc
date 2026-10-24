@@ -505,6 +505,20 @@ function site_footer(array $config = []): void
     require __DIR__ . "/footer.inc";
 }
 
+// Render the shared footer template to a string
+function fancy_footer(string $extraCredit = ''): string
+{
+    // Credit manual/documentation pages to the PHP Documentation Group;
+    // everything else to the PHP Group.
+    $copyrightHolder = (!empty($_SERVER['BASE_PAGE']) && str_starts_with($_SERVER['BASE_PAGE'], 'manual/'))
+        ? 'The PHP Documentation Group'
+        : 'The PHP Group';
+
+    ob_start();
+    require __DIR__ . "/shared-footer.inc";
+    return (string) ob_get_clean();
+}
+
 function sha256_html(string $checksum): string
 {
     $checksum = htmlspecialchars($checksum, ENT_QUOTES, 'UTF-8');
