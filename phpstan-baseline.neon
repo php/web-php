@@ -1587,7 +1587,7 @@ parameters:
 		-
 			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\|false given\.$#'
 			identifier: argument.type
-			count: 14
+			count: 15
 			path: public/cal.php
 
 		-
