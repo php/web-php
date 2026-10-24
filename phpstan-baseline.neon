@@ -1483,12 +1483,6 @@ parameters:
 			path: public/cached.php
 
 		-
-			message: '#^Constant cal not found\.$#'
-			identifier: constant.notFound
-			count: 1
-			path: public/cal.php
-
-		-
 			message: '#^Function date_for_recur\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
@@ -1561,12 +1555,6 @@ parameters:
 			path: public/cal.php
 
 		-
-			message: '#^Function phpdate not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: public/cal.php
-
-		-
 			message: '#^Function read_event\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
@@ -1599,7 +1587,7 @@ parameters:
 		-
 			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\|false given\.$#'
 			identifier: argument.type
-			count: 14
+			count: 15
 			path: public/cal.php
 
 		-
