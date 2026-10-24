@@ -1,0 +1,257 @@
+/*
+ * Standalone, framework-free styling for the shared "fancy" footer
+ * (see include/shared-footer.inc -> fancy_footer()).
+ *
+ * This is the vanilla-CSS counterpart to the Tailwind build in php85.css that
+ * the release pages use. It is fully self-contained; every rule is scoped under
+ * `.php-footer` so it can sit at the bottom of a classic php.net page without
+ * leaking into, or inheriting from, the rest of that page's styles.
+ */
+
+.php-footer {
+    --footer-fg: #ffffffcc;        /* body / link text */
+    --footer-fg-strong: #ffffff;   /* headings, logo, hover */
+    --footer-accent: #6b58ff;      /* Donate button */
+    --footer-accent-hover: #5a47e6;
+    --footer-border: #ffffff1a;
+
+    isolation: isolate;
+    position: relative;
+    z-index: 10;
+    clear: both;
+    /* Transparent so the classic pages' dark-grey (#333) textured html
+       background shows through, blending the footer into the page. */
+    background-color: transparent;
+    line-height: normal;
+    text-align: left;
+}
+
+/*
+ * Match the width of the classic site chrome (#layout, .navbar__inner):
+ * fluid below 1200px, then fixed 1170px / 1440px, centered.
+ */
+.php-footer .footer-container {
+    width: auto;
+    max-width: none;
+    margin-inline: auto;
+    padding-inline: 0;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+    .php-footer .footer-container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .php-footer .footer-container {
+        width: 1440px;
+    }
+}
+
+/* --- top grid: brand column + link columns ------------------------------ */
+
+.php-footer .footer-grid > div > *:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.php-footer .footer-logo {
+    display: inline-block;
+    height: 2.5rem;
+    border: 0;
+    text-decoration: none;
+}
+
+.php-footer .footer-logo svg {
+    display: inline-block;
+    height: 2.5rem;
+    width: auto;
+    color: var(--footer-fg-strong);
+}
+
+.php-footer p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    text-wrap: balance;
+    color: var(--footer-fg);
+}
+
+.php-footer p a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    border: 0;
+}
+
+.php-footer p a:hover {
+    color: var(--footer-fg-strong);
+}
+
+/* --- social icons ------------------------------------------------------- */
+
+.php-footer .social-icons {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.php-footer .social-icons a {
+    display: inline-flex;
+    color: var(--footer-fg);
+    border: 0;
+    text-decoration: none;
+}
+
+.php-footer .social-icons a:hover {
+    color: var(--footer-fg-strong);
+}
+
+.php-footer .social-icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* --- Donate button ------------------------------------------------------ */
+
+.php-footer .button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding-inline: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--footer-fg-strong);
+    background-color: var(--footer-accent);
+    border: 0;
+    border-radius: 9999px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.php-footer .button-primary:hover {
+    background-color: var(--footer-accent-hover);
+}
+
+.php-footer .button-primary:focus-visible {
+    outline: 2px solid var(--footer-fg-strong);
+    outline-offset: 2px;
+}
+
+/* --- link columns ------------------------------------------------------- */
+
+.php-footer .footer-links-container {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.php-footer .footer-links-grid h3 {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: var(--footer-fg-strong);
+}
+
+.php-footer .footer-links-grid ul {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+}
+
+.php-footer .footer-links-grid li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.php-footer .footer-links-grid a {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: var(--footer-fg);
+    border: 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.php-footer .footer-links-grid a:hover {
+    color: var(--footer-fg-strong);
+}
+
+.php-footer .footer-links-grid div:first-of-type {
+    margin-bottom: 2.5rem;
+}
+
+/* --- copyright credits -------------------------------------------------- */
+
+.php-footer .footer-credits {
+    margin-top: 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--footer-border);
+}
+
+.php-footer .footer-credits p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: var(--footer-fg);
+}
+
+.php-footer .footer-credits p a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* --- accessibility helper (in case the host page lacks one) -------------- */
+
+.php-footer .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --- responsive --------------------------------------------------------- */
+
+@media (min-width: 48rem) {
+    .php-footer .footer-links-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .php-footer .footer-links-grid div:first-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 64rem) {
+    .php-footer .footer-container {
+        padding-top: 7rem;
+    }
+
+    .php-footer .footer-credits {
+        margin-top: 6rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .php-footer .footer-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .php-footer .footer-links-container {
+        margin-top: 0;
+        grid-column: span 2 / span 2;
+    }
+}
