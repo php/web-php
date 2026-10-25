@@ -52,11 +52,11 @@ $comparisons = [
             PHP,
         ),
         new FeatureComparison(
-                id: 'polling-api',
-                title: message('polling_api_title', $lang),
-                description: message('polling_api_description', $lang),
+                id: 'duration-class',
+                title: message('duration_title', $lang),
+                description: message('duration_description', $lang),
                 links: [
-                        'RFC|https://wiki.php.net/rfc/poll_api',
+                        'RFC|https://wiki.php.net/rfc/duration_class',
                 ],
                 before: <<<'PHP'
             // TODO
@@ -66,11 +66,11 @@ $comparisons = [
             PHP,
         ),
         new FeatureComparison(
-                id: 'duration-class',
-                title: message('duration_title', $lang),
-                description: message('duration_description', $lang),
+                id: 'polling-api',
+                title: message('polling_api_title', $lang),
+                description: message('polling_api_description', $lang),
                 links: [
-                        'RFC|https://wiki.php.net/rfc/duration_class',
+                        'RFC|https://wiki.php.net/rfc/poll_api',
                 ],
                 before: <<<'PHP'
             // TODO
@@ -87,21 +87,14 @@ $comparisons = [
                         'RFC|https://wiki.php.net/rfc/clamp_v2',
                 ],
                 before: <<<'PHP'
-            function clamp(int $value, int $min, int $max): int {
-                if ($max < $min) {
-                    throw new \InvalidArgumentException(
-                        '$min must be smaller than or equal to argument $max'
-                    );
-                }
-                if ($value > $max) {
-                    return $max;
-                }
-                if ($value < $min) {
-                    return $min;
-                }
+            var_dump(max(0, min(-10, 100)));
+            // int(0)
 
-                return $value;
-            }
+            var_dump(max(0, min(50, 100)));
+            // int(50)
+
+            var_dump(max(0, min(110, 100)));
+            // int(100)
             PHP,
                 after: <<<'PHP'
             var_dump(clamp(-10, 0, 100));
@@ -122,10 +115,18 @@ $comparisons = [
                         'RFC|https://wiki.php.net/rfc/sort_direction_enum',
                 ],
                 before: <<<'PHP'
-            if (!enum_exists('SortDirection')) {
-                enum SortDirection {
-                    case Ascending;
-                    case Descending;
+            class QueryBuilder {
+                private int $sort;
+
+                public function setSort(int $sort): void {
+                    $this->sort = $sort;
+                }
+
+                private function getSortKeyword(): string {
+                    return match($this->sort) {
+                        SORT_ASC => 'ASC',
+                        SORT_DESC => 'DESC',
+                    };
                 }
             }
             PHP,
@@ -157,11 +158,10 @@ $comparisons = [
                 after: <<<'PHP'
             class DB {
                 /**
-                * Returns collection
-                * @return array
+                * Returns up to $limit items matching the $query.
                 */
                 function search(
-                    /** string Terms to search */
+                    /** Terms to search */
                     string $query,
 
                     /** int Terms to search */
@@ -174,7 +174,7 @@ $comparisons = [
             var_dump(
                 new ReflectionParameter([DB::class, 'search'], 'query')->getDocComment()
             );
-            // string(29) "/** string Terms to search */"
+            // string(22) "/** Terms to search */"
             PHP,
         ),
         new FeatureComparison(
