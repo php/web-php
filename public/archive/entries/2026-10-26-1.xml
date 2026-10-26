@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Updated PHP Windows builds for Brotli security fix</title>
+  <id>https://www.php.net/archive/2026.php#2026-10-26-1</id>
+  <published>2026-10-26T11:57:45+00:00</published>
+  <updated>2026-10-26T11:57:45+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-10-26-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-10-26-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP team announces updated Windows builds:
+        <strong>PHP 8.5.12-1, 8.4.27-1, 8.3.36-1 and 8.2.35-1</strong>.
+        These builds include Brotli 1.2.1, which fixes
+        <a href="https://github.com/google/brotli/releases/tag/v1.2.1">CVE-2026-111497</a>,
+        an out-of-bounds write vulnerability in Brotli decompression.
+      </p>
+      <p>
+        In PHP Windows builds, the vulnerable decoder can be reached through the
+        cURL extension when automatic HTTP response decompression is enabled.
+        This is disabled by default in cURL, but applications and HTTP client
+        libraries can enable it.
+      </p>
+      <p>
+        The <code>-1</code> suffix identifies a Windows package rebuild with updated
+        dependencies. These builds use the same PHP source releases, and the PHP
+        runtime versions remain unchanged.
+      </p>
+      <p>
+        The updated packages are available on the
+        <a href="https://www.php.net/downloads.php?os=windows">downloads page</a>.
+      </p>
+    </div>
+  </content>
+</entry>
