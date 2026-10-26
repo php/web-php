@@ -29,7 +29,7 @@ Directory for Scope=Custom. Versions are installed under this directory and a "c
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $true, Position=0)]
-    [ValidatePattern('^\d+(\.\d+)?(\.\d+)?((alpha|beta|RC)\d*)?$')]
+    [ValidatePattern('^\d+(\.\d+)?(\.\d+)?((alpha|beta|RC)\d*)?(-\d+)?$')]
     [string]$Version,
 
     [Parameter(Mandatory = $false, Position=1)]
@@ -191,9 +191,9 @@ Function Get-Semver {
     if ($null -ne $semver) { return [string]$semver }
 
     $html = (Get-File -Url "https://downloads.php.net/~windows/releases/archives/").Content
-    $rx = [regex]"php-($([regex]::Escape($Version))\.[0-9]+)"
+    $rx = [regex]"php-($([regex]::Escape($Version))\.[0-9]+(-[0-9]+)?)"
     $found = $rx.Matches($html) | ForEach-Object { $_.Groups[1].Value } |
-        Sort-Object { [version]$_ } -Descending |
+        Sort-Object { [version]($_ -replace '-', '.') } -Descending |
         Select-Object -First 1
 
     if ($null -ne $found) { return [string]$found }
@@ -229,7 +229,7 @@ Function Get-ReleaseType {
     param(
         [Parameter(Mandatory = $true, Position=0)]
         [ValidateNotNull()]
-        [ValidatePattern('^\d+(\.\d+)?(\.\d+)?((alpha|beta|RC)\d*)?$')]
+        [ValidatePattern('^\d+(\.\d+)?(\.\d+)?((alpha|beta|RC)\d*)?(-\d+)?$')]
         [string]$Version
     )
     if ($Version -match "[a-zA-Z]") {
@@ -247,7 +247,7 @@ Function Get-PhpFromUrl {
         [string]$Version,
         [Parameter(Mandatory = $true, Position=1)]
         [ValidateNotNull()]
-        [ValidatePattern('^\d+(\.\d+)?(\.\d+)?((alpha|beta|RC)\d*)?$')]
+        [ValidatePattern('^\d+(\.\d+)?(\.\d+)?((alpha|beta|RC)\d*)?(-\d+)?$')]
         [string]$Semver,
         [Parameter(Mandatory = $false, Position=2)]
         [ValidateSet("x64", "x86")]
