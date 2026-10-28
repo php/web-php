@@ -11,6 +11,7 @@
 
 use phpweb\I18n\Languages;
 use phpweb\ProjectGlobals;
+use phpweb\Releases\Releases;
 use phpweb\UserPreferences;
 
 // Ensure that our environment is set up
@@ -145,7 +146,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     $df = $dlinfo[1];
     if (strpos($df, "7-LATEST") !== false) {
         require_once __DIR__ . "/../include/version.inc";
-        [$latest] = release_get_latest();
+        [$latest] = new Releases()->getLatest();
         $df = str_replace("7-LATEST", $latest, $df);
     }
 
