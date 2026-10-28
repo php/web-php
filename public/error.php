@@ -181,19 +181,21 @@ if (preg_match('/^GH-(\d+)$/', $URI, $matches)) {
     mirror_redirect("https://github.com/php/php-src/issues/" . $matches[1]);
 }
 
-// php.net/supported-versions.PHP -> supported-versions.php
-if ($URI == 'supported-versions.PHP') {
-    mirror_redirect("https://www.php.net/supported-versions.php");
-}
-
+// Fix for case-insensitive .php extension, e.g. /supported-versions.PHP, /downloads.PHP
+$originalURI = $URI;
+$URI = preg_replace('/\.php\z/i', '.php', $URI);
 
 // ============================================================================
 // Redirect if the entered URI was a PHP page name (except some pages,
 // which we display in the mirror's language or the explicitly specified
 // language [see below])
-if (!in_array($URI, ['mirror-info', 'error', 'mod'], true) &&
-    file_exists(ProjectGlobals::getPublicRoot() . "/$URI.php")) {
-    mirror_redirect("/$URI.php");
+$hasPhpExtension = str_ends_with($URI, '.php');
+$phpPage = $hasPhpExtension ? $URI : "$URI.php";
+$phpPageName = $hasPhpExtension ? substr($URI, 0, -4) : $URI;
+if (!in_array($phpPageName, ['mirror-info', 'error', 'mod'], true) &&
+    file_exists(ProjectGlobals::getPublicRoot() . "/$phpPage") &&
+    (!$hasPhpExtension || $URI !== $originalURI)) {
+    mirror_redirect("/$phpPage");
 }
 
 // Work with lowercased URI from now
