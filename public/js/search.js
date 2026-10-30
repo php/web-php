@@ -255,6 +255,15 @@ const initSearchModal = () => {
 
     // Open when / is pressed
     document.addEventListener("keydown", (event) => {
+        if (event.key === "/") {
+            const gotoOverlay = document.getElementById("goto");
+            if (gotoOverlay && getComputedStyle(gotoOverlay).display !== "none") {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                return;
+            }
+        }
+
         const target = event.target;
 
         if (

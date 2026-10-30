@@ -330,7 +330,7 @@ if (!isset($config["languages"])) {
 <nav id="trick"><div><?php doc_toc("en") ?></div></nav>
 <div id="goto">
     <div class="search">
-         <div class="text"></div>
+         <input class="text" type="text" placeholder="Type to search this page" aria-label="Search this page" autocomplete="off" spellcheck="false">
          <div class="results"><ul></ul></div>
    </div>
 </div>
