@@ -34,7 +34,7 @@
     width: auto;
     max-width: none;
     margin-inline: auto;
-    padding-inline: 0;
+    padding-inline: 1.5rem;
     padding-top: 4rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
@@ -120,6 +120,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
     min-height: 2.5rem;
     padding-inline: 1.25rem;
     font-size: 0.875rem;
@@ -220,6 +222,12 @@
 }
 
 /* --- responsive --------------------------------------------------------- */
+
+@media (min-width: 40rem) {
+    .php-footer .button-primary {
+        width: auto;
+    }
+}
 
 @media (min-width: 48rem) {
     .php-footer .footer-links-grid {
