@@ -257,7 +257,12 @@ const initSearchModal = () => {
     document.addEventListener("keydown", (event) => {
         if (event.key === "/") {
             const gotoOverlay = document.getElementById("goto");
-            if (gotoOverlay && getComputedStyle(gotoOverlay).display !== "none") {
+            const gotoInput = gotoOverlay?.querySelector(".text");
+            if (
+              gotoOverlay &&
+              getComputedStyle(gotoOverlay).display !== "none" &&
+              event.target !== gotoInput
+            ) {
                 event.preventDefault();
                 event.stopImmediatePropagation();
                 return;
