@@ -379,7 +379,7 @@ parameters:
 			path: include/langchooser.inc
 
 		-
-			message: '#^Binary operation "\." between non\-falsy\-string and 0\|0\.0\|''''\|array\{\}\|numeric\-string\|false\|null results in an error\.$#'
+			message: '#^Binary operation "\." between literal\-string&non\-falsy\-string and 0\|0\.0\|''''\|array\{\}\|numeric\-string\|false\|null results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 1
 			path: include/layout.inc
