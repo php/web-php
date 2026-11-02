@@ -233,6 +233,24 @@
     }
 }
 
+@media (max-width: 64rem) {
+    .php-footer .footer-container {
+        padding-inline: 1.5rem;
+    }
+
+    .php-footer .footer-links-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .php-footer .footer-links-grid {
+        display: contents;
+    }
+
+    .php-footer .footer-links-grid div:first-of-type {
+        margin-bottom: 0;
+    }
+}
+
 @media (min-width: 64rem) {
     .php-footer .footer-container {
         padding-top: 7rem;
