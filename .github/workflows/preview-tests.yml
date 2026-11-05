@@ -20,7 +20,7 @@ jobs:
       HTTP_HOST: "localhost:8080"
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
 
@@ -28,27 +28,27 @@ jobs:
         run: echo ${{ github.event.number }} > pr-number.txt
 
       - name: Upload PR code as artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: pr-code
           path: ./
           retention-days: 1
 
       - name: Upload PR number artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: pr-number.txt
           path: ./pr-number.txt
           retention-days: 1
 
-      - uses: shivammathur/setup-php@v2
+      - uses: shivammathur/setup-php@2.40.0
         with:
           coverage: "none"
           extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter, iconv"
           php-version: "${{ matrix.php-version }}"
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v7.1.0
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -62,7 +62,7 @@ jobs:
         run: "echo \"COMPOSER_CACHE_DIR=$(composer config cache-dir)\" >> $GITHUB_ENV"
 
       - name: "Cache dependencies installed with composer"
-        uses: actions/cache@v6
+        uses: actions/cache@v6.1.0
         with:
           path: "${{ env.COMPOSER_CACHE_DIR }}"
           key: "php-${{ matrix.php-version }}-composer-${{ hashFiles('composer.lock') }}"
@@ -81,7 +81,7 @@ jobs:
         run: "make tests_e2e"
 
       - name: Upload playwright report
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v7.0.2
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
