@@ -58,11 +58,32 @@ $comparisons = [
         links: [
                         'RFC|https://wiki.php.net/rfc/duration_class',
                 ],
-        before: <<<'PHP'
-            // TODO
-            PHP,
+        before: '',
         after: <<<'PHP'
-            // TODO
+            use Time\Duration;
+
+            $oneSecond = Duration::fromSeconds(1);
+            $halfSecond = $oneSecond->divideBy(2);
+
+            $onePointFiveSeconds = $oneSecond->add($halfSecond);
+
+            // Sleep for 1.5 seconds
+            sleep($onePointFiveSeconds);
+
+            $negativeHour = Duration::fromHours(1)->negate();
+
+            $durations = [
+                $oneSecond,
+                $negativeHour,
+                $onePointFiveSeconds,
+                $halfSecond,
+            ];
+
+            usort($durations, Duration::compare(...)); // Will sort to [-1h, 0.5s, 1s, 1.5s]
+
+            $baseDelay = Duration::fromMilliseconds(100);
+            $attempt = 5;
+            $delay = $baseDelay->multiplyBy(2 ** $attempt); // $delay is equal to 3.2 seconds
             PHP,
     ),
     new FeatureComparison(
