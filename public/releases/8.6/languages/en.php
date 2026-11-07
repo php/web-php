@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.6 is a major update of the PHP language, with new features including the Partial Function Application, new Duration class, Polling API, and new clamp() function',
+    'common_header' => 'PHP 8.6 is a major update of the PHP language, with new features including Partial Function Application, a new Duration class, a Polling API, and a new clamp() function',
     'main_title' => 'Smarter, Faster, Built for Tomorrow.',
-    'main_subtitle' => '<p xmlns="http://www.w3.org/1999/html"><strong>PHP 8.6 is a major update of the PHP language</strong>, with new features including the <strong>Partial Function Application</strong>, new <strong>Duration</strong> class, <strong>Polling API</strong>, and new <strong>clamp()</strong> function</p>',
+    'main_subtitle' => '<p xmlns="http://www.w3.org/1999/html"><strong>PHP 8.6 is a major update of the PHP language</strong>, with new features including <strong>Partial Function Application</strong>, a new <strong>Duration</strong> class, a <strong>Polling API</strong>, and a new <strong>clamp()</strong> function</p>',
 
     'whats_new' => 'What\'s new in 8.6',
     'upgrade_now' => 'Upgrade to PHP 8.6',
@@ -19,7 +19,7 @@ return [
     'features_polling_api_description' => '<p>The new API is available at the user-code level, allowing low-level frameworks such as ReactPHP or Amp to utilize it.</p>',
     'features_clamp_description' => '<p>Ensures that a given value (numeric or otherwise) falls within a specified range.</p>',
     'features_duration_description' => '<p>Represents a duration of time.</p>',
-    'features_sort_direction_description' => '<p>Represents a sort directions.</p>',
+    'features_sort_direction_description' => '<p>Represents possible sort directions.</p>',
 
     'pfa_title' => 'Partial Function Application',
     'pfa_description' => 'Allows functions to be called with only a subset of the required parameters, deferring the passing of the remaining ones to a later time.',
@@ -37,7 +37,7 @@ return [
     'stream_error_handling_description' => 'TODO.',
     'doc_comments_title' => 'DocComments For Function Parameters',
     'doc_comments_description' => 'TODO.',
-    'isreadable_iswriteable_title' => 'New <code>ReflectionProperty::isReadable</code> and <code>ReflectionProperty::isWritable</code> methods',
+    'isreadable_iswriteable_title' => 'New <code>ReflectionProperty::isReadable()</code> and <code>ReflectionProperty::isWritable()</code> methods',
     'isreadable_iswriteable_description' => 'TODO.',
 
     'new_classes_title' => 'Additional features and improvements',

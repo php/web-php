@@ -115,14 +115,17 @@ $comparisons = [
                         'RFC|https://wiki.php.net/rfc/sort_direction_enum',
                 ],
                 before: <<<'PHP'
-            class QueryBuilder {
+            class QueryBuilder
+            {
                 private int $sort;
 
-                public function setSort(int $sort): void {
+                public function setSort(int $sort): void
+                {
                     $this->sort = $sort;
                 }
 
-                private function getSortKeyword(): string {
+                private function getSortKeyword(): string
+                {
                     return match($this->sort) {
                         SORT_ASC => 'ASC',
                         SORT_DESC => 'DESC',
@@ -131,14 +134,17 @@ $comparisons = [
             }
             PHP,
                 after: <<<'PHP'
-            class QueryBuilder {
+            class QueryBuilder
+            {
                 private SortDirection $sort;
 
-                public function setSort(SortDirection $sort): void {
+                public function setSort(SortDirection $sort): void
+                {
                     $this->sort = $sort;
                 }
 
-                private function getSortKeyword(): string {
+                private function getSortKeyword(): string
+                {
                     return match($this->sort) {
                         SortDirection::Ascending => 'ASC',
                         SortDirection::Descending => 'DESC',
@@ -156,15 +162,16 @@ $comparisons = [
                 ],
                 before: '',
                 after: <<<'PHP'
-            class DB {
+            class DB
+            {
                 /**
-                * Returns up to $limit items matching the $query.
-                */
+                 * Returns up to $limit items matching the $query.
+                 */
                 function search(
                     /** Terms to search */
                     string $query,
 
-                    /** int Terms to search */
+                    /** Maximum number of results */
                     int $limit = 10
                 ): array {
                     return [];
@@ -186,7 +193,8 @@ $comparisons = [
                 ],
                 before: '',
                 after: <<<'PHP'
-            class NewsEntry {
+            class NewsEntry
+            {
                 public string $title = 'PHP 8.6 released!';
 
                 public private(set) string $slug = 'php-86-released';
