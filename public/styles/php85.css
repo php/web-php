@@ -442,7 +442,8 @@ a {
     background-image: radial-gradient(at 50% 50%, var(--color-white), transparent 65%);
     padding-inline: calc(var(--spacing) * 4);
     text-align: center;
-    margin-inline: auto
+    margin-inline: auto;
+    width: 100%;
 }
 
 @media (min-width: 40rem) {
@@ -569,7 +570,8 @@ a {
     margin-inline: auto;
     margin-bottom: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 12);
-    color: var(--color-gray-800)
+    color: var(--color-gray-800);
+    width: auto;
 }
 
 @media (min-width: 64rem) {
@@ -1073,7 +1075,7 @@ a {
 }
 
 .before-and-after-title-and-description h2 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
     font-weight: var(--font-weight-bold)
 }
