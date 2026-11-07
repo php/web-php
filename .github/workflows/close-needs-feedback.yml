@@ -16,7 +16,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Close old issues that need feedback
-        uses: dwieeb/needs-reply@v2
+        uses: imhoffd/needs-reply@v2.0.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-label: "Status: Needs Feedback"
