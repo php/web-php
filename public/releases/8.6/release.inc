@@ -68,7 +68,7 @@ $comparisons = [
             $onePointFiveSeconds = $oneSecond->add($halfSecond);
 
             // Sleep for 1.5 seconds
-            sleep($onePointFiveSeconds);
+            time_nanosleep($onePointFiveSeconds->seconds, $onePointFiveSeconds->nanoseconds);
 
             $negativeHour = Duration::fromHours(1)->negate();
 
@@ -193,7 +193,7 @@ $comparisons = [
                     string $query,
 
                     /** Maximum number of results */
-                    int $limit = 10
+                    int $limit = 10,
                 ): array {
                     return [];
                 }
