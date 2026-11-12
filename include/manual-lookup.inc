@@ -89,6 +89,13 @@ function find_manual_page_slow($lang, $keyword)
         }
     }
 
+    // Fall back to the third-party extensions manual (English only) for the
+    // pages that moved to php/doc-extensions
+    foreach ($sections as $section) {
+        $found = tryprefix("extensions", $keyword, $section);
+        if ($found) { return $found; }
+    }
+
     // BC: Few references pages where moved to book.
     if (strpos($keyword, "ref.") === 0) {
         $kw = substr_replace($keyword, "book.", 0, 4);
