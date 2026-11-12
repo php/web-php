@@ -1,5 +1,6 @@
 <?php
 
+use phpweb\News\Category;
 use phpweb\News\ConferenceSchedule;
 use phpweb\News\NewsHandler;
 
@@ -51,7 +52,7 @@ $renderEntry = static function (array $entry) use ($MYSITE, $today): string {
 
     if (isset($entry["finalTeaserDate"])) {
         $isPast = $entry["finalTeaserDate"] < $today;
-        if (ConferenceSchedule::termFor($entry) === 'cfp') {
+        if (ConferenceSchedule::termFor($entry) === Category::Cfp) {
             $label = $isPast ? 'CFP closed' : 'CFP closes';
         } else {
             $label = $isPast ? 'Started' : 'Starts';
@@ -120,7 +121,10 @@ $content .= "</div>";
 echo $content;
 
 // Build sidebar mirroring the active view: conferences grouped into upcoming/past, or CFPs into open/closed.
-$panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to see your conference appear here?</a></p>';
+$panels = sprintf(
+    '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to see your %s appear here?</a></p>',
+    $view === 'cfps' ? 'call for papers' : 'conference',
+);
 
 $renderPanels = static function (array $entries): string {
     $html = '';

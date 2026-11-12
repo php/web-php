@@ -53,20 +53,22 @@ final class ConferenceSchedule
     /**
      * The entry's primary term. A few posts announce a conference and open its CFP at once,
      * carrying both terms; anything that is a conference is treated as a conference (and so
-     * placed by its date), leaving 'cfp' for CFP-only posts.
+     * placed by its date), leaving Cfp for CFP-only posts.
      *
      * @param array<array-key, mixed> $entry
      */
-    public static function termFor(array $entry): ?string
+    public static function termFor(array $entry): ?Category
     {
         $found = null;
         foreach ($entry['category'] as $category) {
-            if ($category['term'] === 'conferences') {
-                return 'conferences';
+            $term = Category::tryFrom($category['term']);
+
+            if ($term === Category::Conferences) {
+                return $term;
             }
 
-            if ($category['term'] === 'cfp') {
-                $found = 'cfp';
+            if ($term === Category::Cfp) {
+                $found = $term;
             }
         }
 
@@ -79,7 +81,7 @@ final class ConferenceSchedule
     private function assignConferenceOrCfp(array $conferenceOrCfp, string $today): void
     {
         $isFuture = isset($conferenceOrCfp['finalTeaserDate']) && $conferenceOrCfp['finalTeaserDate'] >= $today;
-        $isCfp = self::termFor($conferenceOrCfp) === 'cfp';
+        $isCfp = self::termFor($conferenceOrCfp) === Category::Cfp;
 
         match (true) {
             $isCfp && $isFuture => $this->openCallsForPapers[] = $conferenceOrCfp,
