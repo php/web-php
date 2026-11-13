@@ -1,8 +1,9 @@
 <?php
 
-// Define $MYSITE and $LAST_UPDATED variables
 use phpweb\ProjectGlobals;
+use phpweb\Releases\Releases;
 
+// Define $MYSITE and $LAST_UPDATED variables
 require_once __DIR__ . '/../include/prepend.inc';
 
 // Define release_get_latest() function.
@@ -15,7 +16,7 @@ header("Content-type: text/plain; charset=utf-8");
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');
 
 // SHA256 check last release file (identifies rsync setup problems)
-[, $latest] = release_get_latest();
+[, $latest] = new Releases()->getLatest();
 $dist = $latest['source'][0];
 $filename = ProjectGlobals::getPublicRoot() . "/distributions/{$dist['filename']}";
 if (!file_exists($filename)) {
