@@ -62,8 +62,8 @@ $comparisons = [
         title: message('duration_title', $lang),
         description: message('duration_description', $lang),
         links: [
-                        'RFC|https://wiki.php.net/rfc/duration_class',
-                ],
+            'RFC|https://wiki.php.net/rfc/duration_class',
+        ],
         before: '',
         after: <<<'PHP'
             use Time\Duration;
@@ -100,10 +100,95 @@ $comparisons = [
             'RFC|https://wiki.php.net/rfc/poll_api',
         ],
         before: <<<'PHP'
-            // TODO
+            $server = stream_socket_server('tcp://0.0.0.0:8080');
+            $clients = [];
+
+            while (true) {
+                $read = [$server, ...$clients];
+                $write = $except = null;
+
+                // Based on select(), which typically can't handle more than 1024 connections
+                stream_select($read, $write, $except, null);
+
+                foreach ($read as $stream) {
+                    if ($stream === $server) {
+                        $clients[] = stream_socket_accept($server);
+                        continue;
+                    }
+
+                    $data = fread($stream, 8192);
+
+                    if ($data === '' || $data === false) {
+                        unset($clients[array_search($stream, $clients, true)]);
+                        fclose($stream);
+                    } else {
+                        fwrite($stream, $data);
+                    }
+                }
+            }
             PHP,
         after: <<<'PHP'
-            // TODO
+            use Io\Poll\{Context, Event};
+
+            $server = stream_socket_server('tcp://0.0.0.0:8080');
+
+            // Automatically uses epoll, kqueue, event ports, or WSAPoll
+            $poll = new Context();
+            $poll->add(new StreamPollHandle($server), [Event::Read]);
+
+            while (true) {
+                foreach ($poll->wait() as $watcher) {
+                    $stream = $watcher->getHandle()->getStream();
+
+                    if ($stream === $server) {
+                        $client = stream_socket_accept($server);
+                        $poll->add(new StreamPollHandle($client), [Event::Read]);
+                        continue;
+                    }
+
+                    $data = fread($stream, 8192);
+
+                    if ($data === '' || $data === false) {
+                        $watcher->remove();
+                        fclose($stream);
+                    } else {
+                        fwrite($stream, $data);
+                    }
+                }
+            }
+            PHP,
+    ),
+    new FeatureComparison(
+        id: 'stream-error-handling',
+        title: message('stream_error_handling_title', $lang),
+        description: message('stream_error_handling_description', $lang),
+        links: [
+            'RFC|https://wiki.php.net/rfc/stream_errors',
+        ],
+        before: <<<'PHP'
+            $config = @file_get_contents('/etc/app/config.json');
+
+            if ($config === false) {
+                // Only an unstructured message string is available
+                $error = error_get_last();
+                log_error($error['message']);
+            }
+            PHP,
+        after: <<<'PHP'
+            $context = stream_context_create([
+                'stream' => [
+                    'error_mode' => StreamErrorMode::Exception,
+                ],
+            ]);
+
+            try {
+                $config = file_get_contents('/etc/app/config.json', context: $context);
+            } catch (StreamException $e) {
+                foreach ($e->getErrors() as $error) {
+                    // $error->code is a StreamErrorCode enum case
+                    log_error($error->code->name, $error->message, $error->wrapperName);
+                }
+            }
             PHP,
     ),
     new FeatureComparison(
@@ -187,7 +272,23 @@ $comparisons = [
         links: [
             'RFC|https://wiki.php.net/rfc/parameter-doccomments',
         ],
-        before: '',
+        before: <<<'PHP'
+            class DB
+            {
+                /**
+                 * Returns up to $limit items matching the $query.
+                 *
+                 * @param string $query Terms to search
+                 * @param int $limit Maximum number of results
+                 */
+                function search(string $query, int $limit = 10): array {
+                    return [];
+                }
+            }
+
+            // Parameter descriptions can only be extracted
+            // by parsing the function's DocComment.
+            PHP,
         after: <<<'PHP'
             class DB
             {
@@ -216,7 +317,7 @@ $comparisons = [
         title: message('isreadable_iswriteable_title', $lang),
         description: message('isreadable_iswriteable_description', $lang),
         links: [
-            'RFC|https://wiki.php.net/rfc/parameter-doccomments',
+            'RFC|https://wiki.php.net/rfc/isreadable-iswriteable',
         ],
         before: '',
         after: <<<'PHP'
@@ -249,10 +350,31 @@ $comparisons = [
             'RFC|https://wiki.php.net/rfc/readonly_property_defaults',
         ],
         before: <<<'PHP'
-            //TODO
+            interface Rule
+            {
+                public string $parser { get; }
+            }
+
+            final readonly class SlugRule implements Rule
+            {
+                public string $parser;
+
+                public function __construct()
+                {
+                    $this->parser = SlugParser::class;
+                }
+            }
             PHP,
         after: <<<'PHP'
-            //TODO
+            interface Rule
+            {
+                public string $parser { get; }
+            }
+
+            final readonly class SlugRule implements Rule
+            {
+                public string $parser = SlugParser::class;
+            }
             PHP,
     ),
 ];
@@ -383,22 +505,40 @@ echo ReleasePage::getHeroSection(
                 <div>
                     <h2 id="additional-improvements"><?= message('new_classes_title', $lang) ?></h2>
                     <ul class="new">
-                        <li><?= message('new_uri', $lang) ?></li>
-                        <li><?= message('new_gmp', $lang) ?></li>
+                        <li><?= message('new_override_constants', $lang) ?></li>
+                        <li><?= message('new_enum_debug_info', $lang) ?></li>
+                        <li><?= message('new_const_object_writes', $lang) ?></li>
+                        <li><?= message('new_uri_builder', $lang) ?></li>
+                        <li><?= message('new_sodium', $lang) ?></li>
+                        <li><?= message('new_tls', $lang) ?></li>
+                        <li><?= message('new_mysqli_quote_string', $lang) ?></li>
+                        <li><?= message('new_pack_endianness', $lang) ?></li>
+                        <li><?= message('new_json_error_location', $lang) ?></li>
+                        <li><?= message('new_error_include_args', $lang) ?></li>
                         <li><?= message('new_intl', $lang) ?></li>
-                        <li><?= message('new_mysqli', $lang) ?></li>
-                        <li><?= message('new_reflection', $lang) ?></li>
                         <li><?= message('new_zip', $lang) ?></li>
-                        <li><?= message('new_stream', $lang) ?></li>
+                        <li><?= message('new_performance', $lang) ?></li>
                     </ul>
                 </div>
                 <div>
                     <h2 id="deprecations-and-bc-breaks"><?= message('bc_title', $lang) ?></h2>
                     <ul class="old">
-                        <li><?= message('deprecated_mysqli', $lang) ?></li>
-                        <li><?= message('deprecated_spl', $lang) ?></li>
-                        <li><?= message('deprecated_standard', $lang) ?></li>
-                        <li><?= message('deprecated_date', $lang) ?></li>
+                        <li><?= message('bc_return_in_finally', $lang) ?></li>
+                        <li><?= message('bc_constructor_return', $lang) ?></li>
+                        <li><?= message('bc_reserved_identifiers', $lang) ?></li>
+                        <li><?= message('bc_mbregex', $lang) ?></li>
+                        <li><?= message('bc_type_aliases', $lang) ?></li>
+                        <li><?= message('bc_spl_object_hash', $lang) ?></li>
+                        <li><?= message('bc_objects_as_arrays', $lang) ?></li>
+                        <li><?= message('bc_strcoll', $lang) ?></li>
+                        <li><?= message('bc_ignored_arguments', $lang) ?></li>
+                        <li><?= message('bc_php_filter', $lang) ?></li>
+                        <li><?= message('bc_session_defaults', $lang) ?></li>
+                        <li><?= message('bc_session_handlers', $lang) ?></li>
+                        <li><?= message('bc_other_deprecations', $lang) ?></li>
+                        <li><?= message('bc_trim_form_feed', $lang) ?></li>
+                        <li><?= message('bc_stream_close_errors', $lang) ?></li>
+                        <li><?= message('bc_value_errors', $lang) ?></li>
                     </ul>
                 </div>
             </div>
