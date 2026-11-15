@@ -22,8 +22,8 @@ const LANGUAGES = [
 function common_header(string $description): void {
     global $MYSITE, $lang;
 
-    $meta_image_path = \htmlspecialchars(
-        \filter_var($MYSITE . 'images/php8/php_8_4_released.png', \FILTER_VALIDATE_URL));
+    $meta_image_url = \filter_var($MYSITE . 'images/php8/php_8_4_released.png', \FILTER_VALIDATE_URL);
+    $meta_image_path = $meta_image_url === false ? '' : \htmlspecialchars($meta_image_url);
     $meta_description = \htmlspecialchars($description);
 
     $languages = [];
@@ -54,7 +54,7 @@ META
     ]);
 }
 
-function message($code, $language = 'en'): string
+function message(string $code, string $language = 'en'): string
 {
     $original = require __DIR__ . '/languages/en.php';
     if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {

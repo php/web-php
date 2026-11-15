@@ -2155,48 +2155,6 @@ parameters:
 			path: public/releases/8.3/common.php
 
 		-
-			message: '#^Function releases\\php84\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.4/common.php
-
-		-
-			message: '#^Function releases\\php84\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.4/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.4/common.php
-
-		-
-			message: '#^Function releases\\php85\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.5/common.php
-
-		-
-			message: '#^Function releases\\php85\\message\(\) has parameter \$interpolations with no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: public/releases/8.5/common.php
-
-		-
-			message: '#^Function releases\\php85\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.5/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.5/common.php
-
-		-
 			message: '#^Function formatDate\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
