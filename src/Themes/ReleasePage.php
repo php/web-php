@@ -38,11 +38,9 @@ class ReleasePage
         <section class="hero">
             <video class="hero-bg hero-bg-light" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true" tabindex="-1">
                 <source src="/images/php8/hero-bg-light.webm" type="video/webm">
-                <source src="/images/php8/hero-bg-light.mp4" type="video/mp4">
             </video>
             <video class="hero-bg hero-bg-dark" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true" tabindex="-1">
                 <source src="/images/php8/hero-bg-dark.webm" type="video/webm">
-                <source src="/images/php8/hero-bg-dark.mp4" type="video/mp4">
             </video>
 
             <!-- hero background pattern -->
