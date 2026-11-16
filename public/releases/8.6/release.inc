@@ -259,8 +259,8 @@ $comparisons = [
                 \Time\Duration::fromSeconds(30),
                 min: \Time\Duration::fromMinutes(1),
                 max: \Time\Duration::fromMinutes(10),
-            ));
-            // 60.0s
+            )->seconds);
+            // int(60)
             PHP,
     ),
     new FeatureComparison(
