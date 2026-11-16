@@ -69,22 +69,29 @@ $comparisons = [
             /**
              * All delays are in microseconds.
              */
-            function backoff(int $baseDelay, int $step, int $attempt): void
-            {
+            function backoff(
+                int $baseDelay,
+                int $step,
+                int $attempt,
+            ): void {
                 $delay = $baseDelay + ($step * (2 ** $attempt));
 
                 // Wait at most 30 seconds.
                 usleep(min($delay, 30_000_000));
             }
 
-            // 1 second base delay, plus 100 milliseconds doubling with each attempt.
+            // 1 second base delay, plus 100 milliseconds
+            // doubling with each attempt.
             backoff(1_000_000, 100_000, $attempt);
             PHP,
         after: <<<'PHP'
             use Time\Duration;
 
-            function backoff(Duration $baseDelay, Duration $step, int $attempt): void
-            {
+            function backoff(
+                Duration $baseDelay,
+                Duration $step,
+                int $attempt
+            ): void {
                 $delay = $baseDelay->add($step->multiplyBy(2 ** $attempt));
 
                 // Durations can be compared, so min() and max() work directly.
@@ -93,10 +100,18 @@ $comparisons = [
                 time_nanosleep($delay->seconds, $delay->nanoseconds);
             }
 
-            backoff(Duration::fromSeconds(1), Duration::fromMilliseconds(100), $attempt);
+            backoff(
+                Duration::fromSeconds(1),
+                Duration::fromMilliseconds(100),
+                $attempt,
+            );
 
             // Preconfigure the delays using Partial Function Application.
-            $waitBeforeRetry = backoff(Duration::fromSeconds(1), Duration::fromMilliseconds(100), ?);
+            $waitBeforeRetry = backoff(
+                Duration::fromSeconds(1),
+                Duration::fromMilliseconds(100),
+                attempt: ?,
+            );
             $waitBeforeRetry($attempt);
             PHP,
     ),
