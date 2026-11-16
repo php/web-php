@@ -196,6 +196,15 @@ check_status /imagick 200
 check_page_contains /apcu_add '<title>PHP: apcu_add - Manual</title>' "/apcu_add shows the page of apcu_add"
 check_status /strlen 200
 
+step "Shortcuts that only expand to a page are served in place, the others are redirected"
+# redirects.xml: a group marked serve="in-place" is an expansion (no redirect),
+# the old names and the shortcuts to an anchor keep their 301.
+check_status /intro 200
+check_page_contains /intro "lang=\"$LANGUAGE\"" "/intro is served in place, in $LANGUAGE"
+check_status /oop 200
+check_redirect /tut.php /manual/en/tutorial.php
+check_redirect /memory-limit /manual/en/ini.core.php#ini.memory-limit
+
 step "From the language manual to the extensions manual"
 # The PDO drivers have no page yet: their references wait for a wrapper book
 # in doc-extensions (see the comment at the end of its manual.xml). The links
