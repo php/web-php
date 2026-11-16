@@ -63,6 +63,7 @@ $comparisons = [
         description: message('duration_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/duration_class',
+            message('documentation', $lang) . "|/manual/$documentation/class.time-duration.php",
         ],
         before: '',
         after: <<<'PHP'
@@ -209,6 +210,7 @@ $comparisons = [
         description: message('clamp_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/clamp_v2',
+            message('documentation', $lang) . "|/manual/$documentation/function.clamp.php",
         ],
         before: <<<'PHP'
             var_dump(max(0, min(-10, 100)));
@@ -293,7 +295,7 @@ $comparisons = [
                  * @param string $query Terms to search
                  * @param int $limit Maximum number of results
                  */
-                function search(string $query, int $limit = 10): array
+                public function search(string $query, int $limit = 10): array
                 {
                     return [];
                 }
@@ -410,6 +412,7 @@ echo ReleasePage::getHeroSection(
     upgradeNow: message('upgrade_now', $lang),
     whatsNew: message('whats_new', $lang),
     released: message('released', $lang),
+    isReleaseAvailable: false,
 );
 ?>
     <!-- new features -->
@@ -564,6 +567,7 @@ echo ReleasePage::getPrefooter(
     title: message('footer_title', $lang),
     upgradeNow: message('upgrade_now', $lang),
     description: message('footer_description', $lang),
+    isReleaseAvailable: false,
 );
 
 site_footer(['footer' => false]);

@@ -2051,6 +2051,11 @@ footer p:where(.dark,.dark *) {
     overflow: hidden
 }
 
+.php85 #layout-content a.button-primary--disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
 @media (hover: hover) {
     .php85 #layout-content a.button-primary:hover {
         background-color: oklab(57.9656% .0459944 -.232052/.9)
@@ -2094,6 +2099,11 @@ footer p:where(.dark,.dark *) {
     display: inline-flex;
     position: relative;
     overflow: hidden
+}
+
+.php85 #layout-content a.button-secondary--disabled {
+    opacity: .7;
+    cursor: not-allowed;
 }
 
 @media (hover: hover) {
