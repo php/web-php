@@ -65,32 +65,39 @@ $comparisons = [
             'RFC|https://wiki.php.net/rfc/duration_class',
             message('documentation', $lang) . "|/manual/$documentation/class.time-duration.php",
         ],
-        before: '',
+        before: <<<'PHP'
+            /**
+             * All delays are in microseconds.
+             */
+            function backoff(int $baseDelay, int $step, int $attempt): void
+            {
+                $delay = $baseDelay + ($step * (2 ** $attempt));
+
+                // Wait at most 30 seconds.
+                usleep(min($delay, 30_000_000));
+            }
+
+            // 1 second base delay, plus 100 milliseconds doubling with each attempt.
+            backoff(1_000_000, 100_000, $attempt);
+            PHP,
         after: <<<'PHP'
             use Time\Duration;
 
-            $oneSecond = Duration::fromSeconds(1);
-            $halfSecond = $oneSecond->divideBy(2);
+            function backoff(Duration $baseDelay, Duration $step, int $attempt): void
+            {
+                $delay = $baseDelay->add($step->multiplyBy(2 ** $attempt));
 
-            $onePointFiveSeconds = $oneSecond->add($halfSecond);
+                // Durations can be compared, so min() and max() work directly.
+                $delay = min($delay, Duration::fromSeconds(30));
 
-            // Sleep for 1.5 seconds
-            time_nanosleep($onePointFiveSeconds->seconds, $onePointFiveSeconds->nanoseconds);
+                time_nanosleep($delay->seconds, $delay->nanoseconds);
+            }
 
-            $negativeHour = Duration::fromHours(1)->negate();
+            backoff(Duration::fromSeconds(1), Duration::fromMilliseconds(100), $attempt);
 
-            $durations = [
-                $oneSecond,
-                $negativeHour,
-                $onePointFiveSeconds,
-                $halfSecond,
-            ];
-
-            usort($durations, Duration::compare(...)); // Will sort to [-1h, 0.5s, 1s, 1.5s]
-
-            $baseDelay = Duration::fromMilliseconds(100);
-            $attempt = 5;
-            $delay = $baseDelay->multiplyBy(2 ** $attempt); // $delay is equal to 3.2 seconds
+            // Preconfigure the delays using Partial Function Application.
+            $waitBeforeRetry = backoff(Duration::fromSeconds(1), Duration::fromMilliseconds(100), ?);
+            $waitBeforeRetry($attempt);
             PHP,
     ),
     new FeatureComparison(
