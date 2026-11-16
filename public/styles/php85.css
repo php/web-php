@@ -528,6 +528,11 @@ a {
 @keyframes hero-orb-rotate-fwd { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
 @keyframes hero-orb-rotate-rev { from { transform: rotate(360deg) } to { transform: rotate(0deg) } }
 
+.hero-bg.paused .hero-orb,
+.hero-bg.paused .hero-orb div {
+    animation-play-state: paused
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero-orb,
     .hero-orb div {

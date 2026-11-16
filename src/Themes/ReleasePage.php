@@ -114,6 +114,14 @@ class ReleasePage
             </svg>
 
             <script>
+                // Pause the hero background animation while it is scrolled out of view.
+                const heroBg = document.querySelector('.hero-bg');
+                if (heroBg && 'IntersectionObserver' in window) {
+                    new IntersectionObserver(([entry]) => {
+                        heroBg.classList.toggle('paused', !entry.isIntersecting);
+                    }).observe(heroBg);
+                }
+
                 document.addEventListener('DOMContentLoaded', () => {
                     document.addEventListener('click', async (e) => {
                         const btn = e.target.closest('.js-copy-code');
