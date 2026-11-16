@@ -36,12 +36,11 @@ class ReleasePage
 
         return <<<HTML
         <section class="hero">
-            <video class="hero-bg hero-bg-light" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true" tabindex="-1">
-                <source src="/images/php8/hero-bg-light.webm" type="video/webm">
-            </video>
-            <video class="hero-bg hero-bg-dark" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true" tabindex="-1">
-                <source src="/images/php8/hero-bg-dark.webm" type="video/webm">
-            </video>
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-orb hero-orb-1-x"><div class="hero-orb-1-y"><div class="hero-orb-1-r"></div></div></div>
+                <div class="hero-orb hero-orb-2-x"><div class="hero-orb-2-y"><div class="hero-orb-2-r"></div></div></div>
+                <div class="hero-orb hero-orb-3-x"><div class="hero-orb-3-y"><div class="hero-orb-3-r"></div></div></div>
+            </div>
 
             <!-- hero background pattern -->
             <svg aria-hidden="true" class="hero-pattern">
