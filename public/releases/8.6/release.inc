@@ -94,7 +94,7 @@ $comparisons = [
             ): void {
                 $delay = $baseDelay->add($step->multiplyBy(2 ** $attempt));
 
-                // Durations can be compared, so min() and max() work directly.
+                // Durations are comparable, so min() works directly.
                 $delay = min($delay, Duration::fromSeconds(30));
 
                 time_nanosleep($delay->seconds, $delay->nanoseconds);
