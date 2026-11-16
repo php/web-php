@@ -627,6 +627,12 @@ a {
     }
 }
 
+.hero .release-unavailable-note {
+    margin-top: calc(var(--spacing) * 6);
+    margin-bottom: 0;
+    font-size: var(--text-sm);
+}
+
 .features {
     isolation: isolate;
     z-index: 10;
@@ -1633,6 +1639,12 @@ a {
     --tw-space-x-reverse: 0;
     margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
     margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)))
+}
+
+.cta-footer-content .release-unavailable-note {
+    margin-top: calc(var(--spacing) * -6);
+    margin-bottom: calc(var(--spacing) * 8);
+    font-size: var(--text-sm);
 }
 
 .cta-footer-content p {

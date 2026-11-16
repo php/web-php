@@ -10,7 +10,8 @@ return [
     'old_version' => 'PHP 8.5 and older',
     'badge_new' => 'NEW',
     'documentation' => 'Doc',
-    'released' => 'Released Nov 19, 2026',
+    'released' => 'Will be released on November 19, 2026',
+    'release_unavailable_reason' => 'PHP 8.6 has not been released yet. It will be released on November 19, 2026.',
     'key_features' => 'Key Features in PHP 8.6',
     'key_features_description' => '<p><strong>Faster</strong>, <strong>cleaner</strong>, and <strong>built for developers</strong>.</p>',
 
