@@ -36,16 +36,14 @@ class ReleasePage
 
         return <<<HTML
         <section class="hero">
-            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="hero-bg" aria-hidden="true">
-                <defs>
-                    <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><stop offset="0%" stop-color="rgba(210, 203, 255, 1)"></stop><stop offset="100%" stop-color="rgba(51, 63, 124, 0)"></stop></radialGradient>
-                    <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><stop offset="0%" stop-color="rgba(133, 109, 255, 1)"></stop><stop offset="100%" stop-color="rgba(51, 63, 124, 0)"></stop></radialGradient>
-                    <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><stop offset="0%" stop-color="rgba(210, 203, 255, 1)"></stop><stop offset="100%" stop-color="rgba(51, 63, 124, 0)"></stop></radialGradient>
-                </defs>
-                <g class="hero-orb-1-x"><g class="hero-orb-1-y"><rect width="100%" height="100%" fill="url(#Gradient1)" class="hero-orb-1-r"></rect></g></g>
-                <g class="hero-orb-2-x"><g class="hero-orb-2-y"><rect width="100%" height="100%" fill="url(#Gradient2)" class="hero-orb-2-r"></rect></g></g>
-                <g class="hero-orb-3-x"><g class="hero-orb-3-y"><rect width="100%" height="100%" fill="url(#Gradient3)" class="hero-orb-3-r"></rect></g></g>
-            </svg>
+            <video class="hero-bg hero-bg-light" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true" tabindex="-1">
+                <source src="/images/php8/hero-bg-light.webm" type="video/webm">
+                <source src="/images/php8/hero-bg-light.mp4" type="video/mp4">
+            </video>
+            <video class="hero-bg hero-bg-dark" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true" tabindex="-1">
+                <source src="/images/php8/hero-bg-dark.webm" type="video/webm">
+                <source src="/images/php8/hero-bg-dark.mp4" type="video/mp4">
+            </video>
 
             <!-- hero background pattern -->
             <svg aria-hidden="true" class="hero-pattern">
