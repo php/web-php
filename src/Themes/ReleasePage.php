@@ -32,8 +32,8 @@ class ReleasePage
         }
 
         $upgradeLink = $isReleaseAvailable ?
-            '<a href="/downloads.php" class="button-secondary">'. $upgradeNow . '</a>' :
-            '<a href="javascript:return false;" class="button-secondary button-secondary--disabled">'. $upgradeNow . '</a>';
+            '<a href="/downloads.php" class="button-secondary">' . $upgradeNow . '</a>' :
+            '<a href="javascript:return false;" class="button-secondary button-secondary--disabled">' . $upgradeNow . '</a>';
 
         if (!str_starts_with($subtitle, '<p>')) {
             $subtitle = '<p>' . $subtitle . '</p>';
@@ -80,8 +80,8 @@ class ReleasePage
         $footer = fancy_footer($extraCredit);
 
         $upgradeLink = $isReleaseAvailable ?
-            '<a href="/downloads.php" class="button-primary">'. $upgradeNow . '</a>' :
-            '<a href="javascript:return false;" class="button-primary button-primary--disabled">'. $upgradeNow . '</a>';
+            '<a href="/downloads.php" class="button-primary">' . $upgradeNow . '</a>' :
+            '<a href="javascript:return false;" class="button-primary button-primary--disabled">' . $upgradeNow . '</a>';
 
         return <<<HTML
             <section class="cta-footer">
