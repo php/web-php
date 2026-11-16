@@ -123,6 +123,7 @@ restore_extensions() {
 
 cleanup() {
     restore_extensions
+    rm -f "$SITE/public/manual/en/redirects.json"
     if [ "${SERVER_PID:-}" != "" ] && [ "$KEEP" != "1" ]; then
         kill "$SERVER_PID" 2>/dev/null || true
     fi
@@ -135,6 +136,9 @@ mkdir -p "$SITE/.build"
 step "Build the main manual without the extensions manual next to it (log: $BUILD_LOG)"
 hide_extensions
 run $PHP -d memory_limit=-1 "$ROOT/doc-base/configure.php" --with-lang=en
+# The English manual carries redirects.json, built from en/redirects.xml
+run $PHP -d memory_limit=-1 "$ROOT/phd/render.php" --docbook "$ROOT/doc-base/.manual.xml" \
+    --output="$ROOT/en/output" --package PHP --format php --lang en
 run $PHP -d memory_limit=-1 "$ROOT/doc-base/configure.php" --with-lang=$LANGUAGE
 run $PHP -d memory_limit=-1 "$ROOT/phd/render.php" --docbook "$ROOT/doc-base/.manual.xml" \
     --output="$ROOT/$LANGUAGE/output" --package PHP --format php --lang "$LANGUAGE"
@@ -150,6 +154,9 @@ ln -sfn "$ROOT/$LANGUAGE/output/php-web" "$SITE/public/manual/$LANGUAGE"
 ln -sfn "$ROOT/extensions/output/php-web" "$SITE/public/manual/extensions"
 find "$ROOT/extensions/output/php-web" -name '*.php' \
     -exec sed -i "s#https://www.php.net/manual/en/#$BASE/manual/$LANGUAGE/#g" {} +
+# public/manual/en holds a few pages of the repository: only the redirects of
+# the English manual are added to it, and removed at the end.
+cp "$ROOT/en/output/php-web/redirects.json" "$SITE/public/manual/en/redirects.json"
 echo "  $LANGUAGE         -> $ROOT/$LANGUAGE/output/php-web"
 echo "  extensions -> $ROOT/extensions/output/php-web"
 
