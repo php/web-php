@@ -205,12 +205,12 @@ $comparisons = [
             PHP,
     ),
     new FeatureComparison(
+    new FeatureComparison(
         id: 'clamp-function',
         title: message('clamp_title', $lang),
         description: message('clamp_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/clamp_v2',
-            message('documentation', $lang) . "|/manual/$documentation/function.clamp.php",
         ],
         before: <<<'PHP'
             var_dump(max(0, min(-10, 100)));
@@ -231,6 +231,15 @@ $comparisons = [
 
             var_dump(clamp(110, 0, 100));
             // int(100)
+            
+            // Any comparable value works with clamp(). This
+            // includes the new Duration class.
+            var_dump(clamp(
+                \Time\Duration::fromSeconds(30),
+                min: \Time\Duration::fromMinutes(1),
+                max: \Time\Duration::fromMinutes(10),
+            ));
+            // 60.0s
             PHP,
     ),
     new FeatureComparison(
