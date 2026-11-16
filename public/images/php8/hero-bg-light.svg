@@ -1,0 +1,23 @@
+<!-- Static frame of the previous animated PHP release page hero background. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+    <rect width="100" height="100" fill="#ffffff"/>
+    <g opacity=".35">
+        <defs>
+            <radialGradient id="hero-glow-1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+                <stop offset="0%" stop-color="rgba(210, 203, 255, 1)"/>
+                <stop offset="100%" stop-color="rgba(51, 63, 124, 0)"/>
+            </radialGradient>
+            <radialGradient id="hero-glow-2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+                <stop offset="0%" stop-color="rgba(133, 109, 255, 1)"/>
+                <stop offset="100%" stop-color="rgba(51, 63, 124, 0)"/>
+            </radialGradient>
+            <radialGradient id="hero-glow-3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
+                <stop offset="0%" stop-color="rgba(210, 203, 255, 1)"/>
+                <stop offset="100%" stop-color="rgba(51, 63, 124, 0)"/>
+            </radialGradient>
+        </defs>
+        <rect width="100" height="100" fill="url(#hero-glow-1)" transform="matrix(-0.900969 -0.433884 0.433884 -0.900969 88.354256 126.26644)"/>
+        <rect width="100" height="100" fill="url(#hero-glow-2)" transform="matrix(-0.5 0.866025 -0.866025 -0.5 101.996922 48.365396)"/>
+        <rect width="100" height="100" fill="url(#hero-glow-3)" transform="matrix(-0.939693 -0.34202 0.34202 -0.939693 87.883624 130.752304)"/>
+    </g>
+</svg>
