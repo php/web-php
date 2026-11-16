@@ -29,14 +29,14 @@ foreach($css_files as $filename) {
     if ($filename[0] !== '/') {
         $filename = "/styles/$filename";
     }
-    $path = dirname(__DIR__) . $filename;
+    $path = ProjectGlobals::getPublicRoot() . $filename;
     $CSS[$filename] = @filemtime($path);
 }
 
 $JS = [];
 if (isset($config["js_files"])) {
     foreach($config['js_files'] as $filename) {
-        $path = dirname(__DIR__) . '/' . $filename;
+        $path = ProjectGlobals::getPublicRoot() . '/' . $filename;
         $JS[$filename] = @filemtime($path);
     }
 }
