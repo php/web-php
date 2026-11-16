@@ -8,6 +8,7 @@ require_once __DIR__ . '/../../../include/prepend.inc';
 
 const LANGUAGES = [
     'en' => 'English',
+    'ru' => 'Русский',
 ];
 
 function common_header(string $description): void {
