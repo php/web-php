@@ -36,6 +36,7 @@ function common_header(string $description): void {
         'css' => ['php85.css'],
         'language_switcher' => $languages,
         'theme_switcher' => true,
+        'cache_control' => 60 * 60, // 1 hour
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
