@@ -107,7 +107,8 @@ $comparisons = [
                 $read = [$server, ...$clients];
                 $write = $except = null;
 
-                // Based on select(), which typically can't handle more than 1024 connections
+                // Based on select(), which typically can't handle
+                // more than 1024 connections
                 stream_select($read, $write, $except, null);
 
                 foreach ($read as $stream) {
@@ -119,7 +120,8 @@ $comparisons = [
                     $data = fread($stream, 8192);
 
                     if ($data === '' || $data === false) {
-                        unset($clients[array_search($stream, $clients, true)]);
+                        $key = array_search($stream, $clients, true);
+                        unset($clients[$key]);
                         fclose($stream);
                     } else {
                         fwrite($stream, $data);
@@ -142,7 +144,10 @@ $comparisons = [
 
                     if ($stream === $server) {
                         $client = stream_socket_accept($server);
-                        $poll->add(new StreamPollHandle($client), [Event::Read]);
+                        $poll->add(
+                            new StreamPollHandle($client),
+                            [Event::Read],
+                        );
                         continue;
                     }
 
@@ -182,11 +187,18 @@ $comparisons = [
             ]);
 
             try {
-                $config = file_get_contents('/etc/app/config.json', context: $context);
+                $config = file_get_contents(
+                    '/etc/app/config.json',
+                    context: $context,
+                );
             } catch (StreamException $e) {
                 foreach ($e->getErrors() as $error) {
                     // $error->code is a StreamErrorCode enum case
-                    log_error($error->code->name, $error->message, $error->wrapperName);
+                    log_error(
+                        $error->code->name,
+                        $error->message,
+                        $error->wrapperName,
+                    );
                 }
             }
             PHP,
@@ -281,7 +293,8 @@ $comparisons = [
                  * @param string $query Terms to search
                  * @param int $limit Maximum number of results
                  */
-                function search(string $query, int $limit = 10): array {
+                function search(string $query, int $limit = 10): array
+                {
                     return [];
                 }
             }
@@ -295,7 +308,7 @@ $comparisons = [
                 /**
                  * Returns up to $limit items matching the $query.
                  */
-                function search(
+                public function search(
                     /** Terms to search */
                     string $query,
 
@@ -307,7 +320,8 @@ $comparisons = [
             }
 
             var_dump(
-                new ReflectionParameter([DB::class, 'search'], 'query')->getDocComment()
+                new ReflectionParameter([DB::class, 'search'], 'query')
+                    ->getDocComment(),
             );
             // string(22) "/** Terms to search */"
             PHP,
@@ -335,7 +349,7 @@ $comparisons = [
                     "%s: isReadable=%s isWritable=%s\n",
                     $item,
                     $property->isReadable(null, $entry) ? 'yes' : 'no',
-                    $property->isWritable(null, $entry) ? 'yes' : 'no'
+                    $property->isWritable(null, $entry) ? 'yes' : 'no',
                 );
             }
             // title: isReadable=yes isWritable=yes
