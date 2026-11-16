@@ -15,7 +15,7 @@ return [
     'key_features' => 'Key Features in PHP 8.6',
     'key_features_description' => '<p><strong>Faster</strong>, <strong>cleaner</strong>, and <strong>built for developers</strong>.</p>',
 
-    'features_pfa_description' => '<p>Allows functions to be called with only a subset of the required parameters, deferring the passing of the remaining ones to a later time.</p>',
+    'features_pfa_description' => '<p>Allows some of a function\'s arguments to be provided in advance, returning a Closure that accepts the rest.</p>',
     'features_readonly_property_defaults_description' => '<p>Allows default values for instance readonly properties.</p>',
     'features_polling_api_description' => '<p>Scalable I/O multiplexing using epoll, kqueue, and other native mechanisms, available to event loop libraries like ReactPHP and AMPHP.</p>',
     'features_clamp_description' => '<p>Ensures that a given value (numeric or otherwise) falls within a specified range.</p>',
@@ -23,7 +23,7 @@ return [
     'features_sort_direction_description' => '<p>SortDirection is an enum with exactly two cases (Ascending and Descending) and no associated behavior.</p>',
 
     'pfa_title' => 'Partial Function Application',
-    'pfa_description' => 'Allows functions to be called with only a subset of the required parameters, deferring the passing of the remaining ones to a later time.',
+    'pfa_description' => 'Allows some of a function\'s arguments to be provided in advance, using <code>?</code> and <code>...</code> placeholders for the rest. The result is a Closure, and the function is only called once the remaining arguments are passed to it.',
     'readonly_property_defaults_title' => 'Readonly property defaults',
     'readonly_property_defaults_description' => 'Allows default values for instance readonly properties.',
     'polling_api_title' => 'Polling API',
