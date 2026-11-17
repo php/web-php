@@ -11,6 +11,8 @@ class ReleasePage
         string $upgradeNow,
         string $whatsNew = '',
         string $released = '',
+        bool $isReleaseAvailable = true,
+        string $unavailableReason = '',
     ): string {
         $releasedBadge = '';
         if ($released !== '') {
@@ -28,6 +30,15 @@ class ReleasePage
         $featuresLink = '';
         if ($whatsNew !== '') {
             $featuresLink = '<a href="#features" class="button-primary">' . $whatsNew . '</a>';
+        }
+
+        $upgradeLink = $isReleaseAvailable ?
+            '<a href="/downloads.php" class="button-secondary">' . $upgradeNow . '</a>' :
+            '<a href="javascript:return false;" class="button-secondary button-secondary--disabled" aria-disabled="true">' . $upgradeNow . '</a>';
+
+        $unavailableNote = '';
+        if (!$isReleaseAvailable && $unavailableReason !== '') {
+            $unavailableNote = '<p class="release-unavailable-note">' . $unavailableReason . '</p>';
         }
 
         if (!str_starts_with($subtitle, '<p>')) {
@@ -62,16 +73,26 @@ class ReleasePage
 
                 <div class="hero-actions">
                     $featuresLink
-                    <a href="/downloads.php" class="button-secondary">$upgradeNow</a>
+                    $upgradeLink
                 </div>
+                $unavailableNote
             </div>
         </section>
     HTML;
     }
 
-    public static function getPrefooter(string $title, string $upgradeNow, string $description, string $extraCredit = ''): string
+    public static function getPrefooter(string $title, string $upgradeNow, string $description, string $extraCredit = '', bool $isReleaseAvailable = true, string $unavailableReason = ''): string
     {
         $footer = fancy_footer($extraCredit);
+
+        $upgradeLink = $isReleaseAvailable ?
+            '<a href="/downloads.php" class="button-primary">' . $upgradeNow . '</a>' :
+            '<a href="javascript:return false;" class="button-primary button-primary--disabled" aria-disabled="true">' . $upgradeNow . '</a>';
+
+        $unavailableNote = '';
+        if (!$isReleaseAvailable && $unavailableReason !== '') {
+            $unavailableNote = '<p class="release-unavailable-note">' . $unavailableReason . '</p>';
+        }
 
         return <<<HTML
             <section class="cta-footer">
@@ -93,8 +114,10 @@ class ReleasePage
                     <h2>$title</h2>
 
                     <div class="cta-footer-button-container">
-                        <a href="/downloads.php" class="button-primary">$upgradeNow</a>
+                        $upgradeLink
                     </div>
+
+                    $unavailableNote
 
                     $description
                 </div>

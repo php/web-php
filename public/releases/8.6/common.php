@@ -1,0 +1,67 @@
+<?php
+
+declare(strict_types=1);
+
+namespace releases\php86;
+
+require_once __DIR__ . '/../../../include/prepend.inc';
+
+const LANGUAGES = [
+    'en' => 'English',
+    'ru' => 'Русский',
+];
+
+function common_header(string $description): void {
+    global $MYSITE, $lang;
+
+    $meta_image_url = \filter_var($MYSITE . 'images/php8/php_8_6_released.png', \FILTER_VALIDATE_URL);
+    $meta_image_path = $meta_image_url === false ? '' : \htmlspecialchars($meta_image_url);
+    $meta_description = \htmlspecialchars($description);
+
+    $languages = [];
+    foreach (LANGUAGES as $code => $text) {
+        $languages[] = ['name' => $text, 'selected' => $lang === $code, 'url' => '/releases/8.6/' . $code . '.php'];
+    }
+
+    \site_header("PHP 8.6 Release Announcement", [
+        'current' => 'php85',
+        'css' => ['php85.css'],
+        'language_switcher' => $languages,
+        'theme_switcher' => true,
+        'cache_control' => 60 * 60, // 1 hour
+        'meta_tags' => <<<META
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@official_php" />
+<meta name="twitter:title" content="PHP 8.6 Released" />
+<meta name="twitter:description" content="{$meta_description}" />
+<meta name="twitter:creator" content="@official_php" />
+<meta name="twitter:image:src" content="{$meta_image_path}" />
+
+<meta itemprop="name" content="PHP 8.6 Released" />
+<meta itemprop="description" content="{$meta_description}" />
+<meta itemprop="image" content="{$meta_image_path}" />
+
+<meta property="og:image" content="{$meta_image_path}" />
+<meta property="og:description" content="{$meta_description}" />
+META
+    ]);
+}
+
+/**
+ * @param array<int|string, string> $interpolations
+ */
+function message(string $code, string $language = 'en', array $interpolations = []): string
+{
+    $original = require __DIR__ . '/languages/en.php';
+    if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {
+        $translation = require __DIR__ . '/languages/' . $language . '.php';
+    }
+
+    $message = $translation[$code] ?? $original[$code] ?? $code;
+
+    foreach ($interpolations as $name => $value) {
+        $message = str_replace("{{$name}}", $value, $message);
+    }
+
+    return $message;
+}
