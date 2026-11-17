@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <filter id="paper">
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency=".86"
+      numOctaves="3"
+      stitchTiles="stitch"
+    />
+  </filter>
+  <path
+    fill="#000"
+    filter="url(#paper)"
+    opacity=".6"
+    d="M0 0h180v180H0z"
+  />
+</svg>

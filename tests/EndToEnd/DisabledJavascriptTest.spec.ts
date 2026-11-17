@@ -9,7 +9,8 @@ if (typeof httpHost !== 'string') {
 test.use({ javaScriptEnabled: false });
 
 test('search should fallback when javascript is disabled', async ({ page }) => {
-    await page.goto(httpHost);
+    // The homepage has no inline search field; classic pages keep one in the navbar
+    await page.goto(`${httpHost}/docs.php`);
     let searchInput = await page.getByRole('searchbox', { name: 'Search docs' });
     await searchInput.fill('strpos');
     await searchInput.press('Enter');
@@ -48,4 +49,12 @@ test('menu should fallback when javascript is disabled on mobile', async ({ brow
         .getByRole('link', { name: 'Menu' })
         .click();
     await expect(page).toHaveURL(`http://${httpHost}/menu.php`);
+});
+
+test('latest releases should open when javascript is disabled', async ({ page }) => {
+    await page.goto(httpHost);
+    const allNews = page.getByRole('link', { name: 'All news' });
+    await expect(allNews).toBeHidden();
+    await page.getByText('Latest releases').click();
+    await expect(allNews).toBeVisible();
 });

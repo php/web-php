@@ -471,6 +471,7 @@ function site_header(?string $title = NULL, array $config = []): void
         "meta-navigation" => [],
         'classes' => '',
         'layout_span' => 9,
+        'standalone' => false,
         "cache" => false,
         'cache_control' => false,
         "headsup" => "",

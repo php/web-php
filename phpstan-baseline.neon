@@ -1762,25 +1762,25 @@ parameters:
 			message: '#^Parameter \#1 \$object of function date_format expects DateTimeInterface, DateTime\|false given\.$#'
 			identifier: argument.type
 			count: 2
-			path: public/index.php
+			path: public/legacy-index.php
 
 		-
 			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, int\|false given\.$#'
 			identifier: argument.type
 			count: 1
-			path: public/index.php
+			path: public/legacy-index.php
 
 		-
 			message: '#^Variable \$CONF_TEASER might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
-			path: public/index.php
+			path: public/legacy-index.php
 
 		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 5
-			path: public/index.php
+			path: public/legacy-index.php
 
 		-
 			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, int\<0, max\>\|false given\.$#'

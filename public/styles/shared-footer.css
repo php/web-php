@@ -5,7 +5,8 @@
  * This is the vanilla-CSS counterpart to the Tailwind build in php85.css that
  * the release pages use. It is fully self-contained; every rule is scoped under
  * `.php-footer` so it can sit at the bottom of a classic php.net page without
- * leaking into, or inheriting from, the rest of that page's styles.
+ * leaking into, or inheriting from, the rest of that page's styles. The
+ * homepage gets a light theme at the end of the file.
  */
 
 .php-footer {
@@ -259,6 +260,57 @@
     }
 
     .php-footer .footer-links-container {
+        margin-top: 0;
+        grid-column: span 2 / span 2;
+    }
+}
+
+/* --- homepage ----------------------------------------------------------- */
+
+/*
+ * The homepage loads /styles/base.css and sits on its light "paper"
+ * background rather than the classic dark grey, so it gets a light footer
+ * built from base.css's tokens (which also flip for dark mode).
+ */
+.home-page .php-footer {
+    --footer-fg: var(--muted);
+    --footer-fg-strong: var(--ink);
+    --footer-accent: var(--brand);
+    --footer-accent-hover: var(--brand-strong);
+    --footer-border: var(--line);
+    background-color: var(--surface);
+}
+
+.dark .home-page .php-footer {
+    background-color: color-mix(in oklab, var(--draft) 30%, var(--paper));
+}
+
+.home-page .php-footer .button-primary {
+    color: #fff;
+}
+
+.dark .home-page .php-footer .button-primary {
+    color: var(--paper);
+}
+
+.home-page .php-footer .footer-container {
+    width: auto;
+    max-width: 80rem;
+    padding-inline: 1rem;
+}
+
+@media (min-width: 64rem) {
+    .home-page .php-footer .footer-container {
+        padding-inline: 3.5rem;
+    }
+
+    .home-page .php-footer .footer-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .home-page .php-footer .footer-links-container {
         margin-top: 0;
         grid-column: span 2 / span 2;
     }

@@ -7,6 +7,7 @@ $css_files = [
     '/fonts/Font-Awesome/css/fontello.css',
     '/styles/theme-base.css',
     '/styles/theme-medium.css',
+    '/styles/search-modal.css',
 ];
 
 if (isset($config['css'])) {
@@ -14,6 +15,11 @@ if (isset($config['css'])) {
 }
 if (isset($config["css_overwrite"])) {
     $css_files = $config["css_overwrite"];
+}
+
+// (Conditionally) load fonts to support base.css
+if (array_intersect(['base.css', '/styles/base.css'], $css_files)) {
+    array_unshift($css_files, '/fonts/Inter/inter.css', '/fonts/IBM-Plex-Mono/plex-mono.css');
 }
 
 // The fancy footer is the default for classic pages (see footer.inc); load its
@@ -143,6 +149,12 @@ if (!isset($config["languages"])) {
 <?php } ?>
 </head>
 <body class="<?php echo $curr; ?> <?php echo $classes; ?>">
+<?php
+// Standalone pages (the homepage) render their own navigation and layout.
+if ($config['standalone']) {
+    return;
+}
+?>
 
 <nav class="navbar navbar-fixed-top">
   <div class="navbar__inner">

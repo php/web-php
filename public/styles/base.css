@@ -1,0 +1,152 @@
+/*
+ * Design tokens, reset and utilities for the redesigned pages (currently the
+ * homepage, but viable to support the release pages as well once PHP 8.6 releases).
+ * Load it before the page's own stylesheet.
+ *
+ * Everything here is in a cascade layer, so any unlayered page rule wins over
+ * it. Dark mode is a `.dark` class on <html>; the tokens flip with it.
+ */
+
+@layer theme, base, components, utilities;
+
+/* --- Tokens ------------------------------------------------------------- */
+
+@layer theme {
+    :root {
+        color-scheme: light;
+        --font-sans: "InterVariable", "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        --paper: #fbfaf7;
+        --surface: #ffffff;
+        --ink: #292631;
+        --muted: #6f6a78;
+        --brand: #6b4cda;
+        --brand-strong: #573bb6;
+        --lavender: #eee9fa;
+        --soft: #f2f0ed;
+        --line: rgb(54 42 76 / 14%);
+        --grid: rgb(100 79 140 / 6%);
+        --draft: #b4a5d3;
+        --sage: #467361;
+        --peach: #f9e8df;
+        --mint: #ecf1e9;
+        --editor-canvas: #fdfcfe;
+        --editor-sidebar: #eae7ef;
+        --code-text: #393343;
+        --code-comment: #736a80;
+        --code-string: #39714c;
+        --code-keyword: #8150b0;
+        --code-function: #936022;
+        --code-type: #306e8c;
+        --code-gutter: #8b8295;
+    }
+
+    :root.dark {
+        color-scheme: dark;
+        --paper: #1b1922;
+        --surface: #22202b;
+        --ink: #eeebf4;
+        --muted: #b0aabf;
+        --brand: #b8a0f1;
+        --brand-strong: #cbb9fa;
+        --lavender: #282332;
+        --soft: #24212c;
+        --line: rgb(223 209 255 / 14%);
+        --grid: rgb(199 176 243 / 5%);
+        --draft: #6c5a8e;
+        --sage: #a1c7b3;
+        --peach: #29232a;
+        --mint: #202723;
+        --editor-canvas: #24212e;
+        --editor-sidebar: #1c1924;
+        --code-text: #e2dced;
+        --code-comment: #a59aac;
+        --code-string: #b9d7b3;
+        --code-keyword: #c5a6f5;
+        --code-function: #e6c397;
+        --code-type: #a6cce0;
+        --code-gutter: #81798f;
+    }
+}
+
+/* --- Reset ------------------------------------------------------------- */
+
+@layer base {
+    *, ::before, ::after, ::backdrop, ::file-selector-button {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0 solid;
+    }
+
+    html, :host {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        tab-size: 4;
+        font-family: var(--font-sans);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+        color: var(--ink);
+        background: var(--paper);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    hr { height: 0; color: inherit; border-top-width: 1px; }
+    abbr:where([title]) { text-decoration: underline dotted; }
+    h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+    a { color: inherit; text-decoration: inherit; }
+    b, strong { font-weight: bolder; }
+    code, kbd, samp, pre { font-family: var(--font-mono); font-size: 1em; }
+    small { font-size: 80%; }
+    sub, sup { position: relative; vertical-align: baseline; font-size: 75%; line-height: 0; }
+    sub { bottom: -.25em; }
+    sup { top: -.5em; }
+    table { text-indent: 0; border-color: inherit; border-collapse: collapse; }
+    :-moz-focusring { outline: auto; }
+    progress { vertical-align: baseline; }
+    summary { display: list-item; }
+    ol, ul, menu { list-style: none; }
+    img, svg, video, canvas, audio, iframe, embed, object { display: block; vertical-align: middle; }
+    img, video { max-width: 100%; height: auto; }
+
+    button, input, select, optgroup, textarea, ::file-selector-button {
+        font: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        opacity: 1;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    :where(select:is([multiple], [size])) optgroup { font-weight: bolder; }
+    :where(select:is([multiple], [size])) optgroup option { padding-inline-start: 20px; }
+    ::file-selector-button { margin-inline-end: 4px; }
+    button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button { appearance: button; }
+    [hidden]:where(:not([hidden="until-found"])) { display: none !important; }
+
+    ::selection { background: #d9c8fb; color: #292631; }
+    :focus-visible { outline: 2px solid var(--brand); outline-offset: 5px; }
+}
+
+/* --- Utilities ---------------------------------------------------------- */
+
+@layer utilities {
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}
