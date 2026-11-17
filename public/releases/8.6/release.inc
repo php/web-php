@@ -25,6 +25,7 @@ $comparisons = [
         description: message('pfa_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/partial_function_application_v2',
+            message('documentation', $lang) . "|/manual/$documentation/functions.partial-application.php",
         ],
         before: <<<'PHP'
             $versions = [
@@ -90,7 +91,7 @@ $comparisons = [
             function backoff(
                 Duration $baseDelay,
                 Duration $step,
-                int $attempt
+                int $attempt,
             ): void {
                 $delay = $baseDelay->add($step->multiplyBy(2 ** $attempt));
 
@@ -269,6 +270,7 @@ $comparisons = [
         description: message('sort_direction_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/sort_direction_enum',
+            message('documentation', $lang) . "|/manual/$documentation/enum.sortdirection.php",
         ],
         before: <<<'PHP'
             class QueryBuilder
