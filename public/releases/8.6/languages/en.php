@@ -58,7 +58,7 @@ return [
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_return_in_finally' => 'Using <code>return</code> inside a <code>finally</code> block is now deprecated, as it silently discards exceptions and overrides values returned from the <code>try</code> or <code>catch</code> block.',
-    'bc_constructor_return' => 'Returning a value from <code>__construct()</code> or <code>__destruct()</code> and making them generators is now deprecated. Declaring a nullable return type for <code>__debugInfo()</code> is also deprecated.',
+    'bc_constructor_return' => 'Returning a value from <code>__construct()</code> or <code>__destruct()</code> is now deprecated, as is making them generators. Declaring a nullable return type for <code>__debugInfo()</code> is also deprecated.',
     'bc_reserved_identifiers' => 'Using <code>let</code> or <code>is</code> as the name of a class, function, or constant is now deprecated. Using <code>_</code> as a constant name, <code>namespace</code> as a class constant name, or <code>readonly</code> as a function name is also deprecated.',
     'bc_mbregex' => 'The mbstring regular expression functions such as <code>mb_ereg()</code> and <code>mb_split()</code> have been deprecated, as the underlying Oniguruma library is no longer maintained. PCRE functions with the <code>u</code> modifier can be used instead.',
     'bc_type_aliases' => 'The <code>is_double()</code>, <code>is_long()</code>, <code>is_integer()</code>, and <code>doubleval()</code> aliases have been deprecated. Use <code>is_float()</code>, <code>is_int()</code>, and <code>floatval()</code> instead.',
