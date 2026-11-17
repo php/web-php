@@ -20,7 +20,7 @@ return [
     'features_polling_api_description' => '<p>Scalable I/O multiplexing using epoll, kqueue, and other native mechanisms, available to event loop libraries like ReactPHP and AMPHP.</p>',
     'features_clamp_description' => '<p>Ensures that a given value (numeric or otherwise) falls within a specified range.</p>',
     'features_duration_description' => '<p>The Duration class represents elapsed time as measured by a stopwatch.</p>',
-    'features_sort_direction_description' => '<p>A standard, type-safe way to express sort order, shared across libraries.</p>',
+    'features_sort_direction_description' => '<p>A standard, type-safe way to express sort order that can be shared across libraries.</p>',
 
     'pfa_title' => 'Partial Function Application',
     'pfa_description' => 'Allows some of a function\'s arguments to be provided in advance, using <code>?</code> and <code>...</code> placeholders for the rest. The result is a Closure, and the function is only called once the remaining arguments are passed to it.',
