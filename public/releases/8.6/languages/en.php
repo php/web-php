@@ -31,7 +31,7 @@ return [
     'clamp_title' => 'New <code>clamp()</code> function',
     'clamp_description' => 'Ensures that a given value (numeric or otherwise) falls within a specified range. Otherwise, the nearest boundary value is returned.',
     'duration_title' => 'New <code>\Time\Duration</code> class',
-    'duration_description' => 'The Duration class represents elapsed time as measured by a stopwatch. Its representation is independent of any time and timezone and allows to represent a range of more than 250 years with nanosecond precision. This makes it well-suited to represent timeouts or benchmark timings in an expressive way.',
+    'duration_description' => 'The Duration class represents elapsed time as measured by a stopwatch. Its representation is independent of any time and timezone and can represent a range of more than 250 years with nanosecond precision. This makes it well-suited to represent timeouts or benchmark timings in an expressive way.',
     'sort_direction_title' => 'New <code>SortDirection</code> enum',
     'sort_direction_description' => '<p>The <code>SortDirection</code> enum provides a shared, type-safe way to express sort order with its <code>Ascending</code> and <code>Descending</code> cases. Previously, every library had to define its own way of representing sort direction, resulting in a mix of incompatible integers, strings, booleans, and custom enums. Since <code>SortDirection</code> is built into PHP, libraries can accept it in their public APIs without needing adapter code.</p><p>Learn more about this feature in <a href="https://thephp.foundation/blog/2026/11/03/stdlib-investment/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
     'stream_error_handling_title' => 'Stream Error Handling',
