@@ -28,31 +28,17 @@ $comparisons = [
             message('documentation', $lang) . "|/manual/$documentation/functions.partial-application.php",
         ],
         before: <<<'PHP'
-            $versions = [
-                '8.4',
-                '8.5',
-                '8.6',
-                '8.7',
-                // …
-                '9.0',
-            ];
+            $versions = ['8.4', '8.5', '8.6', '8.7', '9.0'];
 
-            $supportsPartialFunctionApplication = array_filter(
+            $supported = array_filter(
                 $versions,
                 fn ($version) => version_compare($version, '8.6', '>='),
             );
             PHP,
         after: <<<'PHP'
-            $versions = [
-                '8.4',
-                '8.5',
-                '8.6',
-                '8.7',
-                // …
-                '9.0',
-            ];
+            $versions = ['8.4', '8.5', '8.6', '8.7', '9.0'];
 
-            $supportsPartialFunctionApplication = array_filter(
+            $supported = array_filter(
                 $versions,
                 version_compare(?, '8.6', '>='),
             );
@@ -275,40 +261,48 @@ $comparisons = [
         before: <<<'PHP'
             class QueryBuilder
             {
-                private int $sort;
+                private array $orderBy = [];
 
-                public function setSort(int $sort): void
-                {
-                    $this->sort = $sort;
-                }
-
-                private function getSortKeyword(): string
-                {
-                    return match($this->sort) {
+                public function orderBy(
+                    string $column,
+                    int $direction = SORT_ASC,
+                ): static {
+                    $this->orderBy[] = $column . ' ' . match ($direction) {
                         SORT_ASC => 'ASC',
                         SORT_DESC => 'DESC',
                     };
+
+                    return $this;
                 }
             }
+
+            $qb->orderBy('name', SORT_DESC);
+            $qb->orderBy('name', SORT_STRING);
+            // Accepted by the signature, then fails inside the method:
+            // UnhandledMatchError: Unhandled match case 2
             PHP,
         after: <<<'PHP'
             class QueryBuilder
             {
-                private SortDirection $sort;
+                private array $orderBy = [];
 
-                public function setSort(SortDirection $sort): void
-                {
-                    $this->sort = $sort;
-                }
-
-                private function getSortKeyword(): string
-                {
-                    return match($this->sort) {
+                public function orderBy(
+                    string $column,
+                    SortDirection $direction = SortDirection::Ascending,
+                ): static {
+                    $this->orderBy[] = $column . ' ' . match ($direction) {
                         SortDirection::Ascending => 'ASC',
                         SortDirection::Descending => 'DESC',
                     };
+
+                    return $this;
                 }
             }
+
+            $qb->orderBy('name', SortDirection::Descending);
+            $qb->orderBy('name', SORT_STRING);
+            // TypeError: QueryBuilder::orderBy(): Argument #2 ($direction)
+            // must be of type SortDirection, int given
             PHP,
     ),
     new FeatureComparison(
