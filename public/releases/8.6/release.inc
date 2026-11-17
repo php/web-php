@@ -219,6 +219,7 @@ $comparisons = [
         description: message('clamp_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/clamp_v2',
+            message('documentation', $lang) . "|/manual/$documentation/function.clamp.php",
         ],
         before: <<<'PHP'
             var_dump(max(0, min(-10, 100)));
