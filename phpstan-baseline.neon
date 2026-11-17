@@ -319,12 +319,6 @@ parameters:
 			path: include/header.inc
 
 		-
-			message: '#^Variable \$CSS might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: include/header.inc
-
-		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 9
