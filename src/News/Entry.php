@@ -111,7 +111,12 @@ class Entry
         $dom->preserveWhiteSpace = false;
         $item = $dom->createElementNs("http://www.w3.org/2005/Atom", "entry");
 
-        $href = self::WEBROOT . ($this->isConference() ? '/conferences/index.php' : '/index.php');
+        // Build the appropriate deep link depending on whether it's news, conference, or CFP
+        $href = self::WEBROOT . match (true) {
+            in_array('conferences', $this->categories, true) => '/conferences/index.php',
+            in_array('cfp', $this->categories, true) => '/conferences/index.php?view=cfps',
+            default => '/index.php',
+        };
         $archive = self::WEBROOT . "/archive/" . date('Y', $_SERVER['REQUEST_TIME']) . ".php#{$this->id}";
         $link = ($this->image['link'] ?? null) ?: $archive;
 

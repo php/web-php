@@ -13,9 +13,6 @@ $css_files = [
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
 }
-if (isset($config["css_overwrite"])) {
-    $css_files = $config["css_overwrite"];
-}
 
 // (Conditionally) load fonts to support base.css
 if (array_intersect(['base.css', '/styles/base.css'], $css_files)) {
@@ -35,14 +32,14 @@ foreach($css_files as $filename) {
     if ($filename[0] !== '/') {
         $filename = "/styles/$filename";
     }
-    $path = dirname(__DIR__) . $filename;
+    $path = ProjectGlobals::getPublicRoot() . $filename;
     $CSS[$filename] = @filemtime($path);
 }
 
 $JS = [];
 if (isset($config["js_files"])) {
     foreach($config['js_files'] as $filename) {
-        $path = dirname(__DIR__) . '/' . $filename;
+        $path = ProjectGlobals::getPublicRoot() . '/' . $filename;
         $JS[$filename] = @filemtime($path);
     }
 }
@@ -342,7 +339,7 @@ if ($config['standalone']) {
 <nav id="trick"><div><?php doc_toc("en") ?></div></nav>
 <div id="goto">
     <div class="search">
-         <div class="text"></div>
+         <input class="text" type="text" placeholder="Type to search this page" aria-label="Search this page" autocomplete="off" spellcheck="false">
          <div class="results"><ul></ul></div>
    </div>
 </div>

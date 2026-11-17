@@ -442,7 +442,8 @@ a {
     background-image: radial-gradient(at 50% 50%, var(--color-white), transparent 65%);
     padding-inline: calc(var(--spacing) * 4);
     text-align: center;
-    margin-inline: auto
+    margin-inline: auto;
+    width: 100%;
 }
 
 @media (min-width: 40rem) {
@@ -463,31 +464,48 @@ a {
 
 .hero .hero-bg {
     pointer-events: none;
-    top: calc(var(--spacing) * 0);
+    inset: 0;
     z-index: calc(10 * -1);
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition-property: opacity;
+    overflow: hidden;
     opacity: .35;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    container-type: size;
     -webkit-user-select: none;
     user-select: none;
     position: absolute
 }
 
-.hero-orb-1-x,
-.hero-orb-1-y,
-.hero-orb-1-r,
-.hero-orb-2-x,
-.hero-orb-2-y,
-.hero-orb-2-r,
-.hero-orb-3-x,
-.hero-orb-3-y,
+/*
+ * Each orb is a square the size of the larger hero dimension, centered in the hero
+ * (equivalent to an SVG viewBox with preserveAspectRatio="xMidYMid slice").
+ * The gradients are static images, so the browser only has to rasterize them once.
+ * The x/y/rotate animations are applied to nested HTML elements and only change
+ * transform, so they can run on the compositor instead of repainting every frame.
+ */
+.hero-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100cqw, 100cqh);
+    aspect-ratio: 1;
+    translate: -50% -50%
+}
+
+.hero-orb div {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%
+}
+
+.hero-orb-1-r {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><radialGradient id='g' cx='.5' cy='.5' fx='.00441602' fy='.5' r='.5'><stop offset='0' stop-color='rgba(210, 203, 255, 1)'/><stop offset='1' stop-color='rgba(51, 63, 124, 0)'/></radialGradient><rect width='100' height='100' fill='url(%23g)'/></svg>")
+}
+
+.hero-orb-2-r {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><radialGradient id='g' cx='.5' cy='.5' fx='.0268147' fy='.5' r='.5'><stop offset='0' stop-color='rgba(133, 109, 255, 1)'/><stop offset='1' stop-color='rgba(51, 63, 124, 0)'/></radialGradient><rect width='100' height='100' fill='url(%23g)'/></svg>")
+}
+
 .hero-orb-3-r {
-    transform-box: view-box;
-    transform-origin: 50% 50%
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><radialGradient id='g' cx='.5' cy='.5' fx='.00836536' fy='.5' r='.5'><stop offset='0' stop-color='rgba(210, 203, 255, 1)'/><stop offset='1' stop-color='rgba(51, 63, 124, 0)'/></radialGradient><rect width='100' height='100' fill='url(%23g)'/></svg>")
 }
 
 .hero-orb-1-x { animation: hero-orb1-x 10s linear infinite alternate }
@@ -510,6 +528,18 @@ a {
 @keyframes hero-orb3-y { from { transform: translateY(0%) } to { transform: translateY(25%) } }
 @keyframes hero-orb-rotate-fwd { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
 @keyframes hero-orb-rotate-rev { from { transform: rotate(360deg) } to { transform: rotate(0deg) } }
+
+.hero-bg.paused .hero-orb,
+.hero-bg.paused .hero-orb div {
+    animation-play-state: paused
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-orb,
+    .hero-orb div {
+        animation-play-state: paused
+    }
+}
 
 .hero-badge {
     margin-bottom: calc(var(--spacing) * 6);
@@ -569,7 +599,8 @@ a {
     margin-inline: auto;
     margin-bottom: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 12);
-    color: var(--color-gray-800)
+    color: var(--color-gray-800);
+    width: auto;
 }
 
 @media (min-width: 64rem) {
@@ -646,6 +677,12 @@ a {
     .hero-actions {
         flex-direction: row
     }
+}
+
+.hero .release-unavailable-note {
+    margin-top: calc(var(--spacing) * 6);
+    margin-bottom: 0;
+    font-size: var(--text-sm);
 }
 
 .features {
@@ -1073,7 +1110,7 @@ a {
 }
 
 .before-and-after-title-and-description h2 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
     font-weight: var(--font-weight-bold)
 }
@@ -1656,6 +1693,12 @@ a {
     margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)))
 }
 
+.cta-footer-content .release-unavailable-note {
+    margin-top: calc(var(--spacing) * -6);
+    margin-bottom: calc(var(--spacing) * 8);
+    font-size: var(--text-sm);
+}
+
 .cta-footer-content p {
     max-width: var(--container-2xl);
     --tw-leading: var(--leading-relaxed);
@@ -2072,6 +2115,11 @@ footer p:where(.dark,.dark *) {
     overflow: hidden
 }
 
+.php85 #layout-content a.button-primary--disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
 @media (hover: hover) {
     .php85 #layout-content a.button-primary:hover {
         background-color: oklab(57.9656% .0459944 -.232052/.9)
@@ -2115,6 +2163,11 @@ footer p:where(.dark,.dark *) {
     display: inline-flex;
     position: relative;
     overflow: hidden
+}
+
+.php85 #layout-content a.button-secondary--disabled {
+    opacity: .7;
+    cursor: not-allowed;
 }
 
 @media (hover: hover) {

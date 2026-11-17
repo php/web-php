@@ -21,7 +21,14 @@ Mousetrap.bind("?", function () {
 });
 Mousetrap.bind("esc", function () {
     $("#trick").slideUp();
-    $("#goto").slideUp();
+    $("#goto").slideUp(function () {
+        if ($(this).is(":visible")) {
+            return;
+        }
+
+        $("#goto .text").val("");
+        $("#goto .results ul").empty();
+    });
 
     $("html").off("keydown");
     $("html").off("keypress");
@@ -196,47 +203,35 @@ Mousetrap.bind("g s", function (e) {
 });
 
 function boogie(e, cb) {
-    cb($("#goto .text").text());
-    $("#goto .results a:first").focus();
+    e.preventDefault();
+    var searchInput = $("#goto .text");
+    cb(searchInput.val());
     $("#goto").slideToggle();
+    $("#goto").scrollTop(0);
+    searchInput[0].focus({ preventScroll: true });
+
+    searchInput.off("input.gotoSearch").on("input.gotoSearch", function () {
+        var txt = $(this).val().trim();
+        $("#goto .results ul").empty();
+        cb(txt);
+    });
 
     $("html").on("keydown", function (e) {
         switch (e.which || e.keyCode) {
-            case 8:
-                /* Backspace */
-                var txt = $("#goto .text").text();
-                txt = txt.substring(0, txt.length - 1);
-                $("#goto .text").text(txt);
-                $("#goto .results ul").empty();
-                cb(txt);
-                $("#goto .results a:first").focus();
-                e.preventDefault();
-                break;
             case 13:
                 /* Enter */
+                var firstResult = $("#goto .results a:first")[0];
+                if (firstResult) {
+                    firstResult.click();
+                }
                 Mousetrap.unpause();
                 Mousetrap.trigger('esc');
+                e.preventDefault();
                 return true;
-            case 9:
-                /* Tab */
-                $(document.activeElement).parent().next().first().focus();
-                break;
             case 27:
                 Mousetrap.unpause();
                 Mousetrap.trigger('esc');
         }
-    });
-    $("html").on("keypress", function (e) {
-        if (e.which == 13) {
-            return true;
-        }
-        e.preventDefault();
-        var letter = String.fromCharCode(e.which || e.keyCode);
-        $("#goto .text").append(letter);
-        var txt = $("#goto .text").text().trim();
-        $("#goto .results ul").empty();
-        cb(txt);
-        $("#goto .results a:first").focus();
     });
 
     Mousetrap.pause();
@@ -315,14 +310,6 @@ Mousetrap.bind("I space l o v e space P H P enter", function (e) {
 Mousetrap.bind("l o g o enter", function (e) {
     var time = new Date().getTime();
     $(".navbar__brand img").attr("src", "/images/logo.php?refresh&time=" + time);
-});
-Mousetrap.bind("u n r e a d a b l e enter", function (e) {
-    document.cookie = 'MD=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    location.reload(true);
-});
-Mousetrap.bind("r e a d a b l e enter", function (e) {
-    document.cookie = 'MD=1; path=/';
-    location.reload(true);
 });
 
 function fixTimeout() {

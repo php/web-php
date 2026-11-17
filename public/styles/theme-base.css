@@ -1307,29 +1307,95 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 #goto {
   display: none;
-  background-color: var(--dark-grey-color);
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
   position: fixed;
-  top: 64px;
+  inset: 0;
   z-index: 5000;
   color: #E6E6E6;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 0 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.65);
 }
-#goto .search .results {
-  text-shadow: 0 2px 3px #555;
-  font-size: 2rem;
-  line-height: 1;
+#goto div {
+  width: auto;
 }
-#goto .search .results :focus {
-  font-size: 2rem;
-  line-height: 1.2;
+#goto .search {
+  width: min(100%, 52rem);
+  margin: 0 auto;
+  padding: 0.625rem clamp(1rem, 3vw, 1.75rem) 1rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  background-color: var(--dark-grey-color);
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.35);
 }
 #goto .search .text {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
   color: #222;
-  text-shadow: 0 2px 3px #555;
-  font-size: 10rem;
-  line-height: .7;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+#goto .search .text::placeholder {
+  color: #777;
+  opacity: 1;
+}
+#goto .search .text:focus {
+  outline: none;
+  box-shadow: none;
+}
+#goto .search .results {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+#goto .search .results ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#goto .search .results ul:empty::before {
+  content: "No matching pages found";
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+#goto .search .text:placeholder-shown ~ .results ul:empty::before {
+  content: none;
+}
+#goto .search .results li + li {
+  margin-top: 0.25rem;
+}
+#goto .search .results a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  overflow-wrap: anywhere;
+  color: #E6E6E6;
+  text-decoration: none;
+  border-bottom: 0;
+  border-radius: 0.5rem;
+}
+#goto .search .results a:hover,
+#goto .search .results a:focus {
+  color: #fff;
+  outline: 2px solid rgba(255, 255, 255, 0.45);
+  outline-offset: -2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@media (min-width: 992px) {
+  #goto {
+    padding-top: 1rem;
+  }
+
+  #goto .search {
+    padding-top: 1.125rem;
+  }
 }
 #trick {
     display: none;
