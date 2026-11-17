@@ -442,8 +442,6 @@ echo ReleasePage::getHeroSection(
     upgradeNow: message('upgrade_now', $lang),
     whatsNew: message('whats_new', $lang),
     released: message('released', $lang),
-    isReleaseAvailable: false,
-    unavailableReason: message('release_unavailable_reason', $lang),
 );
 ?>
     <!-- new features -->
@@ -598,8 +596,6 @@ echo ReleasePage::getPrefooter(
     title: message('footer_title', $lang),
     upgradeNow: message('upgrade_now', $lang),
     description: message('footer_description', $lang),
-    isReleaseAvailable: false,
-    unavailableReason: message('release_unavailable_reason', $lang),
 );
 
 site_footer(['footer' => false]);
