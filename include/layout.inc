@@ -564,10 +564,10 @@ function get_nav_items(): array {
       id: 'help',
     ),
     new NavItem(
-      name: 'PHP 8.6',
-      href: '/releases/8.6/index.php',
+      name: 'PHP 8.5',
+      href: '/releases/8.5/index.php',
       id: 'php8',
-      image: '/images/php8/logo_php8_6.svg',
+      image: '/images/php8/logo_php8_5.svg',
     )
   ];
 }
