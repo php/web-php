@@ -1,12 +1,12 @@
 <?php
 
 /**
- * En-revision: 48763b34d11ec37d8ec281078b73dc355744b165
+ * En-revision: 1a3d49c51619f269dad740c001575a8a56a31a6a
  */
 
 return [
     'common_header' => 'PHP 8.6 is een omvangrijke update van de PHP programmeertaal, met nieuwe functionaliteit zoals Partial Function Application, een nieuwe Duration-class, een Polling API en een nieuwe clamp()-functie',
-    'main_title' => 'Slimmer, sneller, gebouwd voor morgen.',
+    'main_title' => 'Sneller, veiliger, krachtiger.',
     'main_subtitle' => '<p><strong>PHP 8.6 is een omvangrijke update van de PHP programmeertaal</strong>, met nieuwe functionaliteit zoals <strong>Partial Function Application</strong>, een nieuwe <strong>Duration</strong>-class, een <strong>Polling API</strong> en een nieuwe <strong>clamp()</strong>-functie</p>',
 
     'whats_new' => 'Wat is er nieuw in 8.6',
@@ -17,7 +17,7 @@ return [
     'released' => 'Wordt uitgebracht op 19 november 2026',
     'release_unavailable_reason' => 'PHP 8.6 is nog niet uitgebracht. De release volgt op 19 november 2026.',
     'key_features' => 'Belangrijkste functionaliteit in PHP 8.6',
-    'key_features_description' => '<p><strong>Sneller</strong>, <strong>overzichtelijker</strong> en <strong>gebouwd voor ontwikkelaars</strong>.</p>',
+    'key_features_description' => '<p><strong>Expressievere code</strong>, <strong>sterkere types</strong> en <strong>schaalbare I/O</strong>.</p>',
 
     'features_pfa_description' => '<p>Maakt het mogelijk om een deel van de argumenten van een functie vooraf op te geven; het resultaat is een Closure die de overige argumenten accepteert.</p>',
     'features_readonly_property_defaults_description' => '<p>Readonly eigenschappen kunnen nu een standaardwaarde declareren, zodat vaste waarden niet langer in de constructor toegewezen hoeven te worden.</p>',
