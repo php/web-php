@@ -6,7 +6,7 @@
 
 return [
     'common_header' => 'PHP 8.6 是 PHP 语言的一次重大更新，新增了 Partial Function Application、Duration 类、Polling API 和 clamp() 函数等功能。',
-    'main_title' => '更智能、更快速，为未来而生。',
+    'main_title' => '更快速、更安全、更强大。',
     'main_subtitle' => '<p><strong>PHP 8.6 是 PHP 语言的一次重大更新</strong>，新增了 <strong>Partial Function Application</strong>、<strong>Duration</strong> 类、<strong>Polling API</strong> 和 <strong>clamp()</strong> 函数等功能。</p>',
 
     'whats_new' => '8.6 中的新特性',
@@ -17,7 +17,7 @@ return [
     'released' => '将于 2026 年 11 月 19 日发布',
     'release_unavailable_reason' => 'PHP 8.6 尚未发布，将于 2026 年 11 月 19 日发布。',
     'key_features' => 'PHP 8.6 的主要特性',
-    'key_features_description' => '<p><strong>更快</strong>、<strong>更简洁</strong>、<strong>为开发者而生</strong>。</p>',
+    'key_features_description' => '<p><strong>更具表达力的代码</strong>、<strong>更严格的类型</strong>、<strong>可扩展的 I/O</strong>。</p>',
 
     'features_pfa_description' => '<p>允许预先提供函数的部分参数，并返回一个接收其余参数的 Closure。</p>',
     'features_readonly_property_defaults_description' => '<p>允许为 readonly 属性声明默认值，无需再在构造函数中为其赋予固定值。</p>',

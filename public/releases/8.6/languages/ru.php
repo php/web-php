@@ -6,7 +6,7 @@
 
 return [
     'common_header' => 'PHP 8.6 — большое обновление языка PHP с новыми возможностями, включая частичное применение функций, новый класс Duration, Polling API и новую функцию clamp()',
-    'main_title' => 'Лучше, быстрее, надолго',
+    'main_title' => 'Быстрее, безопаснее, мощнее',
     'main_subtitle' => '<p><strong>PHP 8.6 — большое обновление языка PHP</strong>. Оно содержит новые возможности, включая <strong>частичное применение функций</strong>, новый класс <strong>Duration</strong>, <strong>Polling API</strong> и новую функцию <strong>clamp()</strong>.</p>',
 
     'whats_new' => 'Что нового в 8.6',
@@ -17,7 +17,7 @@ return [
     'released' => 'Будет выпущен 19 ноября 2026',
     'release_unavailable_reason' => 'PHP 8.6 ещё не выпущен. Релиз запланирован на 19 ноября 2026 года.',
     'key_features' => 'Основные возможности PHP 8.6',
-    'key_features_description' => '<p><strong>Быстрее</strong>, <strong>лучше</strong>, <strong>доступнее для разработчиков</strong>.</p>',
+    'key_features_description' => '<p><strong>Более выразительный код</strong>, <strong>более строгие типы</strong> и <strong>масштабируемый ввод-вывод</strong>.</p>',
 
     'features_pfa_description' => '<p>Позволяет заранее передать часть аргументов функции, возвращая замыкание (Closure), которое принимает остальные.</p>',
     'features_readonly_property_defaults_description' => '<p>Позволяет readonly-свойствам объявлять значения по умолчанию, поэтому фиксированные значения больше не нужно присваивать в конструкторе.</p>',
