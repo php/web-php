@@ -1254,7 +1254,7 @@
     width: 3rem;
     height: 1rem;
     justify-content: center;
-    color: color-mix(in srgb, var(--muted) 60%, transparent);
+    color: var(--muted);
 }
 
 .history__mark--major { height: 2.5rem; }
@@ -1338,8 +1338,11 @@
     font-family: var(--font-mono);
     font-size: .625rem;
     font-variant-numeric: tabular-nums;
-    color: color-mix(in srgb, var(--muted) 45%, transparent);
+    /* As faint as they can be and still meet 4.5:1 contrast */
+    color: color-mix(in srgb, var(--muted) 95%, transparent);
 }
+
+.dark .history__years { color: color-mix(in srgb, var(--muted) 75%, transparent); }
 
 .history__years span {
     position: absolute;
