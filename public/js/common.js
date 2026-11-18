@@ -837,30 +837,32 @@ function getLanguage() {
     });
 })(jQuery);
 
-const savedTheme = localStorage.theme || 'system';
 const darkSchemeQuery = matchMedia('(prefers-color-scheme: dark)');
-const isDark = savedTheme === 'dark' || (savedTheme === 'system' && darkSchemeQuery.matches);
 
-if (isDark) document.documentElement.classList.add('dark');
+function getSystemTheme() {
+    return darkSchemeQuery.matches ? 'dark' : 'light';
+}
 
-const themeOrder = ['light', 'dark', 'system'];
+function getSavedTheme() {
+    return localStorage.theme || 'system';
+}
+
+const themeIcons = ['light', 'dark', 'system'];
 
 const btn = document.querySelector('button.js-theme-switcher');
 
 btn?.addEventListener('click', () => {
-    const current = localStorage.theme || 'system';
-    const nextIndex = (themeOrder.indexOf(current) + 1) % themeOrder.length;
-    const newTheme = themeOrder[nextIndex];
+    // Switch to the opposite of the displayed theme, using "system"
+    // when the new theme matches the system theme
+    const savedTheme = getSavedTheme();
+    const displayedTheme = savedTheme === 'system' ? getSystemTheme() : savedTheme;
+    const oppositeTheme = displayedTheme === 'dark' ? 'light' : 'dark';
+    const newTheme = oppositeTheme === getSystemTheme() ? 'system' : oppositeTheme;
     localStorage.theme = newTheme;
     applyTheme(newTheme);
 });
 
-darkSchemeQuery.addEventListener('change', () => {
-    const current = localStorage.theme || 'system';
-    if (current === 'system') {
-        applyTheme(current);
-    }
-});
+darkSchemeQuery.addEventListener('change', () => applyTheme(getSavedTheme()));
 
 function applyTheme(theme) {
     const isDark = theme === 'dark' || (theme === 'system' && darkSchemeQuery.matches);
@@ -868,10 +870,10 @@ function applyTheme(theme) {
     document.documentElement.classList.toggle('dark', isDark);
 
     const icons = [btn?.querySelector('svg:nth-of-type(1)'), btn?.querySelector('svg:nth-of-type(2)'), btn?.querySelector('svg:nth-of-type(3)')];
-    icons.forEach((icon, i) => icon?.classList.toggle('hidden', themeOrder[i] !== theme));
+    icons.forEach((icon, i) => icon?.classList.toggle('hidden', themeIcons[i] !== theme));
 }
 
-applyTheme(savedTheme)
+applyTheme(getSavedTheme());
 
 const downloads = document.querySelector('.downloads');
 downloads?.addEventListener('click', function (event) {
