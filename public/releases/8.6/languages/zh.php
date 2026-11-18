@@ -7,7 +7,7 @@
 return [
     'common_header' => 'PHP 8.6 是 PHP 语言的一次重大更新，新增了 Partial Function Application、Duration 类、Polling API 和 clamp() 函数等功能。',
     'main_title' => '更智能、更快速，为未来而生。',
-    'main_subtitle' => '<p xmlns="http://www.w3.org/1999/html"><strong>PHP 8.6 是 PHP 语言的一次重大更新</strong>，新增了 <strong>Partial Function Application</strong>、<strong>Duration</strong> 类、<strong>Polling API</strong> 和 <strong>clamp()</strong> 函数等功能。</p>',
+    'main_subtitle' => '<p><strong>PHP 8.6 是 PHP 语言的一次重大更新</strong>，新增了 <strong>Partial Function Application</strong>、<strong>Duration</strong> 类、<strong>Polling API</strong> 和 <strong>clamp()</strong> 函数等功能。</p>',
 
     'whats_new' => '8.6 中的新特性',
     'upgrade_now' => '升级到 PHP 8.6',
