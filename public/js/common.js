@@ -838,8 +838,8 @@ function getLanguage() {
 })(jQuery);
 
 const savedTheme = localStorage.theme || 'system';
-const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
-const isDark = savedTheme === 'dark' || (savedTheme === 'system' && prefersDark);
+const darkSchemeQuery = matchMedia('(prefers-color-scheme: dark)');
+const isDark = savedTheme === 'dark' || (savedTheme === 'system' && darkSchemeQuery.matches);
 
 if (isDark) document.documentElement.classList.add('dark');
 
@@ -855,9 +855,15 @@ btn?.addEventListener('click', () => {
     applyTheme(newTheme);
 });
 
+darkSchemeQuery.addEventListener('change', () => {
+    const current = localStorage.theme || 'system';
+    if (current === 'system') {
+        applyTheme(current);
+    }
+});
+
 function applyTheme(theme) {
-    const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDark = theme === 'dark' || (theme === 'system' && prefersDark);
+    const isDark = theme === 'dark' || (theme === 'system' && darkSchemeQuery.matches);
 
     document.documentElement.classList.toggle('dark', isDark);
 
