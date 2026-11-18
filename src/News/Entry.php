@@ -122,8 +122,8 @@ class Entry
 
         self::ce($dom, "title", $this->title, [], $item);
         self::ce($dom, "id", $archive, [], $item);
-        self::ce($dom, "published", date(DATE_ATOM), [], $item);
-        self::ce($dom, "updated", date(DATE_ATOM), [], $item);
+        self::ce($dom, "published", date(DATE_ATOM, $_SERVER['REQUEST_TIME']), [], $item);
+        self::ce($dom, "updated", date(DATE_ATOM, $_SERVER['REQUEST_TIME']), [], $item);
         self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel" => "alternate", "type" => "text/html"], $item);
         self::ce($dom, "link", null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
 
