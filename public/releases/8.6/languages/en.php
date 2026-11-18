@@ -3,7 +3,7 @@
 return [
     'common_header' => 'PHP 8.6 is a major update of the PHP language, with new features including Partial Function Application, a new Duration class, a Polling API, and a new clamp() function',
     'main_title' => 'Smarter, Faster, Built for Tomorrow.',
-    'main_subtitle' => '<p xmlns="http://www.w3.org/1999/html"><strong>PHP 8.6 is a major update of the PHP language</strong>, with new features including <strong>Partial Function Application</strong>, a new <strong>Duration</strong> class, a <strong>Polling API</strong>, and a new <strong>clamp()</strong> function</p>',
+    'main_subtitle' => '<p><strong>PHP 8.6 is a major update of the PHP language</strong>, with new features including <strong>Partial Function Application</strong>, a new <strong>Duration</strong> class, a <strong>Polling API</strong>, and a new <strong>clamp()</strong> function</p>',
 
     'whats_new' => 'What\'s new in 8.6',
     'upgrade_now' => 'Upgrade to PHP 8.6',
