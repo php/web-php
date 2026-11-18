@@ -471,7 +471,9 @@ function site_header(?string $title = NULL, array $config = []): void
         "meta-navigation" => [],
         'classes' => '',
         'layout_span' => 9,
-        'standalone' => false,
+        // 'classic', or '2026' for the redesigned pages (the homepage and the
+        // release pages), which use the new header and their own layout.
+        'design' => 'classic',
         "cache" => false,
         'cache_control' => false,
         "headsup" => "",
@@ -497,6 +499,7 @@ META
     ];
 
     $config = array_merge($defaults, $config);
+    site_design($config['design']);
 
     $config["headsup"] = get_news_changes();
 
@@ -511,6 +514,21 @@ META
 
     require __DIR__ . "/header.inc";
 }
+/**
+ * The design the current page uses ('classic' or '2026'). site_header() sets
+ * it, so site_footer() can match.
+ */
+function site_design(?string $design = null): string
+{
+    static $current = 'classic';
+
+    if ($design !== null) {
+        $current = $design;
+    }
+
+    return $current;
+}
+
 function site_footer(array $config = []): void
 {
     require __DIR__ . "/footer.inc";

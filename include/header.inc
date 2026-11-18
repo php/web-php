@@ -2,7 +2,15 @@
 
 use phpweb\ProjectGlobals;
 
-$css_files = [
+// The 2026 design (see site_header()) brings its own shared stylesheets and
+// scripts instead of the classic ones; pages add theirs via 'css' and 'js_files'.
+$is2026Design = site_design() === '2026';
+
+$css_files = $is2026Design ? [
+    '/styles/base.css',
+    '/styles/components.css',
+    '/styles/search-modal.css',
+] : [
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
     '/styles/theme-base.css',
@@ -12,10 +20,6 @@ $css_files = [
 
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
-}
-// Standalone pages (the homepage) replace the classic stylesheets entirely.
-if (isset($config["css_overwrite"])) {
-    $css_files = $config["css_overwrite"];
 }
 
 // (Conditionally) load fonts to support base.css
@@ -37,12 +41,18 @@ foreach($css_files as $filename) {
     $CSS[$filename] = @filemtime($path);
 }
 
+$js_files = array_merge($is2026Design ? [
+    'js/ext/FuzzySearch.min.js',
+    'js/search.js',
+    'js/keyboard.js',
+    'js/site-header.js',
+    'js/copy-code.js',
+] : [], $config['js_files'] ?? []);
+
 $JS = [];
-if (isset($config["js_files"])) {
-    foreach($config['js_files'] as $filename) {
-        $path = ProjectGlobals::getPublicRoot() . '/' . $filename;
-        $JS[$filename] = @filemtime($path);
-    }
+foreach($js_files as $filename) {
+    $path = ProjectGlobals::getPublicRoot() . '/' . $filename;
+    $JS[$filename] = @filemtime($path);
 }
 
 if (isset($shortname) && $shortname) {
@@ -146,10 +156,11 @@ if (!isset($config["languages"])) {
 <!-- End Matomo Code -->
 <?php } ?>
 </head>
-<body class="<?php echo $curr; ?> <?php echo $classes; ?>">
+<body class="<?php echo $curr; ?> <?php echo $classes; ?><?= $is2026Design ? ' design-2026' : '' ?>">
 <?php
-// Standalone pages (the homepage) render their own navigation and layout.
-if ($config['standalone']) {
+// 2026 design pages get the new header and render their own layout.
+if ($is2026Design) {
+    require __DIR__ . '/site-header.inc';
     return;
 }
 ?>

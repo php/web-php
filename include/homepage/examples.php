@@ -2,7 +2,7 @@
 
 /*
  * Code examples shown in the homepage editor. `code`, `command` and `output`
- * are pre-highlighted HTML; the tok-* classes are styled in /styles/homepage.css.
+ * are pre-highlighted HTML; the tok-* classes are styled in /styles/components.css.
  */
 return [
     'controller' => [

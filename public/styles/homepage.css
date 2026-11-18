@@ -1,8 +1,9 @@
 /*
  * Homepage (public/index.php).
  *
- * Loaded after /styles/base.css, which provides the design tokens, the reset
- * and .sr-only. This file holds the homepage's own tokens and layout.
+ * Loaded after /styles/base.css (design tokens, reset, .sr-only) and
+ * /styles/components.css (header, buttons and other shared components). This
+ * file holds the homepage's own tokens and layout.
  */
 
 /* --- Tokens ------------------------------------------------------------- */
@@ -19,55 +20,9 @@
     --badge-shadow: none;
 }
 
-/* --- Page defaults ------------------------------------------------------ */
-
-html { scroll-padding-top: 2rem; }
-strong { font-weight: 600; }
-button { cursor: pointer; }
-
-.skip-link:not(:focus) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-}
-
-.skip-link:focus {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 50;
-    padding: .75rem 1rem;
-    border-radius: .5rem;
-    background: var(--surface);
-}
-
 /* --- Building blocks ----------------------------------------------------- */
 
 .home-page { isolation: isolate; }
-
-.container {
-    max-width: 1280px;
-    margin-inline: auto;
-    padding-inline: 1.25rem;
-}
-
-.icon {
-    width: 1rem;
-    height: 1rem;
-    flex-shrink: 0;
-    fill: currentColor;
-}
-
-.status-dot {
-    width: .375rem;
-    height: .375rem;
-    flex-shrink: 0;
-    border-radius: 9999px;
-    background: var(--sage);
-}
 
 .section { padding-block: 5rem; }
 .section--tinted { background: color-mix(in srgb, var(--lavender) 35%, transparent); }
@@ -148,44 +103,6 @@ button { cursor: pointer; }
     stroke-width: 1.5;
     stroke-linecap: round;
 }
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.25rem;
-    padding: 1rem 1.5rem;
-    border-radius: .75rem;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-}
-
-.button--primary {
-    background: var(--brand);
-    color: #fff;
-    box-shadow: inset 0 1px 0 #ffffff30;
-}
-
-.button--primary:hover { background: var(--brand-strong); }
-.dark .button--primary { color: var(--paper); box-shadow: none; }
-
-.button--soft {
-    border: 1px solid color-mix(in srgb, var(--brand) 20%, transparent);
-    background: var(--lavender);
-    color: var(--brand);
-}
-
-.button--soft:hover { background: color-mix(in srgb, var(--brand) 15%, transparent); }
-
-.text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: .75rem;
-}
-
-.text-link:hover { color: var(--brand); }
-.text-link--brand { color: var(--brand); }
 
 .link-row {
     display: flex;
@@ -287,127 +204,6 @@ button { cursor: pointer; }
     opacity: .035;
     background-image: url("/images/homepage/paper-grain.svg");
     background-size: 180px 180px;
-}
-
-/* --- Header --------------------------------------------------------------- */
-
-.site-header {
-    position: relative;
-    z-index: 20;
-    max-width: 1280px;
-    margin-inline: auto;
-    border: 1px solid var(--line);
-    border-top: 0;
-    background: color-mix(in srgb, var(--paper) 90%, transparent);
-}
-
-.site-header__bar {
-    display: flex;
-    height: 5.5rem;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 1.25rem;
-}
-
-.site-header__brand {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-.site-header__logo {
-    width: 4.5rem;
-    height: 2.25rem;
-    fill: currentColor;
-}
-
-.release-pill {
-    display: none;
-    align-items: center;
-    gap: .5rem;
-    padding: .375rem .5rem .375rem .75rem;
-    border: 1px solid color-mix(in srgb, var(--brand) 15%, transparent);
-    border-radius: 9999px;
-    background: color-mix(in srgb, var(--lavender) 70%, transparent);
-    color: var(--brand);
-    font-size: .75rem;
-    line-height: 1rem;
-    font-weight: 500;
-}
-
-.release-pill:hover { background: var(--lavender); }
-
-.site-header__nav {
-    display: none;
-    align-items: center;
-    gap: 2.25rem;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-}
-
-.site-header__nav a:hover { color: var(--brand); }
-
-.site-header__actions {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-
-.icon-button {
-    display: flex;
-    width: 2.5rem;
-    height: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--line);
-    border-radius: .5rem;
-    background: var(--surface);
-    color: var(--ink);
-}
-
-.icon-button:hover { background: var(--lavender); }
-
-.icon-button__icon {
-    width: 1.25rem;
-    height: 1.25rem;
-}
-
-.theme-icon, .menu-icon {
-    fill: none;
-    stroke: var(--ink);
-}
-
-.theme-icon,
-.menu-icon--close,
-[aria-expanded="true"] > .menu-icon--open {
-    display: none;
-}
-
-[aria-expanded="true"] > .menu-icon--close,
-[data-theme="light"] > .theme-icon--light,
-[data-theme="dark"] > .theme-icon--dark,
-[data-theme="system"] > .theme-icon--system {
-    display: block;
-}
-
-.mobile-menu {
-    padding: .75rem 1.25rem;
-    border-top: 1px solid var(--line);
-    font-size: .875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-}
-
-.mobile-menu a {
-    display: block;
-    padding: .75rem;
-    border-radius: .5rem;
-}
-
-.mobile-menu a:hover {
-    background: var(--lavender);
-    color: var(--brand);
 }
 
 /* --- Hero ----------------------------------------------------------------- */
@@ -589,13 +385,8 @@ button { cursor: pointer; }
 
 .releases-panel__news-all:hover { color: var(--brand-strong); }
 
-.releases[open] .releases-panel { animation: releases-reveal .22s ease-out both; }
+.releases[open] .releases-panel { animation: reveal .22s ease-out both; }
 .draft-enter { animation: draft-arrive 1.4s ease-out both; }
-
-@keyframes releases-reveal {
-    from { opacity: 0; transform: translateY(-6px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 @keyframes draft-arrive {
     from { opacity: 0; transform: translateY(8px); }
@@ -877,11 +668,6 @@ button { cursor: pointer; }
     color: var(--ink);
 }
 
-/* homepage.js sets data-copied for a moment after a successful copy. */
-.copy-button__icon--done,
-.copy-button[data-copied] .copy-button__icon--copy { display: none; }
-.copy-button[data-copied] .copy-button__icon--done { display: block; }
-
 /* Enlarge the tap target on touch screens. */
 .copy-button::before {
     content: "";
@@ -964,15 +750,6 @@ button { cursor: pointer; }
     color: var(--brand);
     user-select: none;
 }
-
-/* Syntax highlighting tokens (include/homepage/examples.php). */
-.tok-text { color: var(--code-text); }
-.tok-comment { color: var(--code-comment); }
-.tok-string { color: var(--code-string); }
-.tok-keyword { color: var(--code-keyword); }
-.tok-function { color: var(--code-function); }
-.tok-type { color: var(--code-type); }
-.tok-italic { font-style: italic; }
 
 /* --- Ecosystem ----------------------------------------------------------------- */
 
@@ -1576,37 +1353,9 @@ button { cursor: pointer; }
     background-color: color-mix(in oklab, var(--draft) 30%, var(--paper));
 }
 
-/* --- Toast ------------------------------------------------------------------------ */
-
-/* A message keyboard.js shows for a few seconds (the "I love PHP" keyboard code). */
-.toast {
-    position: fixed;
-    right: 0;
-    bottom: 1.5rem;
-    left: 0;
-    z-index: 50;
-    width: fit-content;
-    margin-inline: auto;
-    padding: .75rem 1.25rem;
-    border-radius: .75rem;
-    background: var(--ink);
-    color: var(--paper);
-    font-size: .875rem;
-    font-weight: 500;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
-    cursor: pointer;
-    animation: releases-reveal .22s ease-out both;
-}
-
 /* --- Breakpoints --------------------------------------------------------------------- */
 
 @media (min-width: 40rem) {
-    .container,
-    .site-header__bar { padding-inline: 2rem; }
-
-    .mobile-menu { padding-inline: 2rem; }
-    .release-pill { display: inline-flex; }
-
     .section { padding-block: 8rem; }
     .ecosystem { padding-block: 7rem; }
 
@@ -1732,13 +1481,6 @@ button { cursor: pointer; }
 }
 
 @media (min-width: 64rem) {
-    .container,
-    .site-header__bar { padding-inline: 3.5rem; }
-
-    .site-header__nav { display: flex; }
-    .site-header__menu-toggle,
-    .mobile-menu { display: none; }
-
     .hero__title { font-size: 6.75rem; }
 
     .hero__art {
@@ -1808,10 +1550,6 @@ button { cursor: pointer; }
     .start-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    html.smooth-scroll { scroll-behavior: smooth; }
-}
-
 @media (prefers-reduced-motion: reduce) {
-    .draft-enter, .releases[open] .releases-panel, .toast { animation: none; }
+    .draft-enter, .releases[open] .releases-panel { animation: none; }
 }

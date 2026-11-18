@@ -30,8 +30,11 @@ $timestamps[] = (int) @filemtime(__DIR__ . "/../include/version.inc");
 $timestamps[] = (int) @filemtime(__DIR__ . "/include/pregen-news.inc");
 $timestamps[] = (int) @filemtime(__DIR__ . "/backend/packagist-stats.json");
 $timestamps[] = (int) @filemtime(__DIR__ . "/styles/base.css");
+$timestamps[] = (int) @filemtime(__DIR__ . "/styles/components.css");
 $timestamps[] = (int) @filemtime(__DIR__ . "/styles/homepage.css");
+$timestamps[] = (int) @filemtime(__DIR__ . "/js/site-header.js");
 $timestamps[] = (int) @filemtime(__DIR__ . "/js/homepage.js");
+$timestamps[] = (int) @filemtime(__DIR__ . "/js/copy-code.js");
 $timestamps[] = (int) @filemtime(__DIR__ . "/js/keyboard.js");
 
 // The release timeline and the years-open count change with the year
@@ -55,7 +58,6 @@ $_SERVER['BASE_PAGE'] = 'index.php';
 require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/homepage.inc';
 
-$navItems = array_filter(get_nav_items(), fn ($item) => $item->image === null);
 $supportedReleases = homepage_supported_releases();
 $latestNews = homepage_latest_news();
 $featured = homepage_featured_release();
@@ -68,50 +70,14 @@ $yearsOpen = (int) date('Y') - 1995;
 site_header(null, [
     'current' => 'home',
     'description' => 'Build websites, APIs, and applications with PHP: a modern, open source language with mature tools and a global community.',
-    'css_overwrite' => ['base.css', 'homepage.css', 'search-modal.css'],
-    'js_files' => ['js/ext/FuzzySearch.min.js', 'js/search.js', 'js/keyboard.js', 'js/homepage.js'],
+    'design' => '2026',
+    'css' => ['homepage.css'],
+    'js_files' => ['js/homepage.js'],
+    'release_pill_href' => '#release',
     'cache_control' => 5 * 60, // 5 minutes
-    'standalone' => true,
 ]);
 ?>
-  <a href="#main" class="skip-link">Skip to content</a>
   <div class="home-page">
-    <header class="site-header">
-      <div class="site-header__bar">
-        <div class="site-header__brand">
-          <a href="/" aria-label="PHP homepage"><?= site_icon('logos/php-mark', 'site-header__logo') ?></a>
-          <a href="#release" class="release-pill"><span class="status-dot" aria-hidden="true"></span><?= $featured['branch'] ?> is here<?= site_icon('arrow-right') ?></a>
-        </div>
-        <nav aria-label="Main navigation" class="site-header__nav">
-<?php foreach ($navItems as $item): ?>
-          <a href="<?= $item->href ?>"><?= $item->name ?></a>
-<?php endforeach; ?>
-        </nav>
-        <div class="site-header__actions">
-          <a href="/lookup-form.php" aria-label="Search docs" class="icon-button" data-search-fallback>
-            <?= site_icon('search', 'icon-button__icon') ?>
-          </a>
-          <button type="button" id="navbar__search-button" aria-label="Search docs" class="icon-button" hidden>
-            <?= site_icon('search', 'icon-button__icon') ?>
-          </button>
-          <button type="button" data-theme-toggle data-theme="system" aria-label="Theme: system. Switch to light" class="icon-button">
-            <?= site_icon('sun', 'icon-button__icon theme-icon theme-icon--light') ?><?= site_icon('moon', 'icon-button__icon theme-icon theme-icon--dark') ?><?= site_icon('computer-desktop', 'icon-button__icon theme-icon theme-icon--system') ?>
-          </button>
-          <a href="/menu.php" aria-label="Menu" class="icon-button site-header__menu-toggle" data-menu-fallback>
-            <svg viewBox="0 0 24 24" class="icon-button__icon menu-icon" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-          </a>
-          <button type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="icon-button site-header__menu-toggle" hidden>
-            <svg viewBox="0 0 24 24" class="icon-button__icon menu-icon menu-icon--open" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-            <svg viewBox="0 0 24 24" class="icon-button__icon menu-icon menu-icon--close" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-          </button>
-        </div>
-      </div>
-      <nav id="mobile-menu" aria-label="Mobile navigation" hidden class="mobile-menu">
-<?php foreach ($navItems as $item): ?>
-        <a href="<?= $item->href ?>"><?= $item->name ?></a>
-<?php endforeach; ?>
-      </nav>
-    </header>
 
     <main id="main" class="page-guides">
       <section class="hero" aria-labelledby="hero-heading">
@@ -216,10 +182,10 @@ site_header(null, [
               </div>
               <div class="code-showcase__panels">
 <?php $first = true; foreach ($examples as $id => $example): ?>
-                <div id="example-<?= $id ?>" role="tabpanel" aria-labelledby="example-tab-<?= $id ?>" tabindex="0" class="code-showcase__panel"<?= $first ? '' : ' hidden' ?>>
+                <div id="example-<?= $id ?>" role="tabpanel" aria-labelledby="example-tab-<?= $id ?>" tabindex="0" data-copy-scope class="code-showcase__panel"<?= $first ? '' : ' hidden' ?>>
                   <div class="code-showcase__tabbar">
                     <div class="code-showcase__file"><?= $example['file'] ?></div>
-                    <button type="button" data-copy-example class="copy-button" aria-label="Copy <?= $example['file'] ?>" title="Copy code">
+                    <button type="button" data-copy-code class="copy-button" aria-label="Copy <?= $example['file'] ?>" title="Copy code">
                       <?= site_icon('document-duplicate', 'icon copy-button__icon copy-button__icon--copy') ?>
                       <?= site_icon('check', 'icon copy-button__icon copy-button__icon--done') ?>
                     </button>
@@ -227,7 +193,7 @@ site_header(null, [
                   <p class="code-showcase__description"><?= $example['description'] ?></p>
                   <div class="code-showcase__code">
                     <pre aria-hidden="true" class="code-showcase__gutter"><?= implode("\n", range(1, substr_count($example['code'], "\n") + 1)) ?></pre>
-                    <pre><code data-example-code><?= $example['code'] ?></code></pre>
+                    <pre><code><?= $example['code'] ?></code></pre>
                   </div>
                   <div role="region" aria-label="Example terminal session" class="terminal">
                     <div class="terminal__header">
@@ -242,7 +208,6 @@ site_header(null, [
 <?php $first = false; endforeach; ?>
               </div>
             </div>
-            <p data-copy-status role="status" class="sr-only"></p>
           </div>
         </div>
       </section>
@@ -449,6 +414,4 @@ site_header(null, [
     </main>
 <?= fancy_footer() ?>
   </div>
-<?php require __DIR__ . '/../include/search-modal.inc'; ?>
-</body>
-</html>
+<?php site_footer(['footer' => false]); ?>

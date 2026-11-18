@@ -2,6 +2,17 @@
 
 use phpweb\ProjectGlobals;
 
+// 2026 design pages (see site_header()) render their own layout, so they only
+// need the footer, the search modal and the closing tags.
+if (site_design() === '2026') {
+    if (($config['footer'] ?? true) !== false) {
+        echo fancy_footer($config['footer_credit'] ?? '');
+    }
+    require __DIR__ . "/search-modal.inc";
+    echo "</body>\n</html>\n";
+    return;
+}
+
 ?>
     </section><!-- layout-content -->
     <?php

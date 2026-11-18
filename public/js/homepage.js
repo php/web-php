@@ -1,57 +1,12 @@
+/*
+ * Homepage (public/index.php)
+ */
 (() => {
-    const root = document.documentElement;
-    // Shares its storage key and cycle order with the theme switcher in common.js.
-    const themes = ['light', 'dark', 'system'];
-    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    let theme = 'system';
-
-    try { theme = localStorage.getItem('theme') || 'system'; } catch {}
-
-    function applyTheme() {
-        root.classList.toggle('dark', theme === 'dark' || (theme === 'system' && darkScheme.matches));
-    }
-
-    // Applied right away, before the page renders, so there's no flash of the wrong theme.
-    applyTheme();
-    darkScheme.addEventListener('change', applyTheme);
-
-    window.addEventListener('load', () => {
-        // wait one tick so the browser finishes restoring scroll position first
-        setTimeout(() => root.classList.add('smooth-scroll'), 0);
-    });
-
     document.addEventListener('DOMContentLoaded', () => {
-        initThemeButton();
         initReleaseHistory();
-        initSearch();
-        initMobileMenu();
         initReleasesDropdown();
         initExampleTabs();
-        initCopyButtons();
     });
-
-    function initThemeButton() {
-        const themeButton = document.querySelector('[data-theme-toggle]');
-
-        if (!themeButton) {
-            return;
-        }
-
-        const nextTheme = () => themes[(themes.indexOf(theme) + 1) % themes.length];
-
-        function updateThemeControl() {
-            themeButton.dataset.theme = theme;
-            themeButton.setAttribute('aria-label', `Theme: ${theme}. Switch to ${nextTheme()}`);
-        }
-
-        themeButton.addEventListener('click', () => {
-            theme = nextTheme();
-            try { localStorage.setItem('theme', theme); } catch {}
-            applyTheme();
-            updateThemeControl();
-        });
-        updateThemeControl();
-    }
 
     function initReleaseHistory() {
         const history = document.querySelector('[data-release-history]');
@@ -166,55 +121,6 @@
     }
 
     // The search modal (search.js, include/search-modal.inc) is the one the rest of the site uses.
-    function initSearch() {
-        if (typeof initSearchModal !== 'function') {
-            return;
-        }
-
-        const language = document.documentElement.lang;
-
-        document.querySelector('[data-search-fallback]')?.setAttribute('hidden', '');
-        initSearchModal();
-        initPHPSearch(language).then((searchCallback) => {
-            initSearchUI({ language, searchCallback, limit: 30 });
-        });
-    }
-
-    function initMobileMenu() {
-        const menuButton = document.querySelector('[data-menu-toggle]');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (!menuButton || !mobileMenu) {
-            return;
-        }
-
-        document.querySelector('[data-menu-fallback]')?.setAttribute('hidden', '');
-        menuButton.hidden = false;
-
-        function setMenu(open) {
-            menuButton.setAttribute('aria-expanded', String(open));
-            menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-            mobileMenu.hidden = !open;
-        }
-
-        menuButton.addEventListener('click', () => {
-            setMenu(menuButton.getAttribute('aria-expanded') !== 'true');
-        });
-
-        mobileMenu.addEventListener('click', (event) => {
-            if (event.target.closest('a')) {
-                setMenu(false);
-            }
-        });
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-                setMenu(false);
-                menuButton.focus();
-            }
-        });
-    }
-
     // A native <details>, so it opens and closes on its own; this adds Escape and clicking outside to close.
     function initReleasesDropdown() {
         const releases = document.querySelector('[data-releases]');
@@ -294,53 +200,6 @@
                 event.preventDefault();
                 selectExample(exampleTabs[nextIndex]);
                 exampleTabs[nextIndex].focus();
-            });
-        });
-    }
-
-    function initCopyButtons() {
-        const showcase = document.querySelector('[data-code-showcase]');
-
-        if (!showcase) {
-            return;
-        }
-
-        const copyStatus = showcase.querySelector('[data-copy-status]');
-
-        showcase.querySelectorAll('[data-copy-example]').forEach((button) => {
-            const originalLabel = button.getAttribute('aria-label');
-            let resetTimer;
-
-            button.addEventListener('click', async () => {
-                const panel = button.closest('[role="tabpanel"]');
-                const code = panel.querySelector('[data-example-code]');
-
-                clearTimeout(resetTimer);
-                copyStatus.textContent = '';
-
-                try {
-                    await navigator.clipboard.writeText(code.textContent);
-                    button.dataset.copied = '';
-                    button.setAttribute('aria-label', 'Copied!');
-                    button.title = 'Copied!';
-                    copyStatus.textContent = 'PHP example copied to clipboard.';
-                } catch {
-                    const selection = window.getSelection();
-                    const range = document.createRange();
-
-                    range.selectNodeContents(code);
-                    selection.removeAllRanges();
-                    selection.addRange(range);
-                    button.setAttribute('aria-label', 'Code selected; use your keyboard to copy');
-                    button.title = 'Code selected; use your keyboard to copy';
-                    copyStatus.textContent = 'Clipboard unavailable. Code selected; use your keyboard to copy.';
-                }
-
-                resetTimer = setTimeout(() => {
-                    delete button.dataset.copied;
-                    button.setAttribute('aria-label', originalLabel);
-                    button.title = 'Copy code';
-                }, 2500);
             });
         });
     }

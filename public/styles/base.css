@@ -1,6 +1,6 @@
 /*
  * Design tokens, reset and utilities for the redesigned pages (currently the
- * homepage, but viable to support the release pages as well once PHP 8.6 releases).
+ * homepage and the release pages).
  * Load it before the page's own stylesheet.
  *
  * Everything here is in a cascade layer, so any unlayered page rule wins over
