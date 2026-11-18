@@ -144,35 +144,6 @@ function homepage_packagist_stats(): array
     return PackagistStats::load(ProjectGlobals::getBackendRoot() . '/packagist-stats.json');
 }
 
-/**
- * Inline include/homepage/svg/{$name}.svg (e.g. 'logos/nike'), so it can use
- * currentColor and the page's CSS variables. The attributes are added to its
- * root <svg>; it is hidden from screen readers unless it is given an aria-label.
- *
- * @param array<string, string> $attributes
- */
-function homepage_svg(string $name, array $attributes = []): string
-{
-    static $files = [];
-    $svg = $files[$name] ??= trim((string) file_get_contents(__DIR__ . "/homepage/svg/$name.svg"));
-
-    if (!isset($attributes['aria-label'])) {
-        $attributes['aria-hidden'] = 'true';
-    }
-
-    $html = '';
-    foreach ($attributes as $attribute => $value) {
-        $html .= ' ' . $attribute . '="' . htmlspecialchars($value) . '"';
-    }
-
-    return substr_replace($svg, $html, strlen('<svg'), 0);
-}
-
-function homepage_icon(string $name, string $class = 'icon'): string
-{
-    return homepage_svg($name, ['class' => $class]);
-}
-
 function homepage_scribble(string $text): string
 {
     return '<span class="scribble">' . $text

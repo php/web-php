@@ -79,8 +79,8 @@ site_header(null, [
     <header class="site-header">
       <div class="site-header__bar">
         <div class="site-header__brand">
-          <a href="/" aria-label="PHP homepage"><?= homepage_icon('logos/php-mark', 'site-header__logo') ?></a>
-          <a href="#release" class="release-pill"><span class="status-dot" aria-hidden="true"></span><?= $featured['branch'] ?> is here<?= homepage_icon('arrow-right') ?></a>
+          <a href="/" aria-label="PHP homepage"><?= site_icon('logos/php-mark', 'site-header__logo') ?></a>
+          <a href="#release" class="release-pill"><span class="status-dot" aria-hidden="true"></span><?= $featured['branch'] ?> is here<?= site_icon('arrow-right') ?></a>
         </div>
         <nav aria-label="Main navigation" class="site-header__nav">
 <?php foreach ($navItems as $item): ?>
@@ -89,13 +89,13 @@ site_header(null, [
         </nav>
         <div class="site-header__actions">
           <a href="/lookup-form.php" aria-label="Search docs" class="icon-button" data-search-fallback>
-            <?= homepage_icon('search', 'icon-button__icon') ?>
+            <?= site_icon('search', 'icon-button__icon') ?>
           </a>
           <button type="button" id="navbar__search-button" aria-label="Search docs" class="icon-button" hidden>
-            <?= homepage_icon('search', 'icon-button__icon') ?>
+            <?= site_icon('search', 'icon-button__icon') ?>
           </button>
           <button type="button" data-theme-toggle data-theme="system" aria-label="Theme: system. Switch to light" class="icon-button">
-            <?= homepage_icon('sun', 'icon-button__icon theme-icon theme-icon--light') ?><?= homepage_icon('moon', 'icon-button__icon theme-icon theme-icon--dark') ?><?= homepage_icon('computer-desktop', 'icon-button__icon theme-icon theme-icon--system') ?>
+            <?= site_icon('sun', 'icon-button__icon theme-icon theme-icon--light') ?><?= site_icon('moon', 'icon-button__icon theme-icon theme-icon--dark') ?><?= site_icon('computer-desktop', 'icon-button__icon theme-icon theme-icon--system') ?>
           </button>
           <a href="/menu.php" aria-label="Menu" class="icon-button site-header__menu-toggle" data-menu-fallback>
             <svg viewBox="0 0 24 24" class="icon-button__icon menu-icon" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -121,10 +121,10 @@ site_header(null, [
           <p class="hero__lead">Build websites, APIs, and applications with a modern, open source language, mature tools, and a global community. It's a scripting language too, just as strong on the command line as on the web.</p>
           <div class="hero__cta">
             <div class="hero__actions">
-              <a href="#start" class="button button--primary">Get started<?= homepage_icon('arrow-right') ?></a>
-              <a href="/downloads.php" class="text-link">Download PHP<?= homepage_icon('arrow-up-right') ?></a>
+              <a href="#start" class="button button--primary">Get started<?= site_icon('arrow-right') ?></a>
+              <a href="/downloads.php" class="text-link">Download PHP<?= site_icon('arrow-up-right') ?></a>
               <details data-releases class="releases">
-                <summary class="text-link releases-toggle">Latest releases<?= homepage_icon('chevron-down', 'icon releases-toggle__chevron') ?></summary>
+                <summary class="text-link releases-toggle">Latest releases<?= site_icon('chevron-down', 'icon releases-toggle__chevron') ?></summary>
                 <div class="releases-panel">
                   <ul role="list" class="releases-panel__list" style="--release-count: <?= count($supportedReleases) ?>">
 <?php foreach ($supportedReleases as $release): ?>
@@ -138,14 +138,14 @@ site_header(null, [
 <?php if ($latestNews): ?>
                     <span class="status-dot" aria-hidden="true"></span><span class="sr-only">Latest news: </span><time datetime="<?= $latestNews['date']->format(DATE_W3C) ?>" class="releases-panel__news-date"><?= $latestNews['date']->format('j M Y') ?></time><a href="<?= $latestNews['url'] ?>" class="releases-panel__news-title"><?= $latestNews['title'] ?></a>
 <?php endif; ?>
-                    <a href="/archive/" class="text-link text-link--brand releases-panel__news-all">All news<?= homepage_icon('arrow-up-right') ?></a>
+                    <a href="/archive/" class="text-link text-link--brand releases-panel__news-all">All news<?= site_icon('arrow-up-right') ?></a>
                   </p>
                 </div>
               </details>
             </div>
           </div>
           <div class="hero__art draft-enter" aria-hidden="true">
-            <?= homepage_svg('hero-php-globe') ?>
+            <?= site_svg('hero-php-globe') ?>
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ site_header(null, [
         . (isset($logo['height_sm']) ? "; --logo-height-sm: {$logo['height_sm']}" : '');
 ?>
               <li><a href="<?= $logo['url'] ?>" aria-label="<?= htmlspecialchars($label) ?>" title="<?= htmlspecialchars($title) ?>" class="logo-wall__link">
-                <?= homepage_svg('logos/' . $logo['icon'], ['class' => 'logo-wall__mark', 'style' => $size]) ?>
+                <?= site_svg('logos/' . $logo['icon'], ['class' => 'logo-wall__mark', 'style' => $size]) ?>
 <?php if (isset($logo['wordmark'])): ?>
                 <span class="logo-wall__wordmark <?= $logo['wordmark_class'] ?? '' ?>"><?= $logo['wordmark'] ?></span>
 <?php endif; ?>
@@ -189,11 +189,11 @@ site_header(null, [
               <div class="split__body">
                 <h3 class="card-title">Made for the web.<br>From the beginning.</h3>
                 <p class="lead">PHP has grown with the web. From dynamic pages and forms to data pipelines and AI agents, the language and its ecosystem grow with your application.</p>
-                <div class="link-row"><a href="/manual/introduction.php" class="text-link text-link--brand">Meet the language<?= homepage_icon('arrow-up-right') ?></a></div>
+                <div class="link-row"><a href="/manual/introduction.php" class="text-link text-link--brand">Meet the language<?= site_icon('arrow-up-right') ?></a></div>
               </div>
               <div class="language-panel__art" aria-hidden="true">
                 <div class="draft-grid"></div>
-                <?= homepage_svg('web-capabilities') ?>
+                <?= site_svg('web-capabilities') ?>
               </div>
             </div>
             <div class="panel__footer language-panel__footer">
@@ -207,7 +207,7 @@ site_header(null, [
           <div data-code-showcase class="code-showcase">
             <div class="code-showcase__layout">
               <div class="code-showcase__sidebar">
-                <p class="code-showcase__folder"><?= homepage_icon('folder-open') ?><span>examples</span></p>
+                <p class="code-showcase__folder"><?= site_icon('folder-open') ?><span>examples</span></p>
                 <div role="tablist" aria-label="PHP code examples" aria-orientation="vertical" class="code-showcase__tabs">
 <?php $first = true; foreach ($examples as $id => $example): ?>
                   <button type="button" role="tab" id="example-tab-<?= $id ?>" aria-controls="example-<?= $id ?>" aria-selected="<?= $first ? 'true' : 'false' ?>" tabindex="<?= $first ? '0' : '-1' ?>" class="code-showcase__tab"><?= $example['file'] ?></button>
@@ -220,8 +220,8 @@ site_header(null, [
                   <div class="code-showcase__tabbar">
                     <div class="code-showcase__file"><?= $example['file'] ?></div>
                     <button type="button" data-copy-example class="copy-button" aria-label="Copy <?= $example['file'] ?>" title="Copy code">
-                      <?= homepage_icon('document-duplicate', 'icon copy-button__icon copy-button__icon--copy') ?>
-                      <?= homepage_icon('check', 'icon copy-button__icon copy-button__icon--done') ?>
+                      <?= site_icon('document-duplicate', 'icon copy-button__icon copy-button__icon--copy') ?>
+                      <?= site_icon('check', 'icon copy-button__icon copy-button__icon--done') ?>
                     </button>
                   </div>
                   <p class="code-showcase__description"><?= $example['description'] ?></p>
@@ -281,15 +281,15 @@ site_header(null, [
                     <img src="/images/homepage/composer.svg" alt="" width="47" height="62" loading="lazy">
                   </div>
                   <div class="badge badge--packagist">
-                    <?= homepage_svg('logos/packagist') ?>
+                    <?= site_svg('logos/packagist') ?>
                   </div>
                 </div>
                 <h3 class="card-title">Composer + Packagist</h3>
                 <p class="lead">Declare what your project needs, lock exact versions, and install the same dependency graph everywhere. Search Packagist to find packages for databases, APIs, testing, queues, files, and almost everything between.</p>
                 <div class="command-line"><span class="command-line__prompt">$</span>composer require vendor/package</div>
                 <div class="link-row">
-                  <a href="https://getcomposer.org/" class="text-link text-link--brand">Get Composer<?= homepage_icon('arrow-up-right') ?></a>
-                  <a href="https://packagist.org/" class="text-link text-link--brand">Browse Packagist<?= homepage_icon('arrow-up-right') ?></a>
+                  <a href="https://getcomposer.org/" class="text-link text-link--brand">Get Composer<?= site_icon('arrow-up-right') ?></a>
+                  <a href="https://packagist.org/" class="text-link text-link--brand">Browse Packagist<?= site_icon('arrow-up-right') ?></a>
                 </div>
               </div>
             </div>
@@ -303,8 +303,8 @@ site_header(null, [
                 </div>
               </div>
               <div class="link-row">
-                <a href="https://github.com/php/pie" class="text-link text-link--brand">Meet PIE<?= homepage_icon('arrow-up-right') ?></a>
-                <a href="https://packagist.org/extensions" class="text-link text-link--brand">Browse extensions<?= homepage_icon('arrow-up-right') ?></a>
+                <a href="https://github.com/php/pie" class="text-link text-link--brand">Meet PIE<?= site_icon('arrow-up-right') ?></a>
+                <a href="https://packagist.org/extensions" class="text-link text-link--brand">Browse extensions<?= site_icon('arrow-up-right') ?></a>
               </div>
             </div>
           </div>
@@ -323,7 +323,7 @@ site_header(null, [
                 <div class="draft-grid" aria-hidden="true"></div>
                 <div class="release-card__ring release-card__ring--outer" aria-hidden="true"></div>
                 <div class="release-card__ring release-card__ring--inner" aria-hidden="true"></div>
-                <?= homepage_icon('logos/php-mark', 'release-card__logo') ?>
+                <?= site_icon('logos/php-mark', 'release-card__logo') ?>
                 <div class="release-card__numeral">
                   <p class="release-card__numeral-outline" aria-hidden="true"><?= $featured['branch'] ?></p>
                   <p><?= $featured['branch'] ?><span class="release-card__plus" aria-hidden="true">+</span></p>
@@ -342,12 +342,12 @@ site_header(null, [
                 <dl class="feature-list">
 <?php foreach ($featured['features'] as $feature): ?>
                   <div class="feature-list__item">
-                    <dt><?= homepage_svg($feature['icon']) ?><a href="<?= $featured['url'] ?>#<?= $feature['anchor'] ?>"><?= $feature['title'] ?></a></dt>
+                    <dt><?= site_svg($feature['icon']) ?><a href="<?= $featured['url'] ?>#<?= $feature['anchor'] ?>"><?= $feature['title'] ?></a></dt>
                     <dd><?= $feature['description'] ?></dd>
                   </div>
 <?php endforeach; ?>
                 </dl>
-                <div class="link-row"><a href="<?= $featured['url'] ?>" class="text-link text-link--brand">Explore all PHP <?= $featured['branch'] ?> features<?= homepage_icon('arrow-up-right') ?></a></div>
+                <div class="link-row"><a href="<?= $featured['url'] ?>" class="text-link text-link--brand">Explore all PHP <?= $featured['branch'] ?> features<?= site_icon('arrow-up-right') ?></a></div>
               </div>
             </div>
           </div>
@@ -361,19 +361,19 @@ site_header(null, [
             <p class="lead">PHP has been community-owned for <?= $yearsOpen ?> years. The language evolves through public proposals, discussion, and votes, and is <strong>free from corporate control.</strong></p>
             <p class="lead">Contribute to the language, improve the docs, or help someone find their feet. There’s a place for you here.</p>
             <div class="community__actions">
-              <a href="/get-involved.php" class="button button--primary">Get involved<?= homepage_icon('arrow-right') ?></a>
-              <a href="https://wiki.php.net/rfc" class="text-link">Explore the RFCs<?= homepage_icon('arrow-up-right') ?></a>
+              <a href="/get-involved.php" class="button button--primary">Get involved<?= site_icon('arrow-right') ?></a>
+              <a href="https://wiki.php.net/rfc" class="text-link">Explore the RFCs<?= site_icon('arrow-up-right') ?></a>
             </div>
           </div>
           <div class="foundation-card">
             <div class="foundation-card__body">
-              <?= homepage_svg('logos/php-foundation', ['class' => 'foundation-card__logo', 'role' => 'img', 'aria-label' => 'The PHP Foundation']) ?>
+              <?= site_svg('logos/php-foundation', ['class' => 'foundation-card__logo', 'role' => 'img', 'aria-label' => 'The PHP Foundation']) ?>
               <h3 class="card-title">Funding the people behind PHP.</h3>
               <p class="lead">Your support funds work on PHP’s core, helping maintain and improve the language that so much of the web depends on.</p>
             </div>
             <div class="foundation-card__footer">
-              <a href="https://thephp.foundation/sponsor/" class="button button--soft">Donate to PHP<?= homepage_icon('arrow-right') ?></a>
-              <a href="https://thephp.foundation/" class="text-link">Meet the Foundation<?= homepage_icon('arrow-up-right') ?></a>
+              <a href="https://thephp.foundation/sponsor/" class="button button--soft">Donate to PHP<?= site_icon('arrow-right') ?></a>
+              <a href="https://thephp.foundation/" class="text-link">Meet the Foundation<?= site_icon('arrow-up-right') ?></a>
             </div>
           </div>
         </div>
@@ -386,30 +386,30 @@ site_header(null, [
               <h2 id="start-heading" class="section-title section-title--large">Get started.</h2>
               <p class="lead">Get PHP running, find your feet in the language, and explore a world of packages ready to help.</p>
             </div>
-            <a href="/manual/getting-started.php" class="button button--primary">Get started with PHP<?= homepage_icon('arrow-right') ?></a>
+            <a href="/manual/getting-started.php" class="button button--primary">Get started with PHP<?= site_icon('arrow-right') ?></a>
           </div>
           <ol role="list" class="start-steps">
             <li class="start-step">
               <h3 class="start-step__title">Get set up.</h3>
               <p>Install PHP locally or configure it for your servers. Find the setup that fits your tools and infrastructure.</p>
               <div class="link-row">
-                <a href="/manual/install.php" class="text-link text-link--brand">Installation guide<?= homepage_icon('arrow-up-right') ?></a>
+                <a href="/manual/install.php" class="text-link text-link--brand">Installation guide<?= site_icon('arrow-up-right') ?></a>
               </div>
             </li>
             <li class="start-step">
               <h3 class="start-step__title">Learn the language.</h3>
               <p>Dive into the documentation or follow a guided tutorial. Explore the features, functions, and patterns you’ll use.</p>
               <div class="link-row">
-                <a href="/docs.php" class="text-link text-link--brand">Read the docs<?= homepage_icon('arrow-up-right') ?></a>
-                <a href="/manual/tutorial.php" class="text-link text-link--brand">Take the tutorial<?= homepage_icon('arrow-up-right') ?></a>
+                <a href="/docs.php" class="text-link text-link--brand">Read the docs<?= site_icon('arrow-up-right') ?></a>
+                <a href="/manual/tutorial.php" class="text-link text-link--brand">Take the tutorial<?= site_icon('arrow-up-right') ?></a>
               </div>
             </li>
             <li class="start-step">
               <h3 class="start-step__title">Explore the package ecosystem.</h3>
               <p>Find reusable packages and native extensions for the work your application needs to do.</p>
               <div class="link-row">
-                <a href="https://packagist.org/" class="text-link text-link--brand">Browse Packagist<?= homepage_icon('arrow-up-right') ?></a>
-                <a href="https://packagist.org/extensions" class="text-link text-link--brand">Find extensions<?= homepage_icon('arrow-up-right') ?></a>
+                <a href="https://packagist.org/" class="text-link text-link--brand">Browse Packagist<?= site_icon('arrow-up-right') ?></a>
+                <a href="https://packagist.org/extensions" class="text-link text-link--brand">Find extensions<?= site_icon('arrow-up-right') ?></a>
               </div>
             </li>
           </ol>
