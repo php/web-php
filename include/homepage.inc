@@ -14,15 +14,20 @@ require_once __DIR__ . '/branches.inc';
 require_once __DIR__ . '/version.inc';
 
 /**
- * Supported branches, newest first, each with its latest release.
+ * Branches in active support (not security-only), newest first, each with its
+ * latest release.
  *
  * @return list<array{branch: string, version: string, major: string, minor: string}>
  */
-function homepage_supported_releases(): array
+function homepage_actively_supported_releases(): array
 {
     $releases = [];
-    foreach (get_active_branches() as $major => $branches) {
+    foreach (get_active_branches(false) as $major => $branches) {
         foreach ($branches as $branch => $release) {
+            if (get_branch_support_state($branch) !== 'stable') {
+                continue;
+            }
+
             [, $minor] = explode('.', $branch);
             $releases[] = [
                 'branch' => $branch,
@@ -39,7 +44,7 @@ function homepage_supported_releases(): array
 }
 
 /**
- * The newest front page news entry, shown under the latest releases.
+ * The newest front page news entry, shown above the latest releases.
  *
  * @return ?array{title: string, url: string, date: DateTimeImmutable}
  */

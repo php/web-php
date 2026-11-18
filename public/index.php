@@ -58,7 +58,7 @@ $_SERVER['BASE_PAGE'] = 'index.php';
 require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/homepage.inc';
 
-$supportedReleases = homepage_supported_releases();
+$supportedReleases = homepage_actively_supported_releases();
 $latestNews = homepage_latest_news();
 $featured = homepage_featured_release();
 $history = homepage_release_history();
@@ -89,30 +89,46 @@ site_header(null, [
             <div class="hero__actions">
               <a href="#start" class="button button--primary">Get started<?= site_icon('arrow-right') ?></a>
               <a href="/downloads.php" class="text-link">Download PHP<?= site_icon('arrow-up-right') ?></a>
-              <details data-releases class="releases">
-                <summary class="text-link releases-toggle">Latest releases<?= site_icon('chevron-down', 'icon releases-toggle__chevron') ?></summary>
-                <div class="releases-panel">
-                  <ul role="list" class="releases-panel__list" style="--release-count: <?= count($supportedReleases) ?>">
-<?php foreach ($supportedReleases as $release): ?>
-                    <li class="releases-panel__item">
-                      <a href="/downloads.php?version=<?= $release['branch'] ?>" class="releases-panel__version"><?= $release['version'] ?></a>
-                      <span class="releases-panel__links"><a href="/ChangeLog-<?= $release['major'] ?>.php#<?= $release['version'] ?>">Changelog</a><span aria-hidden="true" class="releases-panel__separator">·</span><a href="/migration<?= $release['major'] . $release['minor'] ?>">Upgrading</a></span>
-                    </li>
-<?php endforeach; ?>
-                  </ul>
-                  <p class="releases-panel__news">
-<?php if ($latestNews): ?>
-                    <span class="status-dot" aria-hidden="true"></span><span class="sr-only">Latest news: </span><time datetime="<?= $latestNews['date']->format(DATE_W3C) ?>" class="releases-panel__news-date"><?= $latestNews['date']->format('j M Y') ?></time><a href="<?= $latestNews['url'] ?>" class="releases-panel__news-title"><?= $latestNews['title'] ?></a>
-<?php endif; ?>
-                    <a href="/archive/" class="text-link text-link--brand releases-panel__news-all">All news<?= site_icon('arrow-up-right') ?></a>
-                  </p>
-                </div>
-              </details>
             </div>
           </div>
           <div class="hero__art draft-enter" aria-hidden="true">
             <?= site_svg('hero-php-globe') ?>
           </div>
+        </div>
+
+        <div class="latest">
+          <section class="latest__row" aria-labelledby="latest-news-heading">
+            <div class="container latest__inner">
+              <h2 id="latest-news-heading" class="latest__label">Latest news</h2>
+              <div class="latest__body">
+<?php if ($latestNews): ?>
+                <p class="latest-news">
+                  <span class="status-dot" aria-hidden="true"></span><time datetime="<?= $latestNews['date']->format(DATE_W3C) ?>" class="latest-news__date"><?= $latestNews['date']->format('j M Y') ?></time><a href="<?= $latestNews['url'] ?>" class="latest-news__title"><?= $latestNews['title'] ?></a>
+                </p>
+<?php endif; ?>
+              </div>
+              <a href="/archive/" class="text-link text-link--brand latest__all">All news<?= site_icon('arrow-up-right') ?></a>
+            </div>
+          </section>
+          <section class="latest__row" aria-labelledby="latest-releases-heading">
+            <div class="container latest__inner">
+              <h2 id="latest-releases-heading" class="latest__label">Latest releases</h2>
+              <div class="latest__body">
+                <ul role="list" class="latest-releases">
+<?php foreach ($supportedReleases as $release): ?>
+                  <li class="latest-releases__item">
+                    <a href="/downloads.php?version=<?= $release['branch'] ?>" class="latest-releases__version"><?= $release['version'] ?></a>
+                    <span aria-hidden="true" class="latest-releases__separator">·</span>
+                    <a href="/ChangeLog-<?= $release['major'] ?>.php#<?= $release['version'] ?>" class="latest-releases__link" aria-label="PHP <?= $release['version'] ?> changelog">Changelog</a>
+                    <span aria-hidden="true" class="latest-releases__separator">·</span>
+                    <a href="/migration<?= $release['major'] . $release['minor'] ?>" class="latest-releases__link" aria-label="Upgrading to PHP <?= $release['branch'] ?>">Upgrading</a>
+                  </li>
+<?php endforeach; ?>
+                </ul>
+              </div>
+              <a href="/releases/" class="text-link text-link--brand latest__all">All releases<?= site_icon('arrow-up-right') ?></a>
+            </div>
+          </section>
         </div>
       </section>
 

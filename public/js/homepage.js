@@ -4,7 +4,6 @@
 (() => {
     document.addEventListener('DOMContentLoaded', () => {
         initReleaseHistory();
-        initReleasesDropdown();
         initExampleTabs();
     });
 
@@ -117,40 +116,6 @@
 
         requestAnimationFrame(() => {
             scroll.scrollLeft = scroll.scrollWidth;
-        });
-    }
-
-    // The search modal (search.js, include/search-modal.inc) is the one the rest of the site uses.
-    // A native <details>, so it opens and closes on its own; this adds Escape and clicking outside to close.
-    function initReleasesDropdown() {
-        const releases = document.querySelector('[data-releases]');
-
-        if (!releases) {
-            return;
-        }
-
-        function closeOnEscape(event) {
-            if (event.key === 'Escape') {
-                releases.open = false;
-                releases.querySelector('summary').focus();
-            }
-        }
-
-        function closeOnOutsideClick(event) {
-            if (!releases.contains(event.target)) {
-                releases.open = false;
-            }
-        }
-
-        // Only listen while the panel is open, however it gets closed.
-        releases.addEventListener('toggle', () => {
-            if (releases.open) {
-                document.addEventListener('keydown', closeOnEscape);
-                document.addEventListener('click', closeOnOutsideClick);
-            } else {
-                document.removeEventListener('keydown', closeOnEscape);
-                document.removeEventListener('click', closeOnOutsideClick);
-            }
         });
     }
 

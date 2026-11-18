@@ -211,7 +211,7 @@
 .hero {
     position: relative;
     z-index: 20;
-    padding-block: 4rem;
+    padding-top: 4rem;
 }
 
 .hero__grid {
@@ -267,17 +267,6 @@
 }
 
 .hero__actions .text-link { justify-content: center; }
-.releases-toggle {
-    display: flex;
-    gap: .5rem;
-    cursor: pointer;
-    list-style: none;
-}
-
-.releases-toggle::-webkit-details-marker { display: none; }
-
-.releases-toggle__chevron { transition: transform .2s; }
-.releases[open] .releases-toggle__chevron { transform: rotate(180deg); }
 
 .hero__art {
     position: absolute;
@@ -297,38 +286,89 @@
 }
 
 /*
- * Latest releases drawer, a native <details> so it opens without JavaScript.
- * It isn't positioned, so the panel anchors to .hero__cta below the actions.
+ * Latest news and releases, a strip of full-bleed rows closing out the hero.
+ * The logo wall's top border closes off the last row.
  */
-.releases-panel {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 20;
-    width: 100%;
-    margin-top: .75rem;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    border-radius: 1rem;
-    background: color-mix(in srgb, var(--surface) 95%, transparent);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
-    backdrop-filter: blur(8px);
+.latest { margin-top: 4rem; }
+
+.latest__row {
+    border-top: 1px solid var(--line);
+    background: color-mix(in srgb, var(--paper) 60%, transparent);
 }
 
-.releases-panel__list {
+.latest__inner {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "label all" "body body";
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
     gap: 1.25rem 1rem;
-    padding: 1.25rem 1rem;
+    padding-block: 2rem;
 }
 
-.releases-panel__item {
+.latest__label {
+    grid-area: label;
+    font-family: var(--font-mono);
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.latest__body {
+    grid-area: body;
+    min-width: 0;
+}
+
+.latest__all {
+    grid-area: all;
+    gap: .375rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.latest__all:hover { color: var(--brand-strong); }
+
+.latest-news {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.5rem;
+}
+
+.latest-news__date {
+    font-family: var(--font-mono);
+    font-size: .8125rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+}
+
+.latest-news__title {
+    flex-basis: 100%;
+    font-weight: 500;
+}
+
+.latest-news__title:hover { color: var(--brand); }
+
+.latest-releases {
     display: flex;
     flex-direction: column;
-    gap: .25rem;
+    gap: 1rem;
 }
 
-.releases-panel__version {
+.latest-releases__item {
+    display: flex;
+    align-items: baseline;
+    gap: .625rem;
+    white-space: nowrap;
+}
+
+.latest-releases__version {
+    margin-right: .25rem;
     font-family: var(--font-mono);
     font-size: 1.125rem;
     line-height: 1.5rem;
@@ -336,56 +376,16 @@
     color: var(--ink);
 }
 
-.releases-panel__links {
-    font-size: .8125rem;
-    line-height: 1.25rem;
+.latest-releases__link {
+    font-size: .9375rem;
+    line-height: 1.5rem;
     color: var(--muted);
 }
 
-.releases-panel__item a:hover { color: var(--brand); }
+.latest-releases__item a:hover { color: var(--brand); }
 
-.releases-panel__separator { margin-inline: .25rem; }
+.latest-releases__separator { color: color-mix(in srgb, var(--muted) 60%, transparent); }
 
-/* Sized to the releases above it, so a long headline truncates rather than widening the panel. */
-.releases-panel__news {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    width: 0;
-    min-width: 100%;
-    padding: .875rem 1rem;
-    border-top: 1px solid var(--line);
-    background: color-mix(in srgb, var(--soft) 50%, transparent);
-    font-size: .875rem;
-    line-height: 1.25rem;
-    white-space: nowrap;
-}
-
-.releases-panel__news-date {
-    font-family: var(--font-mono);
-    font-size: .8125rem;
-    font-variant-numeric: tabular-nums;
-    color: var(--muted);
-}
-
-.releases-panel__news-title {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.releases-panel__news-title:hover { color: var(--brand); }
-
-.releases-panel__news-all {
-    flex-shrink: 0;
-    gap: .375rem;
-    margin-left: auto;
-    padding-left: 1rem;
-}
-
-.releases-panel__news-all:hover { color: var(--brand-strong); }
-
-.releases[open] .releases-panel { animation: reveal .22s ease-out both; }
 .draft-enter { animation: draft-arrive 1.4s ease-out both; }
 
 @keyframes draft-arrive {
@@ -1375,7 +1375,8 @@
     .lead { font-size: 1.125rem; line-height: 2rem; }
     .card-title { font-size: 2.25rem; line-height: 2.5rem; }
 
-    .hero { padding-block: 6rem; }
+    .hero { padding-top: 6rem; }
+    .latest { margin-top: 6rem; }
     .hero__title { font-size: 6rem; }
 
     .hero__lead {
@@ -1390,24 +1391,6 @@
         align-items: center;
         gap: 2rem;
     }
-
-    .releases-panel {
-        width: max-content;
-        max-width: 100%;
-    }
-
-    .releases-panel__list {
-        grid-template-columns: repeat(2, max-content);
-        column-gap: 4rem;
-        padding: 1.5rem;
-    }
-
-    .releases-panel__links {
-        font-size: .875rem;
-        white-space: nowrap;
-    }
-
-    .releases-panel__news { padding-inline: 1.5rem; }
 
     .logo-wall__eyebrow { margin-bottom: 1.75rem; }
     .logo-wall__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1479,6 +1462,44 @@
 
 @media (min-width: 48rem) {
     .hero__art svg { opacity: .5; }
+
+    .latest__inner {
+        grid-template-areas: "label body all";
+        grid-template-columns: 11rem minmax(0, 1fr) auto;
+        align-items: stretch;
+        gap: 0 2rem;
+        padding-block: 0;
+    }
+
+    .latest__label,
+    .latest__body,
+    .latest__all { padding-block: 1.25rem; }
+
+    .latest__label {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid var(--line);
+    }
+
+    .latest__body {
+        display: flex;
+        align-items: center;
+    }
+
+    .latest-news { flex-wrap: nowrap; white-space: nowrap; }
+
+    .latest-news__title {
+        flex-basis: auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .latest-releases {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 3.5rem;
+    }
     .foundation-card .card-title { font-size: 2.25rem; line-height: 2.5rem; }
 }
 
@@ -1493,8 +1514,6 @@
     }
 
     .hero__art svg { opacity: 1; }
-
-    .releases-panel__list { grid-template-columns: repeat(var(--release-count, 3), max-content); }
 
     .logo-wall__list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .logo-wall__cross { display: block; }
@@ -1553,7 +1572,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .draft-enter, .releases[open] .releases-panel { animation: none; }
+    .draft-enter { animation: none; }
 }
 
 /* High contrast modes drop backgrounds, which carry the selected tab and the timeline ticks. */
