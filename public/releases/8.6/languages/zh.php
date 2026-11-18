@@ -62,7 +62,7 @@ return [
 
     'bc_title' => '弃用与向后不兼容的变更',
     'bc_return_in_finally' => '在 <code>finally</code> 块中使用 <code>return</code> 现已弃用，因为它会静默丢弃异常，并覆盖 <code>try</code> 或 <code>catch</code> 块的返回值。',
-    'bc_constructor_return' => '从 <code>__construct()</code> 或 <code>__destruct()</code> 返回值，以及将它们用作生成器的行为现已弃用。为 <code>__debugInfo()</code> 声明可空返回类型也已弃用。',
+    'bc_constructor_return' => '从 <code>__construct()</code> 或 <code>__destruct()</code> 返回值的行为现已弃用，将它们用作生成器的行为也已弃用。为 <code>__debugInfo()</code> 声明可空返回类型也已弃用。',
     'bc_reserved_identifiers' => '将 <code>let</code> 或 <code>is</code> 用作类名、函数名或常量名现已弃用。将 <code>_</code> 用作常量名、将 <code>namespace</code> 用作类常量名，以及将 <code>readonly</code> 用作函数名也已弃用。',
     'bc_mbregex' => '由于底层的 Oniguruma 库已停止维护，<code>mb_ereg()</code> 和 <code>mb_split()</code> 等 mbstring 正则表达式函数现已弃用。可改用带 <code>u</code> 修饰符的 PCRE 函数。',
     'bc_type_aliases' => '<code>is_double()</code>、<code>is_long()</code>、<code>is_integer()</code> 和 <code>doubleval()</code> 这些别名现已弃用。请改用 <code>is_float()</code>、<code>is_int()</code> 和 <code>floatval()</code>。',
