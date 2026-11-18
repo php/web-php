@@ -1,7 +1,7 @@
 <?php
 
 /**
- * En-revision: 3a119ea0972f5773f09f8e103951f36c6b481b10
+ * En-revision: 48763b34d11ec37d8ec281078b73dc355744b165
  */
 
 return [
@@ -14,7 +14,7 @@ return [
     'old_version' => 'PHP 8.5 и ранее',
     'badge_new' => 'Новинка',
     'documentation' => 'Документация',
-    'released' => 'Будет выпущен 19 ноября 2026',
+    'released' => 'Выпущен 19 ноября 2026',
     'release_unavailable_reason' => 'PHP 8.6 ещё не выпущен. Релиз запланирован на 19 ноября 2026 года.',
     'key_features' => 'Основные возможности PHP 8.6',
     'key_features_description' => '<p><strong>Более выразительный код</strong>, <strong>более строгие типы</strong> и <strong>масштабируемый ввод-вывод</strong>.</p>',
