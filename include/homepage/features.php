@@ -2,9 +2,30 @@
 
 /*
  * Highlights shown in the "Meet PHP x.y" card, keyed by branch. The homepage
- * features the newest branch in this list, regardless of releases elsewhere.
+ * features the newest branch in this list that has been released, so a new
+ * branch can be added ahead of its release day.
  */
 return [
+    '8.6' => [
+        [
+            'icon' => 'php-86-pfa',
+            'title' => 'Partial Function Application',
+            'anchor' => 'partial-function-application',
+            'description' => 'Fill in some of a function’s arguments now with <code>?</code> and <code>...</code> placeholders, and get back a Closure that takes the rest.',
+        ],
+        [
+            'icon' => 'php-86-duration',
+            'title' => 'Duration Class',
+            'anchor' => 'duration-class',
+            'description' => 'The new <code>Time\Duration</code> class expresses timeouts and benchmark timings with nanosecond precision, independent of any clock or timezone.',
+        ],
+        [
+            'icon' => 'php-86-poll',
+            'title' => 'Polling API',
+            'anchor' => 'polling-api',
+            'description' => '<code>Io\Poll</code> watches many streams at once using epoll, kqueue, and other native mechanisms, without the limits of <code>stream_select()</code>.',
+        ],
+    ],
     '8.5' => [
         [
             'icon' => 'php-85-uri',

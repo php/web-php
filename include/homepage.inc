@@ -4,6 +4,7 @@
  * Data and markup helpers for the homepage (public/index.php).
  */
 
+use phpweb\Homepage\FeaturedRelease;
 use phpweb\Homepage\PackagistStats;
 use phpweb\Homepage\ReleaseHistory;
 use phpweb\News\NewsHandler;
@@ -57,8 +58,8 @@ function homepage_latest_news(): ?array
 }
 
 /**
- * The branch featured in the "Meet PHP x.y" card (the newest branch in
- * include/homepage/features.php), with its release dates.
+ * The branch featured in the "Meet PHP x.y" card (the newest released branch
+ * in include/homepage/features.php), with its release dates.
  *
  * @return array{branch: string, released: ?DateTime, latest: ?string, latest_date: ?DateTime, features: list<array{icon: string, title: string, anchor: string, description: string}>, url: string}
  */
@@ -67,12 +68,11 @@ function homepage_featured_release(): array
     /** @var array<string, list<array{icon: string, title: string, anchor: string, description: string}>> $featureReleases */
     $featureReleases = require __DIR__ . '/homepage/features.php';
 
-    $branch = '0.0';
-    foreach (array_keys($featureReleases) as $candidate) {
-        if (version_compare($candidate, $branch, '>')) {
-            $branch = $candidate;
-        }
-    }
+    $branch = FeaturedRelease::branch(
+        array_map('strval', array_keys($featureReleases)),
+        get_branch_release_date(...),
+        new DateTimeImmutable(),
+    );
 
     $latest = get_current_release_for_branch(...array_map('intval', explode('.', $branch)));
     $latestDate = null;
