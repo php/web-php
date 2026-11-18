@@ -30,7 +30,7 @@ $comparisons = [
         before: <<<'PHP'
             $versions = ['8.4', '8.5', '8.6', '8.7', '9.0'];
 
-            $supported = array_filter(
+            $supportsPfa = array_filter(
                 $versions,
                 fn ($version) => version_compare($version, '8.6', '>='),
             );
@@ -38,7 +38,7 @@ $comparisons = [
         after: <<<'PHP'
             $versions = ['8.4', '8.5', '8.6', '8.7', '9.0'];
 
-            $supported = array_filter(
+            $supportsPfa = array_filter(
                 $versions,
                 version_compare(?, '8.6', '>='),
             );
