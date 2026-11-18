@@ -118,8 +118,7 @@ site_header(null, [
 
       <section id="proof" class="logo-wall" aria-labelledby="proof-heading">
         <div class="container">
-          <h2 id="proof-heading" class="sr-only">Selected projects built with PHP</h2>
-          <p class="logo-wall__eyebrow">Powered by PHP</p>
+          <h2 id="proof-heading" class="logo-wall__eyebrow">Powered by PHP</h2>
           <div class="logo-wall__body">
             <ul role="list" class="logo-wall__list" aria-label="Selected projects built with PHP">
 <?php foreach ($logos as $logo):
@@ -182,7 +181,7 @@ site_header(null, [
               </div>
               <div class="code-showcase__panels">
 <?php $first = true; foreach ($examples as $id => $example): ?>
-                <div id="example-<?= $id ?>" role="tabpanel" aria-labelledby="example-tab-<?= $id ?>" tabindex="0" data-copy-scope class="code-showcase__panel"<?= $first ? '' : ' hidden' ?>>
+                <div id="example-<?= $id ?>" role="tabpanel" aria-labelledby="example-tab-<?= $id ?>" data-copy-scope class="code-showcase__panel"<?= $first ? '' : ' hidden' ?>>
                   <div class="code-showcase__tabbar">
                     <div class="code-showcase__file"><?= $example['file'] ?></div>
                     <button type="button" data-copy-code class="copy-button" aria-label="Copy <?= $example['file'] ?>" title="Copy code">
@@ -191,11 +190,11 @@ site_header(null, [
                     </button>
                   </div>
                   <p class="code-showcase__description"><?= $example['description'] ?></p>
-                  <div class="code-showcase__code">
+                  <div role="region" aria-label="<?= $example['file'] ?> code" tabindex="0" class="code-showcase__code">
                     <pre aria-hidden="true" class="code-showcase__gutter"><?= implode("\n", range(1, substr_count($example['code'], "\n") + 1)) ?></pre>
                     <pre><code><?= $example['code'] ?></code></pre>
                   </div>
-                  <div role="region" aria-label="Example terminal session" class="terminal">
+                  <div class="terminal">
                     <div class="terminal__header">
                       <p class="terminal__tab">Terminal</p>
                       <p class="tok-comment">Example session</p>
@@ -225,15 +224,15 @@ site_header(null, [
               <div class="ecosystem__stats">
                 <div class="dot-paper" aria-hidden="true"></div>
                 <div class="ecosystem__stats-body">
-                  <p class="ecosystem__headline-stat"><?= PackagistStats::abbreviate($packagist['packages']) ?></p>
+                  <p class="ecosystem__headline-stat"><span aria-hidden="true"><?= PackagistStats::abbreviate($packagist['packages']) ?></span><span class="sr-only"><?= PackagistStats::spoken($packagist['packages']) ?></span></p>
                   <p class="ecosystem__headline-label">packages published</p>
                   <div class="ecosystem__stat-row">
                     <div class="stat-card">
-                      <p class="stat-card__value"><?= PackagistStats::abbreviate($packagist['versions']) ?></p>
+                      <p class="stat-card__value"><span aria-hidden="true"><?= PackagistStats::abbreviate($packagist['versions']) ?></span><span class="sr-only"><?= PackagistStats::spoken($packagist['versions']) ?></span></p>
                       <p class="stat-card__label">versions</p>
                     </div>
                     <div class="stat-card">
-                      <p class="stat-card__value"><?= PackagistStats::abbreviate($packagist['downloads']) ?></p>
+                      <p class="stat-card__value"><span aria-hidden="true"><?= PackagistStats::abbreviate($packagist['downloads']) ?></span><span class="sr-only"><?= PackagistStats::spoken($packagist['downloads']) ?></span></p>
                       <p class="stat-card__label">installs</p>
                     </div>
                   </div>
@@ -251,7 +250,7 @@ site_header(null, [
                 </div>
                 <h3 class="card-title">Composer + Packagist</h3>
                 <p class="lead">Declare what your project needs, lock exact versions, and install the same dependency graph everywhere. Search Packagist to find packages for databases, APIs, testing, queues, files, and almost everything between.</p>
-                <div class="command-line"><span class="command-line__prompt">$</span>composer require vendor/package</div>
+                <div class="command-line"><span class="command-line__prompt" aria-hidden="true">$</span>composer require vendor/package</div>
                 <div class="link-row">
                   <a href="https://getcomposer.org/" class="text-link text-link--brand">Get Composer<?= site_icon('arrow-up-right') ?></a>
                   <a href="https://packagist.org/" class="text-link text-link--brand">Browse Packagist<?= site_icon('arrow-up-right') ?></a>
@@ -393,10 +392,10 @@ site_header(null, [
         <p id="history-help" class="sr-only">Drag or scroll horizontally to explore releases. Follow a version to read its release details. Use the arrow keys to move between releases, or Home and End to jump to the first and last. Taller marks indicate major versions. PHP 6 was never released.</p>
         <div data-history-scroll class="history__scroll">
           <div data-history-track class="history__track" style="width: <?= $history['width'] ?>px">
-            <ol role="list" aria-label="PHP release milestones">
+            <ol role="list" aria-label="PHP release milestones" aria-describedby="history-help">
 <?php foreach ($history['releases'] as $i => $release): ?>
               <li class="history__release" style="left: <?= $release['left'] ?>px">
-                <a draggable="false" data-history-release<?php if ($release['url']): ?> href="<?= $release['url'] ?>" target="_blank" rel="noopener noreferrer"<?php endif; ?> title="<?= $release['title'] ?>" aria-label="<?= $release['title'] ?>" aria-describedby="history-help"<?= $i === array_key_last($history['releases']) ? '' : ' tabindex="-1"' ?> class="history__mark<?= $release['major'] ? ' history__mark--major' : '' ?>">
+                <a draggable="false" data-history-release<?php if ($release['url']): ?> href="<?= $release['url'] ?>"<?php endif; ?> title="<?= $release['title'] ?>" aria-label="<?= $release['title'] ?>"<?= $i === array_key_last($history['releases']) ? '' : ' tabindex="-1"' ?> class="history__mark<?= $release['major'] ? ' history__mark--major' : '' ?>">
                   <span class="history__label"><?= $release['branch'] ?></span>
                 </a>
               </li>

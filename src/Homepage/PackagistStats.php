@@ -13,6 +13,9 @@ use function is_string;
 use function json_decode;
 use function number_format;
 use function rtrim;
+use function str_ends_with;
+use function strtr;
+use function substr;
 
 /**
  * Packagist's package, version and install totals for the homepage, read from
@@ -78,5 +81,20 @@ final class PackagistStats
         }
 
         return (string) $number;
+    }
+
+    /**
+     * abbreviate() in words, for screen readers: 480630 => 480 thousand,
+     * 6066036 => 6.06 million, 213748586762 => more than 213 billion.
+     */
+    public static function spoken(int $number): string
+    {
+        $abbreviated = self::abbreviate($number);
+
+        if (str_ends_with($abbreviated, 'B+')) {
+            return 'more than ' . substr($abbreviated, 0, -2) . ' billion';
+        }
+
+        return strtr($abbreviated, ['M' => ' million', 'K' => ' thousand']);
     }
 }

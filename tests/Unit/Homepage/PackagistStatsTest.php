@@ -68,4 +68,21 @@ final class PackagistStatsTest extends TestCase
         yield 'one trailing zero is dropped' => [6100000, '6.1M'];
         yield 'billions round down with a plus' => [213748586762, '213B+'];
     }
+
+    #[DataProvider('provideSpokenNumbers')]
+    public function testSpellsOutAbbreviationsForScreenReaders(int $number, string $expected): void
+    {
+        self::assertSame($expected, PackagistStats::spoken($number));
+    }
+
+    /**
+     * @return iterable<string, array{int, string}>
+     */
+    public static function provideSpokenNumbers(): iterable
+    {
+        yield 'under a thousand' => [999, '999'];
+        yield 'thousands' => [480630, '480 thousand'];
+        yield 'millions' => [6066036, '6.06 million'];
+        yield 'billions' => [213748586762, 'more than 213 billion'];
+    }
 }

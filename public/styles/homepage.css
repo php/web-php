@@ -618,7 +618,7 @@
 .code-showcase__tab[aria-selected="true"]::before { opacity: 1; }
 
 .code-showcase__tab:focus-visible,
-.code-showcase__panel:focus-visible {
+.code-showcase__code:focus-visible {
     outline-offset: -3px;
 }
 
@@ -1015,10 +1015,9 @@
 
 .release-card__dates a {
     color: var(--brand);
+    text-decoration: underline;
     text-underline-offset: 2px;
 }
-
-.release-card__dates a:hover { text-decoration: underline; }
 
 .dark .release-card__logo { fill: var(--ink); }
 .dark .release-card__numeral,
@@ -1552,4 +1551,18 @@
 
 @media (prefers-reduced-motion: reduce) {
     .draft-enter, .releases[open] .releases-panel { animation: none; }
+}
+
+/* High contrast modes drop backgrounds, which carry the selected tab and the timeline ticks. */
+@media (forced-colors: active) {
+    .code-showcase__tab::before,
+    .history__mark::after {
+        forced-color-adjust: none;
+        background: CanvasText;
+    }
+
+    .code-showcase__tab[aria-selected="true"]::before { width: 4px; }
+
+    .history__mark:hover::after,
+    .history__mark:focus-visible::after { background: Highlight; }
 }
