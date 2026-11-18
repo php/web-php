@@ -13,6 +13,10 @@ $css_files = [
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
 }
+// Standalone pages (the homepage) replace the classic stylesheets entirely.
+if (isset($config["css_overwrite"])) {
+    $css_files = $config["css_overwrite"];
+}
 
 // (Conditionally) load fonts to support base.css
 if (array_intersect(['base.css', '/styles/base.css'], $css_files)) {
@@ -26,6 +30,7 @@ if (!in_array('php85.css', $css_files, true) && !in_array('/styles/php85.css', $
     $css_files[] = '/styles/shared-footer.css';
 }
 
+$CSS = [];
 foreach($css_files as $filename) {
     // files that do not start with / are assumed to be located in the /styles
     // directory
