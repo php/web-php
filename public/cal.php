@@ -189,7 +189,7 @@ for ($i = 1; $i <= date("t",$bom); $i++) {
     // Print out day number and all events for the day
     echo '<td><a class="day" href="/cal.php', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
          '">',$i,'</a>';
-    display_events_for_day(cal . phpdate("Y-m-", $bom) . sprintf("%02d", $i), $events);
+    display_events_for_day(date("Y-m-", $bom) . sprintf("%02d", $i), $events);
     echo '</td>';
 
     // Break HTML table row if at end of week

@@ -1004,7 +1004,7 @@ div.elephpants img:focus {
 .headsup {
   position: relative;
   padding:.25rem 0;
-  height:1.5rem;
+  height: auto;
   box-shadow: 0 2px 4px 0px rgba(0,0,0,.2);
   background-color: var(--dark-magenta-color);
   color:#fff;

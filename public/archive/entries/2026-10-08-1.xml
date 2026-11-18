@@ -9,7 +9,7 @@
   <category term="frontpage" label="PHP.net frontpage news"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>The PHP team is pleased to announce the first release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is specified in the <a href="https://wiki.php.net/todo/php86">PHP Wiki</a>.</p>
+      <p>The PHP team is pleased to announce the second release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is specified in the <a href="https://wiki.php.net/todo/php86">PHP Wiki</a>.</p>
       <p>Source downloads of PHP 8.6.0 RC3 are available on the <a href="https://downloads.php.net/~svpernova09/">download page</a>.</p>
       <p>Please carefully test this version and report any issues found in the <a href="https://github.com/php/php-src/issues/new?template=bug_report.yml">GitHub Issues</a>.</p>
       <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>

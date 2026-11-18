@@ -319,12 +319,6 @@ parameters:
 			path: include/header.inc
 
 		-
-			message: '#^Variable \$CSS might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: include/header.inc
-
-		-
 			message: '#^Variable \$MYSITE might not be defined\.$#'
 			identifier: variable.undefined
 			count: 9
@@ -379,7 +373,7 @@ parameters:
 			path: include/langchooser.inc
 
 		-
-			message: '#^Binary operation "\." between non\-falsy\-string and 0\|0\.0\|''''\|array\{\}\|numeric\-string\|false\|null results in an error\.$#'
+			message: '#^Binary operation "\." between literal\-string&non\-falsy\-string and 0\|0\.0\|''''\|array\{\}\|numeric\-string\|false\|null results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 1
 			path: include/layout.inc
@@ -1483,12 +1477,6 @@ parameters:
 			path: public/cached.php
 
 		-
-			message: '#^Constant cal not found\.$#'
-			identifier: constant.notFound
-			count: 1
-			path: public/cal.php
-
-		-
 			message: '#^Function date_for_recur\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
@@ -1561,12 +1549,6 @@ parameters:
 			path: public/cal.php
 
 		-
-			message: '#^Function phpdate not found\.$#'
-			identifier: function.notFound
-			count: 1
-			path: public/cal.php
-
-		-
 			message: '#^Function read_event\(\) has no return type specified\.$#'
 			identifier: missingType.return
 			count: 1
@@ -1599,7 +1581,7 @@ parameters:
 		-
 			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, int\|false given\.$#'
 			identifier: argument.type
-			count: 14
+			count: 15
 			path: public/cal.php
 
 		-
@@ -2093,120 +2075,6 @@ parameters:
 			identifier: variable.undefined
 			count: 1
 			path: public/quickref.php
-
-		-
-			message: '#^Function releases\\php80\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.0/common.php
-
-		-
-			message: '#^Function releases\\php80\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.0/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.0/common.php
-
-		-
-			message: '#^Function releases\\php81\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.1/common.php
-
-		-
-			message: '#^Function releases\\php81\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.1/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.1/common.php
-
-		-
-			message: '#^Function releases\\php82\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.2/common.php
-
-		-
-			message: '#^Function releases\\php82\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.2/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.2/common.php
-
-		-
-			message: '#^Function releases\\php83\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.3/common.php
-
-		-
-			message: '#^Function releases\\php83\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.3/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.3/common.php
-
-		-
-			message: '#^Function releases\\php84\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.4/common.php
-
-		-
-			message: '#^Function releases\\php84\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.4/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.4/common.php
-
-		-
-			message: '#^Function releases\\php85\\message\(\) has parameter \$code with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.5/common.php
-
-		-
-			message: '#^Function releases\\php85\\message\(\) has parameter \$interpolations with no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: public/releases/8.5/common.php
-
-		-
-			message: '#^Function releases\\php85\\message\(\) has parameter \$language with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: public/releases/8.5/common.php
-
-		-
-			message: '#^Parameter \#1 \$string of function htmlspecialchars expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: public/releases/8.5/common.php
 
 		-
 			message: '#^Function formatDate\(\) has no return type specified\.$#'

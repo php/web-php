@@ -367,6 +367,21 @@ function news_archive_sidebar(): void
     }
 }
 
+// Get Last-Modified timestamp for a year's archive page:
+// mtime of file or latest article, whichever is newer
+/** @param list<array<array-key, mixed>> $news */
+function news_archive_last_modified(array $news, string $pageFile): int
+{
+    $timestamps = array_map(static fn (array $entry): int => strtotime($entry['published']), $news);
+
+    $mtime = filemtime($pageFile);
+    if ($mtime !== false) {
+        $timestamps[] = $mtime;
+    }
+
+    return $timestamps === [] ? time() : max($timestamps);
+}
+
 // Print news
 function print_news($news, $dog, $max = 5, $return = false) {
     $retval = [];
@@ -488,11 +503,6 @@ META
     $curr = $config["current"];
     $classes = $config['classes'];
 
-    if (isset($_COOKIE["MD"]) || isset($_GET["MD"])) {
-        $classes .= "markdown-content";
-        $config["css_overwrite"] = ["/styles/i-love-markdown.css"];
-    }
-
     // shorturl; http://wiki.snaplog.com/short_url
     if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
         $shorturl = "https://www.php.net/" . $shortname;
@@ -503,6 +513,20 @@ META
 function site_footer(array $config = []): void
 {
     require __DIR__ . "/footer.inc";
+}
+
+// Render the shared footer template to a string
+function fancy_footer(string $extraCredit = ''): string
+{
+    // Credit manual/documentation pages to the PHP Documentation Group;
+    // everything else to the PHP Group.
+    $copyrightHolder = (!empty($_SERVER['BASE_PAGE']) && str_starts_with($_SERVER['BASE_PAGE'], 'manual/'))
+        ? 'The PHP Documentation Group'
+        : 'The PHP Group';
+
+    ob_start();
+    require __DIR__ . "/shared-footer.inc";
+    return (string) ob_get_clean();
 }
 
 function sha256_html(string $checksum): string

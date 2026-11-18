@@ -22,8 +22,8 @@ const LANGUAGES = [
 function common_header(string $description): void {
     global $MYSITE, $lang;
 
-    $meta_image_path = \htmlspecialchars(
-        \filter_var($MYSITE . 'images/php8/php_8_5_released.png', \FILTER_VALIDATE_URL));
+    $meta_image_url = \filter_var($MYSITE . 'images/php8/php_8_5_released.png', \FILTER_VALIDATE_URL);
+    $meta_image_path = $meta_image_url === false ? '' : \htmlspecialchars($meta_image_url);
     $meta_description = \htmlspecialchars($description);
 
     $languages = [];
@@ -36,6 +36,7 @@ function common_header(string $description): void {
         'css' => ['php85.css'],
         'language_switcher' => $languages,
         'theme_switcher' => true,
+        'cache_control' => 60 * 60, // 1 hour
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
@@ -54,7 +55,10 @@ META
     ]);
 }
 
-function message($code, $language = 'en', array $interpolations = []): string
+/**
+ * @param array<int|string, string> $interpolations
+ */
+function message(string $code, string $language = 'en', array $interpolations = []): string
 {
     $original = require __DIR__ . '/languages/en.php';
     if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {

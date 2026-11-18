@@ -90,22 +90,22 @@
 }
 
 .hero__versions a.notes {
-    font-size:.875rem;
-    white-space:nowrap;
+    font-size: .875rem;
+    white-space: nowrap;
 }
 
 .hero__versions a {
     color: var(--background-text-color);
-    border:0;
+    border: 0;
 }
 
 .hero__versions a:hover,
 .hero__versions a:focus {
-  border-bottom:1px dotted;
+  border-bottom: 1px dotted;
 }
 
 .hero__version-link {
-    color:#fff !important;
+    color: #fff !important;
     display: inline-block;
 }
 
@@ -151,11 +151,12 @@
 /* Layout */
 
 #layout-content {
-  border-right:.25rem solid #666;
+  border-right: .25rem solid #666;
 }
+
 .home .newsentry .newstitle a:after  {
-  content:"\20 \00bb";
-  color:#666;
+  content: "\20 \00bb";
+  color: #666;
 }
 
 p.archive {
@@ -180,7 +181,7 @@ p.archive {
     }
 
     #layout-content {
-        width:70%;
+        width: 70%;
     }
 }
 
@@ -215,4 +216,42 @@ aside.tips .social-media .icon-twitter {
 .btn-primary:hover, .hero__btn--primary:focus {
   background-color: var(--dark-magenta-color) !important;
   border-color: var(--dark-magenta-color) !important;
+}
+
+/* Conference pages */
+.conference-views {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin: 0 0 1.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.conference-views .conference-view {
+  padding: .5rem .25rem;
+  margin-bottom: -1px;
+  border-bottom: 3px solid transparent;
+  color: #666;
+  text-decoration: none;
+}
+
+.conference-views .conference-view.is-active {
+  border-bottom-color: var(--dark-blue-color);
+  color: var(--dark-grey-color);
+  font-weight: 600;
+}
+
+.newsentry .newsdate {
+  margin: -.75rem 0 .75rem;
+  color: #666;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+h2.conferences-divider {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
 }
