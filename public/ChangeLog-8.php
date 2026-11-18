@@ -9,6 +9,304 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_5"></a>
 
+<section class="version" id="8.5.13"><!-- {{{ 8.5.13 -->
+<h3>Version 8.5.13</h3>
+<b><?php release_date('19-Nov-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24184); ?> (System ID not being reinitialized after an Apache graceful restart, potentially causing incompatible OPcache file cache entries to be reused).</li>
+  <li>Fixed memory leak when an exception already contains the pending exception in its previous chain.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23979); ?> (Nullsafe operator must not flush delayed oplines of an enclosing function).</li>
+  <li>Fixed memory manager keeping a block reallocated to exactly the size of the next smaller bin in its larger bin, which efree_size() then freed into the wrong one.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24081); ?> (User opcode handlers resume execution against a stale frame under ZEND_VM_KIND_TAILCALL).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24218); ?> (Invalid opcode for count() of a literal array without SCCP).</li>
+  <li>Fix throwing behaviour with recursive arrays in VM.</li>
+  <li>Fixed skipped catch block when switching fibers during exception unwinding (Nicolas Grekas)</li>
+  <li>Fix escape analysis for objects implementing ArrayAccess.</li>
+  <li>Fix UAF for resolved callable zval.</li>
+  <li>Fix memory leak for nested HTTP calls.</li>
+  <li>Fix function and constant imports in compile_to_ast and add support for grouping.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24668); ?> (zend_set_local_var() leaks the previous value of an existing CV).</li>
+  <li>Fixed unmapping of an unrelated range when the aligned chunk mmap fails (Marti2203).</li>
+  <li>Fixed AST printing dropping final on class constants and properties, and abstract on properties.</li>
+  <li>Fixed AST export of readonly anonymous classes dropping the readonly modifier.</li>
+  <li>Fixed memory leak of a duplicate named argument in new in initializer.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25061); ?> ($x = $x - 1 on null is optimized to PRE_DEC).</li>
+  <li>Fixed first-class callables to static methods in trait constant expressions resolving to the method of the first using class and bypassing visibility checks.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '8mjj-2r7p-4hg2'); ?> (Use-after-free in magic method backtraces can lead to remote code execution). (CVE-2026-129474)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '2fjv-p558-g82m'); ?> (Use-after-free via repopulation of last_fatal_error_backtrace global after shutdown). (CVE-2026-129182)</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '5j3f-64r7-f564'); ?> (PHP-CGI out-of-bounds read and write during PATH_INFO correction). (CVE-2026-129538)</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24697); ?> (PHP_HTTP_PARSER_STRICT build option doesn't work).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9670); ?> (List -C and -q in the CLI help).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25008); ?> (com_event_sink() and com_print_typeinfo() crash resolving an event source with no loaded typelib).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix use-after-free of CURLOPT_STDERR stream on cloned curl handle.</li>
+  <li>Fix UAF on clone due to callback data pointer mismatch.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20503); ?> (Assertion failure with ext/date DateInterval property hash construction).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24350); ?> (MINIT reads a stale external tz database after an in-process module restart).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'gr4f-wgx5-jpfv'); ?> (Timezone cache use-after-free can lead to remote code execution). (CVE-2026-129496)</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24641); ?> (ndbm backend never checks dbm_open() return value, NULL deref on first use after a failed open).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed a use-after-free when reflected attribute setters replace an attribute whose child still has a live wrapper.</li>
+  <li>Fix error paths in dom_xml_serializing_a_document_node().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25118); ?> (Dom\HTMLDocument::createFromString() crash on OOM).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'x8r7-mg3g-74hg'); ?> (Double free during DOM XML serialization). (CVE-2026-129501)</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24582); ?> (Memory leaks in ext/ffi parser when finalize_type() bails out).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24289); ?> (finfo::file() reports the wrong argument number for an invalid $filename).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24229); ?> (fcgi_close() passes shutdown() a literal 1, which is SHUT_RD in WASI).</li>
+  <li>Fixed crash and stack memory disclosure in the worker output logging with a pool name longer than the message prefix buffer or log_limit.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'jm4m-qfqx-967m'); ?> (PHP-FPM epoll use-after-free can lead to local privilege escalation). (CVE-2026-129291)</li>
+  <li>Fixed memory leaks of the _GET string on the status page error and HEAD request paths.</li>
+  <li>Fixed use-after-free of the scoreboard copy when logging invalid status values.</li>
+  <li>Fixed null pointer dereference in fpm_get_status() when the scoreboard copy fails.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'qc49-hpvq-g2w6'); ?> (PHP-FPM request smuggling through an unread HTTP request body). (CVE-2026-129289)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3mg3-cr28-46gc'); ?> (PHP-FPM status endpoint XSS via unescaped user and script fields). (CVE-2026-129292)</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fix double free in ext/ftp data_accept() on accept failure.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imagetruecolortopalette() error message.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fix GOST and Snefru digests of 512 MiB or more.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed IntlDateFormatter parse functions truncating an $offset below INT_MIN.</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Fixed json_encode() leaving the recursion guard set on objects with hooked properties after running out of memory while escaping a property name.</li>
+  <li>Fixed json_encode() silently narrowing $depth values outside the int range, which wrapped to an unrelated depth.</li>
+  <li>Fixed json_encode() continuing to encode after an array or object key failed to encode.</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fix crash in ldap_exop_sync() when $response_data is omitted.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23958); ?> (truncated encoding names resolving to full names).</li>
+  <li>Fixed out-of-bounds read in php_mb_rfc1867_getword() on a multibyte lead byte at the end of a multipart field name.</li>
+  <li>Fixed negative mbstring.regex_stack_limit and mbstring.regex_retry_limit on 32bit platforms.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24293); ?> (Segfault on connect with an empty password to a MariaDB PAM account).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24609); ?> (OK packets without an info message rejected on x32 builds).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25036); ?> (odbc_prepare() corrupts the heap when the driver cannot describe a parameter).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24397); ?> (Assertion failure when dumping JIT IR).</li>
+  <li>Fixed tracing JIT returning a wrapped integer instead of a float on integer overflow after an integer was compared with a float or numeric-string literal.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17626); ?> (JIT corrupts an opline handler when blacklisting a root trace at the opcache.jit_max_root_traces limit, causing spurious "Too few arguments" errors and crashes).</li>
+  <li>Fix type inference of ADD_ARRAY_UNPACK with integer keys.</li>
+  <li>Fix too wide type inference for ASSIGN_DIM_OP.</li>
+  <li>Fix OSS-Fuzz #568005340 (FETCH_DIM_FUNC_ARG partial conversion).</li>
+  <li>Fix exception checks due to NAN warnings and object empty()'s.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24270); ?> (JIT loses the called scope of self:: and parent:: calls in closures).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24337); ?> (JIT: segfault when decrementing a non-numeric string property).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24185); ?> (Windows ZTS: random access violations with OPcache JIT in multi-process setups).</li>
+  <li>Fix SIGFPE on LONG_MIN % -1 with a constant divisor.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24388); ?> (Tracing JIT: segfault when a trace runs out of side exits).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24391); ?> (JIT switch on constant null takes default instead of case 0).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24206); ?> (Tracing JIT loses loop-carried CV when its loop PHI is reloaded from memory).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24386); ?> (JIT: register operand must be loaded before the typed reference check).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24437); ?> (JIT: Fix OP_DATA read from an unwritten slot in zend_jit_assign_dim_op()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24398); ?> (JIT: minimal JIT segfault when a hooked property is passed to a run-time-resolved function).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24389); ?> (Tracing JIT: type guard on entry of an inlined call exits with an uninitialized opline).</li>
+  <li>Fixed use-after-free in JIT ASSIGN_DIM_OP when concatenating into an empty array element.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24396); ?> (Assertion failure in zend_jit_def_reg() "reg forwarding" with chained Pi nodes).</li>
+  <li>Fixed JIT treating an array as packed after a string key write turned it into a hash.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24436); ?> (Tracing JIT: keep the SEND_VAL type guard after assigning to a reference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24745); ?> (File cache loses attributes on constants on 32-bit builds).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17733); ?> (System entropy does not take into account function order, resulting in wrong functions possibly called in different configurations).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24438); ?> (Preserve indirect types in JIT side traces).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24577); ?> (CE-cache flag on interned class name visible before map_ptr offset).</li>
+  <li>Fixed tracing JIT losing register-allocated CVs when an interrupt is handled at the end of a loop trace.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24675); ?> (function with &gt;~1.7 MB of machine code corrupts JIT buffer accounting).</li>
+  <li>Call orig_post_shutdown_cb().</li>
+  <li>Fixed JIT segfault on switch over a string reference holding a non-string value.</li>
+  <li>Fixed AArch64 JIT encoding of invalid logical immediates.</li>
+  <li>Fixed JIT crashes when handling a VM interrupt with a stale saved opline in the tailcall VM.</li>
+  <li>Fixed function JIT misinterpreting VM-enter results after an interrupt callback in the CALL and TAILCALL VMs.</li>
+  <li>Fixed unsound shift_left_overflows range when shift wraps.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23572); ?> (Tracing JIT calls the wrong method for self::/parent:: static calls in trait methods shared by several classes).</li>
+  <li>Fix block pass dropping ZEND_FAST_CALL OP2 definition.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23626); ?> (orphaned temporaries cause leaks and assertions).</li>
+  <li>Fix preloaded functions JIT-compiled on load being overwritten after restart.</li>
+  <li>Fix opcache.interned_strings_buffer being 0 in threads started later (ZTS).</li>
+  <li>Fixed potential infinite recursion/hang (HYBRID/TAILCALL respectively) when zend_interrupt_function resets EG(vm_interrupt).</li>
+  <li>Fix JIT losing the called scope of self::/parent:: calls in included files.</li>
+  <li>Fixed preloaded functions not JIT-compiled again after OPcache restart.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24988); ?> (Incorrect opcode range check causes bugs with exceptions in function JIT).</li>
+  <li>Fix opcache phar check.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22216); ?> (spurious opcache.memory_consumption warning on each new ZTS thread; the directive is also reported as 0 in worker threads).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed build and test compatibility with OpenSSL 4.0 and 4.1.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24784); ?> (openssl_pkcs7_read() and openssl_cms_read() overwrite certificates with CRLs).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed invalid ATTR_ORACLE_NULLS values being accepted and truncated.</li>
+  <li>Fixed a duplicate warning when ATTR_STATEMENT_CLASS is rejected on a persistent connection.</li>
+  <li>Fixed constructor option errors naming argument #3 ($password) instead of argument #4 ($options).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25006); ?> (getColumnMeta() reads out of bounds for an out-of-range column index).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed a use-after-free when a persistent connection receives a notice after the request that called Pdo\Pgsql::setNoticeCallback() has ended.</li>
+</ul></li>
+<li>PDO_SQLite:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24990); ?> (Statement unusable after a failed execute()).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25093); ?> (Phar::webPhar() redirect reads past the request URI).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25089); ?> (Heap buffer over-read via crafted alias size in zip-based phar).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8469); ?> (Phar::decompressFiles() and Phar::compressFiles() retain compressed contents after changing compression).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24740); ?> (Oversized tar metadata exhausts the memory limit).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25090); ?> (UAF in phar rename() of an entry with metadata).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25091); ?> (UAF in phar rename() when source and destination are equal).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25092); ?> (Double free in Phar::copy() on link and mounted entries).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24531); ?> (Crash when modifying a zip-based phar whose file was renamed).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '68fq-fh7h-f8gr'); ?> (PHAR OpenSSL signature bypass via algorithm downgrade). (CVE-2026-128090)</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li>Fix wrong command names.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22480); ?> (Use-after-free when re-watching an already-watched variable).</li>
+  <li>Fixed over-read when watching a packed array element.</li>
+  <li>Fixed double free of watch element chains.</li>
+</ul></li>
+<li>POSIX:
+<ul>
+  <li>Fixed posix_setrlimit() rejecting POSIX_RLIMIT_INFINITY on Solaris.</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li>Fixed a crash in readline_info() when completion_append_character contains a non-ASCII byte.</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed infinite loop in sapi_header_op() for headers of 4 GiB or more.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'q23r-hr55-xmpg'); ?> (SOAP information disclosure through malformed array dimensions). (CVE-2026-15353)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '4646-p932-gw34'); ?> (SOAP use-after-free when processing DTD entity references). (CVE-2026-129506)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Validate whole session ID instead of stopping at the first NUL byte.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'fm2m-fjf5-v3cp'); ?> (Partially overwritten session files can lead to remote code execution). (CVE-2026-126714)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '658j-r8rw-q6mx'); ?> (Session serializer mismatch can lead to remote code execution). (CVE-2026-115560)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'g3vh-838c-65v7'); ?> (Use-after-free after interrupted session shutdown). (CVE-2026-129481)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24264); ?> (Unwind/GracefulExit discarded in spl_iterators.c).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24748); ?> (socket_set_option() crashes with declared object properties).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed memory leaks in checkdnsrr() and dns_check_record() on Windows.</li>
+  <li>Fixed __unserialize() and __wakeup() being called for objects with a missing closing brace.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24308); ?> (Request shutdown calls closelog() even when syslog was not opened by PHP).</li>
+  <li>Fixed password_get_info() and password_needs_rehash() accepting malformed bcrypt costs.</li>
+  <li>Fixed proc_open() null descriptor not being inheritable on Windows.</li>
+  <li>Don't share the unserialize() context with enum autoloaders.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24399); ?> (usleep() and time_nanosleep() ignore queued APCs on Windows).</li>
+  <li>Fixed glob() not negating bracket expressions that start with "^".</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24552); ?> (Case-insensitive substr_compare(), ksort() and krsort() are still locale-dependent).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24605); ?> (var_export() crashes on deeply nested arrays and objects).</li>
+  <li>Fix use-after-free in Randomizer::shuffleArray() when the engine throws.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'f6gg-rchx-xw8j'); ?> (Mixed-case HTTPS and FTPS URLs can expose data in plaintext). (CVE-2026-128064)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'mmf9-xm3v-hg2x'); ?> (Denial of service through folded HTTP response headers). (CVE-2026-127960)</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24508); ?> (HTTP wrapper leaks the dechunk filter when header parsing fails after Transfer-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24509); ?> (HTTP wrapper leaks Location buffer on empty Location header).</li>
+  <li>Fix out-of-bounds reads parsing ftp:// wrapper server replies.</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fixed tidy_repair_string(), tidy_repair_file(), tidy::repairString() and tidy::repairFile() rejecting null for $encoding.</li>
+</ul></li>
+<li>URI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25019); ?> (Uri\Rfc3986\Uri rejects a port with leading zeros as out of range).</li>
+  <li>Upgrade to uriparser 1.0.3. (CVE-2026-48841)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'mg3p-mxj9-g2mm'); ?> (Incorrect RFC 3986 URI serialization for oversized input). (CVE-2026-129438)</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25009); ?> (GetConsoleTitleW() buffer size passed in bytes).</li>
+  <li>Fixed sapi_windows_cp_set() and sapi_windows_cp_conv() accepting a negative codepage on 32bit platforms.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Reject broken libzip versions 1.3.1, 1.7.0 and 1.12.0 during Windows configuration.</li>
+  <li>Excluded libzip 1.12.0 due to a regression preventing additions and replacements in torrentzip archives.</li>
+  <li>Fixed use-after-free when re-entering ZipArchive during destruction or a close warning, and rejected opening streams while closing.</li>
+  <li>Fixed a use-after-free when a ZipArchive method that modifies the archive is called from a progress or cancel callback during close().</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed use-after-free when an error handler removes a failing zlib.inflate filter (<?php githubissuel('php/php-src', 24176); ?>).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24533); ?> (zlib.lib could not be found because zlib 1.3.2 CMake build does not emit it).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.5.12"><!-- {{{ 8.5.12 -->
 <h3>Version 8.5.12</h3>
 <b><?php release_date('22-Oct-2026'); ?></b>
@@ -1650,6 +1948,303 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_4"></a>
+
+<section class="version" id="8.4.28"><!-- {{{ 8.4.28 -->
+<h3>Version 8.4.28</h3>
+<b><?php release_date('19-Nov-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24184); ?> (System ID not being reinitialized after an Apache graceful restart, potentially causing incompatible OPcache file cache entries to be reused).</li>
+  <li>Fixed memory leak when an exception already contains the pending exception in its previous chain.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23979); ?> (Nullsafe operator must not flush delayed oplines of an enclosing function).</li>
+  <li>Fixed memory manager keeping a block reallocated to exactly the size of the next smaller bin in its larger bin, which efree_size() then freed into the wrong one.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24218); ?> (Invalid opcode for count() of a literal array without SCCP).</li>
+  <li>Fix throwing behaviour with recursive arrays in VM.</li>
+  <li>Fixed skipped catch block when switching fibers during exception unwinding (Nicolas Grekas)</li>
+  <li>Fix escape analysis for objects implementing ArrayAccess.</li>
+  <li>Fix UAF for resolved callable zval.</li>
+  <li>Fix memory leak for nested HTTP calls.</li>
+  <li>Fixed pthread attribute leak in zend_call_stack_get_netbsd_pthread().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24321); ?> (ZTS: global_map_ptr_last survives zend_shutdown(), so an in-process engine restart keeps growing the map_ptr table).</li>
+  <li>Fix function and constant imports in compile_to_ast and add support for grouping.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24265); ?> (Unwind/GracefulExit discarded in zend_fiber_execute()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24668); ?> (zend_set_local_var() leaks the previous value of an existing CV).</li>
+  <li>Fixed unmapping of an unrelated range when the aligned chunk mmap fails (Marti2203).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24989); ?> (Use-after-free in GC when an exception is thrown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24534); ?> (Segfault in zend_try_early_bind when a parent class autoloads its cached child during linking).</li>
+  <li>Fixed AST printing dropping final on class constants and properties, and abstract on properties.</li>
+  <li>Fixed AST export of readonly anonymous classes dropping the readonly modifier.</li>
+  <li>Fixed memory leak of a duplicate named argument in new in initializer.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25061); ?> ($x = $x - 1 on null is optimized to PRE_DEC).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24480); ?> (Finally block running a second time when a VM interrupt throws as the finally block returns to a "return" in its try block).</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '5j3f-64r7-f564'); ?> (PHP-CGI out-of-bounds read and write during PATH_INFO correction). (CVE-2026-129538)</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24697); ?> (PHP_HTTP_PARSER_STRICT build option doesn't work).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9670); ?> (List -C and -q in the CLI help).</li>
+  <li>Fixed crash and leak in the built-in server on repeated request headers.</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25008); ?> (com_event_sink() and com_print_typeinfo() crash resolving an event source with no loaded typelib).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix use-after-free of CURLOPT_STDERR stream on cloned curl handle.</li>
+  <li>Fix UAF on clone due to callback data pointer mismatch.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20503); ?> (Assertion failure with ext/date DateInterval property hash construction).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24350); ?> (MINIT reads a stale external tz database after an in-process module restart).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'gr4f-wgx5-jpfv'); ?> (Timezone cache use-after-free can lead to remote code execution). (CVE-2026-129496)</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24641); ?> (ndbm backend never checks dbm_open() return value, NULL deref on first use after a failed open).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed a use-after-free when reflected attribute setters replace an attribute whose child still has a live wrapper.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23352); ?> (UAF reading an attribute value node retained across DOMDocument::adoptNode()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24260); ?> (querySelectorAll() returns duplicate elements for selector lists).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23334); ?> (Use-after-free in php_dom_free_templated_content()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22077); ?> (UAF in custom XPath function).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22554); ?> (use-after-free with XPath callback returning a node from a foreign document).</li>
+  <li>Fixed DOMXPath crash wrapping a foreign node after a nodeset callback.</li>
+  <li>Fix error paths in dom_xml_serializing_a_document_node().</li>
+  <li>Fixed use-after-free on namespace axis results with a foreign-document XPath callback node.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'x8r7-mg3g-74hg'); ?> (Double free during DOM XML serialization). (CVE-2026-129501)</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24582); ?> (Memory leaks in ext/ffi parser when finalize_type() bails out).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24229); ?> (fcgi_close() passes shutdown() a literal 1, which is SHUT_RD in WASI).</li>
+  <li>Fixed crash and stack memory disclosure in the worker output logging with a pool name longer than the message prefix buffer or log_limit.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'jm4m-qfqx-967m'); ?> (PHP-FPM epoll use-after-free can lead to local privilege escalation). (CVE-2026-129291)</li>
+  <li>Fixed memory leaks of the _GET string on the status page error and HEAD request paths.</li>
+  <li>Fixed use-after-free of the scoreboard copy when logging invalid status values.</li>
+  <li>Fixed null pointer dereference in fpm_get_status() when the scoreboard copy fails.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'qc49-hpvq-g2w6'); ?> (PHP-FPM request smuggling through an unread HTTP request body). (CVE-2026-129289)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3mg3-cr28-46gc'); ?> (PHP-FPM status endpoint XSS via unescaped user and script fields). (CVE-2026-129292)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24289); ?> (finfo::file() reports the wrong argument number for an invalid $filename).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fix double free in ext/ftp data_accept() on accept failure.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imagetruecolortopalette() error message.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fix GOST and Snefru digests of 512 MiB or more.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed IntlDateFormatter parse functions truncating an $offset below INT_MIN.</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Fixed json_encode() leaving the recursion guard set on objects with hooked properties after running out of memory while escaping a property name.</li>
+  <li>Fixed json_encode() silently narrowing $depth values outside the int range, which wrapped to an unrelated depth.</li>
+  <li>Fixed json_encode() continuing to encode after an array or object key failed to encode.</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fix crash in ldap_exop_sync() when $response_data is omitted.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23958); ?> (truncated encoding names resolving to full names).</li>
+  <li>Fixed out-of-bounds read in php_mb_rfc1867_getword() on a multibyte lead byte at the end of a multipart field name.</li>
+  <li>Fixed negative mbstring.regex_stack_limit and mbstring.regex_retry_limit on 32bit platforms.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24293); ?> (Segfault on connect with an empty password to a MariaDB PAM account).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24609); ?> (OK packets without an info message rejected on x32 builds).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24736); ?> (php_odbc_connstr_is_quoted() treats a value with no closing brace as quoted).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25036); ?> (odbc_prepare() corrupts the heap when the driver cannot describe a parameter).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24397); ?> (Assertion failure when dumping JIT IR).</li>
+  <li>Fixed tracing JIT returning a wrapped integer instead of a float on integer overflow after an integer was compared with a float or numeric-string literal.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20890); ?> (Segfault in zval_undefined_cv with non-simple property hook with minimal tracing JIT).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17626); ?> (JIT corrupts an opline handler when blacklisting a root trace at the opcache.jit_max_root_traces limit, causing spurious "Too few arguments" errors and crashes).</li>
+  <li>Fix type inference of ADD_ARRAY_UNPACK with integer keys.</li>
+  <li>Fix too wide type inference for ASSIGN_DIM_OP.</li>
+  <li>Fix OSS-Fuzz #568005340 (FETCH_DIM_FUNC_ARG partial conversion).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24218); ?> (Invalid opcode for count() of a literal array when SCCP is disabled).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24337); ?> (JIT: segfault when decrementing a non-numeric string property).</li>
+  <li>Fix SIGFPE on LONG_MIN % -1 with a constant divisor.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24388); ?> (Tracing JIT: segfault when a trace runs out of side exits).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24391); ?> (JIT switch on constant null takes default instead of case 0).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24206); ?> (Tracing JIT loses loop-carried CV when its loop PHI is reloaded from memory).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24386); ?> (JIT: register operand must be loaded before the typed reference check).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24437); ?> (JIT: Fix OP_DATA read from an unwritten slot in zend_jit_assign_dim_op()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24398); ?> (JIT: minimal JIT segfault when a hooked property is passed to a run-time-resolved function).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24389); ?> (Tracing JIT: type guard on entry of an inlined call exits with an uninitialized opline).</li>
+  <li>Fixed use-after-free in JIT ASSIGN_DIM_OP when concatenating into an empty array element.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24396); ?> (Assertion failure in zend_jit_def_reg() "reg forwarding" with chained Pi nodes).</li>
+  <li>Fixed JIT treating an array as packed after a string key write turned it into a hash.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24436); ?> (Tracing JIT: keep the SEND_VAL type guard after assigning to a reference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17733); ?> (System entropy does not take into account function order, resulting in wrong functions possibly called in different configurations).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24438); ?> (Preserve indirect types in JIT side traces).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24577); ?> (CE-cache flag on interned class name visible before map_ptr offset).</li>
+  <li>Fixed tracing JIT losing register-allocated CVs when an interrupt is handled at the end of a loop trace.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24675); ?> (function with &gt;~1.7 MB of machine code corrupts JIT buffer accounting).</li>
+  <li>Call orig_post_shutdown_cb().</li>
+  <li>Fixed JIT segfault on switch over a string reference holding a non-string value.</li>
+  <li>Fixed AArch64 JIT encoding of invalid logical immediates.</li>
+  <li>Fixed unsound shift_left_overflows range when shift wraps.</li>
+  <li>Fix block pass dropping ZEND_FAST_CALL OP2 definition.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 23626); ?> (orphaned temporaries cause leaks and assertions).</li>
+  <li>Fix preloaded functions JIT-compiled on load being overwritten after restart.</li>
+  <li>Fix opcache.interned_strings_buffer being 0 in threads started later (ZTS).</li>
+  <li>Fixed potential infinite recursion/hang (HYBRID/TAILCALL respectively) when zend_interrupt_function resets EG(vm_interrupt).</li>
+  <li>Fixed preloaded functions not JIT-compiled again after OPcache restart.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24988); ?> (Incorrect opcode range check causes bugs with exceptions in function JIT).</li>
+  <li>Fix opcache phar check.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed build and test compatibility with OpenSSL 4.0 and 4.1.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24784); ?> (openssl_pkcs7_read() and openssl_cms_read() overwrite certificates with CRLs).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed invalid ATTR_ORACLE_NULLS values being accepted and truncated.</li>
+  <li>Fixed a duplicate warning when ATTR_STATEMENT_CLASS is rejected on a persistent connection.</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25006); ?> (getColumnMeta() reads out of bounds for an out-of-range column index).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed a use-after-free when a persistent connection receives a notice after the request that called Pdo\Pgsql::setNoticeCallback() has ended.</li>
+</ul></li>
+<li>PDO_SQLite:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24990); ?> (Statement unusable after a failed execute()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25021); ?> (SQLite createFunction corrupts large integers).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25093); ?> (Phar::webPhar() redirect reads past the request URI).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25089); ?> (Heap buffer over-read via crafted alias size in zip-based phar).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8469); ?> (Phar::decompressFiles() and Phar::compressFiles() retain compressed contents after changing compression).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24740); ?> (Oversized tar metadata exhausts the memory limit).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25090); ?> (UAF in phar rename() of an entry with metadata).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25091); ?> (UAF in phar rename() when source and destination are equal).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25092); ?> (Double free in Phar::copy() on link and mounted entries).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24531); ?> (Crash when modifying a zip-based phar whose file was renamed).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '68fq-fh7h-f8gr'); ?> (PHAR OpenSSL signature bypass via algorithm downgrade). (CVE-2026-128090)</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li>Fix wrong command names.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22480); ?> (Use-after-free when re-watching an already-watched variable).</li>
+  <li>Fixed over-read when watching a packed array element.</li>
+  <li>Fixed double free of watch element chains.</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li>Fixed a crash in readline_info() when completion_append_character contains a non-ASCII byte.</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed infinite loop in sapi_header_op() for headers of 4 GiB or more.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed use of uninitialized func in do_request() on OOM bailout.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'q23r-hr55-xmpg'); ?> (SOAP information disclosure through malformed array dimensions). (CVE-2026-15353)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '4646-p932-gw34'); ?> (SOAP use-after-free when processing DTD entity references). (CVE-2026-129506)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Validate whole session ID instead of stopping at the first NUL byte.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'fm2m-fjf5-v3cp'); ?> (Partially overwritten session files can lead to remote code execution). (CVE-2026-126714)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '658j-r8rw-q6mx'); ?> (Session serializer mismatch can lead to remote code execution). (CVE-2026-115560)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'g3vh-838c-65v7'); ?> (Use-after-free after interrupted session shutdown). (CVE-2026-129481)</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24488); ?> (GC double-frees the SimpleXMLElement properties table).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24264); ?> (Unwind/GracefulExit discarded in spl_iterators.c).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24748); ?> (socket_set_option() crashes with declared object properties).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed memory leaks in checkdnsrr() and dns_check_record() on Windows.</li>
+  <li>Fixed __unserialize() and __wakeup() being called for objects with a missing closing brace.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24308); ?> (Request shutdown calls closelog() even when syslog was not opened by PHP).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24399); ?> (usleep() and time_nanosleep() ignore queued APCs on Windows).</li>
+  <li>Fixed chown() and lchown() failing to resolve user names in ZTS builds when getpwnam_r() needs a larger buffer.</li>
+  <li>Fixed password_get_info() and password_needs_rehash() accepting malformed bcrypt costs.</li>
+  <li>Fixed proc_open() null descriptor not being inheritable on Windows.</li>
+  <li>Don't share the unserialize() context with enum autoloaders.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24373); ?> (serialize() called from a destructor during var_hash destruction reuses the outer var_hash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24552); ?> (Case-insensitive substr_compare(), ksort() and krsort() are still locale-dependent).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24605); ?> (var_export() crashes on deeply nested arrays and objects).</li>
+  <li>Fix use-after-free in Randomizer::shuffleArray() when the engine throws.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'f6gg-rchx-xw8j'); ?> (Mixed-case HTTPS and FTPS URLs can expose data in plaintext). (CVE-2026-128064)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'mmf9-xm3v-hg2x'); ?> (Denial of service through folded HTTP response headers). (CVE-2026-127960)</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24508); ?> (HTTP wrapper leaks the dechunk filter when header parsing fails after Transfer-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24509); ?> (HTTP wrapper leaks Location buffer on empty Location header).</li>
+  <li>Fix out-of-bounds reads parsing ftp:// wrapper server replies.</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fixed tidy_repair_string(), tidy_repair_file(), tidy::repairString() and tidy::repairFile() rejecting null for $encoding.</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed sapi_windows_cp_set() and sapi_windows_cp_conv() accepting a negative codepage on 32bit platforms.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 25009); ?> (GetConsoleTitleW() buffer size passed in bytes).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Reject broken libzip versions 1.3.1, 1.7.0 and 1.12.0 during Windows configuration.</li>
+  <li>Excluded libzip 1.12.0 due to a regression preventing additions and replacements in torrentzip archives.</li>
+  <li>Fixed use-after-free when re-entering ZipArchive during destruction or a close warning, and rejected opening streams while closing.</li>
+  <li>Fixed a use-after-free when a ZipArchive method that modifies the archive is called from a progress or cancel callback during close().</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed use-after-free when an error handler removes a failing zlib.inflate filter (<?php githubissuel('php/php-src', 24176); ?>).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 24533); ?> (zlib.lib could not be found because zlib 1.3.2 CMake build does not emit it).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.4.27"><!-- {{{ 8.4.27 -->
 <h3>Version 8.4.27</h3>
@@ -4587,6 +5182,48 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.37"><!-- {{{ 8.3.37 -->
+<h3>Version 8.3.37</h3>
+<b><?php release_date('19-Nov-2026'); ?></b>
+<ul><li>CGI:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '5j3f-64r7-f564'); ?> (PHP-CGI out-of-bounds read and write during PATH_INFO correction). (CVE-2026-129538)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'gr4f-wgx5-jpfv'); ?> (Timezone cache use-after-free can lead to remote code execution). (CVE-2026-129496)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'qc49-hpvq-g2w6'); ?> (PHP-FPM request smuggling through an unread HTTP request body). (CVE-2026-129289)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3mg3-cr28-46gc'); ?> (PHP-FPM status endpoint XSS via unescaped user and script fields). (CVE-2026-129292)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'jm4m-qfqx-967m'); ?> (PHP-FPM epoll use-after-free can lead to local privilege escalation). (CVE-2026-129291)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '68fq-fh7h-f8gr'); ?> (PHAR OpenSSL signature bypass via algorithm downgrade). (CVE-2026-128090)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'fm2m-fjf5-v3cp'); ?> (Partially overwritten session files can lead to remote code execution). (CVE-2026-126714)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '658j-r8rw-q6mx'); ?> (Session serializer mismatch can lead to remote code execution). (CVE-2026-115560)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'g3vh-838c-65v7'); ?> (Use-after-free after interrupted session shutdown). (CVE-2026-129481)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'q23r-hr55-xmpg'); ?> (SOAP information disclosure through malformed array dimensions). (CVE-2026-15353)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '4646-p932-gw34'); ?> (SOAP use-after-free when processing DTD entity references). (CVE-2026-129506)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'f6gg-rchx-xw8j'); ?> (Mixed-case HTTPS and FTPS URLs can expose data in plaintext). (CVE-2026-128064)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'mmf9-xm3v-hg2x'); ?> (Denial of service through folded HTTP response headers). (CVE-2026-127960)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.36"><!-- {{{ 8.3.36 -->
 <h3>Version 8.3.36</h3>
 <b><?php release_date('22-Oct-2026'); ?></b>
@@ -7391,6 +8028,47 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_2"></a>
+
+<section class="version" id="8.2.36"><!-- {{{ 8.2.36 -->
+<h3>Version 8.2.36</h3>
+<b><?php release_date('19-Nov-2026'); ?></b>
+<ul><li>CGI:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '5j3f-64r7-f564'); ?> (PHP-CGI out-of-bounds read and write during PATH_INFO correction). (CVE-2026-129538)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'gr4f-wgx5-jpfv'); ?> (Timezone cache use-after-free can lead to remote code execution). (CVE-2026-129496)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'qc49-hpvq-g2w6'); ?> (PHP-FPM request smuggling through an unread HTTP request body). (CVE-2026-129289)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3mg3-cr28-46gc'); ?> (PHP-FPM status endpoint XSS via unescaped user and script fields). (CVE-2026-129292)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'jm4m-qfqx-967m'); ?> (PHP-FPM epoll use-after-free can lead to local privilege escalation). (CVE-2026-129291)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '68fq-fh7h-f8gr'); ?> (PHAR OpenSSL signature bypass via algorithm downgrade). (CVE-2026-128090)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'fm2m-fjf5-v3cp'); ?> (Partially overwritten session files can lead to remote code execution). (CVE-2026-126714)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '658j-r8rw-q6mx'); ?> (Session serializer mismatch can lead to remote code execution). (CVE-2026-115560)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'q23r-hr55-xmpg'); ?> (SOAP information disclosure through malformed array dimensions). (CVE-2026-15353)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '4646-p932-gw34'); ?> (SOAP use-after-free when processing DTD entity references). (CVE-2026-129506)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'f6gg-rchx-xw8j'); ?> (Mixed-case HTTPS and FTPS URLs can expose data in plaintext). (CVE-2026-128064)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'mmf9-xm3v-hg2x'); ?> (Denial of service through folded HTTP response headers). (CVE-2026-127960)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.2.35"><!-- {{{ 8.2.35 -->
 <h3>Version 8.2.35</h3>
