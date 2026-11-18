@@ -2,11 +2,10 @@
  * Standalone, framework-free styling for the shared "fancy" footer
  * (see include/shared-footer.inc -> fancy_footer()).
  *
- * This is the vanilla-CSS counterpart to the Tailwind build in php85.css that
- * the release pages use. It is fully self-contained; every rule is scoped under
+ * Every page loads it. It is fully self-contained; every rule is scoped under
  * `.php-footer` so it can sit at the bottom of a classic php.net page without
  * leaking into, or inheriting from, the rest of that page's styles. The
- * homepage gets a light theme at the end of the file.
+ * homepage and the release pages get light themes at the end of the file.
  */
 
 .php-footer {
@@ -313,5 +312,71 @@
     .home-page .php-footer .footer-links-container {
         margin-top: 0;
         grid-column: span 2 / span 2;
+    }
+}
+
+/* --- release pages ------------------------------------------------------ */
+
+/*
+ * The release pages (/releases/8.x/) load /styles/php85.css and sit on its
+ * white background, so they get a light footer in its gray palette, using its
+ * color tokens. The Donate button is styled by php85.css.
+ */
+.php85 .php-footer {
+    --footer-fg: var(--color-gray-600);
+    --footer-fg-strong: var(--color-gray-900);
+    --footer-border: color-mix(in oklab, var(--color-gray-900) 10%, transparent);
+    border-top: 1px solid color-mix(in oklab, var(--color-black) 5%, transparent);
+    line-height: inherit;
+}
+
+.dark .php85 .php-footer {
+    --footer-fg: color-mix(in oklab, var(--color-white) 80%, transparent);
+    --footer-fg-strong: var(--color-white);
+    --footer-border: color-mix(in oklab, var(--color-white) 10%, transparent);
+    border-top-color: color-mix(in oklab, var(--color-white) 3%, transparent);
+    background-color: oklab(39.0688% .00431919 -.103547 / .3);
+}
+
+.php85 .php-footer .footer-logo svg,
+.php85 .php-footer .social-icons a:hover {
+    color: var(--color-gray-800);
+}
+
+.dark .php85 .php-footer .footer-logo svg,
+.dark .php85 .php-footer .social-icons a:hover {
+    color: var(--color-white);
+}
+
+/* Keeps the paragraph spacing these pages have always had from theme-base.css. */
+.php85 .php-footer .footer-grid p,
+.php85 .php-footer .footer-credits p {
+    margin-bottom: 1.5rem;
+}
+
+.php85 .php-footer .footer-container {
+    width: auto;
+    max-width: 80rem;
+    padding-inline: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .php85 .php-footer .footer-container {
+        padding-top: 6rem;
+    }
+
+    .php85 .php-footer .footer-credits {
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .php85 .php-footer .footer-container {
+        padding-inline: 2rem;
+        padding-top: 7rem;
+    }
+
+    .php85 .php-footer .footer-credits {
+        margin-top: 6rem;
     }
 }

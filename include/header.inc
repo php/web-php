@@ -23,12 +23,8 @@ if (array_intersect(['base.css', '/styles/base.css'], $css_files)) {
     array_unshift($css_files, '/fonts/Inter/inter.css', '/fonts/IBM-Plex-Mono/plex-mono.css');
 }
 
-// The fancy footer is the default for classic pages (see footer.inc); load its
-// standalone stylesheet everywhere except the release landing pages, which ship
-// their own footer styles in php85.css.
-if (!in_array('php85.css', $css_files, true) && !in_array('/styles/php85.css', $css_files, true)) {
-    $css_files[] = '/styles/shared-footer.css';
-}
+// Every page uses the fancy footer (see footer.inc and fancy_footer()).
+$css_files[] = '/styles/shared-footer.css';
 
 $CSS = [];
 foreach($css_files as $filename) {

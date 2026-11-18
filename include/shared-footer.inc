@@ -6,10 +6,8 @@
  *   string $copyrightHolder  Name credited in the copyright line.
  *   string $extraCredit      Optional extra markup for the credits row (may be '').
  *
- * The markup is CSS-framework agnostic: it carries both the release-page class
- * names (footer-grid, social-icons, …) and a top-level `php-footer` class, so the
- * caller can dress it with either the Tailwind build in /styles/php85.css or the
- * standalone /styles/shared-footer.css.
+ * Styled by /styles/shared-footer.css, which every page loads; its rules are
+ * scoped under the top-level `php-footer` class.
  *
  * @var string $copyrightHolder
  * @var string $extraCredit
