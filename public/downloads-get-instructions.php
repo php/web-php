@@ -31,6 +31,10 @@ if (array_key_exists('multiversion', $options)) {
     $multiversion = $options['multiversion'] === 'Y';
 }
 
+if (!in_array($options['version'], $versions, true)) {
+    $options['version'] = 'default';
+}
+
 $source = false;
 
 if (array_key_exists('source', $options)) {
