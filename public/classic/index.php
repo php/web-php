@@ -2,19 +2,6 @@
 
 use phpweb\News\NewsHandler;
 
-(function ($uri): void {
-    // Special redirect cases not able to be captured in error.php
-    $shortcuts = [
-        '/?:' => '/language.operators.comparison#language.operators.comparison.ternary',
-        '/??' => '/language.operators.comparison#language.operators.comparison.coalesce',
-        '/??=' => '/language.operators.assignment#language.operators.assignment.other',
-    ];
-    if (isset($shortcuts[$uri])) {
-        header("Location: {$shortcuts[$uri]}");
-        exit;
-    }
-})($_SERVER['REQUEST_URI'] ?? '');
-
 // Get the modification date of this PHP file
 $timestamps = [@getlastmod()];
 
@@ -25,13 +12,13 @@ $timestamps = [@getlastmod()];
    the display of the index page). The cost of stat'ing
    them all is prohibitive.
 */
-$timestamps[] = @filemtime("../include/prepend.inc");
+$timestamps[] = @filemtime(__DIR__ . "/../../include/prepend.inc");
 
 // These are the only dynamic parts of the frontpage
-$timestamps[] = @filemtime("include/pregen-confs.inc");
-$timestamps[] = @filemtime("include/pregen-news.inc");
-$timestamps[] = @filemtime("../include/version.inc");
-$timestamps[] = @filemtime("js/common.js");
+$timestamps[] = @filemtime(__DIR__ . "/../include/pregen-confs.inc");
+$timestamps[] = @filemtime(__DIR__ . "/../include/pregen-news.inc");
+$timestamps[] = @filemtime(__DIR__ . "/../../include/version.inc");
+$timestamps[] = @filemtime(__DIR__ . "/../js/common.js");
 
 // The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);
@@ -52,11 +39,11 @@ header("Last-Modified: " . $tsstring);
 // The previous homepage, kept reachable but out of search results
 header("X-Robots-Tag: noindex");
 
-$_SERVER['BASE_PAGE'] = 'legacy-index.php';
-require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
-require_once __DIR__ . '/include/pregen-confs.inc';
-require_once __DIR__ . '/../include/version.inc';
+$_SERVER['BASE_PAGE'] = 'classic/index.php';
+require_once __DIR__ . '/../../include/prepend.inc';
+require_once __DIR__ . '/../../include/branches.inc';
+require_once __DIR__ . '/../include/pregen-confs.inc';
+require_once __DIR__ . '/../../include/version.inc';
 
 // Disable LAST_NEWS cookie as its busting the CDN cache — disabling temporarily (or not) — Derick
 // mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
