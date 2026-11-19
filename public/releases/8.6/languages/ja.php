@@ -75,5 +75,5 @@ return [
     'bc_value_errors' => '多くの関数が、範囲外の値、無効なフラグ、NUL バイトを含む文字列に対して、黙って切り詰めたり無視したりせず <code>ValueError</code> をスローするようになりました。',
 
     'footer_title' => 'より優れた構文、パフォーマンスの向上、型安全性。',
-    'footer_description' => '<p class="first-paragraph">変更点の完全な一覧は <a href="/ChangeLog-8.php#PHP_8_6" target="_blank">ChangeLog</a> に記載されています。</p><p>新機能と後方互換性のない変更の詳細な一覧については、<a href="/manual/en/migration86.php" target="_blank">移行ガイド</a>をご覧ください。</p>',
+    'footer_description' => '<p class="first-paragraph">変更点の完全な一覧は <a href="/ChangeLog-8.php#PHP_8_6" target="_blank">ChangeLog</a> に記載されています。</p><p>新機能と後方互換性のない変更の詳細な一覧については、<a href="/manual/ja/migration86.php" target="_blank">移行ガイド</a>をご覧ください。</p>',
 ];
