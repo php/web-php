@@ -407,6 +407,16 @@ $comparisons = [
                     $this->parser = SlugParser::class;
                 }
             }
+
+            final class DateRule implements Rule
+            {
+                public readonly string $parser;
+
+                public function __construct()
+                {
+                    $this->parser = DateParser::class;
+                }
+            }
             PHP,
         after: <<<'PHP'
             interface Rule
@@ -417,6 +427,11 @@ $comparisons = [
             final readonly class SlugRule implements Rule
             {
                 public string $parser = SlugParser::class;
+            }
+
+            final class DateRule implements Rule
+            {
+                public readonly string $parser = DateParser::class;
             }
             PHP,
     ),
