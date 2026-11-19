@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.6.0 Released!</title>
+  <id>https://www.php.net/archive/2026.php#2026-11-19-5</id>
+  <published>2026-11-19T14:01:00+00:00</published>
+  <updated>2026-11-19T14:01:00+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-11-19-5" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-11-19-5" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team announces the immediate availability of PHP 8.6.0. This release marks a major update to the PHP language.</p>
+
+<p>PHP 8.6 comes with numerous improvements and new features such as:</p>
+<ul>
+  <li>Partial Function Application</li>
+  <li>Default values for readonly properties</li>
+  <li>New <code>Io\Poll</code> API for monitoring streams</li>
+  <li>New <code>clamp()</code> function</li>
+  <li>New <code>\Time\Duration</code> class</li>
+  <li>New <code>SortDirection</code> enum</li>
+</ul>
+<p>See <a href="https://www.php.net/releases/8.6/en.php">what’s new in PHP 8.6</a> for more highlights and examples.</p>
+<p>
+  Source downloads for PHP 8.6.0 are available on our <a href="https://www.php.net/downloads.php?source=Y">downloads page</a>.
+  Windows source and binaries are available on the <a href="https://www.php.net/downloads.php?os=windows">Windows downloads page</a>.
+  The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.6.0">ChangeLog</a>.
+</p>
+<p>
+  The <a href="https://www.php.net/manual/en/migration86.php">migration guide</a> in the PHP Manual lists new features and backward-incompatible changes in detail.
+</p>
+<p>Kudos to all the contributors and supporters!</p>
+</div>
+  </content>
+</entry>

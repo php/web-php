@@ -1,8 +1,12 @@
 <?php
 
+/**
+ * En-revision: 395a1fa013c232bba24cccda3f398f281364860e
+ */
+
 return [
     'common_header' => 'PHP 8.6 — большое обновление языка PHP с новыми возможностями, включая частичное применение функций, новый класс Duration, Polling API и новую функцию clamp()',
-    'main_title' => 'Лучше, быстрее, надолго',
+    'main_title' => 'Быстрее, безопаснее, мощнее',
     'main_subtitle' => '<p><strong>PHP 8.6 — большое обновление языка PHP</strong>. Оно содержит новые возможности, включая <strong>частичное применение функций</strong>, новый класс <strong>Duration</strong>, <strong>Polling API</strong> и новую функцию <strong>clamp()</strong>.</p>',
 
     'whats_new' => 'Что нового в 8.6',
@@ -10,22 +14,22 @@ return [
     'old_version' => 'PHP 8.5 и ранее',
     'badge_new' => 'Новинка',
     'documentation' => 'Документация',
-    'released' => 'Будет выпущен 19 ноября 2026',
+    'released' => 'Выпущен 19 ноября 2026',
     'release_unavailable_reason' => 'PHP 8.6 ещё не выпущен. Релиз запланирован на 19 ноября 2026 года.',
     'key_features' => 'Основные возможности PHP 8.6',
-    'key_features_description' => '<p><strong>Быстрее</strong>, <strong>лучше</strong>, <strong>доступнее для разработчиков</strong>.</p>',
+    'key_features_description' => '<p><strong>Более выразительный код</strong>, <strong>более строгие типы</strong> и <strong>масштабируемый ввод-вывод</strong>.</p>',
 
-    'features_pfa_description' => '<p>Позволяет вызывать функции, передавая лишь часть обязательных параметров, а остальные — позже.</p>',
-    'features_readonly_property_defaults_description' => '<p>Позволяет задавать значения по умолчанию для readonly-свойств экземпляра.</p>',
+    'features_pfa_description' => '<p>Позволяет заранее передать часть аргументов функции, возвращая замыкание (Closure), которое принимает остальные.</p>',
+    'features_readonly_property_defaults_description' => '<p>Позволяет readonly-свойствам объявлять значения по умолчанию, поэтому фиксированные значения больше не нужно присваивать в конструкторе.</p>',
     'features_polling_api_description' => '<p>Масштабируемое мультиплексирование ввода-вывода на основе epoll, kqueue и других нативных механизмов — для библиотек событийных циклов вроде ReactPHP и AMPHP.</p>',
     'features_clamp_description' => '<p>Гарантирует, что значение (числовое или любое другое) находится в заданном диапазоне.</p>',
     'features_duration_description' => '<p>Класс Duration представляет прошедшее время, измеренное секундомером.</p>',
-    'features_sort_direction_description' => '<p>SortDirection — перечисление с двумя вариантами (Ascending и Descending) и без связанного поведения.</p>',
+    'features_sort_direction_description' => '<p>Стандартный типобезопасный способ выразить порядок сортировки, который можно использовать в разных библиотеках.</p>',
 
     'pfa_title' => 'Частичное применение функций',
-    'pfa_description' => 'Позволяет вызывать функции, передавая лишь часть обязательных параметров, а остальные — позже.',
+    'pfa_description' => 'Позволяет заранее передать часть аргументов функции, используя заполнители <code>?</code> и <code>...</code> для остальных. Результатом является замыкание (Closure), и функция вызывается только после передачи ей оставшихся аргументов.',
     'readonly_property_defaults_title' => 'Значения по умолчанию для readonly-свойств',
-    'readonly_property_defaults_description' => 'Позволяет задавать значения по умолчанию для readonly-свойств экземпляра.',
+    'readonly_property_defaults_description' => 'Readonly-свойства экземпляра, в том числе в readonly-классах, теперь могут объявлять значение по умолчанию. Это упрощает реализацию свойств интерфейсов только для чтения с фиксированными значениями, для которых раньше требовалось присваивание в конструкторе. Значение по умолчанию считается инициализацией свойства, поэтому конструктор не может его перезаписать.',
     'polling_api_title' => 'Polling API',
     'polling_api_description' => 'Новый API <code>Io\Poll</code> эффективно отслеживает множество потоков одновременно, используя лучший механизм, доступный на каждой платформе (epoll, kqueue, event ports или WSAPoll), и не упирается в ограничения масштабируемости <code>stream_select()</code>. Он задуман как общая основа, на которой могут строиться библиотеки событийных циклов, такие как ReactPHP и AMPHP.',
     'clamp_title' => 'Новая функция <code>clamp()</code>',
@@ -33,7 +37,7 @@ return [
     'duration_title' => 'Новый класс <code>\Time\Duration</code>',
     'duration_description' => 'Класс Duration представляет прошедшее время, измеренное секундомером. Его представление не привязано ни к какому времени и часовому поясу и позволяет выразить диапазон более чем в 250 лет с точностью до наносекунды. Поэтому он отлично подходит для выразительного представления таймаутов или результатов бенчмарков.',
     'sort_direction_title' => 'Новое перечисление <code>SortDirection</code>',
-    'sort_direction_description' => '<p>SortDirection — перечисление с двумя вариантами (Ascending и Descending) и без связанного поведения.</p><p>Подробнее об этой возможности — в <a href="https://thephp.foundation/blog/2026/11/03/stdlib-investment/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
+    'sort_direction_description' => '<p>Перечисление <code>SortDirection</code> предоставляет общий типобезопасный способ выражения порядка сортировки с вариантами <code>Ascending</code> и <code>Descending</code>. Раньше каждой библиотеке приходилось определять собственный способ представления направления сортировки, что приводило к смешению несовместимых целых чисел, строк, логических значений и пользовательских перечислений. Поскольку <code>SortDirection</code> встроено в PHP, библиотеки могут принимать его в своих публичных API без необходимости писать код-адаптер.</p><p>Подробнее об этой возможности — в <a href="https://thephp.foundation/blog/2026/11/03/stdlib-investment/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
     'stream_error_handling_title' => 'Обработка ошибок в потоках',
     'stream_error_handling_description' => 'Теперь операции с потоками можно настроить так, чтобы они выбрасывали <code>StreamException</code> или тихо завершались с ошибкой вместо вывода предупреждений. Ошибки сообщаются в виде структурированных объектов <code>StreamError</code> с вариантом перечисления <code>StreamErrorCode</code>, именем обёртки и затронутым путём или URL; их также можно получить позже через <code>stream_last_errors()</code> или передать собственному обработчику ошибок.',
     'doc_comments_title' => 'DocComments для параметров функций',
@@ -58,7 +62,7 @@ return [
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
     'bc_return_in_finally' => 'Использование <code>return</code> внутри блока <code>finally</code> объявлено устаревшим: оно молча отбрасывает исключения и перекрывает значения, возвращённые из блока <code>try</code> или <code>catch</code>.',
-    'bc_constructor_return' => 'Возврат значения из <code>__construct()</code> или <code>__destruct()</code> и превращение их в генераторы объявлены устаревшими. Объявление nullable-типа возврата для <code>__debugInfo()</code> также устарело.',
+    'bc_constructor_return' => 'Возврат значения из <code>__construct()</code> или <code>__destruct()</code> объявлен устаревшим, как и превращение их в генераторы. Объявление nullable-типа возврата для <code>__debugInfo()</code> также устарело.',
     'bc_reserved_identifiers' => 'Использование <code>let</code> или <code>is</code> в качестве имени класса, функции или константы объявлено устаревшим. Также устарело использование <code>_</code> как имени константы, <code>namespace</code> как имени константы класса и <code>readonly</code> как имени функции.',
     'bc_mbregex' => 'Регулярные функции mbstring, такие как <code>mb_ereg()</code> и <code>mb_split()</code>, объявлены устаревшими, поскольку лежащая в их основе библиотека Oniguruma больше не поддерживается. Вместо них можно использовать функции PCRE с модификатором <code>u</code>.',
     'bc_type_aliases' => 'Псевдонимы <code>is_double()</code>, <code>is_long()</code>, <code>is_integer()</code> и <code>doubleval()</code> объявлены устаревшими. Используйте <code>is_float()</code>, <code>is_int()</code> и <code>floatval()</code>.',
