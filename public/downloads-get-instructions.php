@@ -1,6 +1,6 @@
 <?php
 $file = 'unknown';
-$latestPhpVersion = '8.5';
+$latestPhpVersion = '8.6';
 $versions ??= [];
 $multiversion = false;
 $source = false;
