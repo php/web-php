@@ -1,6 +1,7 @@
 <?php
 
 header("Content-Type: application/atom+xml");
+header("Cache-Control: public, max-age=300"); // 5 minutes
 
 require __DIR__ . "/../../include/version.inc";
 

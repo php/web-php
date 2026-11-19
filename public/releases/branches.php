@@ -4,6 +4,7 @@ require_once __DIR__ . '/../../include/prepend.inc';
 require_once __DIR__ . '/../../include/branches.inc';
 
 header('Content-Type: application/json; charset=UTF-8');
+header('Cache-Control: public, max-age=300'); // 5 minutes
 
 function formatDate($date = null) {
     return $date !== null ? $date->format('c') : null;

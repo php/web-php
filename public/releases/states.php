@@ -11,6 +11,7 @@ require_once __DIR__ . '/../../include/prepend.inc';
 require_once ProjectGlobals::getProjectRoot() . '/include/branches.inc';
 
 header('Content-Type: application/json; charset=UTF-8');
+header('Cache-Control: public, max-age=300'); // 5 minutes
 
 $states = [];
 
