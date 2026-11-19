@@ -5,8 +5,7 @@
  */
 (() => {
     const root = document.documentElement;
-    // Shares its storage key and cycle order with the theme switcher in common.js.
-    const themes = ['light', 'dark', 'system'];
+    // Shares its storage key and toggle behavior with the theme switcher in common.js.
     const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     let theme = 'system';
 
@@ -39,19 +38,25 @@
             return;
         }
 
-        const nextTheme = () => themes[(themes.indexOf(theme) + 1) % themes.length];
+        const systemTheme = () => darkScheme.matches ? 'dark' : 'light';
+        const displayedTheme = () => theme === 'system' ? systemTheme() : theme;
+        const oppositeTheme = () => displayedTheme() === 'dark' ? 'light' : 'dark';
 
         function updateThemeControl() {
             themeButton.dataset.theme = theme;
-            themeButton.setAttribute('aria-label', `Theme: ${theme}. Switch to ${nextTheme()}`);
+            themeButton.setAttribute('aria-label', `Theme: ${theme}. Switch to ${oppositeTheme()}`);
         }
 
         themeButton.addEventListener('click', () => {
-            theme = nextTheme();
+            // Switch to the opposite of the displayed theme, using "system"
+            // when the new theme matches the system theme
+            const newTheme = oppositeTheme();
+            theme = newTheme === systemTheme() ? 'system' : newTheme;
             try { localStorage.setItem('theme', theme); } catch {}
             applyTheme();
             updateThemeControl();
         });
+        darkScheme.addEventListener('change', updateThemeControl);
         updateThemeControl();
     }
 
