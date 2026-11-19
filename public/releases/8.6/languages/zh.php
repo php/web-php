@@ -1,7 +1,7 @@
 <?php
 
 /**
- * En-revision: 3a119ea0972f5773f09f8e103951f36c6b481b10
+ * En-revision: 395a1fa013c232bba24cccda3f398f281364860e
  */
 
 return [
@@ -14,7 +14,7 @@ return [
     'old_version' => 'PHP 8.5 及更早版本',
     'badge_new' => '新增',
     'documentation' => '文档',
-    'released' => '将于 2026 年 11 月 19 日发布',
+    'released' => '发布于 2026 年 11 月 19 日',
     'release_unavailable_reason' => 'PHP 8.6 尚未发布，将于 2026 年 11 月 19 日发布。',
     'key_features' => 'PHP 8.6 的主要特性',
     'key_features_description' => '<p><strong>更具表达力的代码</strong>、<strong>更严格的类型</strong>、<strong>可扩展的 I/O</strong>。</p>',

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * En-revision: 395a1fa013c232bba24cccda3f398f281364860e
+ */
+
 return [
     'common_header' => 'PHP 8.6 は、関数の部分適用、新しい Duration クラス、Polling API、新しい clamp() 関数などの新機能を備えた、PHP 言語のメジャーアップデートです',
     'main_title' => 'より速く、より安全に、より強力に。',
@@ -10,7 +14,7 @@ return [
     'old_version' => 'PHP 8.5 以前',
     'badge_new' => 'NEW',
     'documentation' => 'ドキュメント',
-    'released' => '2026年11月19日リリース予定',
+    'released' => '2026/11/19 リリース',
     'release_unavailable_reason' => 'PHP 8.6 はまだリリースされていません。2026年11月19日にリリースされる予定です。',
     'key_features' => 'PHP 8.6 の主な機能',
     'key_features_description' => '<p><strong>より表現力の高いコード</strong>、<strong>より強力な型</strong>、そして<strong>スケーラブルな I/O</strong>。</p>',

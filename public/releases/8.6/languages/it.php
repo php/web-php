@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * En-revision: 395a1fa013c232bba24cccda3f398f281364860e
+ */
+
 return [
     'common_header' => 'PHP 8.6 è un aggiornamento importante del linguaggio PHP, con novità come l’applicazione parziale delle funzioni, la nuova classe Duration, una API di polling e la nuova funzione clamp()',
     'main_title' => 'Più veloce, più sicuro, più potente.',
@@ -10,7 +14,7 @@ return [
     'old_version' => 'PHP 8.5 e versioni precedenti',
     'badge_new' => 'NOVITÀ',
     'documentation' => 'Doc',
-    'released' => 'Uscirà il 19 novembre 2026',
+    'released' => 'Pubblicato il 19 novembre 2026.',
     'release_unavailable_reason' => 'PHP 8.6 non è ancora disponibile. Uscirà il 19 novembre 2026.',
     'key_features' => 'Principali novità di PHP 8.6',
     'key_features_description' => '<p><strong>Codice più espressivo</strong>, <strong>tipi più rigorosi</strong> e <strong>I/O scalabile</strong>.</p>',
