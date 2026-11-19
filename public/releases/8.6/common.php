@@ -8,6 +8,7 @@ require_once __DIR__ . '/../../../include/prepend.inc';
 
 const LANGUAGES = [
     'en' => 'English',
+    'pt_BR' => 'Brazilian Portuguese',
     'ru' => 'Русский',
     'zh' => '简体中文',
 ];
