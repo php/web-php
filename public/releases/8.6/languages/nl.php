@@ -14,7 +14,7 @@ return [
     'old_version' => 'PHP 8.5 en ouder',
     'badge_new' => 'NIEUW',
     'documentation' => 'Doc',
-    'released' => 'Verschijnt op 19 november 2026',
+    'released' => 'Uitgebracht op 19 november 2026',
     'release_unavailable_reason' => 'PHP 8.6 is nog niet uitgebracht. De release volgt op 19 november 2026.',
     'key_features' => 'Belangrijkste functionaliteit in PHP 8.6',
     'key_features_description' => '<p><strong>Expressievere code</strong>, <strong>sterkere types</strong> en <strong>schaalbare I/O</strong>.</p>',
