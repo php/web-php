@@ -179,6 +179,7 @@ $comparisons = [
         description: message('stream_error_handling_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/stream_errors',
+            message('documentation', $lang) . "|/manual/$documentation/stream.errors.handling.php",
         ],
         before: <<<'PHP'
             $config = @file_get_contents('/etc/app/config.json');
@@ -361,6 +362,7 @@ $comparisons = [
         description: message('isreadable_iswriteable_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/isreadable-iswriteable',
+            message('documentation', $lang) . "|/manual/$documentation/reflectionproperty.isreadable.php",
         ],
         before: '',
         after: <<<'PHP'
@@ -391,6 +393,7 @@ $comparisons = [
         description: message('readonly_property_defaults_description', $lang),
         links: [
             'RFC|https://wiki.php.net/rfc/readonly_property_defaults',
+            message('documentation', $lang) . "|/manual/$documentation/language.oop5.properties.php#language.oop5.properties.readonly-properties",
         ],
         before: <<<'PHP'
             interface Rule
