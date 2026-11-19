@@ -2,12 +2,18 @@
 $file = 'unknown';
 $latestPhpVersion = '8.5';
 $versions ??= [];
+$multiversion = false;
+$source = false;
 
 if (!isset($options)) {
     $options = [
         'os' => '',
         'version' => '',
     ];
+}
+
+if (!array_key_exists($options['version'], $versions)) {
+  $options['version'] = 'default';
 }
 
 if ($options['os'] === 'windows') {
@@ -26,17 +32,9 @@ if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     }
 }
 
-$multiversion = false;
-
 if (array_key_exists('multiversion', $options)) {
     $multiversion = $options['multiversion'] === 'Y';
 }
-
-if (!array_key_exists($options['version'], $versions)) {
-    $options['version'] = 'default';
-}
-
-$source = false;
 
 if (array_key_exists('source', $options)) {
     if ($options['source'] === 'Y') {
