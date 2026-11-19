@@ -1,9 +1,5 @@
 <?php
 
-/**
- * En-revision: 395a1fa013c232bba24cccda3f398f281364860e
- */
-
 return [
     'common_header' => 'PHP 8.6 es una actualización importante del lenguaje PHP, con nuevas funcionalidades como la aplicación parcial de funciones, una nueva clase Duration, una API de polling y una nueva función clamp()',
     'main_title' => 'Más rápido, más seguro, más potente.',
