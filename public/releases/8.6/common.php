@@ -11,6 +11,7 @@ const LANGUAGES = [
     'ru' => 'Русский',
     'zh' => '简体中文',
     'nl' => 'Nederlands',
+    'fr' => 'Français',
     'pt_BR' => 'Brazilian Portuguese',
 ];
 
