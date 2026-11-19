@@ -1,7 +1,7 @@
 <?php
 
 /**
- * En-revision: 1a3d49c51619f269dad740c001575a8a56a31a6a
+ * En-revision: 395a1fa013c232bba24cccda3f398f281364860e
  */
 
 return [
@@ -14,7 +14,7 @@ return [
     'old_version' => 'PHP 8.5 et versions antérieures',
     'badge_new' => 'NOUVEAU',
     'documentation' => 'Doc',
-    'released' => 'Sera publié le 19 novembre 2026',
+    'released' => 'Publié le 19 nov. 2026',
     'release_unavailable_reason' => 'PHP 8.6 n\'a pas encore été publié. Il sera publié le 19 novembre 2026.',
     'key_features' => 'Fonctionnalités clés de PHP 8.6',
     'key_features_description' => '<p><strong>Un code plus expressif</strong>, <strong>des types plus stricts</strong> et <strong>des E/S évolutives</strong>.</p>',
