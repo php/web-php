@@ -1,6 +1,7 @@
 <?php
 $file = 'unknown';
 $latestPhpVersion = '8.5';
+$versions ??= [];
 
 if (!isset($options)) {
     $options = [
@@ -31,7 +32,7 @@ if (array_key_exists('multiversion', $options)) {
     $multiversion = $options['multiversion'] === 'Y';
 }
 
-if (!in_array($options['version'], $versions, true)) {
+if (!array_key_exists($options['version'], $versions)) {
     $options['version'] = 'default';
 }
 
