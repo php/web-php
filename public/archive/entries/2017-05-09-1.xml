@@ -10,6 +10,7 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://callforpapers.sandsmedia.com" title="International PHP Conference 2017 Fall - Call for Papers">ipc-2017-fall.png</default:newsImage>
   <link href="https://callforpapers.sandsmedia.com" rel="via" type="text/html"/>
   <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
     <p>While we are eagerly waiting for IPC Spring and webinale to come in later May, we are already preparing for the fall edition of IPC this year. The conference's date is October 23th to 27th and the location will be Munich again.</p>
 	<p>We are looking forward to your submissions for workshops, sessions &amp; keynotes. Please submit your proposals in English language. Please see our list below of topics which we'd love to see covered, but we are sure that you'll add also some extra stuff which is great and which we do not expect!</p>
 	<p><strong>THE BASIC FACTS</strong></p>
@@ -63,5 +64,6 @@
 		</ul>
 	</ul>
 	<p>We are looking forward to your exciting submissions! For further information on International PHP Conference’s sessions and speakers visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+    </div>
   </content>
 </entry>
