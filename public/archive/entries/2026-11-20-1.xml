@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Kansai 2026 (JAPAN)</title>
+  <id>https://www.php.net/archive/2026.php#2026-11-20-1</id>
+  <published>2026-11-20T13:54:40+00:00</published>
+  <updated>2026-11-20T13:54:40+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2026-11-20-1" rel="alternate" type="text/html"/>
+  <link href="https://2026.kphpug.jp/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2027-01-16</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2026.kphpug.jp/" title="PHPConferenceKansai2026">phpConfKansaiJapan2026.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <div>
+       <p>
+         We are excited to announce PHP Conference Kansai 2026! 🎉
+       </p>
+     
+       <p><strong>About the conference</strong></p>
+       <p>
+         PHP Conference Kansai is a technical conference where PHP engineers in the Kansai region of Japan share their knowledge and experience.
+         It started in 2011 and came back in 2024 in Osaka after a six-year break.
+         It was held in Kobe in 2025, and this edition will be held in Kyoto.
+       </p>
+       <p>
+         The theme of this edition is "次は、ここから始まる。" (What's next starts here.)<br/>
+         AI has dramatically changed the way we work.
+         But the quality of the answers you get from AI depends on how much you know when you ask.
+         To ask the right questions and judge whether an answer holds up, you need to learn from others and see beyond your own perspective.
+         At the conference, through sessions, talks, and casual conversations around the venue, you can talk with people who have a shared knowledge base.
+         We want it to be a place where everyone who comes finds their own "next."
+       </p>
+       <p>
+         Note: Despite its name, the conference takes place in January 2027.
+       </p>
+     
+       <p><strong>Who can join?</strong></p>
+       <p>
+         Anyone involved with PHP is welcome, whether you use it now, used it before, or are just curious about it.
+         (All talks will be in Japanese.)
+       </p>
+     
+       <p><strong>Basic facts</strong></p>
+       <ul>
+         <li>Date: January 16, 2027 (JST)</li>
+         <li>Location: Kyoto Research Park, Building 4, Kyoto, Japan</li>
+         <li><a href="https://2026.kphpug.jp/timetable/">Timetable</a></li>
+         <li><a href="https://2026.kphpug.jp/#tickets">Tickets</a></li>
+       </ul>
+     
+       <p>
+         For more information, see the event page: <a href="https://2026.kphpug.jp/">PHP Conference Kansai 2026</a>.
+       </p>
+       <p>
+         Follow us on <a href="https://x.com/phpcon_kansai">X (Twitter)</a>.
+       </p>
+     </div>
+    </div>
+  </content>
+</entry>
