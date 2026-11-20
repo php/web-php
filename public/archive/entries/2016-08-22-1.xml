@@ -10,7 +10,7 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="http://www.bgphp.org" title="Bulgaria PHP Conference 2016">BulgariaPHP2016.png</default:newsImage>
   <link href="http://www.bgphp.org" rel="via" type="text/html"/>
   <content type="xhtml">
-    <div xmlns="http://www.bgphp.org">
+    <div xmlns="http://www.w3.org/1999/xhtml">
       <p><a href="http://www.bgphp.org">Bulgaria PHP Conference</a> is the premier PHP conference, gathering PHP and frontend developers and engineers from all around Europe. Co-organized by the Bulgaria PHP User Group and SiteGround web hosting, the conference is bringing internationally renowned experts from the PHP industry to talk about APIs, Frameworks, Security, Testing, Continuous Integration, and much more!</p>
 
       <p>Highlights:</p>
