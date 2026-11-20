@@ -228,79 +228,11 @@ main a:not(.button) {
     pointer-events: none;
     inset: 0;
     z-index: calc(10 * -1);
-    overflow: hidden;
     opacity: .35;
-    container-type: size;
+    background: url("/images/php8/hero-bg.svg") center / cover no-repeat;
     -webkit-user-select: none;
     user-select: none;
     position: absolute
-}
-
-/*
- * Each orb is a square the size of the larger hero dimension, centered in the hero
- * (equivalent to an SVG viewBox with preserveAspectRatio="xMidYMid slice").
- * The gradients are static images, so the browser only has to rasterize them once.
- * The x/y/rotate animations are applied to nested HTML elements and only change
- * transform, so they can run on the compositor instead of repainting every frame.
- */
-.hero-orb {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: max(100cqw, 100cqh);
-    aspect-ratio: 1;
-    translate: -50% -50%
-}
-
-.hero-orb div {
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%
-}
-
-.hero-orb-1-r {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><radialGradient id='g' cx='.5' cy='.5' fx='.00441602' fy='.5' r='.5'><stop offset='0' stop-color='rgba(210, 203, 255, 1)'/><stop offset='1' stop-color='rgba(51, 63, 124, 0)'/></radialGradient><rect width='100' height='100' fill='url(%23g)'/></svg>")
-}
-
-.hero-orb-2-r {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><radialGradient id='g' cx='.5' cy='.5' fx='.0268147' fy='.5' r='.5'><stop offset='0' stop-color='rgba(133, 109, 255, 1)'/><stop offset='1' stop-color='rgba(51, 63, 124, 0)'/></radialGradient><rect width='100' height='100' fill='url(%23g)'/></svg>")
-}
-
-.hero-orb-3-r {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><radialGradient id='g' cx='.5' cy='.5' fx='.00836536' fy='.5' r='.5'><stop offset='0' stop-color='rgba(210, 203, 255, 1)'/><stop offset='1' stop-color='rgba(51, 63, 124, 0)'/></radialGradient><rect width='100' height='100' fill='url(%23g)'/></svg>")
-}
-
-.hero-orb-1-x { animation: hero-orb1-x 10s linear infinite alternate }
-.hero-orb-1-y { animation: hero-orb1-y 10.5s linear infinite alternate }
-.hero-orb-1-r { animation: hero-orb-rotate-fwd 7s linear infinite }
-
-.hero-orb-2-x { animation: hero-orb2-x 11.5s linear infinite alternate }
-.hero-orb-2-y { animation: hero-orb2-y 12s linear infinite alternate }
-.hero-orb-2-r { animation: hero-orb-rotate-fwd 12s linear infinite }
-
-.hero-orb-3-x { animation: hero-orb3-x 12.5s linear infinite alternate }
-.hero-orb-3-y { animation: hero-orb3-y 6s linear infinite alternate }
-.hero-orb-3-r { animation: hero-orb-rotate-rev 9s linear infinite }
-
-@keyframes hero-orb1-x { from { transform: translateX(25%) } to { transform: translateX(0%) } }
-@keyframes hero-orb1-y { from { transform: translateY(0%) } to { transform: translateY(25%) } }
-@keyframes hero-orb2-x { from { transform: translateX(-25%) } to { transform: translateX(0%) } }
-@keyframes hero-orb2-y { from { transform: translateY(0%) } to { transform: translateY(50%) } }
-@keyframes hero-orb3-x { from { transform: translateX(0%) } to { transform: translateX(25%) } }
-@keyframes hero-orb3-y { from { transform: translateY(0%) } to { transform: translateY(25%) } }
-@keyframes hero-orb-rotate-fwd { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
-@keyframes hero-orb-rotate-rev { from { transform: rotate(360deg) } to { transform: rotate(0deg) } }
-
-.hero-bg.paused .hero-orb,
-.hero-bg.paused .hero-orb div {
-    animation-play-state: paused
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hero-orb,
-    .hero-orb div {
-        animation-play-state: paused
-    }
 }
 
 .hero-badge {
