@@ -1,3 +1,8 @@
+<?php
+
+use phpweb\ProjectGlobals;
+
+?>
     </section><!-- layout-content -->
     <?php
     if (!empty($config['spanning-content'])) {
@@ -59,36 +64,16 @@
 
   </div><!-- layout -->
 
-<?php if(!isset($config['footer']) || $config['footer']): ?>
-  <footer>
-    <div class="container footer-content">
-      <div class="row-fluid">
-      <ul class="footmenu">
 <?php
-global $LANG;
-if (!empty($_SERVER['BASE_PAGE'])
-    && str_starts_with($_SERVER['BASE_PAGE'], 'manual/' . $LANG . '/')) {
-?>
-        <li><a href="/manual/<?php echo $LANG; ?>/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Documentation Group</a></li>
-<?php
-} else {
-?>
-        <li><a href="/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Group</a></li>
-<?php
+// Render the fancy shared footer on every page unless the caller opts out with
+// 'footer' => false — used by the release landing pages (releases/*/release.inc),
+// which emit the footer inline via ReleasePage::getPrefooter().
+//
+// 'footer_credit' optionally supplies extra markup for the footer's credit row.
+if (($config['footer'] ?? true) !== false) {
+    echo fancy_footer($config['footer_credit'] ?? '');
 }
 ?>
-        <li><a href="/my.php">My PHP.net</a></li>
-        <li><a href="/contact.php">Contact</a></li>
-        <li><a href="/sites.php">Other PHP.net sites</a></li>
-        <li><a href="/privacy.php">Privacy policy</a></li>
-<?php if (!empty($_SERVER['BASE_PAGE']) && strncmp($_SERVER['BASE_PAGE'], 'manual', 6) !== 0): ?>
-        <li><a href="https://github.com/php/web-php/blob/master/<?php echo urlencode($_SERVER['BASE_PAGE']); ?>">View Source</a></li>
-<?php endif; ?>
-      </ul>
-      </div>
-    </div>
-  </footer>
-<?php endif; ?>
     <?php
     // if elephpants enabled, insert placeholder nodes
     // to be populated with images via javascript.
@@ -100,14 +85,14 @@ if (!empty($_SERVER['BASE_PAGE'])
 <?php
  $jsfiles = ["ext/jquery-3.6.0.min.js", "ext/FuzzySearch.min.js", "ext/mousetrap.min.js", "ext/jquery.scrollTo.min.js", "search.js", "common.js"];
  foreach ($jsfiles as $filename) {
-   $path = dirname(__DIR__) . '/js/' . $filename;
+   $path = ProjectGlobals::getPublicRoot() . '/js/' . $filename;
    echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
  }
 ?>
 <?php
  $jsfiles = ["interactive-examples.js"];
  foreach ($jsfiles as $filename) {
-   $path = dirname(__DIR__) . '/js/' . $filename;
+   $path = ProjectGlobals::getPublicRoot() . '/js/' . $filename;
    echo '<script type="module" src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
  }
 ?>

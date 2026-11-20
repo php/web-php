@@ -27,7 +27,7 @@
     <coverage includeUncoveredFiles="true"/>
     <source>
         <include>
-            <directory suffix=".php">../manual/</directory>
+            <directory suffix=".php">../public/manual/</directory>
             <directory suffix=".inc">../include/</directory>
             <directory suffix=".php">../src/</directory>
         </include>

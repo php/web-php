@@ -18,63 +18,78 @@
 $RELEASES = (function () {
     $data = [];
 
-    /* PHP 8.5 Release */
-    $data['8.5'] = [
-        'version' => '8.5.4',
-        'date' => '12 Mar 2026',
+    /* PHP 8.6 Release */
+    $data['8.6'] = [
+        'version' => '8.6.0',
+        'date' => '19 Nov 2026',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
             // WARNING: Order of SHA256 entries here is DIFFERENT from the
             // order in the manifest
-            'tar.gz' => '4fef7f44eff3c18e329504cb0d3eb30b41cf54e2db05cb4ebe8b78fc37d38ce1',
-            'tar.bz2' => '2ac929a29a6b7ef4b8acec981a417b91bdf7f548f597df665cc56ab9ea95fc75',
-            'tar.xz' => 'c1569f1f543f6b025c583cdc0e730e5c5833c603618613f1aa8e75d1524b8c91',
+            'tar.gz' => '62337dccde3d9fcc39797d4529f42637613036eaf3875353c206874e5813a3c1',
+            'tar.bz2' => '9e233e38999a89f351a33ae6a7276d1caf5addcba11e09e3bbe3a8d25f411ff1',
+            'tar.xz' => '5f84beaa3d763aee1e4feed99bf54ec692c383b322e25626807b589238c3a087',
+        ]
+    ];
+
+    /* PHP 8.5 Release */
+    $data['8.5'] = [
+        'version' => '8.5.13',
+        'date' => '19 Nov 2026',
+        'tags' => ['security'], // Set to ['security'] for security releases.
+        'sha256' => [
+            // WARNING: Order of SHA256 entries here is DIFFERENT from the
+            // order in the manifest
+            'tar.gz' => '3aeb20a7e667e197929747f76047409196f91f0172357439319cba344df8b3e1',
+            'tar.bz2' => '47d50c36016784a4a71f019cd7bfa29c31e4be0de22d3fa06095b280a6299e2f',
+            'tar.xz' => '607602acaf0c3061818e9916ec44a058e8b3d43959a83862b9cd3ec7bf5b785f',
         ]
     ];
 
     /* PHP 8.4 Release */
     $data['8.4'] = [
-        'version' => '8.4.19',
-        'date' => '12 Mar 2026',
-        'tags' => [], // Set to ['security'] for security releases.
+        'version' => '8.4.28',
+        'date' => '19 Nov 2026',
+        'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => '9e862435ffb533dc5b0eb486170a74e5f7c8095e8eb8819a2ff5aad430292a18',
-            'tar.bz2' => 'bceb7798ed37b442fe523ae7ef345ccc2231db0b022d30735c2e378d3254a0d4',
-            'tar.xz' => '11f7164ab26d356c31f94d3d69cc0e0707d5d2d6494a221aaeae307c08eaaa1c',
+            'tar.gz' => 'deffc88c60fcfb99f683a9f6689e9c91cf41b7cba50bd5f01a232a98c27f2cd4',
+            'tar.bz2' => 'b23aa1be5b74629ad624fd01365c0e4df6d8878473983f337349433ef349c1f7',
+            'tar.xz' => '0c8ec360e5dd8154f270b2fd50cd44ecc824e6ee39c85f911312b80d4daecd72',
         ]
     ];
 
     /* PHP 8.3 Release */
     $data['8.3'] = [
-        'version' => '8.3.30',
-        'date' => '15 Jan 2026',
-        'tags' => [], // Set to ['security'] for security releases.
+        'version' => '8.3.37',
+        'date' => '19 Nov 2026',
+        'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'e587dc95fb7f62730299fa7b36b6e4f91e6708aaefa2fff68a0098d320c16386',
-            'tar.bz2' => '800b7b6ed50b73c8ee7844ee5f2f7cc612faa7875a0aa7c4529e8ed5866a5030',
-            'tar.xz' => '67f084d36852daab6809561a7c8023d130ca07fc6af8fb040684dd1414934d48',
+            'tar.gz' => 'cdd2ed867cb104ececff7c0292142c807c68a6b6da1b114ead4d586fba628a4f',
+            'tar.bz2' => '7837b43cd4e18db5deac21ee6f00866e4779a705f2e54faea83c8a6cf56fd1d8',
+            'tar.xz' => '0237af84478b7a7649d3964153f1b8653d622550b846f56d63062de683fb86bb',
         ]
     ];
 
     /* PHP 8.2 Release */
     $data['8.2'] = [
-        'version' => '8.2.30',
-        'date' => '18 Dec 2025',
+        'version' => '8.2.36',
+        'date' => '19 Nov 2026',
         'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'a0fa6673ba4b0c8335fbab08afb7c2e13a3791f2b5a0928c7ad3d7ad872edf26',
-            'tar.bz2' => '104820b6c8fc959dde4b3342135f42bdabf246e86918a16381a17d8447c866fa',
-            'tar.xz' => 'bc90523e17af4db46157e75d0c9ef0b9d0030b0514e62c26ba7b513b8c4eb015',
+            'tar.gz' => 'c871dbdc1cd3d898e48632c8b5fcc73f1b0e1cbb15ef816579ced7f2ae1696a8',
+            'tar.bz2' => 'f4306b4ada602637ef35df2e0f4aa059d559952bc87926ed746fad2b0a777b72',
+            'tar.xz' => 'df50a00d2b453096608bf2bd98a9fab9a3df8678a77b93011b65c3cfe9a018fa',
         ]
     ];
 
     $ret = [];
     foreach ($data as $release) {
+        $release += ['announcement' => true];
         $version = $release['version'];
         [$major] = explode('.', $version, 2);
 
         $info = [
-            'announcement' => $release['announcement'] ?? true,
+            'announcement' => $release['announcement'],
             'tags' => $release['tags'],
             'date' => $release['date'],
             'source' => [],
@@ -114,7 +129,7 @@ function show_source_releases()
 {
     global $RELEASES;
 
-    $SHOW_COUNT = 4;
+    $SHOW_COUNT = 5;
 
     $current_uri = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
 
@@ -139,8 +154,9 @@ function show_source_releases()
                   <?php download_link($rel['filename'], $rel['filename']); ?>
                   <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
                   <?php
-                    if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
-                    if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
+                    if (isset($rel['sha256'])) {
+                        echo sha256_html($rel['sha256']);
+                    }
                    ?>
                   <?php if (isset($rel['note']) && $rel['note']): ?>
                     <p>

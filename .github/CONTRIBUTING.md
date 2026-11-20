@@ -74,6 +74,19 @@ about what you're working on, you can contact us via the
   ```
 
   to automatically fix coding standard issues.
+- Run
+
+  ```shell
+  make static-analysis
+  ```
+
+  to run a static analysis or, if applicable, run
+
+  ```shell
+  make static-analysis-baseline
+  ```
+
+  to regenerate the baseline.
 - Review the change once more just before submitting it.
 
 ## What happens after submitting contribution?
@@ -134,6 +147,20 @@ Having said that, here are the organizational rules:
    make coding-standards
    ```
 
-6. Use reasonable commit messages.
+6. Run
+
+  ```shell
+  make static-analysis
+  ```
+
+to run a static analysis or, if applicable, run
+
+  ```shell
+  make static-analysis-baseline
+  ```
+
+to regenerate the baseline.
+
+7. Use reasonable commit messages.
 
 Thank you for contributing to https://www.php.net!

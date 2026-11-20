@@ -31,7 +31,7 @@ paths:
                 Returns information about the host running php.net.
                 Historically, this was unique per mirror.
                 With the move to a CDN model in 2019, there is now only one canonical source, and thus only one relevant configuration.
-                Refer to https://github.com/php/web-php/blob/master/mirror-info.php for the serialization format of the response.
+                Refer to https://github.com/php/web-php/blob/master/public/mirror-info.php for the serialization format of the response.
             responses:
                 "200":
                     description: "Successful response of host configuration. This API does not error."
@@ -42,7 +42,7 @@ paths:
                                 readOnly: true
                                 externalDocs:
                                     description: "This pipe delimited string's contents are described in the source code for this file."
-                                    url: "https://github.com/php/web-php/blob/master/mirror-info.php"
+                                    url: "https://github.com/php/web-php/blob/master/public/mirror-info.php"
                                 example: "https://www.php.net/|8.4.5|1743832640|0|0|en|manual-noalias|1|Core,date,libxml,json,SPL,Zend OPcache|php-web4|169.254.12.255"
 
     "/releases/feed.php":

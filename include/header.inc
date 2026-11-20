@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\ProjectGlobals;
+
 $css_files = [
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
@@ -9,8 +12,12 @@ $css_files = [
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
 }
-if (isset($config["css_overwrite"])) {
-    $css_files = $config["css_overwrite"];
+
+// The fancy footer is the default for classic pages (see footer.inc); load its
+// standalone stylesheet everywhere except the release landing pages, which ship
+// their own footer styles in php85.css.
+if (!in_array('php85.css', $css_files, true) && !in_array('/styles/php85.css', $css_files, true)) {
+    $css_files[] = '/styles/shared-footer.css';
 }
 
 foreach($css_files as $filename) {
@@ -19,14 +26,14 @@ foreach($css_files as $filename) {
     if ($filename[0] !== '/') {
         $filename = "/styles/$filename";
     }
-    $path = dirname(__DIR__) . $filename;
+    $path = ProjectGlobals::getPublicRoot() . $filename;
     $CSS[$filename] = @filemtime($path);
 }
 
 $JS = [];
 if (isset($config["js_files"])) {
     foreach($config['js_files'] as $filename) {
-        $path = dirname(__DIR__) . '/' . $filename;
+        $path = ProjectGlobals::getPublicRoot() . '/' . $filename;
         $JS[$filename] = @filemtime($path);
     }
 }
@@ -39,7 +46,7 @@ if ($config["cache"]) {
     if (is_numeric($config["cache"])) {
         $timestamp = $config["cache"];
     } else {
-        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]);
+        $timestamp = filemtime(ProjectGlobals::getPublicRoot() . "/" . $_SERVER["BASE_PAGE"]);
     }
     $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
@@ -49,6 +56,11 @@ if ($config["cache"]) {
     }
     header("Last-Modified: " . $tsstring);
 }
+
+if ($config["cache_control"] && is_numeric($config["cache_control"])) {
+    header("Cache-Control: public, max-age=" . (int) $config["cache_control"]);
+}
+
 if (!isset($config["languages"])) {
     $config["languages"] = [];
 }
@@ -104,10 +116,6 @@ if (!isset($config["languages"])) {
 <?php foreach($JS as $filename => $modified): ?>
 <script type="text/javascript" src="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>"></script>
 <?php endforeach ?>
-
-<?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
-<?php endif ?>
 
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
@@ -319,7 +327,7 @@ if (!isset($config["languages"])) {
 <nav id="trick"><div><?php doc_toc("en") ?></div></nav>
 <div id="goto">
     <div class="search">
-         <div class="text"></div>
+         <input class="text" type="text" placeholder="Type to search this page" aria-label="Search this page" autocomplete="off" spellcheck="false">
          <div class="results"><ul></ul></div>
    </div>
 </div>

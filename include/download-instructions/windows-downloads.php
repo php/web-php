@@ -1,7 +1,10 @@
 <?php
+
+use phpweb\ProjectGlobals;
+
 $baseDownloads  = 'https://downloads.php.net/~windows/releases/archives/';
 
-$dataStr = @file_get_contents(__DIR__ . '/../../backend/win-releases.json');
+$dataStr = @file_get_contents(ProjectGlobals::getBackendRoot() . '/win-releases.json');
 $releases = $dataStr ? json_decode($dataStr, true) : null;
 
 if (!is_array($releases)) {
@@ -19,7 +22,9 @@ $fullVersion = isset($verBlock['version']) ? $verBlock['version'] : $version;
 
 function ws_build_label(string $k, array $entry): string {
 	$tool = 'VS';
-	if (strpos($k, 'vs17') !== false) {
+	if (strpos($k, 'vs18') !== false) {
+		$tool .= '18';
+	} elseif (strpos($k, 'vs17') !== false) {
 		$tool .= '17';
 	} elseif (strpos($k, 'vs16') !== false) {
 		$tool .= '16';
@@ -41,6 +46,32 @@ function ws_build_label(string $k, array $entry): string {
 
 	return trim(($tool ? $tool . ' ' : '') . ($arch ? $arch . ' ' : '') . $ts . ($mt ? ' <span class="time">' . $mt . ' UTC</span>' : ''));
 }
+
+function ws_has_sbom(string $version, string $fullVersion): bool {
+	if (version_compare($version, '8.6', '>=')) {
+		return true;
+	}
+
+	$minimumVersions = [
+		'8.2' => '8.2.33',
+		'8.3' => '8.3.33',
+		'8.4' => '8.4.24',
+		'8.5' => '8.5.9',
+	];
+
+	return isset($minimumVersions[$version]) && version_compare($fullVersion, $minimumVersions[$version], '>=');
+}
+
+$hasSbom = ws_has_sbom($version, $fullVersion);
+
+echo <<<'HTML'
+<strong>Architecture</strong>
+<p>It is recommended to use x64 builds of PHP as almost all Windows installations currently support x64.</p>
+<strong>Thread Safety</strong>
+<p>NTS builds are for single-threaded use cases, typically PHP running via FastCGI or on the CLI. TS builds support multithreaded SAPIs and are intended for PHP loaded as a web server module. So, if you want to use PHP as FastCGI with IIS, use the Non-Thread Safe (NTS) builds of PHP, or if you want to use the Apache HTTP Server, use the Thread Safe (TS) builds of PHP.</p>
+<strong>Visual Studio Versions</strong>
+<p>The builds below are built using Visual Studio 2019 (VS16) or Visual Studio 2022 (VS17) compiler. They require the Visual C++ Redistributable for Visual Studio 2015-2022 <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64</a> or <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">x86</a> installed.</p>
+HTML;
 
 echo '<h3>PHP ' . htmlspecialchars($version) . ' (' . $fullVersion . ')</h3>';
 
@@ -97,7 +128,13 @@ foreach (['nts-x64', 'ts-x64', 'nts-x86', 'ts-x86'] as $bk) {
 			if (!empty($entry[$type]['path'])) {
 				$p = $entry[$type]['path'];
 				echo "\t", '<p><strong><a href="' . $baseDownloads . $p . '">' . $package_names[$type] . '</a></strong> <span class="size">' . $entry[$type]['size'] . '</span><br>', PHP_EOL;
-				echo "\t", '<span class="sha256"><strong>sha256:</strong> ' . $entry[$type]['sha256'] ?? '' . '</span></p>', PHP_EOL;
+				if (!empty($entry[$type]['sha256'])) {
+					echo "\t", sha256_html($entry[$type]['sha256']), PHP_EOL;
+				}
+				if ($type === 'zip' && $hasSbom) {
+					echo "\t", '<span class="sbom"><a href="' . $baseDownloads . $p . '.spdx.json">SPDX</a>|<a href="' . $baseDownloads . $p . '.cdx.json">CDX</a></span>', PHP_EOL;
+				}
+				echo '</p>', PHP_EOL;
 			}
 		}
 

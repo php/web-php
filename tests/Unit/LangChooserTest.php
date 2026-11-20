@@ -20,7 +20,7 @@ class LangChooserTest extends Framework\TestCase
 
     public function testChooseCodeWithLangParameter(): void
     {
-        $langChooser = new LangChooser(self::DEFAULT_LANGUAGE_LIST, [], '', '', 'en');
+        $langChooser = new LangChooser(self::DEFAULT_LANGUAGE_LIST, [], '',  'en');
         $result = $langChooser->chooseCode('de', '/', null);
 
         self::assertSame(['de', 'de'], $result);

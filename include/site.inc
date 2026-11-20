@@ -233,24 +233,14 @@ function get_shortname($page) {
     return $shorturl;
 }
 
-// Guess the current site from what Apache tells us.
-// This should be the main name of the mirror (in case
-// it works under more then one name). SERVER_NAME is
-// the name of the Apache vhost.
+// Build the base URL for the current site using the
+// request scheme (HTTP/HTTPS) and the Host header.
 
-if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
-    $proto = "http";
-} else {
-    $proto = "https";
-}
+$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+    ? 'https'
+    : 'http';
 
-if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
-    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
-    $msite = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
-} else {
-    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
-    $msite = 'https://' . $_SERVER["SERVER_NAME"] . '/';
-}
+$MYSITE = $scheme . '://' . $_SERVER['HTTP_HOST'] . '/';
 
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)

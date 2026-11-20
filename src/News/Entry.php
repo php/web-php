@@ -15,15 +15,15 @@ class Entry
 
     public const PHPWEB = __DIR__ . '/../../';
 
-    public const ARCHIVE_FILE_REL = 'archive/archive.xml';
+    public const ARCHIVE_FILE_REL = 'public/archive/archive.xml';
 
     public const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
 
-    public const ARCHIVE_ENTRIES_REL = 'archive/entries/';
+    public const ARCHIVE_ENTRIES_REL = 'public/archive/entries/';
 
     public const ARCHIVE_ENTRIES_ABS = self::PHPWEB . self::ARCHIVE_ENTRIES_REL;
 
-    public const IMAGE_PATH_REL = 'images/news/';
+    public const IMAGE_PATH_REL = 'public/images/news/';
 
     public const IMAGE_PATH_ABS = self::PHPWEB . self::IMAGE_PATH_REL;
 
@@ -111,14 +111,19 @@ class Entry
         $dom->preserveWhiteSpace = false;
         $item = $dom->createElementNs("http://www.w3.org/2005/Atom", "entry");
 
-        $href = self::WEBROOT . ($this->isConference() ? '/conferences/index.php' : '/index.php');
+        // Build the appropriate deep link depending on whether it's news, conference, or CFP
+        $href = self::WEBROOT . match (true) {
+            in_array('conferences', $this->categories, true) => '/conferences/index.php',
+            in_array('cfp', $this->categories, true) => '/conferences/index.php?view=cfps',
+            default => '/index.php',
+        };
         $archive = self::WEBROOT . "/archive/" . date('Y', $_SERVER['REQUEST_TIME']) . ".php#{$this->id}";
         $link = ($this->image['link'] ?? null) ?: $archive;
 
         self::ce($dom, "title", $this->title, [], $item);
         self::ce($dom, "id", $archive, [], $item);
-        self::ce($dom, "published", date(DATE_ATOM), [], $item);
-        self::ce($dom, "updated", date(DATE_ATOM), [], $item);
+        self::ce($dom, "published", date(DATE_ATOM, $_SERVER['REQUEST_TIME']), [], $item);
+        self::ce($dom, "updated", date(DATE_ATOM, $_SERVER['REQUEST_TIME']), [], $item);
         self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel" => "alternate", "type" => "text/html"], $item);
         self::ce($dom, "link", null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
 

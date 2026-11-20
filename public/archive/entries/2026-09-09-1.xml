@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux Conference 2027, Antwerp Belgium</title>
+  <id>https://www.php.net/archive/2026.php#2026-09-09-1</id>
+  <published>2026-09-09T20:40:47+00:00</published>
+  <updated>2026-09-09T20:40:47+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2026-09-09-1" rel="alternate" type="text/html"/>
+  <link href="https://conference.phpbenelux.eu/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-10-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://conference.phpbenelux.eu/" title="PHPBenelux Conference 2027">phpbenelux_conference_logo_2027.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The <a href="https://conference.phpbenelux.eu">PHPBenelux Conference</a> is back and now it's your turn to take the stage!
+
+     Whether you're a developer, architect, engineering lead, DevOps engineer, or open-source contributor, we'd love to hear your story.
+
+     Join a long tradition of knowledge sharing, inspire fellow developers, and help shape the next chapter of the PHP ecosystem.
+
+        Share your unique perspective, <a href="https://sessionize.com/phpbenelux-2027">submit your proposal today!</a>
+
+    </div>
+  </content>
+</entry>
