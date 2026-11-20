@@ -47,11 +47,7 @@ class ReleasePage
 
         return <<<HTML
         <section class="hero">
-            <div class="hero-bg" aria-hidden="true">
-                <div class="hero-orb hero-orb-1-x"><div class="hero-orb-1-y"><div class="hero-orb-1-r"></div></div></div>
-                <div class="hero-orb hero-orb-2-x"><div class="hero-orb-2-y"><div class="hero-orb-2-r"></div></div></div>
-                <div class="hero-orb hero-orb-3-x"><div class="hero-orb-3-y"><div class="hero-orb-3-r"></div></div></div>
-            </div>
+            <div class="hero-bg" aria-hidden="true"></div>
 
             <!-- hero background pattern -->
             <svg aria-hidden="true" class="hero-pattern">
@@ -137,14 +133,6 @@ class ReleasePage
             </svg>
 
             <script>
-                // Pause the hero background animation while it is scrolled out of view.
-                const heroBg = document.querySelector('.hero-bg');
-                if (heroBg && 'IntersectionObserver' in window) {
-                    new IntersectionObserver(([entry]) => {
-                        heroBg.classList.toggle('paused', !entry.isIntersecting);
-                    }).observe(heroBg);
-                }
-
                 document.addEventListener('DOMContentLoaded', () => {
                     document.addEventListener('click', async (e) => {
                         const btn = e.target.closest('.js-copy-code');
