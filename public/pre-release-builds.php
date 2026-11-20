@@ -2,7 +2,7 @@
 
 use phpweb\ProjectGlobals;
 
-$_SERVER['BASE_PAGE'] = 'qa.php';
+$_SERVER['BASE_PAGE'] = 'pre-release-builds.php';
 require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/release-qa.php';
 

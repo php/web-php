@@ -2,7 +2,7 @@
 
 return [
     'common_header' => 'PHP 8.6 is a major update of the PHP language, with new features including Partial Function Application, a new Duration class, a Polling API, and a new clamp() function',
-    'main_title' => 'Smarter, Faster, Built for Tomorrow.',
+    'main_title' => 'Faster, Safer, More Powerful.',
     'main_subtitle' => '<p><strong>PHP 8.6 is a major update of the PHP language</strong>, with new features including <strong>Partial Function Application</strong>, a new <strong>Duration</strong> class, a <strong>Polling API</strong>, and a new <strong>clamp()</strong> function</p>',
 
     'whats_new' => 'What\'s new in 8.6',
@@ -10,10 +10,10 @@ return [
     'old_version' => 'PHP 8.5 and older',
     'badge_new' => 'NEW',
     'documentation' => 'Doc',
-    'released' => 'Will be released on November 19, 2026',
+    'released' => 'Released November 19, 2026',
     'release_unavailable_reason' => 'PHP 8.6 has not been released yet. It will be released on November 19, 2026.',
     'key_features' => 'Key Features in PHP 8.6',
-    'key_features_description' => '<p><strong>Faster</strong>, <strong>cleaner</strong>, and <strong>built for developers</strong>.</p>',
+    'key_features_description' => '<p><strong>More expressive code</strong>, <strong>stronger types</strong>, and <strong>scalable I/O</strong>.</p>',
 
     'features_pfa_description' => '<p>Allows some of a function\'s arguments to be provided in advance, returning a Closure that accepts the rest.</p>',
     'features_readonly_property_defaults_description' => '<p>Allows readonly properties to declare default values, so fixed values no longer have to be assigned in the constructor.</p>',
