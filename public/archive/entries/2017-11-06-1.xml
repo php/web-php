@@ -10,6 +10,7 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://callforpapers.sandsmedia.com" title="International PHP Conference Spring Edition 2018 - Call for Papers">ipc-2018.png</default:newsImage>
   <link href="https://callforpapers.sandsmedia.com" rel="via" type="text/html"/>
   <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
     <p>The International PHP Conference is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p>
 	<p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale</a> taking place at the same time.</p>
 	<p><strong>THE BASIC FACTS</strong></p>
@@ -32,5 +33,6 @@
 	<li>Data &amp; Privacy</li>
 	</ul>
 	<p>We are looking forward to your exciting submissions! For further information on International PHP Conference's sessions and speakers visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+    </div>
   </content>
 </entry>
