@@ -7,6 +7,8 @@ require_once __DIR__ . '/../include/prepend.inc';
 require_once __DIR__ . '/../include/release-qa.php';
 
 if (isset($_GET["format"])) {
+    header('Cache-Control: public, max-age=300'); // 5 minutes
+
     $output = $QA_RELEASES;
 
     if (($_GET['only'] ?? null) === 'dev_versions') {
@@ -67,6 +69,7 @@ $SIDEBAR_DATA = '
 
 site_header("Pre-Release Builds", [
     'current' => 'downloads',
+    'cache_control' => 5 * 60, // 5 minutes
 ]);
 
 ?>

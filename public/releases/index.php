@@ -7,6 +7,8 @@ require_once __DIR__ . '/../../include/prepend.inc';
 require_once ProjectGlobals::getProjectRoot() . '/include/branches.inc';
 
 if (isset($_GET["serialize"]) || isset($_GET["json"])) {
+    header('Cache-Control: public, max-age=300'); // 5 minutes
+
     $RELEASES = $RELEASES + $OLDRELEASES;
 
     $machineReadable = [];
