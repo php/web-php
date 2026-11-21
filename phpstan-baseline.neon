@@ -1639,12 +1639,6 @@ parameters:
 			path: public/conferences/index.php
 
 		-
-			message: '#^Offset 1 might not exist on array\{\}\|array\{non\-falsy\-string, string\}\.$#'
-			identifier: offsetAccess.notFound
-			count: 1
-			path: public/credits.php
-
-		-
 			message: '#^Variable \$LANG might not be defined\.$#'
 			identifier: variable.undefined
 			count: 2
