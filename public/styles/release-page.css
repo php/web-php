@@ -1,77 +1,19 @@
-.php85 #layout {
-    margin: 0;
-}
+/*
+ * Layout and components for the release announcement pages (/releases/8.x/,
+ * rendered by src/Themes/ReleasePage.php).
+ *
+ * Loaded after /styles/base.css (design tokens, fonts, reset) and
+ * /styles/components.css (header, buttons, code colors). The pages' <body>
+ * has the `release-page` class (site_header()'s `current` option).
+ */
 
-.php85 #layout-content {
-    background: initial;
-    padding: 0;
-    color: inherit;
-}
-
-.php85 #intro .container,
-.php85 #breadcrumbs-inner,
-.php85 #goto div,
-.php85 #trick div,
-.php85 #layout {
-    width: auto;
-}
-
-.php85 h1,
-.php85 h2,
-.php85 h3,
-.php85 h4,
-.php85 h5,
-.php85 h6 {
-    color: inherit;
-}
-
-.php85 header.title,
-.php85 h1:after,
-.php85 h2:after,
-.php85 h3:after {
-    display: none;
-}
-
-.php85 a {
-    border: 0;
-}
-
-.php85 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.php85 .navbar .navbar__nav {
-    margin: 0;
-    margin-left: 24px;
-}
-
-.php85 #layout-content a:link,
-.php85 #layout-content a:visited {
-    color: inherit;
-}
-
-.php85 .headsup {
-    height: auto;
-    z-index: 11;
-    position: relative;
-}
-
-:not(pre) > code[class*=language-], pre[class*=language-] {
-    background: transparent;
-}
-
-code[class*=language-], pre[class*=language-] {
-    text-shadow: none;
-}
-
-.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
-    background: transparent;
-}
-
-.js-copy-code {
-
+/*
+ * The spacing between headings and paragraphs these pages have always had
+ * (it used to come from the classic theme-base.css). Kept as low-specificity
+ * as it was there, so the rules below still win.
+ */
+:where(.release-page main) :is(h1, h2, h3, h4, h5, h6, p) {
+    margin-bottom: 1.5rem;
 }
 
 .features-title h2,
@@ -132,8 +74,6 @@ code[class*=language-], pre[class*=language-] {
 
 @layer theme {
     :root, :host {
-        --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         --color-red-200: oklch(88.5% .062 18.334);
         --color-red-400: oklch(70.4% .191 22.216);
         --color-red-900: oklch(39.6% .141 25.723);
@@ -143,16 +83,16 @@ code[class*=language-], pre[class*=language-] {
         --color-green-900: oklch(39.3% .095 152.535);
         --color-teal-300: oklch(85.5% .138 181.071);
         --color-teal-400: oklch(77.7% .152 181.912);
-        --color-gray-100: var(--color-zinc-100);
+        --color-gray-100: var(--soft);
         --color-gray-200: var(--color-zinc-200);
         --color-gray-300: var(--color-zinc-300);
         --color-gray-400: var(--color-zinc-400);
-        --color-gray-500: var(--color-zinc-500);
-        --color-gray-600: var(--color-zinc-600);
-        --color-gray-700: var(--color-zinc-700);
-        --color-gray-800: var(--color-zinc-800);
-        --color-gray-900: var(--color-zinc-900);
-        --color-gray-950: var(--color-zinc-950);
+        --color-gray-500: var(--muted);
+        --color-gray-600: var(--muted);
+        --color-gray-700: var(--muted);
+        --color-gray-800: var(--ink);
+        --color-gray-900: var(--ink);
+        --color-gray-950: var(--ink);
         --color-zinc-50: oklch(98.5% 0 0);
         --color-zinc-100: oklch(96.7% .001 286.375);
         --color-zinc-200: oklch(92% .004 286.32);
@@ -170,7 +110,6 @@ code[class*=language-], pre[class*=language-] {
         --container-2xl: 42rem;
         --container-3xl: 48rem;
         --container-4xl: 56rem;
-        --container-7xl: 80rem;
         --text-xs: .75rem;
         --text-xs--line-height: calc(1 / .75);
         --text-sm: .875rem;
@@ -203,193 +142,23 @@ code[class*=language-], pre[class*=language-] {
     }
 }
 
-@layer base {
-    *, :after, :before, ::backdrop {
-        box-sizing: border-box;
-        border: 0 solid;
-        margin: 0;
-        padding: 0
-    }
-
-    ::file-selector-button {
-        box-sizing: border-box;
-        border: 0 solid;
-        margin: 0;
-        padding: 0
-    }
-
-    html, :host {
-        -webkit-text-size-adjust: 100%;
-        tab-size: 4;
-        line-height: 1.5;
-        font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
-        -webkit-tap-highlight-color: transparent
-    }
-
-    hr {
-        height: 0;
-        color: inherit;
-        border-top-width: 1px
-    }
-
-    abbr:where([title]) {
-        text-decoration: underline dotted
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-size: inherit;
-        font-weight: inherit
-    }
-
-    a {
-        color: inherit;
-        text-decoration: inherit
-    }
-
-    b, strong {
-        font-weight: bolder
-    }
-
-    code, kbd, samp, pre {
-        font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
-        font-size: 1em
-    }
-
-    small {
-        font-size: 80%
-    }
-
-    sub, sup {
-        vertical-align: baseline;
-        font-size: 75%;
-        line-height: 0;
-        position: relative
-    }
-
-    sub {
-        bottom: -.25em
-    }
-
-    sup {
-        top: -.5em
-    }
-
-    table {
-        text-indent: 0;
-        border-color: inherit;
-        border-collapse: collapse
-    }
-
-    :-moz-focusring {
-        outline: auto
-    }
-
-    progress {
-        vertical-align: baseline
-    }
-
-    summary {
-        display: list-item
-    }
-
-    ol, ul, menu {
-        list-style: none
-    }
-
-    img, svg, video, canvas, audio, iframe, embed, object {
-        vertical-align: middle;
-        display: block
-    }
-
-    img, video {
-        max-width: 100%;
-        height: auto
-    }
-
-    button, input, select, optgroup, textarea {
-        font: inherit;
-        font-feature-settings: inherit;
-        font-variation-settings: inherit;
-        letter-spacing: inherit;
-        color: inherit;
-        opacity: 1;
-        background-color: #0000;
-        border-radius: 0
-    }
-
-    ::file-selector-button {
-        font: inherit;
-        font-feature-settings: inherit;
-        font-variation-settings: inherit;
-        letter-spacing: inherit;
-        color: inherit;
-        opacity: 1;
-        background-color: #0000;
-        border-radius: 0
-    }
-
-    :where(select:is([multiple],[size])) optgroup {
-        font-weight: bolder
-    }
-
-    :where(select:is([multiple],[size])) optgroup option {
-        padding-inline-start: 20px
-    }
-
-    ::file-selector-button {
-        margin-inline-end: 4px
-    }
-
-
-    button, input:where([type=button],[type=reset],[type=submit]) {
-        appearance: button
-    }
-
-    ::file-selector-button {
-        appearance: button
-    }
-
-
-    [hidden]:where(:not([hidden=until-found])) {
-        display: none !important
-    }
-}
-
-@layer utilities {
-    .sr-only {
-        clip-path: inset(50%);
-        white-space: nowrap;
-        border-width: 0;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        position: absolute;
-        overflow: hidden
-    }
-}
-
 body {
-    background-color: var(--color-white);
+    background-color: var(--paper);
     font-family: var(--font-sans);
-    color: var(--color-gray-800);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    color: var(--ink);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: relative
 }
 
-body:where(.dark,.dark *) {
-    color: var(--color-white);
-    background-color: #181d3a
-}
-
-a {
+main a:not(.button) {
     text-underline-offset: 2px;
     text-decoration-line: underline
 }
 
 @media (hover: hover) {
-    a:hover {
+    main a:not(.button):hover {
         text-decoration-line: none
     }
 }
@@ -398,18 +167,11 @@ a {
     position: relative;
     isolation: isolate;
     z-index: 10;
-    margin-top: calc(var(--spacing) * -4);
     display: flex;
     height: calc(var(--spacing) * 160);
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    @media (width >= 64rem) {
-        margin-top: calc(var(--spacing) * -16);
-    }
-    @media (width >= 64rem) {
-        padding-top: calc(var(--spacing) * 16);
-    }
 }
 
 .hero-pattern {
@@ -459,7 +221,7 @@ a {
 }
 
 .hero-content:where(.dark,.dark *) {
-    background-image: radial-gradient(at 50% 50%, #181d3a, transparent 65%)
+    background-image: radial-gradient(at 50% 50%, var(--lavender), transparent 65%)
 }
 
 .hero .hero-bg {
@@ -654,7 +416,7 @@ a {
 }
 
 .features:where(.dark,.dark *) {
-    background-color: oklab(39.0688% .00431919 -.103547/.4)
+    background-color: color-mix(in oklab, var(--draft) 40%, transparent)
 }
 
 .features-pattern {
@@ -683,11 +445,11 @@ a {
 }
 
 .features-title {
-    max-width: var(--container-7xl);
+    max-width: var(--page-width);
     justify-content: center;
     align-items: center;
     gap: calc(var(--spacing) * 3);
-    padding-inline: calc(var(--spacing) * 4);
+    padding-inline: var(--page-gutter);
     text-align: center;
     text-wrap: balance;
     flex-direction: column;
@@ -698,7 +460,6 @@ a {
 @media (min-width: 64rem) {
     .features-title {
         gap: calc(var(--spacing) * 6);
-        padding-inline: calc(var(--spacing) * 8);
         flex-direction: row
     }
 }
@@ -749,19 +510,13 @@ a {
 .features-grid-container {
     margin-inline: auto;
     margin-top: calc(var(--spacing) * 8);
-    max-width: var(--container-7xl);
-    padding-inline: calc(var(--spacing) * 4)
+    max-width: var(--page-width);
+    padding-inline: var(--page-gutter)
 }
 
 @media (min-width: 40rem) {
     .features-grid-container {
         margin-top: calc(var(--spacing) * 12)
-    }
-}
-
-@media (min-width: 64rem) {
-    .features-grid-container {
-        padding-inline: calc(var(--spacing) * 8)
     }
 }
 
@@ -890,11 +645,7 @@ a {
     margin-bottom: calc(var(--spacing) * 4);
     width: calc(var(--spacing) * 7);
     height: calc(var(--spacing) * 7);
-    color: #6b58ff
-}
-
-.features-col svg:where(.dark,.dark *) {
-    color: #7b75ff
+    color: var(--brand)
 }
 
 .features-col a {
@@ -944,7 +695,7 @@ a {
 }
 
 .before-and-after-container:where(.dark,.dark *) {
-    background-color: oklab(39.0688% .00431919 -.103547/.3)
+    background-color: color-mix(in oklab, var(--draft) 30%, transparent)
 }
 
 .before-and-after-container.last {
@@ -960,19 +711,13 @@ a {
 .before-and-after-code-container {
     margin-inline: auto;
     margin-top: calc(var(--spacing) * 8);
-    max-width: var(--container-7xl);
-    padding-inline: calc(var(--spacing) * 4)
+    max-width: var(--page-width);
+    padding-inline: var(--page-gutter)
 }
 
 @media (min-width: 40rem) {
     .before-and-after-code-container {
         margin-top: calc(var(--spacing) * 12)
-    }
-}
-
-@media (min-width: 64rem) {
-    .before-and-after-code-container {
-        padding-inline: calc(var(--spacing) * 8)
     }
 }
 
@@ -1122,7 +867,7 @@ a {
 
 @supports (color:color-mix(in lab, red, red)) {
     .code-container:where(.dark,.dark *) {
-        background-color: color-mix(in oklab, var(--color-gray-950) 25%, transparent)
+        background-color: color-mix(in oklab, var(--color-zinc-950) 25%, transparent)
     }
 }
 
@@ -1280,7 +1025,7 @@ a {
 }
 
 .release-notes:where(.dark,.dark *) {
-    background-color: oklab(39.0688% .00431919 -.103547/.1)
+    background-color: color-mix(in oklab, var(--draft) 10%, transparent)
 }
 
 .release-notes h2 {
@@ -1433,8 +1178,8 @@ a {
 .release-notes-grid-container {
     margin-inline: auto;
     margin-top: calc(var(--spacing) * -2);
-    max-width: var(--container-7xl);
-    padding-inline: calc(var(--spacing) * 4)
+    max-width: var(--page-width);
+    padding-inline: var(--page-gutter)
 }
 
 .release-notes-grid-container + .release-notes-grid-container {
@@ -1442,10 +1187,6 @@ a {
 }
 
 @media (min-width: 64rem) {
-    .release-notes-grid-container {
-        padding-inline: calc(var(--spacing) * 8)
-    }
-
     .release-notes-grid {
         gap: calc(var(--spacing) * 5);
         grid-template-columns:repeat(12, minmax(0, 1fr));
@@ -1536,7 +1277,7 @@ a {
 }
 
 .cta-footer:where(.dark,.dark *) {
-    background-color: oklab(39.0688% .00431919 -.103547/.2)
+    background-color: color-mix(in oklab, var(--draft) 20%, transparent)
 }
 
 .cta-footer > svg {
@@ -1585,10 +1326,6 @@ a {
     height: calc(var(--spacing) * 16);
     color: var(--color-gray-800);
     margin-inline: auto
-}
-
-.cta-footer-content svg:where(.dark,.dark *) {
-    color: var(--color-gray-100)
 }
 
 .cta-footer-content h2 {
@@ -1659,274 +1396,6 @@ a {
     margin-bottom: calc(var(--spacing) * 6)
 }
 
-footer {
-    isolation: isolate;
-    z-index: 10;
-    border-top-style: var(--tw-border-style);
-    border-color: #0000000d;
-    border-top-width: 1px;
-    position: relative
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    footer {
-        border-color: color-mix(in oklab, var(--color-black) 5%, transparent)
-    }
-}
-
-footer:where(.dark,.dark *) {
-    border-color: #ffffff08
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    footer:where(.dark,.dark *) {
-        border-color: color-mix(in oklab, var(--color-white) 3%, transparent)
-    }
-}
-
-footer:where(.dark,.dark *) {
-    background-color: oklab(39.0688% .00431919 -.103547/.3)
-}
-
-footer p {
-    font-size: var(--text-sm);
-    line-height: calc(var(--spacing) * 6);
-    text-wrap: balance;
-    color: var(--color-gray-600)
-}
-
-footer p:where(.dark,.dark *) {
-    color: #fffc
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    footer p:where(.dark,.dark *) {
-        color: color-mix(in oklab, var(--color-white) 80%, transparent)
-    }
-}
-
-.social-icons {
-    column-gap: calc(var(--spacing) * 6);
-    display: flex
-}
-
-.social-icons a {
-    color: var(--color-gray-600)
-}
-
-@media (hover: hover) {
-    .social-icons a:hover {
-        color: var(--color-gray-800)
-    }
-}
-
-.social-icons a:where(.dark,.dark *) {
-    color: #fffc
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    .social-icons a:where(.dark,.dark *) {
-        color: color-mix(in oklab, var(--color-white) 80%, transparent)
-    }
-}
-
-@media (hover: hover) {
-    .social-icons a:where(.dark,.dark *):hover {
-        color: var(--color-white)
-    }
-}
-
-.social-icons svg {
-    width: calc(var(--spacing) * 6);
-    height: calc(var(--spacing) * 6)
-}
-
-.footer-logo {
-    height: calc(var(--spacing) * 10);
-    display: inline-block
-}
-
-.footer-logo svg {
-    height: calc(var(--spacing) * 10);
-    color: var(--color-gray-800);
-    display: inline-block
-}
-
-.footer-logo svg:where(.dark,.dark *) {
-    color: var(--color-white)
-}
-
-.footer-container {
-    max-width: var(--container-7xl);
-    padding-inline: calc(var(--spacing) * 4);
-    padding-top: calc(var(--spacing) * 16);
-    padding-bottom: calc(var(--spacing) * 8);
-    margin-inline: auto
-}
-
-@media (min-width: 40rem) {
-    .footer-container {
-        padding-top: calc(var(--spacing) * 24)
-    }
-}
-
-@media (min-width: 64rem) {
-    .footer-container {
-        padding-inline: calc(var(--spacing) * 8);
-        padding-top: calc(var(--spacing) * 28)
-    }
-}
-
-@media (min-width: 80rem) {
-    .footer-grid {
-        gap: calc(var(--spacing) * 8);
-        grid-template-columns:repeat(3, minmax(0, 1fr));
-        display: grid
-    }
-}
-
-:where(.footer-grid>div>:not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)))
-}
-
-.footer-links-container {
-    margin-top: calc(var(--spacing) * 16);
-    gap: calc(var(--spacing) * 8);
-    grid-template-columns:repeat(2, minmax(0, 1fr));
-    display: grid
-}
-
-@media (min-width: 80rem) {
-    .footer-links-container {
-        margin-top: calc(var(--spacing) * 0);
-        grid-column: span 2/span 2
-    }
-}
-
-@media (min-width: 48rem) {
-    .footer-links-grid {
-        gap: calc(var(--spacing) * 8);
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-        display: grid
-    }
-}
-
-.footer-links-grid h3 {
-    font-size: var(--text-sm);
-    line-height: calc(var(--spacing) * 6);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-gray-900)
-}
-
-.footer-links-grid h3:where(.dark,.dark *) {
-    color: var(--color-white)
-}
-
-.footer-links-grid ul {
-    margin-top: calc(var(--spacing) * 6)
-}
-
-:where(.footer-links-grid ul>:not(:last-child)) {
-    --tw-space-y-reverse: 0;
-    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)))
-}
-
-.footer-links-grid a {
-    font-size: var(--text-sm);
-    line-height: calc(var(--spacing) * 6);
-    color: var(--color-gray-600)
-}
-
-@media (hover: hover) {
-    .footer-links-grid a:hover {
-        color: var(--color-gray-900)
-    }
-}
-
-.footer-links-grid a:where(.dark,.dark *) {
-    color: #fffc
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    .footer-links-grid a:where(.dark,.dark *) {
-        color: color-mix(in oklab, var(--color-white) 80%, transparent)
-    }
-}
-
-@media (hover: hover) {
-    .footer-links-grid a:where(.dark,.dark *):hover {
-        color: var(--color-white)
-    }
-}
-
-.footer-links-grid div:first-of-type {
-    margin-bottom: calc(var(--spacing) * 10)
-}
-
-@media (min-width: 48rem) {
-    .footer-links-grid div:first-of-type {
-        margin-bottom: calc(var(--spacing) * 0)
-    }
-}
-
-.footer-credits {
-    margin-top: calc(var(--spacing) * 0);
-    border-top-style: var(--tw-border-style);
-    border-color: #18181b1a;
-    border-top-width: 1px
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    .footer-credits {
-        border-color: color-mix(in oklab, var(--color-gray-900) 10%, transparent)
-    }
-}
-
-.footer-credits {
-    padding-top: calc(var(--spacing) * 8)
-}
-
-@media (min-width: 40rem) {
-    .footer-credits {
-        margin-top: calc(var(--spacing) * 20)
-    }
-}
-
-@media (min-width: 64rem) {
-    .footer-credits {
-        margin-top: calc(var(--spacing) * 24)
-    }
-}
-
-.footer-credits:where(.dark,.dark *) {
-    border-color: #ffffff1a
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    .footer-credits:where(.dark,.dark *) {
-        border-color: color-mix(in oklab, var(--color-white) 10%, transparent)
-    }
-}
-
-.footer-credits p {
-    font-size: var(--text-sm);
-    line-height: calc(var(--spacing) * 6);
-    color: var(--color-gray-600)
-}
-
-.footer-credits p:where(.dark,.dark *) {
-    color: #fffc
-}
-
-@supports (color:color-mix(in lab, red, red)) {
-    .footer-credits p:where(.dark,.dark *) {
-        color: color-mix(in oklab, var(--color-white) 80%, transparent)
-    }
-}
-
 .noise {
     pointer-events: none;
     top: calc(var(--spacing) * 0);
@@ -1968,172 +1437,24 @@ footer p:where(.dark,.dark *) {
 }
 
 
-.php85 .phpcode code {
+.release-page .phpcode code {
     white-space: revert;
 }
 
-.dark .php85 .phpcode::selection {
-    background-color: #333;
+.release-page .phpcode span {
+    background-color: transparent;
 }
 
-.php85 .phpcode span.comment {
-    color: #708090;
-    background-color: transparent;
+/* PHP's highlighter output, in the shared code colors (see components.css). */
+.release-page .phpcode span.comment {
+    color: var(--code-comment);
     font-style: italic;
 }
 
-.php85 .phpcode span.default {
-    color: rgb(213, 51, 84);
-    background-color: transparent;
-}
-
-.php85 .phpcode span.variable {
-    color: #7d55ba;
-    background-color: transparent;
-}
-
-.php85 .phpcode span.keyword {
-    color: #07a;
-    background-color: transparent;
-}
-
-.php85 .phpcode span.string {
-    color: rgb(80, 119, 0);
-    background-color: transparent;
-}
-
-.dark .php85 .phpcode span.comment {
-    color: #8b949e;
-    background-color: transparent;
-    font-style: italic;
-}
-
-.dark .php85 .phpcode span.default {
-    color: #d2a8ff;
-    background-color: transparent;
-}
-
-.dark .php85 .phpcode span.variable {
-    color: #a5d6ff;
-    background-color: transparent;
-}
-
-.dark .php85 .phpcode span.keyword {
-    color: #ff7b72;
-    background-color: transparent;
-}
-
-.dark .php85 .phpcode span.string {
-    color: #80b83c;
-    background-color: transparent;
-}
-
-.php85 #layout-content a.button-primary {
-    min-height: calc(var(--spacing) * 10);
-    cursor: pointer;
-    width: 100%;
-    padding-inline: calc(var(--spacing) * 5);
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-white);
-    background-color: #6b58ff;
-    border-radius: calc(infinity * 1px);
-    justify-content: center;
-    align-items: center;
-    text-decoration-line: none;
-    display: inline-flex;
-    position: relative;
-    overflow: hidden
-}
-
-.php85 #layout-content a.button-primary--disabled {
-    opacity: .7;
-    cursor: not-allowed;
-}
-
-@media (hover: hover) {
-    .php85 #layout-content a.button-primary:hover {
-        background-color: oklab(57.9656% .0459944 -.232052/.9)
-    }
-}
-
-.php85 #layout-content a.button-primary:focus-visible {
-    outline-offset: 2px;
-    outline: var(--color-gray-800) var(--tw-outline-style) 2px;
-}
-
-.php85 #layout-content a.button-primary:disabled {
-    pointer-events: none;
-    opacity: .9
-}
-
-@media (min-width: 40rem) {
-    .php85 #layout-content a.button-primary {
-        width: auto
-    }
-}
-
-.php85 #layout-content a.button-secondary {
-    min-height: calc(var(--spacing) * 10);
-    cursor: pointer;
-    background-color: var(--color-white);
-    width: 100%;
-    padding-inline: calc(var(--spacing) * 5);
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-gray-900);
-    --tw-shadow: 0 1px 2px 0 #0000000d;
-    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    --tw-ring-color: color-mix(in oklab, var(--color-gray-200) 50%, transparent);
-    border-radius: calc(infinity * 1px);
-    justify-content: center;
-    align-items: center;
-    text-decoration-line: none;
-    display: inline-flex;
-    position: relative;
-    overflow: hidden
-}
-
-.php85 #layout-content a.button-secondary--disabled {
-    opacity: .7;
-    cursor: not-allowed;
-}
-
-@media (hover: hover) {
-    .php85 #layout-content a.button-secondary:hover {
-        background-color: #f4f4f5f2
-    }
-
-    @supports (color:color-mix(in lab, red, red)) {
-        .php85 #layout-content a.button-secondary:hover {
-            background-color: color-mix(in oklab, var(--color-gray-100) 95%, transparent)
-        }
-    }
-}
-
-.php85 #layout-content a.button-secondary:focus-visible {
-    outline-offset: 2px;
-    outline: var(--color-gray-800) var(--tw-outline-style) 2px;
-}
-
-.php85 #layout-content a.button-secondary:disabled {
-    pointer-events: none;
-    opacity: .9
-}
-
-@media (min-width: 40rem) {
-    .php85 #layout-content a.button-secondary {
-        width: auto
-    }
-}
-
-.php85 #layout-content a.button-secondary:where(.dark,.dark *) {
-    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
-}
+.release-page .phpcode span.default { color: var(--code-function); }
+.release-page .phpcode span.variable { color: var(--code-text); }
+.release-page .phpcode span.keyword { color: var(--code-keyword); }
+.release-page .phpcode span.string { color: var(--code-string); }
 
 @property --tw-shadow {
     syntax: "*";

@@ -2,10 +2,11 @@
  * Standalone, framework-free styling for the shared "fancy" footer
  * (see include/shared-footer.inc -> fancy_footer()).
  *
- * This is the vanilla-CSS counterpart to the Tailwind build in php85.css that
- * the release pages use. It is fully self-contained; every rule is scoped under
+ * Every page loads it. It is fully self-contained; every rule is scoped under
  * `.php-footer` so it can sit at the bottom of a classic php.net page without
- * leaking into, or inheriting from, the rest of that page's styles.
+ * leaking into, or inheriting from, the rest of that page's styles. 2026
+ * design pages (the homepage and the release pages) get a light theme at the
+ * end of the file.
  */
 
 .php-footer {
@@ -259,6 +260,56 @@
     }
 
     .php-footer .footer-links-container {
+        margin-top: 0;
+        grid-column: span 2 / span 2;
+    }
+}
+
+/* --- 2026 design -------------------------------------------------------- */
+
+/*
+ * 2026 design pages (the homepage and the release pages; see site_header())
+ * load /styles/base.css and /styles/components.css and sit on base.css's light
+ * "paper" background rather than the classic dark grey, so they get a light
+ * footer built from its tokens (which also flip for dark mode), lined up with
+ * the page's content.
+ */
+.design-2026 .php-footer {
+    --footer-fg: var(--muted);
+    --footer-fg-strong: var(--ink);
+    --footer-accent: var(--brand);
+    --footer-accent-hover: var(--brand-strong);
+    --footer-border: var(--line);
+    background-color: var(--surface);
+}
+
+.dark .design-2026 .php-footer {
+    background-color: color-mix(in oklab, var(--draft) 30%, var(--paper));
+}
+
+.design-2026 .php-footer .button-primary {
+    border-radius: .75rem;
+    color: #fff;
+}
+
+.dark .design-2026 .php-footer .button-primary {
+    color: var(--paper);
+}
+
+.design-2026 .php-footer .footer-container {
+    width: auto;
+    max-width: var(--page-width);
+    padding-inline: var(--page-gutter);
+}
+
+@media (min-width: 64rem) {
+    .design-2026 .php-footer .footer-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .design-2026 .php-footer .footer-links-container {
         margin-top: 0;
         grid-column: span 2 / span 2;
     }

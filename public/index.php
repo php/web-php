@@ -1,6 +1,6 @@
 <?php
 
-use phpweb\News\NewsHandler;
+use phpweb\Homepage\PackagistStats;
 
 (function ($uri): void {
     // Special redirect cases not able to be captured in error.php
@@ -16,22 +16,29 @@ use phpweb\News\NewsHandler;
 })($_SERVER['REQUEST_URI'] ?? '');
 
 // Get the modification date of this PHP file
-$timestamps = [@getlastmod()];
+$timestamps = [(int) @getlastmod()];
 
 /*
-   The date of prepend.inc represents the age of ALL
-   included files. Please touch it if you modify any
-   other include file (and the modification affects
-   the display of the index page). The cost of stat'ing
-   them all is prohibitive.
+   The date of prepend.inc represents the age of ALL included files. Please
+   touch it if you modify any other include file (and the modification affects
+   the display of the index page). The cost of stat'ing them all is prohibitive.
 */
-$timestamps[] = @filemtime("../include/prepend.inc");
+$timestamps[] = (int) @filemtime(__DIR__ . "/../include/prepend.inc");
 
 // These are the only dynamic parts of the frontpage
-$timestamps[] = @filemtime("include/pregen-confs.inc");
-$timestamps[] = @filemtime("include/pregen-news.inc");
-$timestamps[] = @filemtime("../include/version.inc");
-$timestamps[] = @filemtime("js/common.js");
+$timestamps[] = (int) @filemtime(__DIR__ . "/../include/version.inc");
+$timestamps[] = (int) @filemtime(__DIR__ . "/include/pregen-news.inc");
+$timestamps[] = (int) @filemtime(__DIR__ . "/backend/packagist-stats.json");
+$timestamps[] = (int) @filemtime(__DIR__ . "/styles/base.css");
+$timestamps[] = (int) @filemtime(__DIR__ . "/styles/components.css");
+$timestamps[] = (int) @filemtime(__DIR__ . "/styles/homepage.css");
+$timestamps[] = (int) @filemtime(__DIR__ . "/js/site-header.js");
+$timestamps[] = (int) @filemtime(__DIR__ . "/js/homepage.js");
+$timestamps[] = (int) @filemtime(__DIR__ . "/js/copy-code.js");
+$timestamps[] = (int) @filemtime(__DIR__ . "/js/keyboard.js");
+
+// The release timeline and the years-open count change with the year
+$timestamps[] = (new DateTimeImmutable(date('Y') . '-01-01'))->getTimestamp();
 
 // The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);
@@ -40,176 +47,386 @@ $timestamp = max($timestamps);
 $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
 // Check if the client has the same page cached
-if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
-    ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring)) {
+if (($_SERVER["HTTP_IF_MODIFIED_SINCE"] ?? null) === $tsstring) {
     header("HTTP/1.1 304 Not Modified");
     exit();
 }
 
-// Inform the user agent what is our last modification date
 header("Last-Modified: " . $tsstring);
 
 $_SERVER['BASE_PAGE'] = 'index.php';
 require_once __DIR__ . '/../include/prepend.inc';
-require_once __DIR__ . '/../include/branches.inc';
-require_once __DIR__ . '/include/pregen-confs.inc';
-require_once __DIR__ . '/../include/version.inc';
+require_once __DIR__ . '/../include/homepage.inc';
 
-// Disable LAST_NEWS cookie as its busting the CDN cache — disabling temporarily (or not) — Derick
-// mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
+$supportedReleases = homepage_actively_supported_releases();
+$latestNews = homepage_latest_news();
+$featured = homepage_featured_release();
+$history = homepage_release_history();
+$packagist = homepage_packagist_stats();
+$logos = require __DIR__ . '/../include/homepage/logos.php';
+$examples = require __DIR__ . '/../include/homepage/examples.php';
+$yearsOpen = (int) date('Y') - 1995;
 
-$content = "<div class='home-content'>";
-foreach ((new NewsHandler())->getFrontPageNews() as $entry) {
-    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
-    $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
-    $date = date_create($entry['updated']);
-    $date_human = date_format($date, 'd M Y');
-    $date_w3c = date_format($date, DATE_W3C);
-    $content .= <<<NEWSENTRY
-<article class="newsentry">
-  <header class="title">
-    <time datetime="$date_w3c">$date_human</time>
-    <h2 class="newstitle">
-      <a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a>
-    </h2>
-  </header>
-  <div class="newscontent">
-    {$entry["content"]}
-  </div>
-</article>
-NEWSENTRY;
-}
-$content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';
-$content .= "</div>";
-
-$intro = <<<EOF
-  <div class="hero">
-    <img class="hero__logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
-    <p class="hero__text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
-    <div class="hero__actions">
-      <a href="/releases/8.6/index.php" class="hero__btn hero__btn--primary">What's new in 8.6</a>
-      <a href="/downloads.php" class="hero__btn hero__btn--secondary">Download</a>
-    </div>
-EOF;
-
-$intro .= "<ul class='hero__versions'>\n";
-$active_branches = get_active_branches();
-krsort($active_branches);
-foreach ($active_branches as $major => $releases) {
-    krsort($releases);
-    foreach ((array)$releases as $release) {
-        $version = $release['version'];
-        [$major, $minor, $_] = explode('.', $version);
-        $intro .= "
-            <li class='hero__version'><a class='hero__version-link' href='/downloads.php?version=$major.$minor'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
-    }
-}
-$intro .= "</ul>\n";
-$intro .= <<<EOF
-  </div>
-EOF;
-
-site_header(NULL,
-    [
-        'current' => 'home',
-        'headtags' => [
-            '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom">',
-            '<script>',
-            "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
-            "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='" . $MYSITE . "images/php_konami.gif'}});",
-            '</script>',
-        ],
-        'link' => [
-            [
-                "rel" => "search",
-                "type" => "application/opensearchdescription+xml",
-                "href" => $MYSITE . "phpnetimprovedsearch.src",
-                "title" => "Add PHP.net search",
-            ],
-            [
-                "rel" => "alternate",
-                "type" => "application/atom+xml",
-                "href" => $MYSITE . "releases/feed.php",
-                "title" => "PHP Release feed",
-            ],
-
-        ],
-        'css' => ['home.css'],
-        'intro' => $intro,
-        'cache_control' => 5 * 60, // 5 minutes
-    ],
-);
-
-// Print body of home page.
-echo $content;
-
-// Prepare announcements.
-if (is_array($CONF_TEASER)) {
-    $conftype = [
-        'conference' => 'Upcoming conferences',
-        'cfp' => 'Conferences calling for papers',
-    ];
-    $announcements = "";
-    foreach ($CONF_TEASER as $category => $entries) {
-        if ($entries) {
-            $announcements .= '<div class="panel">';
-            $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] . '</a>';
-            $announcements .= '<div class="body"><ul>';
-            foreach (array_slice($entries, 0, 4) as $url => $title) {
-                $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", "$1", $title);
-                $announcements .= "<li><a href='$url' title='$title'>$title</a></li>";
-            }
-            $announcements .= '</ul></div>';
-            $announcements .= '</div>';
-        }
-    }
-} else {
-    $announcements = '';
-}
-
-$SIDEBAR = <<<SIDEBAR_DATA
-
-    <div class='panel'>
-      <a href='https://thephp.foundation/' class='headline'>The PHP Foundation</a>
-      <div class='body'>
-        <p>The PHP Foundation is a collective of people and organizations, united in the mission to ensure the long-term prosperity of the PHP language.
-        <p><a href='https://thephp.foundation/donate/' target="_blank" rel="noopener noreferrer" class='btn btn-primary'>Donate</a></p>
-      </div>
-    </div>
-$announcements
-    <p class='panel'><a href='/cal.php'>User Group Events</a></p>
-    <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
-    <div class='panel social-media'>
-      <span class='headline'>Social media</span>
-      <div class='body'>
-        <ul>
-          <li>
-            <a href="https://twitter.com/official_php" target="_blank" rel="noopener noreferrer">
-              <i class="icon-x-twitter"></i>
-              @official_php
-            </a>
-          </li>
-          <li>
-            <a href="https://fosstodon.org/@php" target="_blank" rel="noopener noreferrer">
-              <i class="icon-mastodon"></i>
-              @php@fosstodon.org
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/phpnet" target="_blank" rel="noopener noreferrer">
-              <i class="icon-linkedin"></i>
-              @phpnet
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-SIDEBAR_DATA;
-
-// Print the common footer.
-site_footer([
-    "atom" => "/feed.atom", // Add a link to the feed at the bottom
-    'elephpants' => true,
-    'sidebar' => $SIDEBAR,
+site_header(null, [
+    'current' => 'home',
+    'description' => 'Build websites, APIs, and applications with PHP: a modern, open source language with mature tools and a global community.',
+    'design' => '2026',
+    'css' => ['homepage.css'],
+    'js_files' => ['js/homepage.js'],
+    'release_pill_href' => '#release',
+    'cache_control' => 5 * 60, // 5 minutes
 ]);
+?>
+  <div class="home-page">
+
+    <main id="main" class="page-guides">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <h1 id="hero-heading" class="hero__title">The web runs<br>on <span class="hero__accent">PHP.</span></h1>
+          <p class="hero__lead">Build websites, APIs, and applications with a modern, open source language, mature tools, and a global community. It's a scripting language too, just as strong on the command line as on the web.</p>
+          <div class="hero__cta">
+            <div class="hero__actions">
+              <a href="#start" class="button button--primary">Get started<?= site_icon('arrow-right') ?></a>
+              <a href="/downloads.php" class="text-link">Download PHP<?= site_icon('arrow-up-right') ?></a>
+            </div>
+          </div>
+          <div class="hero__art draft-enter" aria-hidden="true">
+            <?= site_svg('hero-php-globe') ?>
+          </div>
+        </div>
+
+        <div class="latest">
+          <section class="latest__row" aria-labelledby="latest-news-heading">
+            <div class="container latest__inner">
+              <h2 id="latest-news-heading" class="latest__label">Latest news</h2>
+              <div class="latest__body">
+<?php if ($latestNews): ?>
+                <p class="latest-news">
+                  <span class="status-dot" aria-hidden="true"></span><time datetime="<?= $latestNews['date']->format(DATE_W3C) ?>" class="latest-news__date"><?= $latestNews['date']->format('j M Y') ?></time><a href="<?= $latestNews['url'] ?>" class="latest-news__title"><?= $latestNews['title'] ?></a>
+                </p>
+<?php endif; ?>
+              </div>
+              <a href="/archive/" class="text-link text-link--brand latest__all">All news<?= site_icon('arrow-up-right') ?></a>
+            </div>
+          </section>
+          <section class="latest__row" aria-labelledby="latest-releases-heading">
+            <div class="container latest__inner">
+              <h2 id="latest-releases-heading" class="latest__label">Latest releases</h2>
+              <div class="latest__body">
+                <ul role="list" class="latest-releases">
+<?php foreach ($supportedReleases as $release): ?>
+                  <li class="latest-releases__item">
+                    <a href="/downloads.php?version=<?= $release['branch'] ?>" class="latest-releases__version"><?= $release['version'] ?></a>
+                    <span aria-hidden="true" class="latest-releases__separator">·</span>
+                    <a href="/ChangeLog-<?= $release['major'] ?>.php#<?= $release['version'] ?>" class="latest-releases__link" aria-label="PHP <?= $release['version'] ?> changelog">Changelog</a>
+                    <span aria-hidden="true" class="latest-releases__separator">·</span>
+                    <a href="/migration<?= $release['major'] . $release['minor'] ?>" class="latest-releases__link" aria-label="Upgrading to PHP <?= $release['branch'] ?>">Upgrading</a>
+                  </li>
+<?php endforeach; ?>
+                </ul>
+              </div>
+              <a href="/releases/" class="text-link text-link--brand latest__all">All releases<?= site_icon('arrow-up-right') ?></a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="proof" class="logo-wall" aria-labelledby="proof-heading">
+        <div class="container">
+          <h2 id="proof-heading" class="logo-wall__eyebrow">Powered by PHP</h2>
+          <div class="logo-wall__body">
+            <ul role="list" class="logo-wall__list" aria-label="Selected projects built with PHP">
+<?php foreach ($logos as $logo):
+    $title = "{$logo['name']}: {$logo['story']}";
+    $label = "$title. Read the project story.";
+    $size = "--logo-width: {$logo['width']}"
+        . (isset($logo['width_sm']) ? "; --logo-width-sm: {$logo['width_sm']}" : '')
+        . (isset($logo['height_sm']) ? "; --logo-height-sm: {$logo['height_sm']}" : '');
+?>
+              <li><a href="<?= $logo['url'] ?>" aria-label="<?= htmlspecialchars($label) ?>" title="<?= htmlspecialchars($title) ?>" class="logo-wall__link">
+                <?= site_svg('logos/' . $logo['icon'], ['class' => 'logo-wall__mark', 'style' => $size]) ?>
+<?php if (isset($logo['wordmark'])): ?>
+                <span class="logo-wall__wordmark <?= $logo['wordmark_class'] ?? '' ?>"><?= $logo['wordmark'] ?></span>
+<?php endif; ?>
+              </a></li>
+<?php endforeach; ?>
+            </ul>
+<?php for ($i = 1; $i <= 5; $i++): ?>
+            <div class="logo-wall__cross" style="left: <?= round($i / 6 * 100, 4) ?>%" aria-hidden="true"></div>
+<?php endfor; ?>
+          </div>
+        </div>
+      </section>
+
+      <section id="language" class="section" aria-labelledby="language-heading">
+        <div class="container">
+          <div class="section-intro section-intro--center">
+            <h2 id="language-heading" class="section-title section-title--large">Everything the web needs.</h2>
+            <p class="lead">Security. AI &amp; agents. APIs &amp; JSON. Databases. Scalability. Performance. PHP connects the pieces of the modern web.</p>
+          </div>
+          <div class="panel language-panel">
+            <div class="split">
+              <div class="split__body">
+                <h3 class="card-title">Made for the web.<br>From the beginning.</h3>
+                <p class="lead">PHP has grown with the web. From dynamic pages and forms to data pipelines and AI agents, the language and its ecosystem grow with your application.</p>
+                <div class="link-row"><a href="/manual/introduction.php" class="text-link text-link--brand">Meet the language<?= site_icon('arrow-up-right') ?></a></div>
+              </div>
+              <div class="language-panel__art" aria-hidden="true">
+                <div class="draft-grid"></div>
+                <?= site_svg('web-capabilities') ?>
+              </div>
+            </div>
+            <div class="panel__footer language-panel__footer">
+              <p>From a single request to long-running services.</p>
+              <p class="language-panel__since"><span class="status-dot" aria-hidden="true"></span>Open source since 1995</p>
+            </div>
+          </div>
+
+          <p class="tagline tagline--center">We’ve come a long way from a <?= homepage_scribble('personal home page.') ?></p>
+
+          <div data-code-showcase class="code-showcase">
+            <div class="code-showcase__layout">
+              <div class="code-showcase__sidebar">
+                <p class="code-showcase__folder"><?= site_icon('folder-open') ?><span>examples</span></p>
+                <div role="tablist" aria-label="PHP code examples" aria-orientation="vertical" class="code-showcase__tabs">
+<?php $first = true; foreach ($examples as $id => $example): ?>
+                  <button type="button" role="tab" id="example-tab-<?= $id ?>" aria-controls="example-<?= $id ?>" aria-selected="<?= $first ? 'true' : 'false' ?>" tabindex="<?= $first ? '0' : '-1' ?>" class="code-showcase__tab"><?= $example['file'] ?></button>
+<?php $first = false; endforeach; ?>
+                </div>
+              </div>
+              <div class="code-showcase__panels">
+<?php $first = true; foreach ($examples as $id => $example): ?>
+                <div id="example-<?= $id ?>" role="tabpanel" aria-labelledby="example-tab-<?= $id ?>" data-copy-scope class="code-showcase__panel"<?= $first ? '' : ' hidden' ?>>
+                  <div class="code-showcase__tabbar">
+                    <div class="code-showcase__file"><?= $example['file'] ?></div>
+                    <button type="button" data-copy-code class="copy-button" aria-label="Copy <?= $example['file'] ?>" title="Copy code">
+                      <?= site_icon('document-duplicate', 'icon copy-button__icon copy-button__icon--copy') ?>
+                      <?= site_icon('check', 'icon copy-button__icon copy-button__icon--done') ?>
+                    </button>
+                  </div>
+                  <p class="code-showcase__description"><?= $example['description'] ?></p>
+                  <div role="region" aria-label="<?= $example['file'] ?> code" tabindex="0" class="code-showcase__code">
+                    <pre aria-hidden="true" class="code-showcase__gutter"><?= implode("\n", range(1, substr_count($example['code'], "\n") + 1)) ?></pre>
+                    <pre><code><?= $example['code'] ?></code></pre>
+                  </div>
+                  <div class="terminal">
+                    <div class="terminal__header">
+                      <p class="terminal__tab">Terminal</p>
+                      <p class="tok-comment">Example session</p>
+                    </div>
+                    <pre class="terminal__body"><span class="terminal__prompt" aria-hidden="true">$ </span><?= $example['command'] ?>
+
+<?= $example['output'] ?></pre>
+                  </div>
+                </div>
+<?php $first = false; endforeach; ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ecosystem" class="section section--tinted ecosystem" aria-labelledby="ecosystem-heading">
+        <div class="hatch" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-intro section-intro--split">
+            <h2 id="ecosystem-heading" class="section-title">A package for<br>almost everything.</h2>
+            <p class="tagline">A little less <?= homepage_scribble('reinventing the wheel.') ?></p>
+          </div>
+
+          <div class="panel ecosystem__panel">
+            <div class="split">
+              <div class="ecosystem__stats">
+                <div class="dot-paper" aria-hidden="true"></div>
+                <div class="ecosystem__stats-body">
+                  <p class="ecosystem__headline-stat"><span aria-hidden="true"><?= PackagistStats::abbreviate($packagist['packages']) ?></span><span class="sr-only"><?= PackagistStats::spoken($packagist['packages']) ?></span></p>
+                  <p class="ecosystem__headline-label">packages published</p>
+                  <div class="ecosystem__stat-row">
+                    <div class="stat-card">
+                      <p class="stat-card__value"><span aria-hidden="true"><?= PackagistStats::abbreviate($packagist['versions']) ?></span><span class="sr-only"><?= PackagistStats::spoken($packagist['versions']) ?></span></p>
+                      <p class="stat-card__label">versions</p>
+                    </div>
+                    <div class="stat-card">
+                      <p class="stat-card__value"><span aria-hidden="true"><?= PackagistStats::abbreviate($packagist['downloads']) ?></span><span class="sr-only"><?= PackagistStats::spoken($packagist['downloads']) ?></span></p>
+                      <p class="stat-card__label">installs</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ecosystem__composer">
+                <div class="ecosystem__badges" aria-hidden="true">
+                  <div class="badge badge--composer">
+                    <img src="/images/homepage/composer.svg" alt="" width="47" height="62" loading="lazy">
+                  </div>
+                  <div class="badge badge--packagist">
+                    <?= site_svg('logos/packagist') ?>
+                  </div>
+                </div>
+                <h3 class="card-title">Composer + Packagist</h3>
+                <p class="lead">Declare what your project needs, lock exact versions, and install the same dependency graph everywhere. Search Packagist to find packages for databases, APIs, testing, queues, files, and almost everything between.</p>
+                <div class="command-line"><span class="command-line__prompt" aria-hidden="true">$</span>composer require vendor/package</div>
+                <div class="link-row">
+                  <a href="https://getcomposer.org/" class="text-link text-link--brand">Get Composer<?= site_icon('arrow-up-right') ?></a>
+                  <a href="https://packagist.org/" class="text-link text-link--brand">Browse Packagist<?= site_icon('arrow-up-right') ?></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel__footer ecosystem__pie">
+              <div class="ecosystem__pie-body">
+                <div class="ecosystem__pie-icon" aria-hidden="true">🥧</div>
+                <div>
+                  <h3 class="ecosystem__pie-title">Extensions, as easy as PIE.</h3>
+                  <p>PIE is PHP’s official extension installer. Find, install, and update native extensions with a Composer-like workflow.</p>
+                </div>
+              </div>
+              <div class="link-row">
+                <a href="https://github.com/php/pie" class="text-link text-link--brand">Meet PIE<?= site_icon('arrow-up-right') ?></a>
+                <a href="https://packagist.org/extensions" class="text-link text-link--brand">Browse extensions<?= site_icon('arrow-up-right') ?></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="release" class="section" aria-labelledby="release-heading">
+        <div class="container">
+          <div class="section-intro section-intro--split">
+            <h2 id="release-heading" class="section-title">Still moving.<br>Always improving.</h2>
+            <p class="tagline">More to <?= homepage_scribble('build with.') ?></p>
+          </div>
+          <div class="panel release-card">
+            <div class="split">
+              <div class="release-card__version">
+                <div class="draft-grid" aria-hidden="true"></div>
+                <div class="release-card__ring release-card__ring--outer" aria-hidden="true"></div>
+                <div class="release-card__ring release-card__ring--inner" aria-hidden="true"></div>
+                <?= site_icon('logos/php-mark', 'release-card__logo') ?>
+                <div class="release-card__numeral">
+                  <p class="release-card__numeral-outline" aria-hidden="true"><?= $featured['branch'] ?></p>
+                  <p><?= $featured['branch'] ?><span class="release-card__plus" aria-hidden="true">+</span></p>
+                </div>
+                <div class="release-card__dates">
+<?php if ($featured['released']): ?>
+                  <p>Released <?= $featured['released']->format('F j, Y') ?></p>
+<?php endif; ?>
+<?php if ($featured['latest'] && $featured['latest'] !== $featured['branch'] . '.0'): ?>
+                  <p>Latest patch <a href="/ChangeLog-<?= strtok($featured['latest'], '.') ?>.php#<?= $featured['latest'] ?>"><?= $featured['latest'] ?></a><?= $featured['latest_date'] ? ' · ' . $featured['latest_date']->format('F j, Y') : '' ?></p>
+<?php endif; ?>
+                </div>
+              </div>
+              <div class="split__body release-card__features">
+                <h3 class="card-title">Meet PHP <?= $featured['branch'] ?>.</h3>
+                <dl class="feature-list">
+<?php foreach ($featured['features'] as $feature): ?>
+                  <div class="feature-list__item">
+                    <dt><?= site_svg($feature['icon']) ?><a href="<?= $featured['url'] ?>#<?= $feature['anchor'] ?>"><?= $feature['title'] ?></a></dt>
+                    <dd><?= $feature['description'] ?></dd>
+                  </div>
+<?php endforeach; ?>
+                </dl>
+                <div class="link-row"><a href="<?= $featured['url'] ?>" class="text-link text-link--brand">Explore all PHP <?= $featured['branch'] ?> features<?= site_icon('arrow-up-right') ?></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" class="section section--lavender circuit-texture" aria-labelledby="community-heading">
+        <div class="container community">
+          <div class="community__intro">
+            <h2 id="community-heading" class="section-title">Built by people.<br>Open by design.</h2>
+            <p class="lead">PHP has been community-owned for <?= $yearsOpen ?> years. The language evolves through public proposals, discussion, and votes, and is <strong>free from corporate control.</strong></p>
+            <p class="lead">Contribute to the language, improve the docs, or help someone find their feet. There’s a place for you here.</p>
+            <div class="community__actions">
+              <a href="/get-involved.php" class="button button--primary">Get involved<?= site_icon('arrow-right') ?></a>
+              <a href="https://wiki.php.net/rfc" class="text-link">Explore the RFCs<?= site_icon('arrow-up-right') ?></a>
+            </div>
+          </div>
+          <div class="foundation-card">
+            <div class="foundation-card__body">
+              <?= site_svg('logos/php-foundation', ['class' => 'foundation-card__logo', 'role' => 'img', 'aria-label' => 'The PHP Foundation']) ?>
+              <h3 class="card-title">Funding the people behind PHP.</h3>
+              <p class="lead">Your support funds work on PHP’s core, helping maintain and improve the language that so much of the web depends on.</p>
+            </div>
+            <div class="foundation-card__footer">
+              <a href="https://thephp.foundation/sponsor/" class="button button--soft">Donate to PHP<?= site_icon('arrow-right') ?></a>
+              <a href="https://thephp.foundation/" class="text-link">Meet the Foundation<?= site_icon('arrow-up-right') ?></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="start" class="section" aria-labelledby="start-heading">
+        <div class="container">
+          <div class="section-intro section-intro--split">
+            <div>
+              <h2 id="start-heading" class="section-title section-title--large">Get started.</h2>
+              <p class="lead">Get PHP running, find your feet in the language, and explore a world of packages ready to help.</p>
+            </div>
+            <a href="/manual/getting-started.php" class="button button--primary">Get started with PHP<?= site_icon('arrow-right') ?></a>
+          </div>
+          <ol role="list" class="start-steps">
+            <li class="start-step">
+              <h3 class="start-step__title">Get set up.</h3>
+              <p>Install PHP locally or configure it for your servers. Find the setup that fits your tools and infrastructure.</p>
+              <div class="link-row">
+                <a href="/manual/install.php" class="text-link text-link--brand">Installation guide<?= site_icon('arrow-up-right') ?></a>
+              </div>
+            </li>
+            <li class="start-step">
+              <h3 class="start-step__title">Learn the language.</h3>
+              <p>Dive into the documentation or follow a guided tutorial. Explore the features, functions, and patterns you’ll use.</p>
+              <div class="link-row">
+                <a href="/docs.php" class="text-link text-link--brand">Read the docs<?= site_icon('arrow-up-right') ?></a>
+                <a href="/manual/tutorial.php" class="text-link text-link--brand">Take the tutorial<?= site_icon('arrow-up-right') ?></a>
+              </div>
+            </li>
+            <li class="start-step">
+              <h3 class="start-step__title">Explore the package ecosystem.</h3>
+              <p>Find reusable packages and native extensions for the work your application needs to do.</p>
+              <div class="link-row">
+                <a href="https://packagist.org/" class="text-link text-link--brand">Browse Packagist<?= site_icon('arrow-up-right') ?></a>
+                <a href="https://packagist.org/extensions" class="text-link text-link--brand">Find extensions<?= site_icon('arrow-up-right') ?></a>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="history" data-release-history aria-labelledby="history-heading" class="history">
+        <div class="container history__intro">
+          <h2 id="history-heading" class="section-title section-title--small">PHP through the years.</h2>
+          <p class="history__hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5M4 12h16"/></svg>
+            <span>Three decades of releases. Drag, scroll, or use your arrow keys to explore. Open any version for its notes, or <a href="/manual/history.php.php">read the story</a>.</span>
+          </p>
+        </div>
+        <div class="history__base" aria-hidden="true"></div>
+        <p id="history-help" class="sr-only">Drag or scroll horizontally to explore releases. Follow a version to read its release details. Use the arrow keys to move between releases, or Home and End to jump to the first and last. Taller marks indicate major versions. PHP 6 was never released.</p>
+        <div data-history-scroll class="history__scroll">
+          <div data-history-track class="history__track" style="width: <?= $history['width'] ?>px">
+            <ol role="list" aria-label="PHP release milestones" aria-describedby="history-help">
+<?php foreach ($history['releases'] as $i => $release): ?>
+              <li class="history__release" style="left: <?= $release['left'] ?>px">
+                <a draggable="false" data-history-release<?php if ($release['url']): ?> href="<?= $release['url'] ?>"<?php endif; ?> title="<?= $release['title'] ?>" aria-label="<?= $release['title'] ?>"<?= $i === array_key_last($history['releases']) ? '' : ' tabindex="-1"' ?> class="history__mark<?= $release['major'] ? ' history__mark--major' : '' ?>">
+                  <span class="history__label"><?= $release['branch'] ?></span>
+                </a>
+              </li>
+<?php endforeach; ?>
+            </ol>
+            <div class="history__ruler" aria-hidden="true"></div>
+            <div class="history__years" aria-hidden="true">
+<?php foreach ($history['years'] as $year): ?>
+              <span style="left: <?= $year['left'] ?>px"><?= $year['year'] ?></span>
+<?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+<?= fancy_footer() ?>
+  </div>
+<?php site_footer(['footer' => false]); ?>
