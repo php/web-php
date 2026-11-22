@@ -15,7 +15,7 @@ const LANGUAGES = [
     'fr' => 'Français',
     'it' => 'Italiano',
     'pt_BR' => 'Brazilian Portuguese',
-    'ja' => '日本語'
+    'ja' => '日本語',
     'vi' => "Tiếng Việt"
 ];
 
