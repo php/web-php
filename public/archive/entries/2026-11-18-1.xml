@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Upcoming Critical PHP Security Release</title>
+  <id>https://www.php.net/archive/2026.php#2026-11-18-1</id>
+  <published>2026-11-18T17:09:51+00:00</published>
+  <updated>2026-11-18T17:09:51+00:00</updated>
+  <link href="https://www.php.net/index.php#2026-11-18-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2026.php#2026-11-18-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP security team announces upcoming security releases
+        <b>scheduled for Thursday, 19 November 2026, between 14:00 and
+        14:30 UTC.</b>
+      </p>
+      <p>
+        These releases are part of PHP’s regular four-week release cycle
+        and will address security vulnerabilities affecting all supported
+        PHP versions. The highest severity is <b>CRITICAL</b>.
+      </p>
+      <p>
+        The issues rated CRITICAL require either non-default configuration
+        or uncommon setups.
+      </p>
+      <p>
+        Users are strongly encouraged to prepare to upgrade promptly once
+        the releases become available. Technical details and fixed version
+        numbers will be published alongside the releases.
+      </p>
+      <p>
+        Thank you for helping us keep PHP secure.
+      </p>
+    </div>
+  </content>
+</entry>

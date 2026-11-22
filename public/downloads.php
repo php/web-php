@@ -105,6 +105,7 @@ function option(string $value, string $desc, $attributes = []): string
 }
 
 $versions = [
+    '8.6' => 'version 8.6',
     '8.5' => 'version 8.5',
     '8.4' => 'version 8.4',
     '8.3' => 'version 8.3',
