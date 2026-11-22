@@ -13,10 +13,18 @@
 </p>
 </div>
 <pre><code class="language-bash line-numbers">
-# Add the ondrej/php repository.
+# Add the packages.sury.org/php repository.
 sudo apt update
-sudo apt install -y software-properties-common
-sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y
+sudo apt install -y lsb-release ca-certificates curl
+sudo curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+sudo dpkg -i /tmp/debsuryorg-archive-keyring.deb
+sudo tee /etc/apt/sources.list.d/php.sources &lt;&lt;EOF
+Types: deb
+URIs: https://packages.sury.org/php/
+Suites: $(lsb_release -sc)
+Components: main
+Signed-By: /usr/share/keyrings/debsuryorg-archive-keyring.gpg
+EOF
 sudo apt update
 
 # Install PHP.
