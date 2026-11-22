@@ -16,6 +16,7 @@ const LANGUAGES = [
     'it' => 'Italiano',
     'pt_BR' => 'Brazilian Portuguese',
     'ja' => '日本語'
+    'vi' => "Tiếng Việt"
 ];
 
 function common_header(string $description): void {
