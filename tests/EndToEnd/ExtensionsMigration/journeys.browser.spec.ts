@@ -88,3 +88,19 @@ test('the pages of the two manuals carry the right language and canonical URL', 
     await expect(page.locator('html')).toHaveAttribute('lang', language);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `https://www.php.net/manual/${language}/function.strlen.php`);
 });
+
+test('a shortcut of a directive that moved lands on its anchor in the extensions manual', async ({page}) => {
+    await page.goto('/mysql.max-links');
+
+    await expect(page).toHaveURL(/\/manual\/extensions\/mysql\.configuration\.php#ini\.mysql\.max-links$/);
+    await expect(page.locator('[id="ini.mysql.max-links"]')).toHaveCount(1);
+    await expect(page.locator('#changelang')).toHaveCount(0);
+});
+
+test('a renamed page of the main manual that moved ends on the page of the extensions manual', async ({page}) => {
+    const response = await page.goto(`/manual/${language}/set.mongodb.php`);
+
+    await expect(page).toHaveURL(/\/manual\/extensions\/book\.mongodb\.php$/);
+    expect(response?.status()).toBe(200);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+});

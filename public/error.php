@@ -218,8 +218,16 @@ $loadRedirects = static function (string $file): array {
     }
 
     $maps = json_decode((string) file_get_contents($file), true);
+    if (!is_array($maps)) {
+        return $empty;
+    }
 
-    return is_array($maps) ? $maps + $empty : $empty;
+    $loaded = [];
+    foreach ($empty as $name => $none) {
+        $loaded[$name] = is_array($maps[$name] ?? null) ? $maps[$name] : $none;
+    }
+
+    return $loaded;
 };
 
 $docRedirects = $loadRedirects(__DIR__ . '/manual/en/redirects.json');

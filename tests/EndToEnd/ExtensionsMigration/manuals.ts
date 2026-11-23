@@ -33,9 +33,41 @@ export const redirects: Record<string, string> = JSON.parse(
 
 export const redirectEntries = Object.entries(redirects);
 
+type RedirectMaps = {
+    shortcut: Record<string, string>;
+    in_manual: Record<string, string>;
+    both: Record<string, string>;
+    in_place: Record<string, string>;
+};
+
+function mapsOf(directory: string): RedirectMaps {
+    return {shortcut: {}, in_manual: {}, both: {}, in_place: {}, ...JSON.parse(readFileSync(`${directory}/redirects.json`, 'utf8'))};
+}
+
+const englishOutput = `${root}/en/output/php-web`;
+
+/** The four maps of redirects.json of the extensions manual, and of the English manual. */
+export const extensionMaps = mapsOf(extensionsOutput);
+export const englishMaps = mapsOf(englishOutput);
+
+/** A target of a map is "page" or "page#anchor". */
+export function splitTarget(target: string): [string, string] {
+    const [page, anchor = ''] = target.split('#', 2);
+
+    return [page, anchor];
+}
+
+/** The path (and fragment) a request is redirected to for a target of a map. */
+export function expectedLocation(manual: string, target: string): string {
+    const [page, anchor] = splitTarget(target);
+
+    return `/manual/${manual}/${page}.php${anchor === '' ? '' : `#${anchor}`}`;
+}
+
 /** Every page of the extensions manual, and of the language manual. */
 export const extensionPages = pagesOf(extensionsOutput);
 export const languagePages = pagesOf(languageOutput);
+export const englishPages = pagesOf(englishOutput);
 
 /** Pages of the extensions manual that are not redirected: the language summaries. */
 export const notRedirected = extensionPages.filter((page) => !(page.toLowerCase() in redirects));
@@ -54,8 +86,10 @@ export const knownMissingExtensionPages = ['ref.pdo-cubrid', 'ref.pdo-ibm', 'ref
 /** Pages that were renamed in the main manual; the summaries still link to the old names. */
 export const knownStaleLanguagePages = ['language.exceptions', 'reserved.constants.core'];
 
-export function pageContent(directory: 'extensions' | 'language', page: string): string {
-    return readFileSync(`${directory === 'extensions' ? extensionsOutput : languageOutput}/${page}.php`, 'utf8');
+export function pageContent(directory: 'extensions' | 'language' | 'english', page: string): string {
+    const directories = {extensions: extensionsOutput, language: languageOutput, english: englishOutput};
+
+    return readFileSync(`${directories[directory]}/${page}.php`, 'utf8');
 }
 
 /**
