@@ -207,9 +207,14 @@ $URI = strtolower($URI);
 //   'in_manual' - manual URI (/manual/{lang}/{from}[.php]) -> /manual/{lang}/{to}.php
 //   'both'      - matches at either entry point
 
-$docRedirects = is_file(__DIR__ . '/manual/en/redirects.json')
-    ? json_decode(file_get_contents(__DIR__ . '/manual/en/redirects.json'), true)
-    : ['shortcut' => [], 'in_manual' => [], 'both' => []];
+$docRedirectsFile = __DIR__ . '/manual/en/redirects.json';
+$docRedirects = is_file($docRedirectsFile)
+    ? json_decode(file_get_contents($docRedirectsFile), true)
+    : null;
+if (!is_array($docRedirects)) {
+    // Redirects file is corrupt or missing.
+    $docRedirects = [];
+}
 
 if (preg_match("!^manual/([^/]+)/([^/]+?)(?:\.php)?$!", $URI, $match)) {
     $target = $docRedirects['both'][$match[2]] ?? $docRedirects['in_manual'][$match[2]] ?? null;
