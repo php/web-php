@@ -208,12 +208,13 @@ $URI = strtolower($URI);
 //   'in_place'  - bare URI  (php.net/{from})               -> served at the requested URL
 //   'in_manual' - manual URI (/manual/{lang}/{from}[.php]) -> /manual/{lang}/{to}.php
 //   'both'      - matches at either entry point
-// Targets of the doc-extensions map are always in /manual/extensions/.
+// Targets of the doc-extensions map are always in /manual/extensions/. A target
+// given as {manual}/{to} is in /manual/{manual}/ whatever the request.
 
+$page = null;
 if (preg_match("!^manual/([^/]+)/([^/]+?)(?:\.php)?$!", $URI, $match)) {
-    $targetLang = $match[1];
-    // Pages of the extensions manual itself are not redirected
-    $keys = $targetLang === 'extensions' ? [] : [$match[2]];
+    [, $targetLang, $page] = $match;
+    $keys = [$page];
     $scopes = ['both', 'in_manual'];
 } else {
     // Bare-URI shortcut lookup. Try three forms in order
@@ -226,16 +227,15 @@ if (preg_match("!^manual/([^/]+)/([^/]+?)(?:\.php)?$!", $URI, $match)) {
     $scopes = ['both', 'shortcut', 'in_place'];
 }
 
-// doc-en wins and redirects within the requested language; the doc-extensions
-// map is only read when doc-en has no match
+// doc-en wins; the doc-extensions map is only read when doc-en has no match.
+// A request inside /manual/extensions/ only uses the doc-extensions map.
 $target = null;
 $inPlace = false;
-foreach (['en' => $targetLang, 'extensions' => 'extensions'] as $manual => $targetManual) {
+foreach ([$targetLang => 'en', 'extensions' => 'extensions'] as $targetManual => $manual) {
     $docRedirectsFile = __DIR__ . "/manual/$manual/redirects.json";
     $docRedirects = is_file($docRedirectsFile)
         ? json_decode((string) file_get_contents($docRedirectsFile), true)
         : null;
-
     if (!is_array($docRedirects)) {
         // Redirects file is corrupt or missing.
         continue;
@@ -252,9 +252,20 @@ foreach (['en' => $targetLang, 'extensions' => 'extensions'] as $manual => $targ
     }
 }
 
+// A page that moved to the extensions manual kept its name
+if ($target === null && $page !== null && is_file(__DIR__ . "/manual/extensions/$page.php")) {
+    $target = $page;
+    $targetManual = 'extensions';
+}
+
 if ($target !== null) {
+    // A target in a fixed manual is given as {manual}/{to} ("extensions/book.apcu")
+    if (str_contains($target, '/')) {
+        [$targetManual, $target] = explode('/', $target, 2);
+    }
     [$id, $anchor] = array_pad(explode('#', $target, 2), 2, '');
 
+    // Redirect anyway if the page is not built
     if ($inPlace) {
         require_once ProjectGlobals::getProjectRoot() . "/include/manual-lookup.inc";
         $try = find_manual_page($LANG, $id);
