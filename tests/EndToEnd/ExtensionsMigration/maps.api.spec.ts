@@ -32,28 +32,13 @@ const publicDirectory = resolve(__dirname, '../../../public');
 const isShadowed = (key: string): boolean =>
     existsSync(`${publicDirectory}/${key}`) || existsSync(`${publicDirectory}/${key}.php`);
 
-/**
- * Redirects of the main manual whose target is not a page: the sections "intro"
- * and "synopsis" of this enum are anchors of enum.random-intervalboundary, and
- * were already dead before the extensions moved.
- */
-const knownDeadEnglishRedirects = ['enum.random.intervalboundary.intro', 'enum.random.intervalboundary.synopsis'];
-
-function missingTargets(
-    maps: Record<string, Map>,
-    pages: string[],
-    directory: 'extensions' | 'english',
-    ignore: string[] = [],
-): string[] {
+function missingTargets(maps: Record<string, Map>, pages: string[], directory: 'extensions' | 'english'): string[] {
     const existing = new Set(pages);
     const missing: string[] = [];
 
     for (const [name, map] of Object.entries(maps)) {
         for (const [from, to] of entriesOf(map)) {
             const [page, anchor] = splitTarget(to);
-            if (ignore.includes(from)) {
-                continue;
-            }
             if (!existing.has(page)) {
                 missing.push(`${name}: ${from} -> ${to} (no such page)`);
             } else if (directory === 'extensions' && anchor !== '' && !pageContent(directory, page).includes(`id="${anchor}"`)) {
@@ -74,7 +59,7 @@ test('every target of the extensions manual maps exists, with its anchor', () =>
 // Only the page is checked: the directives that PHP removed (asp_tags, y2k_compliance...)
 // have no anchor left in their page, and their shortcut still leads to the page.
 test('every target of the English manual maps is a page', () => {
-    const missing = missingTargets(englishMaps, englishPages, 'english', knownDeadEnglishRedirects);
+    const missing = missingTargets(englishMaps, englishPages, 'english');
 
     expect(missing.slice(0, 20), `${missing.length} targets are wrong`).toEqual([]);
 });
@@ -162,8 +147,7 @@ test.describe('pages and shortcuts that moved to the extensions manual', () => {
 });
 
 test.describe('the redirects of the English manual still lead to a page', () => {
-    const alive = ([from]: [string, string]) =>
-        isPageKey(from) && !isShadowed(from) && !knownDeadEnglishRedirects.includes(from);
+    const alive = ([from]: [string, string]) => isPageKey(from) && !isShadowed(from);
     const inManual = [...entriesOf(englishMaps.both), ...entriesOf(englishMaps.in_manual)].filter(alive);
     const bare = [
         ...entriesOf(englishMaps.both),
