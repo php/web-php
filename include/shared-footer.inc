@@ -67,6 +67,9 @@
                             <li><a href="/downloads.php">Downloads</a></li>
                             <li><a href="/contact.php">Contact</a></li>
                             <li><a href="/sites.php">Other PHP.net sites</a></li>
+<?php if (!empty($_SERVER['BASE_PAGE']) && !str_starts_with($_SERVER['BASE_PAGE'], 'manual/')): ?>
+                            <li><a href="https://github.com/php/web-php/blob/master/public/<?= urlencode($_SERVER['BASE_PAGE']) ?>">View Source</a></li>
+<?php endif; ?>
                         </ul>
                     </div>
                     <div>
