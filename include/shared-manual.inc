@@ -282,7 +282,10 @@ function manual_setup($setup): void {
     }
     $PGI = $setup;
     // Set base href for this manual page
-    $base = 'manual/' . (new Languages())->convert($setup['head'][1]) . "/";
+    // The third-party extensions manual (php/doc-extensions) is English only
+    // and served from manual/extensions/, which is not a language.
+    $isExtensionsManual = $setup['head'][1] === 'extensions';
+    $base = 'manual/' . ($isExtensionsManual ? 'extensions' : (new Languages())->convert($setup['head'][1])) . "/";
     $_SERVER['BASE_PAGE'] = $base . $setup['this'][0];
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
@@ -314,7 +317,7 @@ function manual_setup($setup): void {
     $config = [
         "current" => "docs",
         "breadcrumbs" => $breadcrumbs,
-        "languages" => array_keys(Languages::ACTIVE_ONLINE_LANGUAGES),
+        "languages" => $isExtensionsManual ? [] : array_keys(Languages::ACTIVE_ONLINE_LANGUAGES),
         "meta-navigation" => [
             "contents" => $base . $setup["home"][0],
             "index" => $base . $setup["up"][0],
@@ -330,6 +333,10 @@ function manual_setup($setup): void {
         "description" => $setup["this"][2] ?? null,
     ];
     site_header($setup["this"][1] . " - Manual", $config);
+
+    if ($isExtensionsManual) {
+        return;
+    }
 
     $languageChooser = manual_language_chooser($config['lang'], $config['thispage']);
 
