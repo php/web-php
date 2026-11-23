@@ -239,10 +239,11 @@ if (preg_match("!^manual/([^/]+)/([^/]+?)(?:\.php)?$!", $URI, $match)) {
 // Whatever the language of the requested page, it moves to the English
 // extensions manual. Requests already in that manual are not redirected.
 if (preg_match("#^manual/(?!extensions/)[^/]+/([^/]+?)(?:\.php)?$#", $URI, $match)) {
-    $target = $extRedirects['in_manual'][$match[1]] ?? null;
+    $target = $extRedirects['both'][$match[1]] ?? $extRedirects['in_manual'][$match[1]] ?? null;
     if ($target !== null) {
+        [$id, $anchor] = array_pad(explode('#', $target, 2), 2, '');
         status_header(301);
-        mirror_redirect("/manual/extensions/$target.php");
+        mirror_redirect("/manual/extensions/$id.php" . ($anchor !== '' ? "#$anchor" : ''));
     }
 }
 
@@ -252,8 +253,10 @@ if (preg_match("#^manual/(?!extensions/)[^/]+/([^/]+?)(?:\.php)?$#", $URI, $matc
 // 3. $-stripped $term ("-server" via /$_SERVER)
 $target = null;
 $inPlaceTarget = null;
+$targetManual = $LANG;
 $term = str_replace('_', '-', $URI);
-foreach ([$URI, $term, ltrim($term, '$')] as $key) {
+$keys = [$URI, $term, ltrim($term, '$')];
+foreach ($keys as $key) {
     if (isset($docRedirects['both'][$key])) {
         $target = $docRedirects['both'][$key];
         break;
@@ -266,6 +269,18 @@ foreach ([$URI, $term, ltrim($term, '$')] as $key) {
         $inPlaceTarget = $docRedirects['in_place'][$key];
         $target = $inPlaceTarget;
         break;
+    }
+}
+
+// The shortcuts of the pages that moved to the extensions manual (English
+// only), tried once the main manual has no answer.
+if ($target === null) {
+    foreach ($keys as $key) {
+        $target = $extRedirects['both'][$key] ?? $extRedirects['shortcut'][$key] ?? null;
+        if ($target !== null) {
+            $targetManual = 'extensions';
+            break;
+        }
     }
 }
 
@@ -284,7 +299,7 @@ if ($inPlaceTarget !== null) {
 
 if ($target !== null) {
     [$id, $anchor] = array_pad(explode('#', $target, 2), 2, '');
-    $url = "/manual/$LANG/$id.php";
+    $url = "/manual/$targetManual/$id.php";
     if ($queryString !== '') {
         $url .= '?' . $queryString;
     }

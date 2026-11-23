@@ -178,6 +178,13 @@ check_redirect /manual/ja/ref.apcu.php /manual/extensions/ref.apcu.php
 # A few identifiers are mixed case, the requested name is lowercased first.
 check_redirect /manual/de/pool.submitto.php /manual/extensions/pool.submitTo.php
 check_redirect /manual/$LANGUAGE/pool.submitTo.php /manual/extensions/pool.submitTo.php
+# Renames and shortcuts that belonged to the main manual before the move.
+check_redirect /manual/$LANGUAGE/set.mongodb.php /manual/extensions/book.mongodb.php
+check_redirect /manual/de/mongodb.installation.pecl.php /manual/extensions/mongodb.installation.php#mongodb.installation.pecl
+check_redirect /set.mongodb /manual/extensions/book.mongodb.php
+check_redirect /mysql.max-links /manual/extensions/mysql.configuration.php#ini.mysql.max-links
+check_redirect /mysql.max_links /manual/extensions/mysql.configuration.php#ini.mysql.max-links
+check_redirect /php-mysql.dll /manual/extensions/book.mysql.php
 
 step "The extensions manual is served from /manual/extensions/"
 check_status /manual/extensions/index.php 200
