@@ -417,22 +417,22 @@
 .latest-releases__item {
     display: flex;
     align-items: baseline;
-    gap: .625rem;
+    gap: .5rem;
     white-space: nowrap;
 }
 
 .latest-releases__version {
     margin-right: .25rem;
     font-family: var(--font-mono);
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 500;
     color: var(--ink);
 }
 
 .latest-releases__link {
-    font-size: .9375rem;
-    line-height: 1.5rem;
+    font-size: .8125rem;
+    line-height: 1.25rem;
     color: var(--muted);
 }
 
@@ -441,6 +441,7 @@
 }
 
 .latest-releases__separator {
+    line-height: 1.25rem;
     color: color-mix(in srgb, var(--muted) 60%, transparent);
 }
 
@@ -1780,6 +1781,7 @@
 
     .latest-news {
         flex-wrap: nowrap;
+        column-gap: 2rem;
         white-space: nowrap;
     }
 
@@ -1891,6 +1893,34 @@
 
     .start-steps {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/*
+ * At full page width the releases fit on one line, as equal columns
+ * split by dividers.
+ */
+@media (min-width: 80rem) {
+    .latest-releases {
+        flex: 1;
+        flex-wrap: nowrap;
+        column-gap: 0;
+    }
+
+    .latest-releases__item {
+        flex: 1 1 0;
+        /* Stretch the dividers without making this row taller than the news row */
+        margin-block: -.75rem;
+        padding-block: .75rem;
+    }
+
+    .latest-releases__item:not(:last-child) {
+        padding-right: 1.5rem;
+    }
+
+    .latest-releases__item + .latest-releases__item {
+        padding-left: 1.5rem;
+        border-left: 1px solid var(--line);
     }
 }
 
