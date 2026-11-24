@@ -234,17 +234,6 @@
     background-image: linear-gradient(to right, transparent calc(50% - 640px), var(--line) calc(50% - 640px), var(--line) calc(50% - 639px), transparent calc(50% - 639px), transparent calc(50% + 639px), var(--line) calc(50% + 639px), var(--line) calc(50% + 640px), transparent calc(50% + 640px));
 }
 
-.page-guides::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 10;
-    pointer-events: none;
-    opacity: .035;
-    background-image: url("/images/homepage/paper-grain.svg");
-    background-size: 180px 180px;
-}
-
 /* --- Hero ----------------------------------------------------------------- */
 
 .hero {

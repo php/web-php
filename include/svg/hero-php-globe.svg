@@ -1,7 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
-  <!-- Single-colour artwork: every stroke and fill uses currentColor, so light and dark mode
-       are set by the text colour of the element that includes it (.hero__art uses var(--brand)).
-       Letters occupy x 63.3–296.8, y 75–220; the four crop lines sit 14 units outside that box. -->
   <g fill="none" stroke="currentColor">
     <g stroke-width="1">
       <circle cx="180" cy="147.5" r="112" stroke-opacity=".22" />
