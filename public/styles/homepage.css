@@ -426,7 +426,7 @@
     justify-content: center;
 }
 
-.logo-wall__link {
+.logo-wall__item {
     display: flex;
     height: 1.75rem;
     box-sizing: content-box;
@@ -438,8 +438,6 @@
     font-weight: 600;
     color: color-mix(in srgb, var(--ink) 75%, transparent);
 }
-
-.logo-wall__link:hover { color: var(--brand); }
 
 .logo-wall__mark {
     width: var(--logo-width);
@@ -1402,7 +1400,7 @@
     .logo-wall { padding-top: 3.5rem; }
     .logo-wall__eyebrow { margin-bottom: .5rem; }
     .logo-wall__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .logo-wall__link { padding: 1.75rem .75rem; }
+    .logo-wall__item { padding: 1.75rem .75rem; }
     .logo-wall__mark {
         width: var(--logo-width-sm, var(--logo-width));
         height: var(--logo-height-sm, auto);

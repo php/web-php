@@ -205,6 +205,11 @@ button { cursor: pointer; }
     stroke: var(--ink);
 }
 
+.theme-icon--system {
+    fill: var(--ink);
+    stroke: none;
+}
+
 .theme-icon,
 .menu-icon--close,
 [aria-expanded="true"] > .menu-icon--open {

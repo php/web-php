@@ -139,17 +139,16 @@ site_header(null, [
             <ul role="list" class="logo-wall__list" aria-label="Selected projects built with PHP">
 <?php foreach ($logos as $logo):
     $title = "{$logo['name']}: {$logo['story']}";
-    $label = "$title. Read the project story.";
     $size = "--logo-width: {$logo['width']}"
         . (isset($logo['width_sm']) ? "; --logo-width-sm: {$logo['width_sm']}" : '')
         . (isset($logo['height_sm']) ? "; --logo-height-sm: {$logo['height_sm']}" : '');
 ?>
-              <li><a href="<?= $logo['url'] ?>" aria-label="<?= htmlspecialchars($label) ?>" title="<?= htmlspecialchars($title) ?>" class="logo-wall__link">
+              <li role="img" aria-label="<?= htmlspecialchars($title) ?>" title="<?= htmlspecialchars($title) ?>" class="logo-wall__item">
                 <?= site_svg('logos/' . $logo['icon'], ['class' => 'logo-wall__mark', 'style' => $size]) ?>
 <?php if (isset($logo['wordmark'])): ?>
                 <span class="logo-wall__wordmark <?= $logo['wordmark_class'] ?? '' ?>"><?= $logo['wordmark'] ?></span>
 <?php endif; ?>
-              </a></li>
+              </li>
 <?php endforeach; ?>
             </ul>
 <?php for ($i = 1; $i <= 5; $i++): ?>

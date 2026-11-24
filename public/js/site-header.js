@@ -44,7 +44,9 @@
 
         function updateThemeControl() {
             themeButton.dataset.theme = theme;
-            themeButton.setAttribute('aria-label', `Theme: ${theme}. Switch to ${oppositeTheme()}`);
+            const label = `Theme: ${theme}. Switch to ${oppositeTheme()}`;
+            themeButton.setAttribute('aria-label', label);
+            themeButton.title = label;
         }
 
         themeButton.addEventListener('click', () => {

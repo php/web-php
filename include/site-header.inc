@@ -57,8 +57,8 @@ $releasePillHref = $config['release_pill_href'] ?? $featured['url'];
         <button type="button" id="navbar__search-button" aria-label="Search docs" class="icon-button" hidden>
           <?= site_icon('search', 'icon-button__icon') ?>
         </button>
-        <button type="button" data-theme-toggle data-theme="system" aria-label="Theme: system. Switch to light" class="icon-button">
-          <?= site_icon('sun', 'icon-button__icon theme-icon theme-icon--light') ?><?= site_icon('moon', 'icon-button__icon theme-icon theme-icon--dark') ?><?= site_icon('computer-desktop', 'icon-button__icon theme-icon theme-icon--system') ?>
+        <button type="button" data-theme-toggle data-theme="system" aria-label="Theme: system. Switch to light" title="Theme: system. Switch to light" class="icon-button">
+          <?= site_icon('sun', 'icon-button__icon theme-icon theme-icon--light') ?><?= site_icon('moon', 'icon-button__icon theme-icon theme-icon--dark') ?><?= site_icon('half-circle', 'icon-button__icon theme-icon theme-icon--system') ?>
         </button>
         <a href="/menu.php" aria-label="Menu" class="icon-button site-header__menu-toggle" data-menu-fallback>
           <svg viewBox="0 0 24 24" class="icon-button__icon menu-icon" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
