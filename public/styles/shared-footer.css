@@ -208,6 +208,29 @@
     text-underline-offset: 2px;
 }
 
+/* --- elephpant link, standing on the credits' top border ------------------ */
+
+.php-footer .footer-elephpant {
+    display: flex;
+    width: fit-content;
+    margin-top: 2rem;
+    margin-left: auto;
+    border: 0;
+    text-decoration: none;
+}
+
+.php-footer .footer-elephpant svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* The drawing stops 2/16 short of its viewBox's bottom; drop it onto the border. */
+    margin-bottom: -0.4375rem;
+    color: var(--footer-accent);
+}
+
+.php-footer .footer-elephpant:hover svg {
+    color: var(--footer-accent-hover);
+}
+
 /* --- accessibility helper (in case the host page lacks one) -------------- */
 
 .php-footer .sr-only {
@@ -247,8 +270,8 @@
         padding-top: 7rem;
     }
 
-    .php-footer .footer-credits {
-        margin-top: 6rem;
+    .php-footer .footer-elephpant {
+        margin-top: 3rem;
     }
 }
 

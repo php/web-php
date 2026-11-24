@@ -99,6 +99,9 @@
                 </div>
             </div>
         </div>
+        <a href="/elephpant.php" class="footer-elephpant" aria-label="The elephpant">
+            <?= site_svg('elephpant') ?>
+        </a>
         <div class="footer-credits">
             <p>Copyright &copy; 2001-<?= date('Y') ?> <?= $copyrightHolder ?>.</p>
             <?= $extraCredit ?>
