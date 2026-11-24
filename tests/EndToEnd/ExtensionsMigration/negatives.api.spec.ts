@@ -50,16 +50,17 @@ test(`the pages that stayed in the ${language} manual answer 200, not a redirect
 test('the language summaries of the extensions manual are not redirected', async ({request}) => {
     expect(notRedirected.length, 'there are summaries to test').toBeGreaterThan(50);
 
-    // Other languages are not built here: such a page must stay a 404.
+    // A summary also exists in the language manual, so error.php is not reached for it. The
+    // other languages are not built here: for them the page would be missing, so it is not tested.
     const failures: string[] = [];
     await inParallel(notRedirected, 20, async (page) => {
-        const response = await request.get(`/manual/ja/${page}.php`, {maxRedirects: 0});
-        if (response.status() === 301) {
-            failures.push(`/manual/ja/${page}.php`);
+        const response = await request.get(`/manual/${language}/${page}.php`, {maxRedirects: 0});
+        if (response.status() !== 200) {
+            failures.push(`/manual/${language}/${page}.php: ${response.status()}`);
         }
     });
 
-    expect(failures.slice(0, 20), `${failures.length} summaries are redirected`).toEqual([]);
+    expect(failures.slice(0, 20), `${failures.length} summaries are not served by the ${language} manual`).toEqual([]);
 });
 
 test('pages that never existed answer 404, in every manual', async ({request}) => {

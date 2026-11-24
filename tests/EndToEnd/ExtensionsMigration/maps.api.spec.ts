@@ -4,6 +4,8 @@ import {resolve} from 'node:path';
 import {
     englishMaps,
     englishPages,
+    entriesInManual,
+    entriesToExtensions,
     expectedLocation,
     extensionMaps,
     extensionPages,
@@ -37,7 +39,9 @@ function missingTargets(maps: Record<string, Map>, pages: string[], directory: '
     const missing: string[] = [];
 
     for (const [name, map] of Object.entries(maps)) {
-        for (const [from, to] of entriesOf(map)) {
+        // The targets of the English maps that lead to the extensions manual are checked against that manual.
+        const entries = directory === 'english' ? entriesInManual(map) : entriesOf(map);
+        for (const [from, to] of entries) {
             const [page, anchor] = splitTarget(to);
             if (!existing.has(page)) {
                 missing.push(`${name}: ${from} -> ${to} (no such page)`);
@@ -56,6 +60,16 @@ test('every target of the extensions manual maps exists, with its anchor', () =>
     expect(missing.slice(0, 20), `${missing.length} targets are wrong`).toEqual([]);
 });
 
+test('every target of the English maps that leads to the extensions manual exists there, with its anchor', () => {
+    const maps = Object.fromEntries(
+        Object.entries(englishMaps).map(([name, map]) => [name, Object.fromEntries(entriesToExtensions(map))]),
+    );
+    const missing = missingTargets(maps, extensionPages, 'extensions');
+
+    expect(Object.values(maps).flatMap((map) => Object.keys(map)).length, 'there are such redirects').toBeGreaterThan(0);
+    expect(missing.slice(0, 20), `${missing.length} targets are wrong`).toEqual([]);
+});
+
 // Only the page is checked: the directives that PHP removed (asp_tags, y2k_compliance...)
 // have no anchor left in their page, and their shortcut still leads to the page.
 test('every target of the English manual maps is a page', () => {
@@ -64,9 +78,11 @@ test('every target of the English manual maps is a page', () => {
     expect(missing.slice(0, 20), `${missing.length} targets are wrong`).toEqual([]);
 });
 
-test.describe('pages and shortcuts that moved to the extensions manual', () => {
-    const shortcuts = [...entriesOf(extensionMaps.both), ...entriesOf(extensionMaps.shortcut)].filter(([from]) =>
-        isPageKey(from),
+test.describe('pages and shortcuts that moved to the extensions manual, renamed or not found by name', () => {
+    // These are the redirects of doc-en marked manual="extensions": the renamed pages and the shortcuts.
+    const renamedPages = [...entriesToExtensions(englishMaps.both), ...entriesToExtensions(englishMaps.in_manual)];
+    const shortcuts = [...entriesToExtensions(englishMaps.both), ...entriesToExtensions(englishMaps.shortcut)].filter(
+        ([from]) => isPageKey(from),
     );
 
     test('the maps are not empty', () => {
@@ -77,7 +93,7 @@ test.describe('pages and shortcuts that moved to the extensions manual', () => {
         const failures: string[] = [];
 
         for (const lang of [language, 'en', 'de', 'ja']) {
-            await inParallel(entriesOf(extensionMaps.both), 10, async ([from, to]) => {
+            await inParallel(renamedPages, 10, async ([from, to]) => {
                 const response = await request.get(`/manual/${lang}/${from}.php`, {maxRedirects: 0});
                 const location = response.headers()['location'];
                 const actual = location ? new URL(location).pathname + new URL(location).hash : '(none)';

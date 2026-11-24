@@ -26,13 +26,6 @@ function pagesOf(directory: string): string[] {
         .sort();
 }
 
-/** Old page name (lowercase) to the name of the page in the extensions manual. */
-export const redirects: Record<string, string> = JSON.parse(
-    readFileSync(`${extensionsOutput}/redirects.json`, 'utf8'),
-).in_manual;
-
-export const redirectEntries = Object.entries(redirects);
-
 type RedirectMaps = {
     shortcut: Record<string, string>;
     in_manual: Record<string, string>;
@@ -46,7 +39,7 @@ function mapsOf(directory: string): RedirectMaps {
 
 const englishOutput = `${root}/en/output/php-web`;
 
-/** The four maps of redirects.json of the extensions manual, and of the English manual. */
+/** The four maps of redirects.json of the extensions manual (empty but for the pages it renames), and of the English manual. */
 export const extensionMaps = mapsOf(extensionsOutput);
 export const englishMaps = mapsOf(englishOutput);
 
@@ -69,8 +62,41 @@ export const extensionPages = pagesOf(extensionsOutput);
 export const languagePages = pagesOf(languageOutput);
 export const englishPages = pagesOf(englishOutput);
 
-/** Pages of the extensions manual that are not redirected: the language summaries. */
-export const notRedirected = extensionPages.filter((page) => !(page.toLowerCase() in redirects));
+/**
+ * A page that moved to the extensions manual kept its name, so the old URL needs
+ * no entry in any map: error.php redirects it because the page is missing from the
+ * language manual and present in the extensions manual. The old URL is lowercased
+ * before it is looked up, so a page whose name has uppercase letters is the
+ * exception: it has an entry in the redirects of doc-en (see renamedEntries).
+ */
+const inLanguageManual = new Set(languagePages);
+export const movedPages = extensionPages.filter((page) => !inLanguageManual.has(page));
+
+/** Old page name (lowercase) to the name of the page in the extensions manual. */
+export const redirects: Record<string, string> = Object.fromEntries(movedPages.map((page) => [page.toLowerCase(), page]));
+
+export const redirectEntries = Object.entries(redirects);
+
+/** Pages of the extensions manual that are not redirected: the summaries the language manual has too. */
+export const notRedirected = extensionPages.filter((page) => inLanguageManual.has(page));
+
+/** The prefix doc-en gives to the target of a redirect to a page of another manual. */
+export const EXTENSIONS_PREFIX = 'extensions/';
+
+/**
+ * The entries of a map that lead to the extensions manual ("extensions/<page>[#anchor]"),
+ * with the prefix removed from the target.
+ */
+export function entriesToExtensions(map: Record<string, string>): [string, string][] {
+    return Object.entries(map)
+        .filter(([, to]) => to.startsWith(EXTENSIONS_PREFIX))
+        .map(([from, to]): [string, string] => [from, to.slice(EXTENSIONS_PREFIX.length)]);
+}
+
+/** The entries of a map that stay in the manual of the map. */
+export function entriesInManual(map: Record<string, string>): [string, string][] {
+    return Object.entries(map).filter(([, to]) => !to.startsWith(EXTENSIONS_PREFIX));
+}
 
 /** Every n-th element, to take a stable sample of a long list. */
 export function sample<T>(list: T[], every: number): T[] {
