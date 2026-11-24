@@ -84,7 +84,7 @@ site_header(null, [
         <div class="hero__grid" aria-hidden="true"></div>
         <div class="container hero__inner">
           <h1 id="hero-heading" class="hero__title">The web runs<br>on <span class="hero__accent">PHP.</span></h1>
-          <p class="hero__lead">Build websites, APIs, and applications with a modern, open source language, mature tools, and a global community. It's a scripting language too, just as strong on the command line as on the web.</p>
+          <p class="hero__lead">Build your next project on it too. Whether it's a website, an API, or a command-line tool, you get a modern, open source language, a mature ecosystem, and a global community.</p>
           <div class="hero__cta">
             <div class="hero__actions">
               <a href="#start" class="button button--primary">Get started<?= site_icon('arrow-right') ?></a>
@@ -207,7 +207,7 @@ site_header(null, [
                   </div>
                   <p class="code-showcase__description"><?= $example['description'] ?></p>
                   <div role="region" aria-label="<?= $example['file'] ?> code" tabindex="0" class="code-showcase__code">
-                    <pre aria-hidden="true" class="code-showcase__gutter"><?= implode("\n", range(1, substr_count($example['code'], "\n") + 1)) ?></pre>
+                    <pre aria-hidden="true" class="code-showcase__gutter" data-lines="<?= implode("\n", range(1, substr_count($example['code'], "\n") + 1)) ?>"></pre>
                     <pre><code><?= $example['code'] ?></code></pre>
                   </div>
                   <div class="terminal">
@@ -305,8 +305,8 @@ site_header(null, [
                 <div class="release-card__ring release-card__ring--inner" aria-hidden="true"></div>
                 <?= site_icon('logos/php-mark', 'release-card__logo') ?>
                 <div class="release-card__numeral">
-                  <p class="release-card__numeral-outline" aria-hidden="true"><?= $featured['branch'] ?></p>
-                  <p><?= $featured['branch'] ?><span class="release-card__plus" aria-hidden="true">+</span></p>
+                  <p class="release-card__numeral-outline" aria-hidden="true" data-text="<?= $featured['branch'] ?>"></p>
+                  <p><?= $featured['branch'] ?><span class="release-card__plus" aria-hidden="true"></span></p>
                 </div>
                 <div class="release-card__dates">
 <?php if ($featured['released']): ?>

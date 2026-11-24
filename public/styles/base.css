@@ -19,7 +19,7 @@
         --paper: #fbfaf7;
         --surface: #ffffff;
         --ink: #292631;
-        --muted: #6f6a78;
+        --muted: #6a6573;
         --brand: #6b4cda;
         --brand-strong: #573bb6;
         --lavender: #eee9fa;
@@ -32,10 +32,10 @@
         --editor-canvas: #fdfcfe;
         --editor-sidebar: #eae7ef;
         --code-text: #393343;
-        --code-comment: #736a80;
+        --code-comment: #6c6478;
         --code-string: #39714c;
         --code-keyword: #8150b0;
-        --code-function: #936022;
+        --code-function: #8d5c21;
         --code-type: #306e8c;
         --code-gutter: #8b8295;
     }

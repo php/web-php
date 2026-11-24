@@ -712,6 +712,9 @@
     user-select: none;
 }
 
+/* Draw decorative text using CSS so it stays out of the accessibility tree. */
+.code-showcase__gutter::before { content: attr(data-lines); }
+
 .terminal {
     border-top: 1px solid var(--line);
     background: var(--editor-sidebar);
@@ -992,6 +995,8 @@
     opacity: .35;
 }
 
+.release-card__numeral-outline::before { content: attr(data-text); }
+
 .release-card__plus {
     position: absolute;
     top: .25rem;
@@ -1002,6 +1007,8 @@
     font-weight: 400;
     color: var(--draft);
 }
+
+.release-card__plus::before { content: "+"; }
 
 .release-card__dates {
     position: relative;
