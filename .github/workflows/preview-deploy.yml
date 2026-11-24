@@ -42,7 +42,7 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Deploy preview
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@v6.0.3
         with:
           REMOTE_HOST: ${{ secrets.PREVIEW_REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.PREVIEW_REMOTE_USER }}
@@ -102,7 +102,7 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Deploy regression report
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@v6.0.3
         with:
           REMOTE_HOST: ${{ secrets.PREVIEW_REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.PREVIEW_REMOTE_USER }}
