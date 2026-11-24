@@ -103,7 +103,7 @@ site_header(null, [
               <div class="latest__body">
 <?php if ($latestNews): ?>
                 <p class="latest-news">
-                  <span class="status-dot" aria-hidden="true"></span><time datetime="<?= $latestNews['date']->format(DATE_W3C) ?>" class="latest-news__date"><?= $latestNews['date']->format('j M Y') ?></time><a href="<?= $latestNews['url'] ?>" class="latest-news__title"><?= $latestNews['title'] ?></a>
+                  <time datetime="<?= $latestNews['date']->format(DATE_W3C) ?>" class="latest-news__date"><?= $latestNews['date']->format('j M Y') ?></time><a href="<?= $latestNews['url'] ?>" class="latest-news__title"><?= $latestNews['title'] ?></a>
                 </p>
 <?php endif; ?>
               </div>
@@ -179,7 +179,7 @@ site_header(null, [
             </div>
             <div class="panel__footer language-panel__footer">
               <p>From a single request to long-running services.</p>
-              <p class="language-panel__since"><span class="status-dot" aria-hidden="true"></span>Open source since 1995</p>
+              <p class="language-panel__since">Open source since 1995</p>
             </div>
           </div>
 

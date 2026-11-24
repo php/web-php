@@ -71,14 +71,6 @@ button { cursor: pointer; }
     fill: currentColor;
 }
 
-.status-dot {
-    width: .375rem;
-    height: .375rem;
-    flex-shrink: 0;
-    border-radius: 9999px;
-    background: var(--sage);
-}
-
 .button {
     display: inline-flex;
     align-items: center;

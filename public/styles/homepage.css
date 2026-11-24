@@ -396,13 +396,13 @@
 /* --- Logo wall ------------------------------------------------------------ */
 
 .logo-wall {
-    padding-block: 1.75rem;
+    padding-block: 2.5rem 1.75rem;
     border-block: 1px solid var(--line);
     background: color-mix(in srgb, var(--surface) 50%, transparent);
 }
 
 .logo-wall__eyebrow {
-    margin-bottom: 1.25rem;
+    margin-bottom: .25rem;
     text-align: center;
     font-size: .75rem;
     line-height: 1rem;
@@ -763,7 +763,7 @@
 .ecosystem__stats {
     position: relative;
     overflow: hidden;
-    padding: 2rem;
+    padding: 2rem 2rem 4rem;
     border-bottom: 1px solid var(--line);
     border-radius: 1.5rem 1.5rem 0 0;
     background: var(--paper);
@@ -1392,7 +1392,8 @@
         gap: 2rem;
     }
 
-    .logo-wall__eyebrow { margin-bottom: 1.75rem; }
+    .logo-wall { padding-top: 3.5rem; }
+    .logo-wall__eyebrow { margin-bottom: .5rem; }
     .logo-wall__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .logo-wall__link { padding: 1.75rem .75rem; }
     .logo-wall__mark {

@@ -32,7 +32,7 @@ $releasePillHref = $config['release_pill_href'] ?? $featured['url'];
     <div class="site-header__bar">
       <div class="site-header__brand">
         <a href="/" aria-label="PHP homepage"><?= site_icon('logos/php-mark', 'site-header__logo') ?></a>
-        <a href="<?= htmlspecialchars($releasePillHref) ?>" class="release-pill"><span class="status-dot" aria-hidden="true"></span><?= $featured['branch'] ?> is here<?= site_icon('arrow-right') ?></a>
+        <a href="<?= htmlspecialchars($releasePillHref) ?>" class="release-pill"><?= $featured['branch'] ?> is here<?= site_icon('arrow-right') ?></a>
       </div>
       <nav aria-label="Main navigation" class="site-header__nav">
 <?php foreach ($navItems as $item): ?>
