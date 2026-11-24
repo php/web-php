@@ -167,7 +167,7 @@ site_header(null, [
           <div class="panel language-panel">
             <div class="split">
               <div class="split__body">
-                <h3 class="card-title">Made for the web.<br>From the beginning.</h3>
+                <h3 class="card-title">Made for the web,<br>from the beginning.</h3>
                 <p class="lead">PHP has grown with the web. From dynamic pages and forms to data pipelines and AI agents, the language and its ecosystem grow with your application.</p>
                 <div class="link-row"><a href="/manual/introduction.php" class="text-link text-link--brand">Meet the language<?= site_icon('arrow-up-right') ?></a></div>
               </div>
@@ -190,7 +190,7 @@ site_header(null, [
                 <p class="code-showcase__folder"><?= site_icon('folder-open') ?><span>examples</span></p>
                 <div role="tablist" aria-label="PHP code examples" aria-orientation="vertical" class="code-showcase__tabs">
 <?php $first = true; foreach ($examples as $id => $example): ?>
-                  <button type="button" role="tab" id="example-tab-<?= $id ?>" aria-controls="example-<?= $id ?>" aria-selected="<?= $first ? 'true' : 'false' ?>" tabindex="<?= $first ? '0' : '-1' ?>" class="code-showcase__tab"><?= $example['file'] ?></button>
+                  <button type="button" role="tab" id="example-tab-<?= $id ?>" aria-controls="example-<?= $id ?>" aria-selected="<?= $first ? 'true' : 'false' ?>" tabindex="<?= $first ? '0' : '-1' ?>" class="code-showcase__tab"><?= str_replace('_', '_<wbr>', $example['file']) ?></button>
 <?php $first = false; endforeach; ?>
                 </div>
               </div>

@@ -141,22 +141,20 @@ TEXT,
     ],
     'html' => [
         'file' => 'extract_headlines.php',
-        'description' => 'Fetch a live page and query it with CSS selectors, using the built-in DOM parser.',
+        'description' => 'Scrape a live page with the built-in DOM parser in one pipeline: <code>?</code> placeholders partially apply each function, and <code>|&gt;</code> feeds it the previous result.',
         'code' => <<<'PHP'
 <?php
 // Fetch a live page and extract its headlines with CSS selectors.
 
-$html = file_get_contents('https://www.php.net/archive/2026.php');
+$headlines = file_get_contents('https://www.php.net/archive/2026.php')
+    |> Dom\HTMLDocument::createFromString(?, LIBXML_NOERROR)
+    |> (fn ($page) => $page->querySelectorAll('article h2'))
+    |> iterator_to_array(...)
+    |> array_map(fn ($heading) => trim($heading->textContent), ?)
+    |> array_reverse(...)
+    |> array_slice(?, 0, 3);
 
-$page = Dom\HTMLDocument::createFromString($html, LIBXML_NOERROR);
-$headlines = [];
-
-foreach ($page->querySelectorAll('article h2') as $heading) {
-    $headlines[] = trim($heading->textContent);
-}
-
-// The archive is newest-first, so the year's first posts are at the end.
-echo json_encode(array_slice(array_reverse($headlines), 0, 3), JSON_PRETTY_PRINT);
+echo json_encode($headlines, JSON_PRETTY_PRINT);
 PHP,
         'command' => 'php extract_headlines.php',
         'output' => <<<'TEXT'

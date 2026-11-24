@@ -146,11 +146,14 @@
             tab.addEventListener('keydown', (event) => {
                 let nextIndex;
 
+                // Tabs stack in the sidebar but sit side by side in the narrow-screen grid.
                 switch (event.key) {
                     case 'ArrowDown':
+                    case 'ArrowRight':
                         nextIndex = (index + 1) % exampleTabs.length;
                         break;
                     case 'ArrowUp':
+                    case 'ArrowLeft':
                         nextIndex = (index - 1 + exampleTabs.length) % exampleTabs.length;
                         break;
                     case 'Home':
