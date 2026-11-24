@@ -102,7 +102,7 @@ HTML,
 
 <span class="tok-keyword">function</span> <span class="tok-function">events</span>(string <span class="tok-text">$file</span>): <span class="tok-type">Generator</span>
 {
-    <span class="tok-text">$stream</span> = <span class="tok-keyword">new</span> <span class="tok-function">SplFileObject</span>(<span class="tok-string">&quot;compress.zlib://$file&quot;</span>);
+    <span class="tok-text">$stream</span> = <span class="tok-keyword">new</span> <span class="tok-function">SplFileObject</span>(<span class="tok-string">&quot;compress.zlib://{$file}&quot;</span>);
 
     <span class="tok-keyword">foreach</span> (<span class="tok-text">$stream</span> <span class="tok-keyword">as</span> <span class="tok-text">$line</span>) {
         <span class="tok-keyword">if</span> (<span class="tok-function">trim</span>(<span class="tok-text">$line</span>) !== <span class="tok-string">&#x27;&#x27;</span>) {
