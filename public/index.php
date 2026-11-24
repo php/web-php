@@ -195,7 +195,22 @@ site_header(null, [
                 </div>
               </div>
               <div class="code-showcase__panels">
-<?php $first = true; foreach ($examples as $id => $example): ?>
+<?php $first = true; foreach ($examples as $id => $example):
+    $code = $example['code'];
+    $lines = substr_count($code, "\n") + 1;
+    $expandedLines = $lines;
+
+    if (isset($example['imports'])) {
+        $importCount = substr_count($example['imports'], "\n") + 1;
+        $fold = '<span data-copy-ignore class="code-fold__summary"><span class="tok-keyword">use</span> '
+            . '<button type="button" data-imports-toggle aria-expanded="false" aria-label="Show ' . $importCount . ' imports" title="Show imports" class="code-fold__toggle">…</button>;</span>'
+            . '<span hidden class="code-fold__body">' . $example['imports'] . '</span>';
+        [$head, $body] = explode("\n\n", $code, 2);
+        $code = "$head\n\n$fold\n\n$body";
+        $lines += 2;
+        $expandedLines = $lines + $importCount - 1;
+    }
+?>
                 <div id="example-<?= $id ?>" role="tabpanel" aria-labelledby="example-tab-<?= $id ?>" data-copy-scope class="code-showcase__panel"<?= $first ? '' : ' hidden' ?>>
                   <div class="code-showcase__tabbar">
                     <div class="code-showcase__file"><?= $example['file'] ?></div>
@@ -206,8 +221,8 @@ site_header(null, [
                   </div>
                   <p class="code-showcase__description"><?= $example['description'] ?></p>
                   <div role="region" aria-label="<?= $example['file'] ?> code" tabindex="0" class="code-showcase__code">
-                    <pre aria-hidden="true" class="code-showcase__gutter" data-lines="<?= implode("\n", range(1, substr_count($example['code'], "\n") + 1)) ?>"></pre>
-                    <pre><code><?= $example['code'] ?></code></pre>
+                    <pre aria-hidden="true" class="code-showcase__gutter" data-lines="<?= implode("\n", range(1, $lines)) ?>" data-lines-expanded="<?= implode("\n", range(1, $expandedLines)) ?>"></pre>
+                    <pre><code><?= $code ?></code></pre>
                   </div>
                   <div class="terminal">
                     <div class="terminal__header">

@@ -94,23 +94,85 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    hr { height: 0; color: inherit; border-top-width: 1px; }
-    abbr:where([title]) { text-decoration: underline dotted; }
-    h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
-    a { color: inherit; text-decoration: inherit; }
-    b, strong { font-weight: bolder; }
-    code, kbd, samp, pre { font-family: var(--font-mono); font-size: 1em; }
-    small { font-size: 80%; }
-    sub, sup { position: relative; vertical-align: baseline; font-size: 75%; line-height: 0; }
-    sub { bottom: -.25em; }
-    sup { top: -.5em; }
-    table { text-indent: 0; border-color: inherit; border-collapse: collapse; }
-    :-moz-focusring { outline: auto; }
-    progress { vertical-align: baseline; }
-    summary { display: list-item; }
-    ol, ul, menu { list-style: none; }
-    img, svg, video, canvas, audio, iframe, embed, object { display: block; vertical-align: middle; }
-    img, video { max-width: 100%; height: auto; }
+    hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+    }
+
+    abbr:where([title]) {
+        text-decoration: underline dotted;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    b, strong {
+        font-weight: bolder;
+    }
+
+    code, kbd, samp, pre {
+        font-family: var(--font-mono);
+        font-size: 1em;
+    }
+
+    small {
+        font-size: 80%;
+    }
+
+    sub, sup {
+        position: relative;
+        vertical-align: baseline;
+        font-size: 75%;
+        line-height: 0;
+    }
+
+    sub {
+        bottom: -.25em;
+    }
+
+    sup {
+        top: -.5em;
+    }
+
+    table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+    }
+
+    :-moz-focusring {
+        outline: auto;
+    }
+
+    progress {
+        vertical-align: baseline;
+    }
+
+    summary {
+        display: list-item;
+    }
+
+    ol, ul, menu {
+        list-style: none;
+    }
+
+    img, svg, video, canvas, audio, iframe, embed, object {
+        display: block;
+        vertical-align: middle;
+    }
+
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
 
     button, input, select, optgroup, textarea, ::file-selector-button {
         font: inherit;
@@ -123,14 +185,35 @@
         border-radius: 0;
     }
 
-    :where(select:is([multiple], [size])) optgroup { font-weight: bolder; }
-    :where(select:is([multiple], [size])) optgroup option { padding-inline-start: 20px; }
-    ::file-selector-button { margin-inline-end: 4px; }
-    button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button { appearance: button; }
-    [hidden]:where(:not([hidden="until-found"])) { display: none !important; }
+    :where(select:is([multiple], [size])) optgroup {
+        font-weight: bolder;
+    }
 
-    ::selection { background: #d9c8fb; color: #292631; }
-    :focus-visible { outline: 2px solid var(--brand); outline-offset: 5px; }
+    :where(select:is([multiple], [size])) optgroup option {
+        padding-inline-start: 20px;
+    }
+
+    ::file-selector-button {
+        margin-inline-end: 4px;
+    }
+
+    button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+        appearance: button;
+    }
+
+    [hidden]:where(:not([hidden="until-found"])) {
+        display: none !important;
+    }
+
+    ::selection {
+        background: #d9c8fb;
+        color: #292631;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--brand);
+        outline-offset: 5px;
+    }
 }
 
 /* --- Utilities ---------------------------------------------------------- */

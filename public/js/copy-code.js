@@ -5,6 +5,7 @@
  * `data-copy-scope` copies the first <code> in that scope. While "copied", the
  * button has a `data-copied`` attribute; base.css uses it to swap the
  * .copy-button__icon--copy icon for the .copy-button__icon--done one.
+ * Elements marked `data-copy-ignore` inside the <code> are left out of the copy.
  */
 (() => {
     const RESET_AFTER = 2500;
@@ -38,7 +39,7 @@
         statusRegion().textContent = '';
 
         try {
-            await navigator.clipboard.writeText(code.textContent);
+            await navigator.clipboard.writeText(copyText(code));
             button.dataset.copied = '';
             setLabel(button, 'Copied!');
             status.textContent = 'Code copied to clipboard.';
@@ -58,6 +59,14 @@
             button.title = button.dataset.originalTitle;
         }, RESET_AFTER));
     });
+
+    function copyText(code) {
+        const copy = code.cloneNode(true);
+
+        copy.querySelectorAll('[data-copy-ignore]').forEach((element) => element.remove());
+
+        return copy.textContent;
+    }
 
     function setLabel(button, label) {
         button.setAttribute('aria-label', label);

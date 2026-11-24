@@ -15,18 +15,30 @@
 }
 
 @media (min-width: 40rem) {
-    :root { --page-gutter: 2rem; }
+    :root {
+        --page-gutter: 2rem;
+    }
 }
 
 @media (min-width: 64rem) {
-    :root { --page-gutter: 3.5rem; }
+    :root {
+        --page-gutter: 3.5rem;
+    }
 }
 
 /* --- Page defaults ------------------------------------------------------ */
 
-html { scroll-padding-top: 2rem; }
-strong { font-weight: 600; }
-button { cursor: pointer; }
+html {
+    scroll-padding-top: 2rem;
+}
+
+strong {
+    font-weight: 600;
+}
+
+button {
+    cursor: pointer;
+}
 
 .skip-link:not(:focus) {
     position: absolute;
@@ -48,12 +60,21 @@ button { cursor: pointer; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    html.smooth-scroll { scroll-behavior: smooth; }
+    html.smooth-scroll {
+        scroll-behavior: smooth;
+    }
 }
 
 @keyframes reveal {
-    from { opacity: 0; transform: translateY(-6px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- Building blocks ----------------------------------------------------- */
@@ -89,8 +110,14 @@ button { cursor: pointer; }
     box-shadow: inset 0 1px 0 #ffffff30;
 }
 
-.button--primary:hover { background: var(--brand-strong); }
-.dark .button--primary { color: var(--paper); box-shadow: none; }
+.button--primary:hover {
+    background: var(--brand-strong);
+}
+
+.dark .button--primary {
+    color: var(--paper);
+    box-shadow: none;
+}
 
 .button--soft {
     border: 1px solid color-mix(in srgb, var(--brand) 20%, transparent);
@@ -98,7 +125,9 @@ button { cursor: pointer; }
     color: var(--brand);
 }
 
-.button--soft:hover { background: color-mix(in srgb, var(--brand) 15%, transparent); }
+.button--soft:hover {
+    background: color-mix(in srgb, var(--brand) 15%, transparent);
+}
 
 /* A link styled as a button but not usable yet (e.g. before a release is out). */
 .button[aria-disabled="true"] {
@@ -113,8 +142,13 @@ button { cursor: pointer; }
     gap: .75rem;
 }
 
-.text-link:hover { color: var(--brand); }
-.text-link--brand { color: var(--brand); }
+.text-link:hover {
+    color: var(--brand);
+}
+
+.text-link--brand {
+    color: var(--brand);
+}
 
 /* --- Header (include/site-header.inc) ----------------------------------- */
 
@@ -162,7 +196,9 @@ button { cursor: pointer; }
     font-weight: 500;
 }
 
-.release-pill:hover { background: var(--lavender); }
+.release-pill:hover {
+    background: var(--lavender);
+}
 
 .site-header__nav {
     display: none;
@@ -173,7 +209,9 @@ button { cursor: pointer; }
     font-weight: 500;
 }
 
-.site-header__nav a:hover { color: var(--brand); }
+.site-header__nav a:hover {
+    color: var(--brand);
+}
 
 .site-header__actions {
     display: flex;
@@ -193,7 +231,9 @@ button { cursor: pointer; }
     color: var(--ink);
 }
 
-.icon-button:hover { background: var(--lavender); }
+.icon-button:hover {
+    background: var(--lavender);
+}
 
 .icon-button__icon {
     width: 1.25rem;
@@ -242,7 +282,9 @@ button { cursor: pointer; }
     font-weight: 500;
 }
 
-.language-select__control:hover { background-color: var(--lavender); }
+.language-select__control:hover {
+    background-color: var(--lavender);
+}
 
 .language-select__chevron {
     position: absolute;
@@ -272,30 +314,61 @@ button { cursor: pointer; }
 }
 
 @media (min-width: 40rem) {
-    .release-pill { display: inline-flex; }
+    .release-pill {
+        display: inline-flex;
+    }
 }
 
 @media (min-width: 64rem) {
-    .site-header__nav { display: flex; }
+    .site-header__nav {
+        display: flex;
+    }
     .site-header__menu-toggle,
-    .mobile-menu { display: none; }
+    .mobile-menu {
+        display: none;
+    }
 }
 
 /* --- Code --------------------------------------------------------------- */
 
 /* Syntax highlighting tokens (include/homepage/examples.php). */
-.tok-text { color: var(--code-text); }
-.tok-comment { color: var(--code-comment); }
-.tok-string { color: var(--code-string); }
-.tok-keyword { color: var(--code-keyword); }
-.tok-function { color: var(--code-function); }
-.tok-type { color: var(--code-type); }
-.tok-italic { font-style: italic; }
+.tok-text {
+    color: var(--code-text);
+}
+
+.tok-comment {
+    color: var(--code-comment);
+}
+
+.tok-string {
+    color: var(--code-string);
+}
+
+.tok-keyword {
+    color: var(--code-keyword);
+}
+
+.tok-function {
+    color: var(--code-function);
+}
+
+.tok-type {
+    color: var(--code-type);
+}
+
+.tok-italic {
+    font-style: italic;
+}
 
 /* /js/copy-code.js sets data-copied for a moment after a successful copy. */
 .copy-button__icon--done,
-[data-copied] .copy-button__icon--copy { display: none; }
-[data-copied] .copy-button__icon--done { display: block; }
+[data-copied] .copy-button__icon--copy {
+    display: none;
+}
+
+[data-copied] .copy-button__icon--done {
+    display: block;
+}
 
 /* --- Toast -------------------------------------------------------------- */
 
@@ -320,5 +393,7 @@ button { cursor: pointer; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .toast { animation: none; }
+    .toast {
+        animation: none;
+    }
 }

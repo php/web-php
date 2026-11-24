@@ -1,13 +1,23 @@
 <?php
 
 /*
- * Code examples shown in the homepage editor. `code`, `command` and `output`
- * are pre-highlighted HTML; the tok-* classes are styled in /styles/components.css.
+ * Code examples shown in the homepage editor. `code`, `imports`, `command` and
+ * `output` are pre-highlighted HTML; the tok-* classes are styled in
+ * /styles/components.css.
+ *
+ * `imports` is optional. It is shown folded to a single `use …;` line (expandable)
+ * after the first blank line of `code`.
  */
 return [
     'controller' => [
         'file' => 'UserController.php',
         'description' => 'Attributes, typed properties, and constructor injection; a whole JSON endpoint in one class.',
+        'imports' => <<<'HTML'
+<span class="tok-keyword">use</span> <span class="tok-type">App\Repository\UserRepository</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\HttpFoundation\JsonResponse</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\HttpKernel\Exception\NotFoundHttpException</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\Routing\Attribute\Route</span>;
+HTML,
         'code' => <<<'HTML'
 <span class="tok-comment">&lt;?php</span>
 <span class="tok-comment tok-italic">// Map a web request to a JSON response.</span>
@@ -19,12 +29,12 @@ return [
     ) {}
 
     #[<span class="tok-function">Route</span>(<span class="tok-string">&#x27;/users/{id}&#x27;</span>, methods: [<span class="tok-string">&#x27;GET&#x27;</span>])]
-    <span class="tok-keyword">public function</span> <span class="tok-function">show</span>(int <span class="tok-text">$id</span>): <span class="tok-type">Response</span>
+    <span class="tok-keyword">public function</span> <span class="tok-function">show</span>(int <span class="tok-text">$id</span>): <span class="tok-type">JsonResponse</span>
     {
         <span class="tok-text">$user</span> = <span class="tok-text">$this</span>-&gt;<span class="tok-text">users</span>-&gt;<span class="tok-function">find</span>(<span class="tok-text">$id</span>)
-            ?? <span class="tok-keyword">throw new</span> <span class="tok-function">NotFoundException</span>();
+            ?? <span class="tok-keyword">throw new</span> <span class="tok-function">NotFoundHttpException</span>();
 
-        <span class="tok-keyword">return</span> <span class="tok-type">Response</span>::<span class="tok-function">json</span>([
+        <span class="tok-keyword">return new</span> <span class="tok-function">JsonResponse</span>([
             <span class="tok-string">&#x27;id&#x27;</span> =&gt; <span class="tok-text">$user</span>-&gt;<span class="tok-text">id</span>,
             <span class="tok-string">&#x27;name&#x27;</span> =&gt; <span class="tok-text">$user</span>-&gt;<span class="tok-text">name</span>,
         ]);
@@ -39,6 +49,13 @@ HTML,
     'cli' => [
         'file' => 'GreetCommand.php',
         'description' => 'Attributes describe arguments and options; the method signature <em>is</em> the command.',
+        'imports' => <<<'HTML'
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\Console\Attribute\Argument</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\Console\Attribute\AsCommand</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\Console\Attribute\Option</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\Console\Command\Command</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Symfony\Component\Console\Output\OutputInterface</span>;
+HTML,
         'code' => <<<'HTML'
 <span class="tok-comment">&lt;?php</span>
 <span class="tok-comment tok-italic">// Turn a plain method into a command-line tool.</span>
@@ -67,6 +84,12 @@ HTML,
     'api' => [
         'file' => 'release_date.php',
         'description' => 'Code against PSR standard interfaces, then plug in whichever HTTP client you like.',
+        'imports' => <<<'HTML'
+<span class="tok-keyword">use</span> <span class="tok-type">GuzzleHttp\Client</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">GuzzleHttp\Psr7\HttpFactory</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Psr\Http\Client\ClientInterface</span>;
+<span class="tok-keyword">use</span> <span class="tok-type">Psr\Http\Message\RequestFactoryInterface</span>;
+HTML,
         'code' => <<<'HTML'
 <span class="tok-comment">&lt;?php</span>
 <span class="tok-comment tok-italic">// Call a JSON API with an HTTP client.</span>
@@ -86,7 +109,7 @@ HTML,
     <span class="tok-keyword">return</span> <span class="tok-text">$release</span>-&gt;<span class="tok-text">date</span>;
 }
 
-<span class="tok-keyword">echo</span> <span class="tok-function">releaseDate</span>(<span class="tok-keyword">new</span> <span class="tok-type">GuzzleHttp\Client</span>(), <span class="tok-keyword">new</span> <span class="tok-type">GuzzleHttp\Psr7\HttpFactory</span>(), <span class="tok-string">&#x27;8.0.0&#x27;</span>);
+<span class="tok-keyword">echo</span> <span class="tok-function">releaseDate</span>(<span class="tok-keyword">new</span> <span class="tok-type">Client</span>(), <span class="tok-keyword">new</span> <span class="tok-type">HttpFactory</span>(), <span class="tok-string">&#x27;8.0.0&#x27;</span>);
 HTML,
         'command' => '<span class="tok-function">php</span> release_date.php',
         'output' => <<<'HTML'

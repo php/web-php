@@ -5,6 +5,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         initReleaseHistory();
         initExampleTabs();
+        initImportFolds();
     });
 
     function initReleaseHistory() {
@@ -165,6 +166,21 @@
                 event.preventDefault();
                 selectExample(exampleTabs[nextIndex]);
                 exampleTabs[nextIndex].focus();
+            });
+        });
+    }
+
+    function initImportFolds() {
+        document.querySelectorAll('[data-imports-toggle]').forEach((toggle) => {
+            toggle.addEventListener('click', () => {
+                const summary = toggle.closest('.code-fold__summary');
+                const region = toggle.closest('.code-showcase__code');
+
+                summary.nextElementSibling.hidden = false;
+                summary.hidden = true;
+                region.dataset.importsExpanded = '';
+                // The button is gone now, so keep focus in the code region.
+                region.focus();
             });
         });
     }

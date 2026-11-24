@@ -139,6 +139,15 @@
         --radius-2xl: 1rem;
         --radius-3xl: 1.5rem;
         --radius-4xl: 2rem;
+        /* Narrower than the site's --page-gutter so the two-column code
+           comparisons fit without scrolling. */
+        --release-gutter: 1rem;
+    }
+
+    @media (min-width: 64rem) {
+        :root {
+            --release-gutter: 2rem;
+        }
     }
 }
 
@@ -194,6 +203,7 @@ main a:not(.button) {
     .hero-pattern {
         stroke: color-mix(in oklab, var(--color-gray-900) 10%, transparent)
     }
+
     .hero-pattern:where(.dark,.dark *) {
         stroke: color-mix(in oklab, var(--color-white) 10%, transparent)
     }
@@ -449,7 +459,7 @@ main a:not(.button) {
     justify-content: center;
     align-items: center;
     gap: calc(var(--spacing) * 3);
-    padding-inline: var(--page-gutter);
+    padding-inline: var(--release-gutter);
     text-align: center;
     text-wrap: balance;
     flex-direction: column;
@@ -511,7 +521,7 @@ main a:not(.button) {
     margin-inline: auto;
     margin-top: calc(var(--spacing) * 8);
     max-width: var(--page-width);
-    padding-inline: var(--page-gutter)
+    padding-inline: var(--release-gutter)
 }
 
 @media (min-width: 40rem) {
@@ -712,7 +722,7 @@ main a:not(.button) {
     margin-inline: auto;
     margin-top: calc(var(--spacing) * 8);
     max-width: var(--page-width);
-    padding-inline: var(--page-gutter)
+    padding-inline: var(--release-gutter)
 }
 
 @media (min-width: 40rem) {
@@ -831,10 +841,12 @@ main a:not(.button) {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height))
 }
+
 .features-col a code {
     font-size: inherit;
     line-height: inherit
 }
+
 .before-and-after-title-and-description h2 > code {
     font-size: 87%;
 }
@@ -1179,7 +1191,7 @@ main a:not(.button) {
     margin-inline: auto;
     margin-top: calc(var(--spacing) * -2);
     max-width: var(--page-width);
-    padding-inline: var(--page-gutter)
+    padding-inline: var(--release-gutter)
 }
 
 .release-notes-grid-container + .release-notes-grid-container {
@@ -1224,9 +1236,11 @@ main a:not(.button) {
     .release-notes-grid div {
         background-color: color-mix(in oklab, var(--color-black) 3%, transparent);
     }
+
     .release-notes-grid div:where(.dark,.dark *) {
         background-color: color-mix(in oklab, var(--color-white) 3%, transparent);
     }
+
     .release-notes-grid div.chart-table:where(.dark,.dark *) {
         background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
     }
@@ -1451,10 +1465,21 @@ main a:not(.button) {
     font-style: italic;
 }
 
-.release-page .phpcode span.default { color: var(--code-function); }
-.release-page .phpcode span.variable { color: var(--code-text); }
-.release-page .phpcode span.keyword { color: var(--code-keyword); }
-.release-page .phpcode span.string { color: var(--code-string); }
+.release-page .phpcode span.default {
+    color: var(--code-function);
+}
+
+.release-page .phpcode span.variable {
+    color: var(--code-text);
+}
+
+.release-page .phpcode span.keyword {
+    color: var(--code-keyword);
+}
+
+.release-page .phpcode span.string {
+    color: var(--code-string);
+}
 
 @property --tw-shadow {
     syntax: "*";
