@@ -328,8 +328,7 @@
 .hero__art svg {
     width: 100%;
     height: 100%;
-    fill: none;
-    stroke: var(--draft);
+    color: var(--brand);
     opacity: .2;
 }
 
