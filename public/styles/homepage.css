@@ -220,7 +220,7 @@
     mask-repeat: repeat;
 }
 
-/* Shared drafting details create a continuous sheet around the large content panels. */
+/* Shared "drafting details" create a continuous border/sheet around the large content panels. */
 .page-guides {
     position: relative;
 }
@@ -811,7 +811,7 @@
     content: attr(data-lines-expanded);
 }
 
-/* A folded block of `use` imports, expanded by its "…" button. */
+/* A folded block of `use` imports, expanded by its "..." button. */
 .code-fold__toggle {
     padding: 0 .25rem;
     border-radius: .25rem;

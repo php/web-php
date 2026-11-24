@@ -10,7 +10,7 @@
  * Optional site_header() options:
  *   'release_pill_href' where the pill links to instead (the homepage uses its
  *                       own release section).
- *   'language_switcher' list of ['name' => …, 'url' => …, 'selected' => bool];
+ *   'language_switcher' list of ['name' => ..., 'url' => ..., 'selected' => bool];
  *                       the switcher only shows on pages that have translations.
  */
 

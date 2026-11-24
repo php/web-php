@@ -5,7 +5,7 @@
  * `output` are pre-highlighted HTML; the tok-* classes are styled in
  * /styles/components.css.
  *
- * `imports` is optional. It is shown folded to a single `use …;` line (expandable)
+ * `imports` is optional. It is shown folded to a single `use ...;` line (expandable)
  * after the first blank line of `code`.
  */
 return [

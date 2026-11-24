@@ -9,7 +9,6 @@
 (() => {
     const root = document.documentElement;
     const modifierKeys = ['Shift', 'Control', 'Alt', 'Meta', 'CapsLock'];
-    let rotation = 0;
     let mirror = 1;
 
     function swapLogo(src) {
@@ -79,16 +78,6 @@
             },
         },
         { keys: [...'bork'], once: true, run: bork },
-        {
-            keys: [...'rotate', 'Enter'],
-            run: () => {
-                rotation += 90;
-                if (rotation > 360) {
-                    rotation = 0;
-                }
-                root.style.transform = `rotate(${rotation}deg)`;
-            },
-        },
         {
             keys: [...'mirror', 'Enter'],
             run: () => {

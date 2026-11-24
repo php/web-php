@@ -203,7 +203,7 @@ site_header(null, [
     if (isset($example['imports'])) {
         $importCount = substr_count($example['imports'], "\n") + 1;
         $fold = '<span data-copy-ignore class="code-fold__summary"><span class="tok-keyword">use</span> '
-            . '<button type="button" data-imports-toggle aria-expanded="false" aria-label="Show ' . $importCount . ' imports" title="Show imports" class="code-fold__toggle">…</button>;</span>'
+            . '<button type="button" data-imports-toggle aria-expanded="false" aria-label="Show ' . $importCount . ' imports" title="Show imports" class="code-fold__toggle">...</button>;</span>'
             . '<span hidden class="code-fold__body">' . $example['imports'] . '</span>';
         [$head, $body] = explode("\n\n", $code, 2);
         $code = "$head\n\n$fold\n\n$body";

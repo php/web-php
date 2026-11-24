@@ -1,7 +1,7 @@
 /*
  * Copy-code buttons
  *
- * Markup: a <button data-copy-code aria-label="…"> inside an element marked
+ * Markup: a <button data-copy-code aria-label="..."> inside an element marked
  * `data-copy-scope` copies the first <code> in that scope. While "copied", the
  * button has a `data-copied`` attribute; base.css uses it to swap the
  * .copy-button__icon--copy icon for the .copy-button__icon--done one.
