@@ -26,7 +26,7 @@ return [
     ],
     [
         'name' => 'NASA',
-        'story' => 'nasa.gov and NASA Science run on WordPress',
+        'story' => 'nasa.gov and NASA Science run on WordPress; NASA uses MediaWiki',
         'source' => 'https://lonerockpoint.com/work/nasa-flagship-wordpress/',
         'icon' => 'nasa',
         'width' => '3.25rem',

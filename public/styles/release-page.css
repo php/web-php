@@ -1459,27 +1459,6 @@ main a:not(.button) {
     background-color: transparent;
 }
 
-/* PHP's highlighter output, in the shared code colors (see components.css). */
-.release-page .phpcode span.comment {
-    color: var(--code-comment);
-    font-style: italic;
-}
-
-.release-page .phpcode span.default {
-    color: var(--code-function);
-}
-
-.release-page .phpcode span.variable {
-    color: var(--code-text);
-}
-
-.release-page .phpcode span.keyword {
-    color: var(--code-keyword);
-}
-
-.release-page .phpcode span.string {
-    color: var(--code-string);
-}
 
 @property --tw-shadow {
     syntax: "*";

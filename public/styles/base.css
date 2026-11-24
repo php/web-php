@@ -36,7 +36,6 @@
         --code-string: #39714c;
         --code-keyword: #8150b0;
         --code-function: #8d5c21;
-        --code-type: #306e8c;
         --code-gutter: #8b8295;
     }
 
@@ -62,7 +61,6 @@
         --code-string: #b9d7b3;
         --code-keyword: #c5a6f5;
         --code-function: #e6c397;
-        --code-type: #a6cce0;
         --code-gutter: #81798f;
     }
 }

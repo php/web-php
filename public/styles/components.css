@@ -331,33 +331,36 @@ button {
 
 /* --- Code --------------------------------------------------------------- */
 
-/* Syntax highlighting tokens (include/homepage/examples.php). */
-.tok-text {
+/* PHP's highlighter output (highlight_php() in include/layout.inc), used by the
+   homepage examples and the release pages. */
+.phpcode span.comment {
+    color: var(--code-comment);
+    font-style: italic;
+}
+
+.phpcode span.default {
+    color: var(--code-function);
+}
+
+.phpcode span.variable {
     color: var(--code-text);
 }
 
+.phpcode span.keyword {
+    color: var(--code-keyword);
+}
+
+.phpcode span.string {
+    color: var(--code-string);
+}
+
+/* The homepage's terminal: the command's program name, and the output. */
 .tok-comment {
     color: var(--code-comment);
 }
 
-.tok-string {
-    color: var(--code-string);
-}
-
-.tok-keyword {
-    color: var(--code-keyword);
-}
-
 .tok-function {
     color: var(--code-function);
-}
-
-.tok-type {
-    color: var(--code-type);
-}
-
-.tok-italic {
-    font-style: italic;
 }
 
 /* /js/copy-code.js sets data-copied for a moment after a successful copy. */

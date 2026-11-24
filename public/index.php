@@ -195,21 +195,34 @@ site_header(null, [
                 </div>
               </div>
               <div class="code-showcase__panels">
-<?php $first = true; foreach ($examples as $id => $example):
-    $code = $example['code'];
-    $lines = substr_count($code, "\n") + 1;
+<?php
+$highlight = static fn (string $code): string => preg_replace(
+    '~^<div class="phpcode"><pre><code[^>]*>|</code></pre></div>$~',
+    '',
+    highlight_php_trimmed($code, true),
+);
+
+$first = true; foreach ($examples as $id => $example):
+    $lines = substr_count($example['code'], "\n") + 1;
     $expandedLines = $lines;
+
+    // highlight_php_trimmed() takes code without the opening tag, so it's added
+    // back here. The imports go after the first blank line, so highlight the
+    // code on either side of it separately.
+    [$head, $body] = explode("\n\n", preg_replace('/^<\?php\n/', '', $example['code']), 2);
+    $code = '<span class="default">&lt;?php</span>' . "\n" . $highlight($head) . "\n\n";
 
     if (isset($example['imports'])) {
         $importCount = substr_count($example['imports'], "\n") + 1;
-        $fold = '<span data-copy-ignore class="code-fold__summary"><span class="tok-keyword">use</span> '
+        $code .= '<span data-copy-ignore class="code-fold__summary"><span class="keyword">use</span> '
             . '<button type="button" data-imports-toggle aria-expanded="false" aria-label="Show ' . $importCount . ' imports" title="Show imports" class="code-fold__toggle">...</button>;</span>'
-            . '<span hidden class="code-fold__body">' . $example['imports'] . '</span>';
-        [$head, $body] = explode("\n\n", $code, 2);
-        $code = "$head\n\n$fold\n\n$body";
+            . '<span hidden class="code-fold__body">' . $highlight($example['imports']) . '</span>'
+            . "\n\n";
         $lines += 2;
         $expandedLines = $lines + $importCount - 1;
     }
+
+    $code .= $highlight($body);
 ?>
                 <div id="example-<?= $id ?>" role="tabpanel" aria-labelledby="example-tab-<?= $id ?>" data-copy-scope class="code-showcase__panel"<?= $first ? '' : ' hidden' ?>>
                   <div class="code-showcase__tabbar">
@@ -222,16 +235,16 @@ site_header(null, [
                   <p class="code-showcase__description"><?= $example['description'] ?></p>
                   <div role="region" aria-label="<?= $example['file'] ?> code" tabindex="0" class="code-showcase__code">
                     <pre aria-hidden="true" class="code-showcase__gutter" data-lines="<?= implode("\n", range(1, $lines)) ?>" data-lines-expanded="<?= implode("\n", range(1, $expandedLines)) ?>"></pre>
-                    <pre><code><?= $code ?></code></pre>
+                    <pre class="phpcode"><code><?= $code ?></code></pre>
                   </div>
                   <div class="terminal">
                     <div class="terminal__header">
                       <p class="terminal__tab">Terminal</p>
                       <p class="tok-comment">Example session</p>
                     </div>
-                    <pre class="terminal__body"><span class="terminal__prompt" aria-hidden="true">$ </span><?= $example['command'] ?>
+                    <pre class="terminal__body"><span class="terminal__prompt" aria-hidden="true">$ </span><?php [$program, $arguments] = explode(' ', $example['command'], 2); ?><span class="tok-function"><?= $program ?></span> <?= htmlspecialchars($arguments) ?>
 
-<?= $example['output'] ?></pre>
+<span class="tok-comment"><?= htmlspecialchars($example['output']) ?></span></pre>
                   </div>
                 </div>
 <?php $first = false; endforeach; ?>
