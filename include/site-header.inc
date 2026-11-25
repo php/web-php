@@ -73,5 +73,6 @@ $releasePillHref = $config['release_pill_href'] ?? $featured['url'];
 <?php foreach ($navItems as $item): ?>
       <a href="<?= $item->href ?>"><?= $item->name ?></a>
 <?php endforeach; ?>
+      <a href="<?= htmlspecialchars($releasePillHref) ?>" class="release-pill release-pill--menu"><?= $featured['branch'] ?> is here<?= site_icon('arrow-right') ?></a>
     </nav>
   </header>

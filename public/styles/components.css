@@ -329,9 +329,20 @@ body::after {
     color: var(--brand);
 }
 
+/* Narrow headers have no room for the release pill, so the menu carries it. */
+.mobile-menu .release-pill--menu {
+    display: inline-flex;
+    margin: .75rem .75rem .5rem;
+    padding: .375rem .5rem .375rem .75rem;
+    border-radius: 9999px;
+}
+
 @media (min-width: 40rem) {
     .release-pill {
         display: inline-flex;
+    }
+    .mobile-menu .release-pill--menu {
+        display: none;
     }
 }
 
