@@ -1,0 +1,34 @@
+/* Get Involved hub page. */
+.get-involved-callout {
+    background: var(--light-blue-color);
+    border-left: 4px solid var(--dark-blue-color);
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+}
+
+.get-involved-callout p {
+    margin: 0;
+}
+
+.get-involved-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    margin-bottom: 1.5rem;
+}
+
+.get-involved-card {
+    background: #fff;
+    border: 1px solid var(--light-blue-color);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+}
+
+.get-involved-card h3 {
+    margin-top: 0;
+}
+
+.get-involved-card p:last-child {
+    margin-bottom: 0;
+}
