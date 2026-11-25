@@ -13,7 +13,7 @@ workflows:
         - 'appleboy/ssh-action@v1.2.5'
     '.github/workflows/preview-deploy.yml':
         - 'actions/download-artifact@v8.0.2'
-        - 'easingthemes/ssh-deploy@main'
+        - 'easingthemes/ssh-deploy@v6.0.3'
         - 'peter-evans/create-or-update-comment@v5.0.0'
         - 'peter-evans/find-comment@v4.0.0'
     '.github/workflows/preview-tests.yml':
@@ -66,9 +66,9 @@ dependencies:
         commit: 'sha1-0ff4204d59e8e51228ff73bce53f80d53301dee2'
         owner_id: 21979
         repo_id: 186202082
-    'easingthemes/ssh-deploy@main':
-        ref: 'main'
-        commit: 'sha1-2cc5b27bf3029d0455dd5e09fe02633904031447'
+    'easingthemes/ssh-deploy@v6.0.3':
+        ref: 'v6.0.3'
+        commit: 'sha1-35647dbb6c84e9f4c4ff546acffbfe40e5650576'
         owner_id: 2750284
         repo_id: 210941897
     'imhoffd/needs-reply@v2.0.0':
