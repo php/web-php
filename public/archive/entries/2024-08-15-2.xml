@@ -9,7 +9,8 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-09-22</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/2025/news/cfp-open-2025" title="ConFoo Montreal 2025">confoo_2024.png</default:newsImage>
-  <content type="html">
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
 	  <p>ConFoo is a multi-technology conference specifically crafted for developers. With over 150 presentations, offered by local and international speakers, this conference wish to bring outstanding diversity of content to expand developers knowledge, increase productivity and boost skills.</p>
 
 	  <p>Want to share your knowledge and expertise to hundreds of experts in your field? Want to be part of our talented team of renowned speakers? Want to demonstrate how human intelligence is changing our field of work?</p>
@@ -21,5 +22,6 @@
 	  <p>You have until September 22 to <a href="https://confoo.ca/en/2025/call-for-papers">submit your proposal on our website</a>.</p>
 
 	  <p>Until October 18th, participants can enjoy a <a href="https://confoo.ca/">300$ discount</a> on their registration! </p>
+    </div>
   </content>
 </entry>
