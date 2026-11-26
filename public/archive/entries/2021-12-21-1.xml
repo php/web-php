@@ -9,7 +9,7 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-01-30</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpconference.nl/" title="Dutch Php Conference CFP">DPC-logo.png</default:newsImage>
-  <content type="html">
+  <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
         We are back for the 16th edition of the Dutch PHP Conference! The 2022 in-person edition features 2 conference days on July 1 &amp; 2, 2022 at RAI Amsterdam.

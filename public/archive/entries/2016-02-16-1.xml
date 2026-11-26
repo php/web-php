@@ -10,7 +10,7 @@
     <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.midwestphp.org"
                        title="Midwest PHP 2016 Conference">midwest2016.png</default:newsImage>
     <link href="http://2016.midwestphp.org" rel="via" type="text/html"/>
-    <content type="html">
+    <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p>
                 <a href="http://2016.midwestphp.org">Midwest PHP 2016 Conference</a>

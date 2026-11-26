@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://www.w3.org/1999/xhtml">
+<entry xmlns="http://www.w3.org/2005/Atom">
   <title>PHP 8.5.0 Alpha 2 available for testing</title>
   <id>https://www.php.net/archive/2025.php#2025-07-17-1</id>
   <published>2025-07-17T11:45:54+00:00</published>

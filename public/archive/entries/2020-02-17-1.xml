@@ -5,10 +5,10 @@
   <published>2020-02-17T11:52:20+01:00</published>
   <updated>2020-02-17T11:52:20+01:00</updated>
   <link href="https://www.php.net/conferences/index.php#id2020-02-17-1" rel="alternate" type="text/html"/>
-  <link href=" https://loop-run.io" rel="via" type="text/html"/>
+  <link href="https://loop-run.io" rel="via" type="text/html"/>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-03-26</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link=" https://loop-run.io" title="LoopRun Barcelona">looprun.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://loop-run.io" title="LoopRun Barcelona">looprun.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      LoopRun Barcelona is an international PHP conference about asynchronous, concurrent and non-blocking PHP libraries.

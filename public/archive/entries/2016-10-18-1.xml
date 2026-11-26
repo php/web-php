@@ -10,7 +10,7 @@
     <default:newsImage xmlns="http://php.net/ns/news" link="https://2017.midwestphp.org"
                        title="Midwest PHP 2017 Conference">midwest2016.png</default:newsImage>
     <link href="https://2017.midwestphp.org" rel="via" type="text/html"/>
-    <content type="html">
+    <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p>
                 The Midwest PHP conference is thrilled to announce the opening of their Call for Papers at

@@ -9,21 +9,23 @@
   <link href="http://php.net/conferences/index.php#id2019-04-02-6" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://amsterdam2019.symfony.com/" title="SymfonyCon Amsterdam 2019 Conference">symfonycon-amsterdam-2019.png</default:newsImage>
   <link href="https://amsterdam2019.symfony.com/" rel="via" type="text/html"/>
-  <content type="html">
-     &lt;p&gt;Symfony is proud to organize the seventh edition of the SymfonyCon, the
-     &lt;strong&gt;international Symfony conference&lt;/strong&gt;. This year, we decided to
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Symfony is proud to organize the seventh edition of the SymfonyCon, the
+     <strong>international Symfony conference</strong>. This year, we decided to
      bring the entire community to the Netherlands and discover the amazing city of
-     &lt;strong&gt;Amsterdam&lt;/strong&gt;. If you like Symfony and share fun with
-     professionals, this is where you want to be on November!&lt;/p&gt;
+     <strong>Amsterdam</strong>. If you like Symfony and share fun with
+     professionals, this is where you want to be on November!</p>
 
-     &lt;p&gt;We look forward to welcoming you to Amsterdam, capital of the Netherlands.
+     <p>We look forward to welcoming you to Amsterdam, capital of the Netherlands.
      Join us for talks, workshops, discussions and other serious work around Symfony
-     and its environment. And of course, celebrate the community reunion!&lt;/p&gt;
+     and its environment. And of course, celebrate the community reunion!</p>
 
-     &lt;p&gt;SymfonyCon Amsterdam is a 5-day event from November 19th to November 23rd:&lt;/p&gt;
+     <p>SymfonyCon Amsterdam is a 5-day event from November 19th to November 23rd:</p>
 
-     &lt;p&gt;Two-day workshop: Tuesday, November 19th and Wednesday, November 20th&lt;/p&gt;
-     &lt;p&gt;Two-day conference: Thursday, November 21st and Friday, November 22nd&lt;/p&gt;
-     &lt;p&gt;One hackday: Saturday, November 23rd&lt;/p&gt;
-</content>
+     <p>Two-day workshop: Tuesday, November 19th and Wednesday, November 20th</p>
+     <p>Two-day conference: Thursday, November 21st and Friday, November 22nd</p>
+     <p>One hackday: Saturday, November 23rd</p>
+    </div>
+  </content>
 </entry>

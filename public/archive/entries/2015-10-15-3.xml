@@ -9,7 +9,7 @@
   <link href="http://php.net/conferences/index.php#id2015-10-15-3" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.com.br" title="PhpConference Brasil 2015">phpconfbrasil2015.png</default:newsImage>
   <link href="http://phpconference.com.br" rel="via" type="text/html"/>
-  <content type="html">
+  <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
 	  <p>Come to the leading PHP Conference in Latin America!</p>
       <p>
