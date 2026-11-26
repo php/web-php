@@ -206,7 +206,7 @@ if (is_readable($winQaFile)) {
         continue;
       }
 
-      if (!empty($allowedBranches) && empty($allowedBranches[$branch])) {
+      if (empty($allowedBranches[$branch])) {
         continue;
       }
 
