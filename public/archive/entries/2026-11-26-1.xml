@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>phpday 2027 - Call for Papers</title>
+  <id>https://www.php.net/archive/2026.php#2026-11-26-1</id>
+  <published>2026-11-26T10:13:24+00:00</published>
+  <updated>2026-11-26T10:13:24+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php?view=cfps#2026-11-26-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpday.it/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-12-13</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpday.it/" title="phpday 2027 - Verona and online - May 13–14">phpday2023.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The 24th edition of <a href="https://www.phpday.it/">phpday</a> takes place
+        on May 13–14, 2027, at Hotel San Marco in Verona, Italy, and online.
+        The conference is organized by <a href="https://www.grusp.org/">GrUSP</a>,
+        and all talks are in English. Founded in 2003, phpday is one of the
+        three longest-running PHP conferences in Europe and one of the four
+        longest-running PHP conferences worldwide.
+      </p>
+      <p>
+        The <a href="https://www.phpday.it/call-for-papers/">call for papers</a>
+        is open through December 13, 2026. The organizers welcome talks rooted
+        in real-world PHP development, from modernizing legacy codebases and
+        exploring emerging technologies to building secure, high-performance
+        applications and contributing to the open source ecosystem.
+        You can <a href="https://sessionize.com/phpday-2027/">submit up to three proposals</a>.
+      </p>
+      <p>
+        <a href="https://www.phpday.it/tickets/">Tickets for phpday 2027</a> are already on sale.
+      </p>
+    </div>
+  </content>
+</entry>
