@@ -106,27 +106,27 @@ function getConfTime(): int { for(;;) {
 
 function getImage(): ?array {
 	global $imageRestriction;
+    $imagePath = Entry::IMAGE_PATH_REL;
 
 	fwrite(STDOUT, "Will a picture be accompanying this entry?(y/N) ");
 	$yn = fgets(STDIN);
-
 
 	if (strtoupper($yn[0]) !== "Y") {
 		return NULL;
 	}
 
 	for ($isValidImage = false; !$isValidImage;) {
-		fwrite(STDOUT, "Enter the image name (note: the image has to exist in './images/news'): ");
+		fwrite(STDOUT, "Enter the image name (note: the image has to exist in '{$imagePath}'): ");
 		$path = basename(rtrim(fgets(STDIN)));
 
-		if (true === file_exists(Entry::PHPWEB . "/images/news/$path")) {
+		if (true === file_exists(Entry::IMAGE_PATH_ABS . "/$path")) {
 			$isValidImage = true;
 
 			if (extension_loaded('gd')) {
 				break;
 			}
 
-			$imageSizes = getimagesize("./images/news/$path");
+			$imageSizes = getimagesize(Entry::IMAGE_PATH_ABS . "/$path");
 
 			if (($imageSizes[0] > $imageRestriction['width']) || ($imageSizes[1] > $imageRestriction['height'])) {
 				fwrite(STDOUT, "Provided image has a higher size than recommended (" . implode(' by ', $imageRestriction) . "). Continue with this image?(y/N) ");
