@@ -72,7 +72,7 @@ final class ReleaseHistory
             }
 
             $label = $override['label'] ?? "PHP $branch";
-            $years = $origin->diff($date)->days / 365.25;
+            $yearsSinceStart = $origin->diff($date)->days / 365.25;
             $lastYear = max($lastYear, (int) $date->format('Y'));
 
             $releases[] = [
@@ -81,7 +81,7 @@ final class ReleaseHistory
                 'title' => $label . ', released ' . $date->format('F j, Y'),
                 'url' => $override['url'] ?? ($this->releaseUrl)($branch),
                 'major' => str_ends_with($branch, '.0'),
-                'left' => (int) round(self::START + $years * self::YEAR_WIDTH),
+                'left' => (int) round(self::START + $yearsSinceStart * self::YEAR_WIDTH),
                 'timestamp' => $date->getTimestamp(),
             ];
         }

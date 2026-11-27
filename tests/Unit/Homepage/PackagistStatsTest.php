@@ -23,17 +23,16 @@ final class PackagistStatsTest extends TestCase
     }
 
     #[DataProvider('provideUnusableJson')]
-    public function testFallsBackWhenTheJsonIsUnusable(?string $json): void
+    public function testFallsBackWhenTheJsonIsUnusable(string $json): void
     {
         self::assertSame(PackagistStats::FALLBACK, PackagistStats::fromJson($json));
     }
 
     /**
-     * @return iterable<string, array{?string}>
+     * @return iterable<string, array{string}>
      */
     public static function provideUnusableJson(): iterable
     {
-        yield 'missing' => [null];
         yield 'empty' => [''];
         yield 'malformed' => ['{"totals": '];
         yield 'not an object' => ['"totals"'];

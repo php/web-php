@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace phpweb\Homepage;
 
+use JsonException;
+
 use function array_keys;
 use function file_get_contents;
 use function floor;
@@ -38,17 +40,21 @@ final class PackagistStats
     {
         $json = @file_get_contents($path);
 
-        return self::fromJson(is_string($json) ? $json : null);
+        return is_string($json) ? self::fromJson($json) : self::FALLBACK;
     }
 
     /**
      * @return array{packages: int, versions: int, downloads: int}
      */
-    public static function fromJson(?string $json): array
+    public static function fromJson(string $json): array
     {
-        $data = $json ? json_decode($json, true) : null;
-        $totals = is_array($data) ? ($data['totals'] ?? null) : null;
+        try {
+            $data = json_decode($json, true, flags: JSON_THROW_ON_ERROR);
+        } catch (JsonException) {
+            return self::FALLBACK;
+        }
 
+        $totals = $data['totals'] ?? null;
         if (!is_array($totals)) {
             return self::FALLBACK;
         }
