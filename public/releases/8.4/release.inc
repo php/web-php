@@ -15,6 +15,7 @@ if (!isset($documentation)) {
 $_SERVER['BASE_PAGE'] = 'releases/8.4/' . $lang . '.php';
 
 require_once __DIR__ . '/common.php';
+require_once __DIR__ . '/../../../include/branches.inc';
 
 common_header(message('common_header', $lang));
 
@@ -422,6 +423,8 @@ echo ReleasePage::getFeatureComparisons($comparisons, 'PHP 8.4', 'PHP < 8.4');
     </section>
 
 <?php
+
+echo ReleasePage::getSupportDetails('8.4');
 
 echo ReleasePage::getPrefooter(
     title: message('footer_title', $lang),

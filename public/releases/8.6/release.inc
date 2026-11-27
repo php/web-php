@@ -15,6 +15,7 @@ if (!isset($documentation)) {
 $_SERVER['BASE_PAGE'] = 'releases/8.6/' . $lang . '.php';
 
 require_once __DIR__ . '/common.php';
+require_once __DIR__ . '/../../../include/branches.inc';
 
 common_header(message('common_header', $lang));
 
@@ -591,6 +592,8 @@ echo ReleasePage::getHeroSection(
         </div>
     </section>
 <?php
+
+echo ReleasePage::getSupportDetails('8.6');
 
 echo ReleasePage::getPrefooter(
     title: message('footer_title', $lang),

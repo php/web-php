@@ -1426,6 +1426,17 @@ a {
     color: var(--color-red-400)
 }
 
+.release-support-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: 1rem;
+    margin-block: 1.5rem;
+}
+
+.release-support-details dt {
+    font-weight: var(--font-weight-semibold);
+}
+
 .release-notes h3 {
     margin-bottom: calc(var(--spacing) * 2);
 }
