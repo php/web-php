@@ -39,10 +39,10 @@ final class NewsHandlerTest extends TestCase
 
     public function testGetNewsByYear(): void
     {
-        $news = (new NewsHandler())->getNewsByYear(2018);
+        $news = (new NewsHandler())->getNewsByYear(2024);
         self::assertNotEmpty($news);
         foreach ($news as $entry) {
-            self::assertSame('2018', (new DateTimeImmutable($entry['published']))->format('Y'));
+            self::assertSame('2024', (new DateTimeImmutable($entry['published']))->format('Y'));
         }
     }
 
