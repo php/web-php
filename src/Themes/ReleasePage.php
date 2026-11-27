@@ -77,6 +77,58 @@ class ReleasePage
     HTML;
     }
 
+    public static function getSupportDetails(string $branch): string
+    {
+        $initial = get_branch_release_date($branch);
+        $activeEnd = get_branch_bug_eol_date($branch);
+        $securityEnd = get_branch_security_eol_date($branch);
+        $version = version_array($branch, 2);
+        $latest = get_current_release_for_branch($version[0], $version[1]);
+        if ($initial === null || $activeEnd === null || $securityEnd === null || $latest === null) {
+            return '';
+        }
+
+        $status = match (get_branch_support_state($branch)) {
+            'stable' => 'Active support',
+            'security' => 'Security fixes only',
+            'eol' => 'End of life',
+            'future' => 'Upcoming',
+            default => 'Unknown',
+        };
+        $latest = htmlspecialchars($latest);
+
+        return <<<HTML
+            <section class="release-notes" lang="en" aria-labelledby="support-details">
+                <div class="release-notes-grid-container">
+                    <h2 id="support-details">Release and support details</h2>
+                    <dl class="release-support-details">
+                        <div>
+                            <dt>Initial release</dt>
+                            <dd><time datetime="{$initial->format('Y-m-d')}">{$initial->format('j M Y')}</time></dd>
+                        </div>
+                        <div>
+                            <dt>Latest release</dt>
+                            <dd>PHP {$latest}</dd>
+                        </div>
+                        <div>
+                            <dt>Support status</dt>
+                            <dd>{$status}</dd>
+                        </div>
+                        <div>
+                            <dt>Active support ends</dt>
+                            <dd><time datetime="{$activeEnd->format('Y-m-d')}">{$activeEnd->format('j M Y')}</time></dd>
+                        </div>
+                        <div>
+                            <dt>Security support ends</dt>
+                            <dd><time datetime="{$securityEnd->format('Y-m-d')}">{$securityEnd->format('j M Y')}</time></dd>
+                        </div>
+                    </dl>
+                    <p><a href="/supported-versions.php">Supported PHP versions</a></p>
+                </div>
+            </section>
+            HTML;
+    }
+
     public static function getPrefooter(string $title, string $upgradeNow, string $description, string $extraCredit = '', bool $isReleaseAvailable = true, string $unavailableReason = ''): string
     {
         $footer = fancy_footer($extraCredit);

@@ -12,6 +12,7 @@ if (!isset($lang)) {
 $_SERVER['BASE_PAGE'] = 'releases/8.2/' . $lang . '.php';
 
 require_once __DIR__ . '/common.php';
+require_once __DIR__ . '/../../../include/branches.inc';
 
 common_header(message('common_header', $lang));
 
@@ -264,6 +265,8 @@ echo ReleasePage::getFeatureComparisons($comparisons, 'PHP 8.2', 'PHP < 8.2');
     </section>
 
 <?php
+
+echo ReleasePage::getSupportDetails('8.2');
 
 echo ReleasePage::getPrefooter(
     title: message('footer_title', $lang),
