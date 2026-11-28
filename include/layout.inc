@@ -471,6 +471,9 @@ function site_header(?string $title = NULL, array $config = []): void
         "meta-navigation" => [],
         'classes' => '',
         'layout_span' => 9,
+        // 'classic', or '2026' for the redesigned pages (the homepage and the
+        // release pages), which use the new header and their own layout.
+        'design' => 'classic',
         "cache" => false,
         'cache_control' => false,
         "headsup" => "",
@@ -496,6 +499,7 @@ META
     ];
 
     $config = array_merge($defaults, $config);
+    site_design($config['design']);
 
     $config["headsup"] = get_news_changes();
 
@@ -510,9 +514,53 @@ META
 
     require __DIR__ . "/header.inc";
 }
+/**
+ * The design the current page uses ('classic' or '2026'). site_header() sets
+ * it, so site_footer() can match.
+ */
+function site_design(?string $design = null): string
+{
+    static $current = 'classic';
+
+    if ($design !== null) {
+        $current = $design;
+    }
+
+    return $current;
+}
+
 function site_footer(array $config = []): void
 {
     require __DIR__ . "/footer.inc";
+}
+
+/**
+ * Inline include/svg/{$name}.svg (e.g. 'logos/nike'), so it can use
+ * currentColor and the page's CSS variables. The attributes are added to its
+ * root <svg>; it is hidden from screen readers unless it is given an aria-label.
+ *
+ * @param array<string, string> $attributes
+ */
+function site_svg(string $name, array $attributes = []): string
+{
+    static $files = [];
+    $svg = $files[$name] ??= trim((string) file_get_contents(__DIR__ . "/svg/$name.svg"));
+
+    if (!isset($attributes['aria-label'])) {
+        $attributes['aria-hidden'] = 'true';
+    }
+
+    $html = '';
+    foreach ($attributes as $attribute => $value) {
+        $html .= ' ' . $attribute . '="' . htmlspecialchars($value) . '"';
+    }
+
+    return substr_replace($svg, $html, strlen('<svg'), 0);
+}
+
+function site_icon(string $name, string $class = 'icon'): string
+{
+    return site_svg($name, ['class' => $class]);
 }
 
 // Render the shared footer template to a string

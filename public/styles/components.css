@@ -1,0 +1,434 @@
+/*
+ * Components shared by the redesigned pages (currently the homepage and the
+ * release pages): the site header, buttons, links, code colors and so on.
+ *
+ * Loaded after /styles/base.css (tokens, reset, .sr-only) and before the
+ * page's own stylesheet, which can build on or override anything here.
+ */
+
+/* --- Tokens ------------------------------------------------------------- */
+
+:root {
+    /* Side padding of full-width content; the header and footer line up with it. */
+    --page-gutter: 1.25rem;
+    --page-width: 1280px;
+}
+
+@media (min-width: 40rem) {
+    :root {
+        --page-gutter: 2rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    :root {
+        --page-gutter: 3.5rem;
+    }
+}
+
+/* --- Page defaults ------------------------------------------------------ */
+
+html {
+    scroll-padding-top: 2rem;
+}
+
+strong {
+    font-weight: 600;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Paper grain over the whole page, header and footer included. */
+body {
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+    opacity: .035;
+    background-image: url("/images/paper-grain.svg");
+    background-size: 180px 180px;
+}
+
+.skip-link:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 50;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    background: var(--surface);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html.smooth-scroll {
+        scroll-behavior: smooth;
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Building blocks ----------------------------------------------------- */
+
+.container {
+    max-width: var(--page-width);
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1rem 1.5rem;
+    border-radius: .75rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.button--primary {
+    background: var(--brand);
+    color: #fff;
+    box-shadow: inset 0 1px 0 #ffffff30;
+}
+
+.button--primary:hover {
+    background: var(--brand-strong);
+}
+
+.dark .button--primary {
+    color: var(--paper);
+    box-shadow: none;
+}
+
+.button--soft {
+    border: 1px solid color-mix(in srgb, var(--brand) 20%, transparent);
+    background: var(--lavender);
+    color: var(--brand);
+}
+
+.button--soft:hover {
+    background: color-mix(in srgb, var(--brand) 15%, transparent);
+    color: var(--brand-strong);
+}
+
+/* A link styled as a button but not usable yet (e.g. before a release is out). */
+.button[aria-disabled="true"] {
+    opacity: .7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+}
+
+.text-link:hover {
+    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.text-link--brand {
+    color: var(--brand);
+}
+
+/* --- Header (include/site-header.inc) ----------------------------------- */
+
+.site-header {
+    position: relative;
+    z-index: 20;
+    max-width: var(--page-width);
+    margin-inline: auto;
+    border: 1px solid var(--line);
+    border-top: 0;
+    background: color-mix(in srgb, var(--paper) 90%, transparent);
+}
+
+.site-header__bar {
+    display: flex;
+    height: 5.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--page-gutter);
+}
+
+.site-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.site-header__logo {
+    width: 4.5rem;
+    height: 2.25rem;
+    fill: currentColor;
+}
+
+.release-pill {
+    display: none;
+    align-items: center;
+    gap: .5rem;
+    padding: .375rem .5rem .375rem .75rem;
+    border: 1px solid color-mix(in srgb, var(--brand) 15%, transparent);
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--lavender) 70%, transparent);
+    color: var(--brand);
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 500;
+}
+
+.release-pill:hover {
+    background: var(--lavender);
+}
+
+.site-header__nav {
+    display: none;
+    align-items: center;
+    gap: 2.25rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.site-header__nav a:hover {
+    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.icon-button {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: .5rem;
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.icon-button:hover {
+    background: var(--lavender);
+}
+
+.icon-button__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.theme-icon, .menu-icon {
+    fill: none;
+    stroke: var(--ink);
+}
+
+.theme-icon--system {
+    fill: var(--ink);
+    stroke: none;
+}
+
+.theme-icon,
+.menu-icon--close,
+[aria-expanded="true"] > .menu-icon--open {
+    display: none;
+}
+
+[aria-expanded="true"] > .menu-icon--close,
+[data-theme="light"] > .theme-icon--light,
+[data-theme="dark"] > .theme-icon--dark,
+[data-theme="system"] > .theme-icon--system {
+    display: block;
+}
+
+/* A native <select> with its own chevron, so the spacing matches the buttons. */
+.language-select {
+    position: relative;
+    display: flex;
+}
+
+.language-select__control {
+    appearance: none;
+    height: 2.5rem;
+    max-width: 9.5rem;
+    padding-inline: .75rem 2.25rem;
+    border: 1px solid var(--line);
+    border-radius: .5rem;
+    background: var(--surface);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.language-select__control:hover {
+    background-color: var(--lavender);
+}
+
+.language-select__chevron {
+    position: absolute;
+    top: 50%;
+    right: .75rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.mobile-menu {
+    padding: .75rem var(--page-gutter);
+    border-top: 1px solid var(--line);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: .75rem;
+    border-radius: .5rem;
+}
+
+.mobile-menu a:hover {
+    background: var(--lavender);
+    color: var(--brand);
+}
+
+/* Narrow headers have no room for the release pill, so the menu carries it. */
+.mobile-menu .release-pill--menu {
+    display: inline-flex;
+    margin: .75rem .75rem .5rem;
+    padding: .375rem .5rem .375rem .75rem;
+    border-radius: 9999px;
+}
+
+@media (min-width: 40rem) {
+    .release-pill {
+        display: inline-flex;
+    }
+    .mobile-menu .release-pill--menu {
+        display: none;
+    }
+}
+
+@media (min-width: 64rem) {
+    .site-header__nav {
+        display: flex;
+    }
+    .site-header__menu-toggle,
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* --- Code --------------------------------------------------------------- */
+
+/* PHP's highlighter output (highlight_php() in include/layout.inc), used by the
+   homepage examples and the release pages. */
+.phpcode span.comment {
+    color: var(--code-comment);
+    font-style: italic;
+}
+
+.phpcode span.default {
+    color: var(--code-function);
+}
+
+.phpcode span.variable {
+    color: var(--code-text);
+}
+
+.phpcode span.keyword {
+    color: var(--code-keyword);
+}
+
+.phpcode span.string {
+    color: var(--code-string);
+}
+
+/* The homepage's terminal: the command's program name, and the output. */
+.tok-comment {
+    color: var(--code-comment);
+}
+
+.tok-function {
+    color: var(--code-function);
+}
+
+/* /js/copy-code.js sets data-copied for a moment after a successful copy. */
+.copy-button__icon--done,
+[data-copied] .copy-button__icon--copy {
+    display: none;
+}
+
+[data-copied] .copy-button__icon--done {
+    display: block;
+}
+
+/* --- Toast -------------------------------------------------------------- */
+
+/* A message keyboard.js shows for a few seconds (the "I love PHP" keyboard code). */
+.toast {
+    position: fixed;
+    right: 0;
+    bottom: 1.5rem;
+    left: 0;
+    z-index: 50;
+    width: fit-content;
+    margin-inline: auto;
+    padding: .75rem 1.25rem;
+    border-radius: .75rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: .875rem;
+    font-weight: 500;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    animation: reveal .22s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toast {
+        animation: none;
+    }
+}

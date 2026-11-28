@@ -2,24 +2,35 @@
 
 use phpweb\ProjectGlobals;
 
-$css_files = [
+// The 2026 design (see site_header()) brings its own shared stylesheets and
+// scripts instead of the classic ones; pages add theirs via 'css' and 'js_files'.
+$is2026Design = site_design() === '2026';
+
+$css_files = $is2026Design ? [
+    '/styles/base.css',
+    '/styles/components.css',
+    '/styles/search-modal.css',
+] : [
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
     '/styles/theme-base.css',
     '/styles/theme-medium.css',
+    '/styles/search-modal.css',
 ];
 
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
 }
 
-// The fancy footer is the default for classic pages (see footer.inc); load its
-// standalone stylesheet everywhere except the release landing pages, which ship
-// their own footer styles in php85.css.
-if (!in_array('php85.css', $css_files, true) && !in_array('/styles/php85.css', $css_files, true)) {
-    $css_files[] = '/styles/shared-footer.css';
+// (Conditionally) load fonts to support base.css
+if (array_intersect(['base.css', '/styles/base.css'], $css_files)) {
+    array_unshift($css_files, '/fonts/Inter/inter.css', '/fonts/IBM-Plex-Mono/plex-mono.css');
 }
 
+// Every page uses the fancy footer (see footer.inc and fancy_footer()).
+$css_files[] = '/styles/shared-footer.css';
+
+$CSS = [];
 foreach($css_files as $filename) {
     // files that do not start with / are assumed to be located in the /styles
     // directory
@@ -30,12 +41,18 @@ foreach($css_files as $filename) {
     $CSS[$filename] = @filemtime($path);
 }
 
+$js_files = array_merge($is2026Design ? [
+    'js/ext/FuzzySearch.min.js',
+    'js/search.js',
+    'js/keyboard.js',
+    'js/site-header.js',
+    'js/copy-code.js',
+] : [], $config['js_files'] ?? []);
+
 $JS = [];
-if (isset($config["js_files"])) {
-    foreach($config['js_files'] as $filename) {
-        $path = ProjectGlobals::getPublicRoot() . '/' . $filename;
-        $JS[$filename] = @filemtime($path);
-    }
+foreach($js_files as $filename) {
+    $path = ProjectGlobals::getPublicRoot() . '/' . $filename;
+    $JS[$filename] = @filemtime($path);
 }
 
 if (isset($shortname) && $shortname) {
@@ -139,7 +156,14 @@ if (!isset($config["languages"])) {
 <!-- End Matomo Code -->
 <?php } ?>
 </head>
-<body class="<?php echo $curr; ?> <?php echo $classes; ?>">
+<body class="<?php echo $curr; ?> <?php echo $classes; ?><?= $is2026Design ? ' design-2026' : '' ?>">
+<?php
+// 2026 design pages get the new header and render their own layout.
+if ($is2026Design) {
+    require __DIR__ . '/site-header.inc';
+    return;
+}
+?>
 
 <nav class="navbar navbar-fixed-top">
   <div class="navbar__inner">

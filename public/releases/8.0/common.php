@@ -34,10 +34,10 @@ function common_header(string $description): void {
     }
 
     \site_header("PHP 8.0 Release Announcement", [
-        'current' => 'php85',
-        'css' => ['php85.css'],
+        'current' => 'release-page',
+        'design' => '2026',
+        'css' => ['release-page.css'],
         'language_switcher' => $languages,
-        'theme_switcher' => true,
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
