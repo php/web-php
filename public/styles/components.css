@@ -143,6 +143,7 @@ body::after {
 
 .button--soft:hover {
     background: color-mix(in srgb, var(--brand) 15%, transparent);
+    color: var(--brand-strong);
 }
 
 /* A link styled as a button but not usable yet (e.g. before a release is out). */
