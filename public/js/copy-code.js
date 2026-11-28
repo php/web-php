@@ -2,7 +2,7 @@
  * Copy-code buttons
  *
  * Markup: a <button data-copy-code aria-label="..."> inside an element marked
- * `data-copy-scope` copies the first <code> in that scope. While "copied", the
+ * `data-copy-scope` copies the first <pre><code> in that scope. While "copied", the
  * button has a `data-copied`` attribute; base.css uses it to swap the
  * .copy-button__icon--copy icon for the .copy-button__icon--done one.
  * Elements marked `data-copy-ignore` inside the <code> are left out of the copy.
@@ -27,7 +27,7 @@
 
     document.addEventListener('click', async (event) => {
         const button = event.target.closest('[data-copy-code]');
-        const code = button?.closest('[data-copy-scope]')?.querySelector('code');
+        const code = button?.closest('[data-copy-scope]')?.querySelector('pre code');
 
         if (!code) {
             return;
