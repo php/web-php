@@ -160,6 +160,8 @@ body::after {
 
 .text-link:hover {
     color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .text-link--brand {
@@ -227,6 +229,8 @@ body::after {
 
 .site-header__nav a:hover {
     color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .site-header__actions {

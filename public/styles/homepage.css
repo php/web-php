@@ -369,6 +369,8 @@
 
 .latest__all:hover {
     color: var(--brand-strong);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .latest-news {
@@ -394,6 +396,8 @@
 
 .latest-news__title:hover {
     color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .latest-releases {
@@ -426,6 +430,8 @@
 
 .latest-releases__item a:hover {
     color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .latest-releases__separator {
@@ -1209,6 +1215,8 @@
 
 .feature-list dt a:hover {
     color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .feature-list dd {
