@@ -156,7 +156,7 @@ body::after {
 .text-link {
     display: inline-flex;
     align-items: center;
-    gap: .75rem;
+    gap: .375rem;
 }
 
 .text-link:hover {

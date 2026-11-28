@@ -88,7 +88,7 @@ site_header(null, [
           <div class="hero__cta">
             <div class="hero__actions">
               <a href="#start" class="button button--primary">Get started<?= site_icon('arrow-right') ?></a>
-              <a href="/downloads.php" class="text-link">Download PHP<?= site_icon('arrow-up-right') ?></a>
+              <a href="/downloads.php" class="text-link">Download PHP<?= site_icon('arrow-right') ?></a>
             </div>
           </div>
           <div class="hero__art draft-enter" aria-hidden="true">
@@ -107,7 +107,7 @@ site_header(null, [
                 </p>
 <?php endif; ?>
               </div>
-              <a href="/archive/" class="text-link text-link--brand latest__all">All news<?= site_icon('arrow-up-right') ?></a>
+              <a href="/archive/" class="text-link text-link--brand latest__all">All news<?= site_icon('arrow-right') ?></a>
             </div>
           </section>
           <section class="latest__row" aria-labelledby="latest-releases-heading">
@@ -126,7 +126,7 @@ site_header(null, [
 <?php endforeach; ?>
                 </ul>
               </div>
-              <a href="/releases/" class="text-link text-link--brand latest__all">All releases<?= site_icon('arrow-up-right') ?></a>
+              <a href="/releases/" class="text-link text-link--brand latest__all">All releases<?= site_icon('arrow-right') ?></a>
             </div>
           </section>
         </div>
@@ -169,7 +169,7 @@ site_header(null, [
               <div class="split__body">
                 <h3 class="card-title">Made for the web,<br>from the beginning.</h3>
                 <p class="lead">PHP has grown with the web. From dynamic pages and forms to data pipelines and AI agents, the language and its ecosystem grow with your application.</p>
-                <div class="link-row"><a href="/manual/introduction.php" class="text-link text-link--brand">Meet the language<?= site_icon('arrow-up-right') ?></a></div>
+                <div class="link-row"><a href="/manual/introduction.php" class="text-link text-link--brand">Meet the language<?= site_icon('arrow-right') ?></a></div>
               </div>
               <div class="language-panel__art" aria-hidden="true">
                 <div class="draft-grid"></div>
@@ -354,7 +354,7 @@ $first = true; foreach ($examples as $id => $example):
                   </div>
 <?php endforeach; ?>
                 </dl>
-                <div class="link-row"><a href="<?= $featured['url'] ?>" class="text-link text-link--brand">Explore all PHP <?= $featured['branch'] ?> features<?= site_icon('arrow-up-right') ?></a></div>
+                <div class="link-row"><a href="<?= $featured['url'] ?>" class="text-link text-link--brand">Explore all PHP <?= $featured['branch'] ?> features<?= site_icon('arrow-right') ?></a></div>
               </div>
             </div>
           </div>
@@ -400,15 +400,15 @@ $first = true; foreach ($examples as $id => $example):
               <h3 class="start-step__title">Get set up.</h3>
               <p>Install PHP locally or configure it for your servers. Find the setup that fits your tools and infrastructure.</p>
               <div class="link-row">
-                <a href="/manual/install.php" class="text-link text-link--brand">Installation guide<?= site_icon('arrow-up-right') ?></a>
+                <a href="/manual/install.php" class="text-link text-link--brand">Installation guide<?= site_icon('arrow-right') ?></a>
               </div>
             </li>
             <li class="start-step">
               <h3 class="start-step__title">Learn the language.</h3>
               <p>Dive into the documentation or follow a guided tutorial. Explore the features, functions, and patterns you’ll use.</p>
               <div class="link-row">
-                <a href="/docs.php" class="text-link text-link--brand">Read the docs<?= site_icon('arrow-up-right') ?></a>
-                <a href="/manual/tutorial.php" class="text-link text-link--brand">Take the tutorial<?= site_icon('arrow-up-right') ?></a>
+                <a href="/docs.php" class="text-link text-link--brand">Read the docs<?= site_icon('arrow-right') ?></a>
+                <a href="/manual/tutorial.php" class="text-link text-link--brand">Take the tutorial<?= site_icon('arrow-right') ?></a>
               </div>
             </li>
             <li class="start-step">
