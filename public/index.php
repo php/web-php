@@ -84,11 +84,11 @@ site_header(null, [
         <div class="hero__grid" aria-hidden="true"></div>
         <div class="container hero__inner">
           <h1 id="hero-heading" class="hero__title">The web runs<br>on <span class="hero__accent">PHP.</span></h1>
-          <p class="hero__lead">Build your next project on it too. Whether it's a website, an API, or a command-line tool, PHP is fast, flexible, pragmatic, and open source, with a mature ecosystem and a global community behind it.</p>
+          <p class="hero__lead">Build your next project on it, too. Whether it's a website, an API, or a command-line tool, PHP is fast, flexible, pragmatic, and open source, with a mature ecosystem and a global community behind it.</p>
           <div class="hero__cta">
             <div class="hero__actions">
-              <a href="#start" class="button button--primary">Get started<?= site_icon('arrow-right') ?></a>
-              <a href="/downloads.php" class="text-link">Download PHP<?= site_icon('arrow-right') ?></a>
+              <a href="#start" class="button button--primary">Start building with PHP<?= site_icon('arrow-down-right') ?></a>
+              <a href="#proof" class="text-link">Learn more<?= site_icon('arrow-down-right') ?></a>
             </div>
           </div>
           <div class="hero__art draft-enter" aria-hidden="true">
