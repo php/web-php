@@ -84,7 +84,7 @@ site_header(null, [
         <div class="hero__grid" aria-hidden="true"></div>
         <div class="container hero__inner">
           <h1 id="hero-heading" class="hero__title">The web runs<br>on <span class="hero__accent">PHP.</span></h1>
-          <p class="hero__lead">Build your next project on it too. Whether it's a website, an API, or a command-line tool, you get a modern, open source language, a mature ecosystem, and a global community.</p>
+          <p class="hero__lead">Build your next project on it too. Whether it's a website, an API, or a command-line tool, PHP is fast, flexible and pragmatic, with a mature ecosystem and a global community behind it.</p>
           <div class="hero__cta">
             <div class="hero__actions">
               <a href="#start" class="button button--primary">Get started<?= site_icon('arrow-right') ?></a>
